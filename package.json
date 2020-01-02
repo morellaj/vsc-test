@@ -1,34 +1,57 @@
 {
-  "name": "vsc-test",
-  "version": "0.1.0",
-  "private": true,
+  "name": "learning-is-the-solution",
+  "version": "0.0.1",
+  "description": "Learning is the Solution homeschool education website",
+  "main": "server.js",
+  "homepage": "learningisthesolution.glitch.me",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && node server.js"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
+    "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-router-dom": "^5.1.2",
+    "pdfjs-dist": "^2.3.200",
+    "pdfjs": "^2.3.2",
+    "react-pdf": "^4.1.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "styled-components": "^4.4.1",
+    "https": "^1.0.0",
+    "react-full-screen": "^0.2.4",
+    "react-spring": "^8.0.27",
+    "react-slideshow-image": "^1.3.3",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "image-webpack-loader": "^5.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "^1.10.6",
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.10"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "engines": {
+    "node": "9.x"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "repository": {
+    "url": "https://glitch.com/edit/#!/starter-react-router"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
