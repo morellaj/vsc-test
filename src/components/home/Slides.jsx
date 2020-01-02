@@ -11,7 +11,7 @@ export default function Slides(props){
     return (
       <SlideContainer key={i}>
         <PicContainer>
-          <Pic src={'../../../assets/' + props.type + pic + '.png'}/>
+          <Pic src={'../../assets/' + props.type + pic + '.png'}/>
         </PicContainer>
       </SlideContainer>
     )

@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.use('/public', express.static(process.cwd() + '/public'));
-app.use(express.static('public'));
+app.use('/dist', express.static(process.cwd() + '/dist'));
+app.use(express.static('dist'));
 
 app.get("*", function(request, response) {
-  response.sendFile(__dirname + '/app/index.html');
+  response.sendFile(__dirname + '/src/index.html');
 });
 
 

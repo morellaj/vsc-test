@@ -13,7 +13,7 @@ export default function IntroParagraph(props){
   return (
     <Container>
       <IntroTextContainer>
-        <Pic src='../../../assets/HomeText.png'/>
+        <Pic src='../../assets/HomeText.png'/>
         <TryButtonContainer>
           <TryButton/>
         </TryButtonContainer>

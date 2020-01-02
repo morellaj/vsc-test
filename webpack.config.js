@@ -2,11 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  context: path.join(__dirname, './'),
-  entry: './app/app.jsx',
+  entry: './src/index.jsx',
   output: {
-    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -31,12 +30,9 @@ module.exports = {
           ]
         },
         {
-          test: /\.html$/,
-          use: [
-            {
-              loader: 'html-loader',
-            }
-          ]
+          test: /\.(html)$/,
+          use: 'html-loader' 
+            
         }
       ]
    }
