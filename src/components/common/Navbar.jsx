@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <Container>
       <LogoContainer to="/">
-          <Logo src={LogoPicture} alt="Learning is the Solution logo"/>
+          <Logo src="./assets/Logo-White-Small.png'" alt="Learning is the Solution logo"/>
       </LogoContainer>
         <List>            
           {items}
