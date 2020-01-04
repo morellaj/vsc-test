@@ -20,9 +20,11 @@ import {colors, character} from '../../master.json';
 export default function CharacterPage(props) {
   const [unitSelected, setUnitSelected] = useState(0);
   const [done, setDone] = useState(false);
-  let location = props.location.search.slice(1, );
+  let location = window.location.search.slice(1, );
+  let url = window.location.href;
+  let newUrl = url.replace('?' + location, "");
   let locationUnit = unitNumbers.indexOf(location) != -1?unitNumbers.indexOf(location):unitSelected;
-  history.pushState({id: unitNumbers[unitSelected]}, 'Stuff', 'https://learningisthesolution.glitch.me/units?' + unitNumbers[unitSelected]);
+  history.pushState({id: unitNumbers[unitSelected]}, 'Stuff', newUrl + '?' + unitNumbers[unitSelected]);
   if(locationUnit != unitSelected && !done){
     setUnitSelected(locationUnit);
     setDone(true);
