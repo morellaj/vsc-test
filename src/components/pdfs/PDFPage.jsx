@@ -6,7 +6,6 @@ import React, {useState, useEffect} from  'react';
 import {Document, Page} from 'react-pdf';
 import styled from 'styled-components';
 import Fullscreen from 'react-full-screen';
-import AngryChoices from '../../assets/angry-choices.pdf';
 
 // Component dependencies
 import Navbar from '../common/Navbar';
@@ -64,7 +63,7 @@ export default function PDFPage(props) {
         <Navbar/>
       </InvisNavbar>
         <StyledDoc
-          file={AngryChoices}
+          file={file}
           loading="Loading book..."
           error="Book not found :("
           onLoadSuccess={onDocumentLoadSuccess}
