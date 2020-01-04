@@ -1,22 +1,29 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // Component dependencies
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
-/***************************************/
+/** ************************************ */
 // Component for the description of activities
-/***********************************/
+/** ******************************** */
 export default function SingleActivity(props) {
-  const name = props.activity.title.toLowerCase().replace(/[?]/g,"").replace(/\s+/g, '-');
-  return(
+  const { title } = props;
+  const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
+  return (
     <Container>
-      <Link to={"/book?" + name}><Image src={"assets/" + name + ".png"}/></Link>
+      <Link to={`/book?${name}`}><Image src={`assets/${name}.png`} /></Link>
     </Container>
-  )
+  );
 }
+
+// Prop validation
+SingleActivity.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 // Styling
 const Container = styled.div`
@@ -29,10 +36,10 @@ const Container = styled.div`
   :hover{
     background-color: darkgray;
   }
-`
+`;
 
 const Image = styled.img`
   width: 300px;
   border-radius: 3px;
   box-shadow: 0 0 8px 0 #000000;
-`
+`;

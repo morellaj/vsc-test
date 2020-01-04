@@ -4,19 +4,18 @@ import styled from 'styled-components';
 
 
 // Data files
-import {colors} from '../../../master.json';
+import { colors } from '../../../master.json';
 
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying an individual unit on the unit list
-/************************************************/
-export default function Legend(props){
-  
+/** ********************************************* */
+export default function Legend() {
   return (
     <Container>
       Topic List
     </Container>
-    )           
+  );
 }
 
 
@@ -26,4 +25,4 @@ const Container = styled.div`
   margin: 2px 0;
   background-color: ${colors.LITS.color};
   color: white;
-`
+`;

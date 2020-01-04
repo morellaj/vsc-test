@@ -16,36 +16,36 @@ module.exports = {
     port: 3000,
     open: true,
     proxy: {
-      '/api': 'http://localhost:8080'
-    }
+      '/api': 'http://localhost:8080',
+    },
   },
-   module: {
-      rules: [
-         {
-           test: /\.jsx/,
-           use: {
-              loader: 'babel-loader'
-          },
-           exclude: /node_modules/
-         },
-         {
-            test: /\.css/,
-            use: ['style-loader', 'css-loader']
-         },
-        {
-          test: /\.(pdf|png|svg|jpg|gif)$/,
-          use: [
-            'file-loader'
-          ]
-        }
-      ]
-   },
-   plugins: [
-     new HtmlWebpackPlugin({
-       template: './src/index.html'
-     }),
-     new CopyPlugin([
-       {from: 'assets', to: 'assets'}
-     ])
-   ]
+  module: {
+    rules: [
+      {
+        test: /\.jsx/,
+        use: {
+          loader: 'babel-loader',
+        },
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(pdf|png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new CopyPlugin([
+      { from: 'assets', to: 'assets' },
+    ]),
+  ],
 };

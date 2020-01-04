@@ -1,5 +1,5 @@
 // Package dependencies
-import React, {Fragment} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -8,36 +8,30 @@ import Navbar from '../common/Navbar';
 import IntroPictures from './IntroPictures';
 import TopicsDisplay from './TopicsDisplay';
 import Details from './Details';
-import TryButton from'./TryButton';
+import TryButton from './TryButton';
 import Footer from '../common/Footer';
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying the home page
-/************************************************/
-export default function Home(props){ 
+/** ********************************************* */
+export default function Home() {
   return (
-    <Fragment>
+    <>
       <Navbar />
-      <IntroPictures/>
+      <IntroPictures />
       <SectionLabel>CURRENT TOPICS</SectionLabel>
-      <TopicsDisplay/>
-      <Details/>
+      <TopicsDisplay />
+      <Details />
       <TryContainer>
-        <TryButton/>
+        <TryButton />
       </TryContainer>
-      <Footer/>
-    </Fragment>
+      <Footer />
+    </>
   );
 }
 
 
 // Styling
-const IntroContainer = styled.section`
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-`
-
 const SectionLabel = styled.h1`
   display: flex;
   justify-content: center;
@@ -46,10 +40,10 @@ const SectionLabel = styled.h1`
   font-weight: 700;
   color: dimgray;
   text-decoration: underline;
-`
+`;
 
 const TryContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
-`
+`;

@@ -1,28 +1,40 @@
 // Package dependencies
 import React from 'react';
-import {Fade} from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying the home page
-/************************************************/
-export default function Slides(props){ 
-  const picList = props.pictureList.map((pic, i) => {
-    return (
-      <SlideContainer key={i}>
-        <PicContainer>
-          <Pic src={'../../assets/' + props.type + pic + '.png'}/>
-        </PicContainer>
-      </SlideContainer>
-    )
-  })
-  
+/** ********************************************* */
+export default function Slides(props) {
+  const { pictureList, fadeProperties, type } = props;
+  const picList = pictureList.map((pic) => (
+    <SlideContainer key={pic}>
+      <PicContainer>
+        <Pic src={`../../assets/${type}${pic}.png`} />
+      </PicContainer>
+    </SlideContainer>
+  ));
+
   return (
-    <Fade {...props.fadeProperties}>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Fade {...fadeProperties}>
       {picList}
     </Fade>
   );
 }
+
+// Props validation
+Slides.propTypes = {
+  pictureList: PropTypes.arrayOf(PropTypes.number).isRequired,
+  fadeProperties: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number,
+  ])).isRequired,
+  type: PropTypes.string.isRequired,
+};
+
 
 // Styling
 const SlideContainer = styled.div`
@@ -30,16 +42,15 @@ const SlideContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-`
+`;
 
 const PicContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-`
+`;
 
 const Pic = styled.img`
   width: 100%;
   max-width: 1100px;
-`
-
+`;
