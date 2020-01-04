@@ -1,27 +1,29 @@
 // Package dependencies
-import React, {useState, useEffect, Fragment} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import https from 'https';
-
-
-// Component dependencies
-import Book from './Book';
+import PropTypes from 'prop-types';
 
 // Data files
-import {colors} from '../../master.json';
+import { colors } from '../../master.json';
 
 
 // Component for displaying a section of the book page
 export default function Section(props) {
+  const { section, bookList } = props;
   return (
     <Container>
-      <SectionHeader>{props.section}</SectionHeader>
+      <SectionHeader>{section}</SectionHeader>
       <BooksContainer>
-        {props.bookList}
+        {bookList}
       </BooksContainer>
     </Container>
   );
 }
+
+Section.propTypes = {
+  section: PropTypes.string.isRequired,
+  bookList: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
 
 
 // Styling
@@ -31,15 +33,15 @@ const Container = styled.div`
   border-radius: 20px;
   max-width: 1100px;
   background-color: white;
-`
+`;
 
 const BooksContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: left;
-`
+`;
 
 const SectionHeader = styled.h1`
   margin: 0;
   border-bottom: 1px solid ${colors.LITS.color};
-`
+`;

@@ -1,5 +1,5 @@
 // Package dependencies
-import React, {Fragment} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -7,13 +7,13 @@ import styled from 'styled-components';
 import Navbar from '../common/Navbar';
 import Footer from '../common/Footer';
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying the home page
-/************************************************/
-export default function Home(props){ 
+/** ********************************************* */
+export default function Home(props) {
   return (
-    <Fragment>
-      <Navbar/>
+    <>
+      <Navbar />
       <Container>
         <Title>About</Title>
         <Heading>Why Learning is the Solution?</Heading>
@@ -23,7 +23,7 @@ export default function Home(props){
   “My son just hit his sister with a rock.  I never imagined he could do something so vicious.  What am I supposed to do?”
   “I just caught my daughter lying to me for the first time.  I got really angry, probably too angry.  But I can’t have her grow up to be a liar…”
   “My son struggles to control his temper and constantly throws tantrums.  Nothing I do seems to help.”
-  Any of this sound familiar?  This responsibility is made more daunting by a lack of outside help or resources.  Parenting books and online articles provide advice, but applying that advice in the heat-of-the-moment is nearly impossible, and who the has time to read all that anyways?  Counselors and therapists are effective, but extremely expensive.  For the most part, we are on our own.   
+  Any of this sound familiar?  This responsibility is made more daunting by a lack of outside help or resources.  Parenting books and online articles provide advice, but applying that advice in the heat-of-the-moment is nearly impossible, and who the has time to read all that anyways?  Counselors and therapists are effective, but extremely expensive.  For the most part, we are on our own.
   Learning is the Solution hopes to address this problem by providing online solutions for behavioral challenges that are fun, easy to access, and easy to use.  Whenever a parent is concerned about their child’s behavior, they don’t need to panic or punish.  They just need to sit down with their child and read a book on Learning is the Solution.
   At Learning is the Solution, we believe there are no bad kids, only kids that need to learn.
 
@@ -48,8 +48,8 @@ export default function Home(props){
 
         </Text>
       </Container>
-      <Footer/>
-    </Fragment>
+      <Footer />
+    </>
   );
 }
 
@@ -57,16 +57,16 @@ export default function Home(props){
 // Styling
 const Container = styled.div`
  
-`
+`;
 
 const Title = styled.div`
 
-`
+`;
 
 const Heading = styled.div`
 
-`
+`;
 
 const Text = styled.div`
 
-`
+`;

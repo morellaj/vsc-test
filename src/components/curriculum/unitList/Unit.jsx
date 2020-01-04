@@ -1,31 +1,42 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 
 // Data files
-import {colors} from '../../../master.json';
+import { colors } from '../../../master.json';
 
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying an individual unit on the unit list
-/************************************************/
-export default function Unit(props){
-  const unit = props.unit;
-  const num = props.num;
+/** ********************************************* */
+export default function Unit(props) {
+  const {
+    char, title, num, setUnitSelected, unitSelected,
+  } = props;
   return (
-    <Container  
-      onClick={(e) => {props.setUnitSelected(e.target.getAttribute('value'))}} 
-      value = {num}
-      color = {colors[unit.unit.charAt(0)].color}
-      unitSelected={props.unitSelected}>
+    <Container
+      onClick={(e) => { setUnitSelected(e.target.getAttribute('value')); }}
+      value={num}
+      color={colors[char].color}
+      unitSelected={unitSelected}
+    >
       <div value={num}>
-        {unit.title}
+        {title}
       </div>
     </Container>
-    )           
+  );
 }
 
+// Prop validation
+Unit.propTypes = {
+  char: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  num: PropTypes.number.isRequired,
+  setUnitSelected: PropTypes.func.isRequired,
+  unitSelected: PropTypes.bool.isRequired,
+};
 
 // Styling
 const Container = styled.div`
@@ -33,15 +44,15 @@ const Container = styled.div`
   align-items: center; 
   margin-top: 2px;
   padding: 5px;
-  border-left: 10px outset ${props => props.color};
+  border-left: 10px outset ${(props) => props.color};
   border-radius: 1px;
   font-size: 16px;
   font-weight: 400;
-  color: ${props => props.unitSelected? 'white':'black'};
-  background-color: ${props => props.unitSelected? props.color:'white'};
+  color: ${(props) => (props.unitSelected ? 'white' : 'black')};
+  background-color: ${(props) => (props.unitSelected ? props.color : 'white')};
   cursor: pointer;
 
   :hover {
-    background-color: ${props => props.unitSelected?props.color:'#D9D9D9'};
+    background-color: ${(props) => (props.unitSelected ? props.color : '#D9D9D9')};
   }
-`
+`;

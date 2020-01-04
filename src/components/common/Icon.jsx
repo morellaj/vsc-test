@@ -1,37 +1,24 @@
 // Package dependencies
-import React, {Fragment} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-        faBook, 
-        faExpandArrowsAlt,
-        faCompressArrowsAlt,
-        faChild,
-        faSmileBeam,
-        faMoneyBillWaveAlt,
-        faGraduationCap,
-        faHandshake,
-        faBookReader,
-        faFileAlt,
-        faTv,
-        faQuestionCircle
-       } from '@fortawesome/free-solid-svg-icons';
+  faBook,
+  faExpandArrowsAlt,
+  faCompressArrowsAlt,
+  faChild,
+  faSmileBeam,
+  faMoneyBillWaveAlt,
+  faGraduationCap,
+  faHandshake,
+  faBookReader,
+  faFileAlt,
+  faTv,
+  faQuestionCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import {
-        faListAlt
-       } from '@fortawesome/free-regular-svg-icons';
-
-
-/************************************************/
-// Component for displaying icons
-/************************************************/
-export default function Icon(props){
-  return(
-    <Fragment>
-      <FontAwesomeIcon 
-        icon={iconList[props.icon]} 
-        style={{'marginLeft':'5px', 'marginRight':'5px'}}/>
-    </Fragment>
-  )
-}
+  faListAlt,
+} from '@fortawesome/free-regular-svg-icons';
 
 
 // Constants
@@ -50,5 +37,25 @@ const iconList = {
   reader: faBookReader,
   text: faFileAlt,
   show: faTv,
-  question: faQuestionCircle
+  question: faQuestionCircle,
+};
+
+/** ********************************************* */
+// Component for displaying icons
+/** ********************************************* */
+export default function Icon(props) {
+  const { icon } = props;
+  return (
+    <>
+      <FontAwesomeIcon
+        icon={iconList[icon]}
+        style={{ marginLeft: '5px', marginRight: '5px' }}
+      />
+    </>
+  );
 }
+
+// Props validation
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+};

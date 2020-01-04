@@ -9,13 +9,18 @@ import BookImage from './BookImage';
 
 // Component for displaying an individual book
 export default function Book(props) {
-  const book = props.currentBook;
-  const title = book.subtitle?<Title>{book.title + ': '}<SubTitle>{book.subtitle}</SubTitle></Title>:<Title>{book.title}</Title>
+  const {value, currentBook: { subtitle, title, imageLinks }} = props;
+  const titleDisplay = subtitle ? (
+    <Title>
+      {`${title}: `}
+      <SubTitle>{subtitle}</SubTitle>
+    </Title>
+  ) : <Title>{title}</Title>;
   return (
-  <Container onClick={()=> props.setMoreInfo(props.value)}>
-    <BookImage book={book}/>
-    {title}
-  </Container>
+    <Container onClick={() => props.setMoreInfo(value)}>
+      <BookImage images={imageLinks} />
+      {titleDisplay}
+    </Container>
   );
 }
 
@@ -30,16 +35,16 @@ const Container = styled.div`
     background-color: lightgray;
     cursor: pointer;
   }
-`
+`;
 
 const Title = styled.div`
   text-align: center;
   margin-top: 10px;
   font-size: 18px;
   font-weight: 600;
-`
+`;
 
 const SubTitle = styled.span`
   font-size: 16px;
   font-weight: 400;
-`
+`;

@@ -5,21 +5,21 @@ import React from 'react';
 import Book from './Book';
 
 // Data files
-import {books} from '../../master.json';
+import { books } from '../../master.json';
 
 
 // Function for creating a list of books
-export default function ListCreator(list, obj, setMoreInfo) {
-  const arr = list.map(book => {
-    obj[book] = books[book];
+export default function ListCreator(list, object, setMoreInfo) {
+  const arr = list.map((book) => {
+    object[book] = books[book];
     return (
-      <Book 
-       currentBook={books[book]} 
-       setMoreInfo={setMoreInfo} 
-       value = {book}
-       key={book}/>
-      )
+      <Book
+        currentBook={books[book]}
+        setMoreInfo={setMoreInfo}
+        value={book}
+        key={book}
+      />
+    );
   });
   return arr;
 }
-

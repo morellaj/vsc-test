@@ -1,27 +1,82 @@
+
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Component dependencies
 import Topic from './Topic';
 
-/************************************************/
+// Constants
+const topicList = [
+  {
+    id: 1,
+    text: 'Hurting Others',
+    status: 'Available',
+  },
+  {
+    id: 2,
+    text: 'Critical Thinking',
+    status: 'Available',
+  },
+  {
+    id: 3,
+    text: 'Honesty',
+    status: 'Available',
+  },
+  {
+    id: 4,
+    text: 'Thinking for Yourself',
+    status: 'Date TBD',
+  },
+  {
+    id: 5,
+    text: 'Anger',
+    status: 'Date TBD',
+  },
+  {
+    id: 6,
+    text: 'Sharing',
+    status: 'Date TBD',
+  },
+  {
+    id: 7,
+    text: 'Gratitude',
+    status: 'Date TBD',
+  },
+  {
+    id: 8,
+    text: 'Caring',
+    status: 'Date TBD',
+  },
+  {
+    id: 9,
+    text: 'Making the World a Better Place',
+    status: 'Date TBD',
+  },
+  {
+    id: 10,
+    text: 'Diversity',
+    status: 'Date TBD',
+  },
+];
+
+/** ********************************************* */
 // Component for displaying the home page
-/************************************************/
-export default function TopicsDisplay(props){ 
-  const list = topicList.map((topic, i) => {
-    if(topic.status == "Available"){
+/** ********************************************* */
+export default function TopicsDisplay() {
+  const list = topicList.map((item) => {
+    if (item.status === 'Available') {
       return (
-        <Link to={"/units?" + topic.text.replace(/\s+/g, '-').toLowerCase()} key={i}>
-          <Topic topic={topic}/>
+        <Link to={`/units?${item.text.replace(/\s+/g, '-').toLowerCase()}`} key={item.id}>
+          <Topic status={item.status} text={item.text} />
         </Link>
-    )}
-    else {
-      return <Topic topic={topic} key={i}/>
+      );
     }
-  })
-  
+
+    return <Topic status={item.status} text={item.text} key={item.id} />;
+  });
+
   return (
     <Container>
       <DisplayContainer>
@@ -31,60 +86,16 @@ export default function TopicsDisplay(props){
   );
 }
 
-// Constants
-const topicList = [
-  {
-    text: 'Hurting Others',
-    status: "Available"
-  },
-  {
-    text: 'Critical Thinking',
-    status: "Available"
-  },
-  {
-    text: 'Honesty',
-    status: "Available"
-  },
-  {
-    text: 'Thinking for Yourself',
-    status: "Date TBD"
-  },
-  {
-    text: 'Anger',
-    status: "Date TBD"
-  },
-  {
-    text: 'Sharing',
-    status: "Date TBD"
-  },
-  {
-    text: 'Gratitude',
-    status: "Date TBD"
-  },
-  {
-    text: 'Caring',
-    status: "Date TBD"
-  },
-  {
-    text: 'Making the World a Better Place',
-    status: "Date TBD"
-  },
-  {
-    text: 'Diversity',
-    status: "Date TBD"
-  }
-]
-
 // Styling
 
 const Container = styled.section`
   display: flex;
   justify-content: center;
-`
+`;
 
 const DisplayContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 50px;
-`
+`;

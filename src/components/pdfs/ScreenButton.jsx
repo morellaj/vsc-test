@@ -1,26 +1,34 @@
 // Package dependencies
-import React, {useState, useEffect} from  'react';
+import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // Component dependencies
 import Icon from '../common/Icon';
 
 // Component for the controls on the pdf page
-export default function ScreenButton(props){
-  function handleClick(){
-    props.setFull(!props.full);
+export default function ScreenButton(props) {
+  const { full } = props;
+  function handleClick() {
+    props.setFull(!full);
   }
-  
-  const icon = props.full?"compress":"expand";
-  const text = props.full?"Exit Full Screen":"Full Screen";
-  
+
+  const icon = full ? 'compress' : 'expand';
+  const text = full ? 'Exit Full Screen' : 'Full Screen';
+
   return (
     <Container onClick={handleClick}>
-      <Icon icon={icon}/>
+      <Icon icon={icon} />
       {text}
     </Container>
-  )
+  );
 }
+
+// Prop type verification
+ScreenButton.propTypes = {
+  setFull: PropTypes.func.isRequired,
+  full: PropTypes.bool.isRequired,
+};
 
 const Container = styled.div`
   font-size: 25px;
@@ -37,4 +45,4 @@ const Container = styled.div`
   :hover{
     cursor: pointer;
   }
-`
+`;

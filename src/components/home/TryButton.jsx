@@ -1,15 +1,15 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Component dependencies
-import {colors} from '../../master.json';
+import { colors } from '../../master.json';
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying the home page
-/************************************************/
-export default function TryButton(props){ 
+/** ********************************************* */
+export default function TryButton() {
   return (
     <Container to="book?the-furbots">READ A BOOK</Container>
   );
@@ -29,4 +29,4 @@ const Container = styled(Link)`
   :hover{
     background-color: ${colors.LITS.darkColor}
   }
-`
+`;

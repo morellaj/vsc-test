@@ -1,34 +1,35 @@
 // Package dependencies
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 
 // Component dependencies
 import Icon from '../../common/Icon';
 
 
-/***************************************/
+/** ************************************ */
 // Component for the description of activities
-/***********************************/
+/** ******************************** */
 export default function CategoryInformation(props) {
   const [open, setOpen] = useState(false);
-  
-  const display = props.text.map((text, i) => {
-    return <Text key={i}>{text}</Text>;
-  })
-  
-  function handleClick(e){
-    console.log('click');
-    setOpen(!open);
-  }
+  const { text } = props;
 
-  return(
-    <Container onClick={() => {setOpen(!open)}} onMouseLeave ={() => {setOpen(false)}}>
-      <Icon icon='question'/>
+  // eslint-disable-next-line react/no-array-index-key
+  const display = text.map((item, i) => <Text key={i}>{item}</Text>);
+
+  return (
+    <Container onClick={() => { setOpen(!open); }} onMouseLeave={() => { setOpen(false); }}>
+      <Icon icon="question" />
       <TextContainer open={open}>{display}</TextContainer>
     </Container>
-  )
+  );
 }
+
+// Props validation
+CategoryInformation.propTypes = {
+  text: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 
 // Styling
@@ -39,7 +40,7 @@ const Container = styled.div`
   color: gray;
   font-size: 25px;
   cursor: pointer;
-`
+`;
 
 const TextContainer = styled.ul`
   position:absolute;
@@ -50,10 +51,10 @@ const TextContainer = styled.ul`
   padding: 20px 10px 20px 40px;
   font-size: 20px;
 
-  display: ${props => props.open?'block':'none'};
-`
+  display: ${(props) => (props.open ? 'block' : 'none')};
+`;
 
 const Text = styled.li`
   margin-bottom: 10px;
   color: black;
-`
+`;

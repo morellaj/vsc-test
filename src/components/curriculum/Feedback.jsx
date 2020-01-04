@@ -1,21 +1,21 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-//Component dependencies
-import {colors} from '../../master.json';
+// Component dependencies
+import { colors } from '../../master.json';
 
 
-/************************************************/
+/** ********************************************* */
 // Component for displaying the home page
-/************************************************/
-export default function Feedback(props){ 
+/** ********************************************* */
+export default function Feedback() {
   return (
     <Container>
       <Text>
-        Complete an activity you loved?  Or more importantly, one you hated?  
-        Wish aspects of the website were differently? Let us know!  
+        Complete an activity you loved?  Or more importantly, one you hated?
+        Wish aspects of the website were differently? Let us know!
       </Text>
       <FeedbackButton to="/feedback">Give Feedback</FeedbackButton>
       <Text>Our development is driven by your input and feedback.</Text>
@@ -30,12 +30,12 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 200px 0 50px 0;
-`
+`;
 
 const Text = styled.div`
   margin: 10px;
   font-size: 20px;
-`
+`;
 
 const FeedbackButton = styled(Link)`
   padding: 14px 20px;
@@ -50,4 +50,4 @@ const FeedbackButton = styled(Link)`
   :hover{
     background-color: ${colors.LITS.darkColor}
   }
-`
+`;
