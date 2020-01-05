@@ -15,7 +15,7 @@ export default function SingleActivity(props) {
   const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
   return (
     <Container>
-      <Link to={`/book?${name}`}><Image src={`assets/${name}.png`} /></Link>
+      <Link to={`/book?${name}`}><Image src={`assets/${name}.jpg`} /></Link>
     </Container>
   );
 }

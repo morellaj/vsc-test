@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 // Component dependencies and data files
-import { colors } from '../../master.json';
+import { colors } from '../../colors.json';
 import { list } from './Links';
 
 
