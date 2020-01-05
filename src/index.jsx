@@ -2,15 +2,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter } from 'react-router-dom';
+import loadable from '@loadable/component';
 
 // Component dependencies
-import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
+//import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 import Home from './components/home/HomePage';
-import CharacterPage from './components/curriculum/CharacterPage';
-import PDFPage from './components/pdfs/PDFPage';
-import About from './components/other/About';
-import BookPage from './components/books/BookPage';
-
+const AnnotationLayer = loadable(() => import('react-pdf/dist/Page/AnnotationLayer.css'))
+const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
+const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
+const About = loadable(() => import('./components/other/About'));
+const BookPage = loadable(() => import('./components/books/BookPage'));
 
 ReactDOM.render((
   <BrowserRouter>

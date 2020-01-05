@@ -1,15 +1,23 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import loadable from '@loadable/component';
 
 
 // Component dependencies
 import Navbar from '../common/Navbar';
 import IntroPictures from './IntroPictures';
+const TryButton = loadable(() => import('./TryButton'));
+const TopicsDisplay = loadable(() => import('./TopicsDisplay'));
+const Details = loadable(() => import('./Details'));
+const Footer = loadable(() => import('../common/Footer'));
+/*
+import IntroPictures from './IntroPictures';
+import TryButton from './TryButton';
 import TopicsDisplay from './TopicsDisplay';
 import Details from './Details';
-import TryButton from './TryButton';
 import Footer from '../common/Footer';
+*/
 
 /** ********************************************* */
 // Component for displaying the home page

@@ -12,7 +12,7 @@ export default function Slides(props) {
   const picList = pictureList.map((pic) => (
     <SlideContainer key={pic}>
       <PicContainer>
-        <Pic src={`../../assets/${type}${pic}.png`} />
+        <Pic src={`../../assets/${type}${pic}.jpg`} />
       </PicContainer>
     </SlideContainer>
   ));
