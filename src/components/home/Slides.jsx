@@ -9,13 +9,15 @@ import PropTypes from 'prop-types';
 /** ********************************************* */
 export default function Slides(props) {
   const { pictureList, fadeProperties, type } = props;
-  const picList = pictureList.map((pic) => (
-    <SlideContainer key={pic}>
-      <PicContainer>
-        <Pic src={`../../assets/${type}${pic}.jpg`} />
-      </PicContainer>
-    </SlideContainer>
-  ));
+  const picList = pictureList.map((pic) => {
+    return (
+      <SlideContainer key={pic.id}>
+        <PicContainer>
+          <Pic src={pic.src} />
+        </PicContainer>
+      </SlideContainer>
+    );
+  });
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading

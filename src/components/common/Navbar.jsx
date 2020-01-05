@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 // Component dependencies and data files
 import { colors } from '../../colors.json';
 import { list } from './Links';
+import LogoPicture from '../../../assets/logo-white-small.webp';
 
 
 // Component for displaying the navbar on pages
@@ -22,7 +23,7 @@ export default function Navbar() {
   return (
     <Container>
       <LogoContainer to="/">
-        <Logo src="./assets/test.png" alt="Learning is the Solution logo" />
+        <Logo src={LogoPicture} alt="Learning is the Solution logo" />
       </LogoContainer>
       <List>
         {items}

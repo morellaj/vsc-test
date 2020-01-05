@@ -1,9 +1,18 @@
 const express = require('express');
+const path = require('path');
+const expressStaticGzip = require('express-static-gzip');
 
 const app = express();
 
-app.use('/dist', express.static(`${process.cwd()}/dist`));
-app.use(express.static('dist'));
+app.use(expressStaticGzip(path.join(__dirname, 'dist'), {
+  enableBrotli: true,
+  customCompressions: [{
+    encodingName: 'deflate',
+    fileExtension: 'zz',
+  }],
+  orderPreference: ['br'],
+}));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', (request, response) => {
   response.sendFile(`${__dirname}/src/index.html`);
