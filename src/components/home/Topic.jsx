@@ -12,7 +12,7 @@ export default function Topic(props) {
   const unit = text.replace(/\s+/g, '-').toLowerCase();
   return (
     <Container>
-      <Image src={`./assets/${unit}1.jpg`} status={status} />
+      <Image src={`./assets/${unit}.webp`} status={status} />
       <TextContainer>
         <Title>{text}</Title>
         <Status status={status}>{status}</Status>

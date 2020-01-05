@@ -1,15 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -40,9 +42,25 @@ module.exports = {
           'file-loader',
         ],
       },
+      {
+        test: /\.(jpe?g|png|webp)$/,
+        use: [
+          'webp-loader',
+          'file-loader',
+        ],
+      },
     ],
   },
   plugins: [
+    new CompressionPlugin({
+      filename: '[path].br[query]',
+      algorithm: 'brotliCompress',
+      test: /\.(js|css|html|svg|png|jpg|webp)$/,
+      compressionOptions: { level: 11 },
+      threshold: 10240,
+      minRatio: 0.8,
+      deleteOriginalAssets: false,
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),

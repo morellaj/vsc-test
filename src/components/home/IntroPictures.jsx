@@ -5,11 +5,38 @@ import loadable from '@loadable/component';
 
 // Component dependencies
 import TryButton from './TryButton';
-//const Slides = loadable(() => import('./Slides'));
+// const Slides = loadable(() => import('./Slides'));
 import Slides from './Slides';
+import Home8 from '../../../assets/Home8.webp';
+import Home34 from '../../../assets/Home34.webp';
+import Home5 from '../../../assets/Home5.webp';
+import Home12 from '../../../assets/Home12.webp';
+import Home10 from '../../../assets/Home10.webp';
+
 
 // Constants
-const pictureList = [8, 34, 39, 12, 10, 21, 27, 5, 20, 18, 22, 31];
+const pictureList = [
+  {
+    id: 1,
+    src: Home8,
+  },
+  {
+    id: 2,
+    src: Home34,
+  },
+  {
+    id: 3,
+    src: Home5,
+  },
+  {
+    id: 4,
+    src: Home12,
+  },
+  {
+    id: 5,
+    src: Home10,
+  },
+];
 
 const fadeProperties = {
   duration: 5000,
@@ -22,11 +49,11 @@ const fadeProperties = {
 /** ********************************************* */
 export default function IntroParagraph() {
   return (
-    <Container >
+    <Container>
       <SlidesContainer>
         <Slides pictureList={pictureList} type="Home" fadeProperties={fadeProperties} />
         <TryButtonContainer>
-          <TryButton/>
+          <TryButton />
         </TryButtonContainer>
         <IntroTextContainer>
           <IntroText>Online books that inspire kids to make good choices!</IntroText>
@@ -49,7 +76,7 @@ const SlidesContainer = styled.div`
   height: 55vw;
   max-height: 618.75px;
   position: relative;
-`
+`;
 
 const IntroTextContainer = styled.div`
 display: flex;
@@ -62,7 +89,7 @@ align-items: center;
 bottom: 0;
 color: white;
 font-size: 30px;
-`
+`;
 
 const IntroText = styled.p`
   text-shadow: 0 0 20px black;
@@ -70,7 +97,7 @@ const IntroText = styled.p`
   font-size: 3.5vw;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-`
+`;
 
 const TryButtonContainer = styled.div`
   display: flex;

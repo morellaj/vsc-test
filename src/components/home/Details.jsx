@@ -8,7 +8,28 @@ import DetailItem from './DetailItem';
 import Slides from './Slides';
 
 // Constants
-const pictureList = [1, 9, 3, 4, 7, 11, 2, 5, 6, 8, 10];
+const pictureList = [
+  {
+    id: 1,
+    src: '../../assets/Detail1.webp',
+  },
+  {
+    id: 2,
+    src: '../../assets/Detail9.webp',
+  },
+  {
+    id: 3,
+    src: '../../assets/Detail3.webp',
+  },
+  {
+    id: 4,
+    src: '../../assets/Detail4.webp',
+  },
+  {
+    id: 5,
+    src: '../../assets/Detail7.webp',
+  },
+];
 
 const fadeProperties = {
   duration: 10000,
