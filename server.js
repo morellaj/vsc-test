@@ -14,7 +14,7 @@ app.use(expressStaticGzip(path.join(__dirname, 'dist'), {
 }));
 
 app.get('/*', (request, response) => {
-  response.sendFile(`${__dirname}/index.html`, (err) => {
+  response.sendFile(`${__dirname}/dist/index.html`, (err) => {
     console.log('test');
     if (err) {
       response.status(500).send(err);
