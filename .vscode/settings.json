@@ -1,0 +1,16 @@
+{
+    "files.exclude": {
+        "_redirects": true,
+        ".eslintrc.js": true,
+        ".gitattributes": true,
+        ".gitignore": true,
+        ".lfsconfig": true,
+        ".netlify": true,
+        ".vscode": true,
+        "babel.config.js": true,
+        "node_modules": true,
+        "nodemon.json": true,
+        "package-lock.json": true,
+        "watch.json": true
+    }
+}
