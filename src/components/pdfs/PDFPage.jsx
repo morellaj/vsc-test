@@ -64,7 +64,7 @@ export default function PDFPage() {
         error="Book not found :("
         onLoadSuccess={onDocumentLoadSuccess}
         onItemClick={onItemClick}
-        options={{ disableAutoFetch: false, disableStream: true }}
+        options={{ disableAutoFetch: true, disableStream: true }}
       >
         <MainPage
           display={display}
