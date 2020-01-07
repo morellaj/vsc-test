@@ -5,8 +5,11 @@
   "main": "server.js",
   "homepage": "learningisthesolution.glitch.me",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack && node server.js",
+    "build": "webpack --mode production",
+    "start": "npm run build && node server.js",
+    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start:dev": "webpack-dev-server"
   },
   "dependencies": {
@@ -15,7 +18,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@loadable/component": "^5.11.0",
-    "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.1.1",
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.5",
@@ -46,6 +48,7 @@
     "@loadable/babel-plugin": "^5.11.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-styled-components": "^1.10.6",
+    "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^3.0.1",
     "css-loader": "^3.2.0",
     "eslint": "^6.8.0",
