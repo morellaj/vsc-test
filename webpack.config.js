@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
@@ -67,6 +68,7 @@ module.exports = {
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
     ]),
+    new CleanWebpackPlugin(),
     // new BundleAnalyzerPlugin(),
   ],
 };
