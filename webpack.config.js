@@ -65,6 +65,7 @@ module.exports = {
     }),
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
+      { from: '_redirects', to: '_redirects' },
     ]),
     new CleanWebpackPlugin(),
     // new BundleAnalyzerPlugin(),
