@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
 
 // Component dependencies
 import TryButton from './TryButton';
@@ -105,9 +104,4 @@ const TryButtonContainer = styled.div`
   width: 100%;
   position: absolute;
   bottom: 20px;
-`;
-
-const Pic = styled.img`
-  width: 100%;
-  max-width: 1100px;
 `;
