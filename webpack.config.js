@@ -6,7 +6,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
@@ -67,6 +67,6 @@ module.exports = {
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
     ]),
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 };

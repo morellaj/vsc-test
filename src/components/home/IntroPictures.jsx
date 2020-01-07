@@ -5,7 +5,6 @@ import loadable from '@loadable/component';
 
 // Component dependencies
 import TryButton from './TryButton';
-// const Slides = loadable(() => import('./Slides'));
 import Slides from './Slides';
 import Home8 from '../../../assets/Home8.webp';
 import Home34 from '../../../assets/Home34.webp';
