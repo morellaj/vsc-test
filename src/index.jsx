@@ -5,7 +5,6 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import loadable from '@loadable/component';
 
 // Component dependencies
-import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 import Home from './components/home/HomePage';
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));

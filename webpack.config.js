@@ -67,5 +67,6 @@ module.exports = {
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
     ]),
+    // new BundleAnalyzerPlugin(),
   ],
 };
