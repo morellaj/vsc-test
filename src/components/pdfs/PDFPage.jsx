@@ -17,6 +17,7 @@ export default function PDFPage() {
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
   const [full, setFull] = useState(false);
+  const [perLoaded, setPerLoaded] = useState(0);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
 
   function handleResize() {
@@ -40,6 +41,12 @@ export default function PDFPage() {
     handleResize();
   }
 
+  function onDocumentLoadProgress({ loaded, total }, set) {
+    console.log(loaded);
+    console.log(total);
+    console.log(loaded / total);
+    set(loaded/total);
+  }
 
   function onItemClick(e) {
     setDisplay(false);
@@ -53,18 +60,21 @@ export default function PDFPage() {
     }
   }
 
+
   return (
     <Fullscreen enabled={full} onChange={() => setFull(full)}>
       <InvisNavbar full={full}>
         <Navbar />
       </InvisNavbar>
+      <div>{perLoaded}</div>
       <StyledDoc
         file={file}
-        loading="Loading book..."
+        loading="loading"
         error="Book not found :("
+        onLoadProgress={({ loaded, total }) => onDocumentLoadProgress({ loaded, total }, setPerLoaded)}
         onLoadSuccess={onDocumentLoadSuccess}
         onItemClick={onItemClick}
-        options={{ disableAutoFetch: true, disableStream: true }}
+        options={{ disableAutoFetch: false, disableStream: false }}
       >
         <MainPage
           display={display}
