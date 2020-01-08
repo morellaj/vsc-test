@@ -3,10 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-// Component dependencies
-import Navbar from '../common/Navbar';
-import Footer from '../common/Footer';
-
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */

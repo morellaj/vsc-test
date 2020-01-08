@@ -7,9 +7,8 @@ import Fullscreen from 'react-full-screen';
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Component dependencies
-import Navbar from '../common/Navbar';
 import ScreenButton from './ScreenButton';
-import { colors } from '../../colors.json';
+import Progress from './Progress';
 
 // Component for displaying a pdf page
 export default function PDFPage() {
@@ -18,6 +17,7 @@ export default function PDFPage() {
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
   const [full, setFull] = useState(false);
+  const [screenActual, setScreenActual] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
@@ -50,6 +50,11 @@ export default function PDFPage() {
     setProgress(newNum);
   }
 
+  function onFullScreenChange() {
+    setScreenActual(!screenActual);
+    setFull(!screenActual);
+  }
+
   function onItemClick(e) {
     setDisplay(false);
     setPage(e.pageNumber);
@@ -64,15 +69,8 @@ export default function PDFPage() {
 
 
   return (
-    <Fullscreen enabled={full} onChange={() => setFull(full)}>
-      <InvisNavbar full={full}>
-        <Navbar />
-      </InvisNavbar>
-      <ProgressContainer display={progDisplay}>
-        <Progress>
-          {`${perLoaded} / 5MB Loaded...`}
-        </Progress>
-      </ProgressContainer>
+    <Fullscreen enabled={full} onChange={onFullScreenChange}>
+      <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
       <StyledDoc
         file={file}
         loading={null}
@@ -113,11 +111,7 @@ const MainPage = styled(Page)`
 `;
 
 const LastPage = styled(Page)`
-  display: ${(props) => (props.display ? 'none' : 'block')}
-`;
-
-const InvisNavbar = styled.div`
-  display: ${(props) => (props.full ? 'none' : 'block')};
+  display: ${(props) => (props.display ? 'none' : 'block')};
 `;
 
 const Loading = styled.div`
@@ -135,25 +129,4 @@ const Loading = styled.div`
   :hover{
     cursor: pointer;
   }
-`;
-
-const ProgressContainer = styled.div`
-  display: ${(props) => (props.display ? 'block' : 'none')};
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 70%;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Progress = styled.div`
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  background-color: ${colors.LITS.color};
-  font-size: 40px;
-  font-weight: 900;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px black;
 `;

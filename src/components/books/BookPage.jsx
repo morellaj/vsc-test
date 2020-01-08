@@ -33,25 +33,21 @@ export default function BookPage() {
     ? booksObj[moreInfo] : null;
 
   return (
-    <>
-      <Navbar />
-      <Container>
-        <Header>
-          <HeaderTitle>Book Recommendations</HeaderTitle>
-          <HeaderSubTitle>{`${section}: ${character[section].title}`}</HeaderSubTitle>
-        </Header>
-        <Section
-          section="Our Favorites"
-          bookList={primaryList}
-        />
-        <Section
-          section="Other Recommendations"
-          bookList={secondaryList}
-        />
-        <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} />
-      </Container>
-      <Footer />
-    </>
+    <Container>
+      <Header>
+        <HeaderTitle>Book Recommendations</HeaderTitle>
+        <HeaderSubTitle>{`${section}: ${character[section].title}`}</HeaderSubTitle>
+      </Header>
+      <Section
+        section="Our Favorites"
+        bookList={primaryList}
+      />
+      <Section
+        section="Other Recommendations"
+        bookList={secondaryList}
+      />
+      <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} />
+    </Container>
   );
 }
 

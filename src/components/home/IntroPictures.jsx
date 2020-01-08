@@ -100,7 +100,7 @@ const IntroText = styled.p`
 const TryButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  z-index: 5;
+  z-index: 6;
   width: 100%;
   position: absolute;
   bottom: 20px;

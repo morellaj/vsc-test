@@ -13,6 +13,7 @@ export default function Topic(props) {
   return (
     <Container>
       <Image src={`./assets/${unit}.webp`} status={status} />
+      <NotAvailable status={status}>Not Available Yet</NotAvailable>
       <TextContainer>
         <Title>{text}</Title>
         <Status status={status}>{status}</Status>
@@ -70,4 +71,16 @@ const Title = styled.div`
 
 const Status = styled.div`
   color: ${(props) => (props.status === 'Available' ? 'green' : 'darkslategray')}
+`;
+
+const NotAvailable = styled.div`
+  position:absolute;
+  font-family: 'Montserrate', sans-serif;
+  font-size: 14px;
+  color: white;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 2px 10px;
+  border-radius: 20px;
+  display: ${(props) => (props.status === 'Available' ? 'none' : 'block')}
 `;

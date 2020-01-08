@@ -12,7 +12,7 @@ import Icon from '../../common/Icon';
 const list = [
   {
     id: 1,
-    link: 'book?parent-',
+    link: 'book?parents-',
     icon: 'text',
     text: 'Parent Informational',
   },

@@ -3,17 +3,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-// Component dependencies
-import Navbar from '../common/Navbar';
-import Footer from '../common/Footer';
-
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function Home(props) {
+export default function Home() {
   return (
     <>
-      <Navbar />
       <Container>
         <Title>About</Title>
         <Heading>Why Learning is the Solution?</Heading>

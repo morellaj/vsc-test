@@ -17,7 +17,10 @@ export default function Unit(props) {
   } = props;
   return (
     <Container
-      onClick={(e) => { setUnitSelected(e.target.getAttribute('value')); }}
+      onClick={(e) => {
+        console.log(e.target.getAttribute('value'));
+        setUnitSelected(e.target.getAttribute('value'));
+      }}
       value={num}
       color={colors[char].color}
       unitSelected={unitSelected}

@@ -8,6 +8,8 @@ import loadable from '@loadable/component';
 
 // Component dependencies
 import Home from './components/home/HomePage';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
 import CharacterPage from './components/curriculum/CharacterPage';
 import PDFPage from './components/pdfs/PDFPage';
 import About from './components/other/About';
@@ -21,6 +23,7 @@ const BookPage = loadable(() => import('./components/books/BookPage'));
 
 ReactDOM.render((
   <BrowserRouter>
+    <Navbar />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/units" component={CharacterPage} />
@@ -32,4 +35,5 @@ ReactDOM.render((
       <Route path="/topic-recommendation" component={Home} />
       <Route component={CharacterPage} />
     </Switch>
+    <Footer />
   </BrowserRouter>), document.getElementById('main'));

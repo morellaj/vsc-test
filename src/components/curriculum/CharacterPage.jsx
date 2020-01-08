@@ -6,8 +6,6 @@ import styled, { ThemeProvider } from 'styled-components';
 // Component dependencies and data files
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
-import Navbar from '../common/Navbar';
-import Footer from '../common/Footer';
 import TopicSubmission from './TopicSubmission';
 import Feedback from './Feedback';
 import UnitArr from './UnitArr';
@@ -30,7 +28,7 @@ export default function CharacterPage() {
     ? unitNumbers.indexOf(location) : unitSelected;
   // eslint-disable-next-line no-restricted-globals
   history.pushState({ id: unitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${unitNumbers[unitSelected]}`);
-  if (locationUnit !== unitSelected && !done) {
+  if (!done) {
     setUnitSelected(locationUnit);
     setDone(true);
   }
@@ -50,22 +48,18 @@ export default function CharacterPage() {
   });
 
   return (
-    <>
-      <Navbar />
-      <ThemeProvider theme={theme}>
-        <ActivitiesContainer>
-          <UnitList
-            unitList={unitArr}
-            unitSelected={unitSelected}
-            setUnitSelected={setUnitSelected}
-          />
-          <UnitActivities unit={character[unitName]} unitName={unitName} />
-        </ActivitiesContainer>
-        <TopicSubmission />
-        <Feedback />
-        <Footer />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <ActivitiesContainer>
+        <UnitList
+          unitList={unitArr}
+          unitSelected={unitSelected}
+          setUnitSelected={setUnitSelected}
+        />
+        <UnitActivities unit={character[unitName]} unitName={unitName} />
+      </ActivitiesContainer>
+      <TopicSubmission />
+      <Feedback />
+    </ThemeProvider>
   );
 }
 

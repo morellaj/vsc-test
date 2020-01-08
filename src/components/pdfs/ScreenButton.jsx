@@ -8,9 +8,9 @@ import Icon from '../common/Icon';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {
-  const { full } = props;
+  const { full, setFull } = props;
   function handleClick() {
-    props.setFull(!full);
+    setFull(!full);
   }
 
   const icon = full ? 'compress' : 'expand';
