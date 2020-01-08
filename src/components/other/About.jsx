@@ -8,16 +8,13 @@ import styled from 'styled-components';
 /** ********************************************* */
 export default function Home() {
   return (
-    <>
-      <Container>
-        <Title>About</Title>
-        <Heading>Why Learning is the Solution?</Heading>
-        <Text>
+    <Container>
+      <Title>About</Title>
+      <Heading>Why Learning is the Solution?</Heading>
+      <Text>
           To be completed
-        </Text>
-      </Container>
-      <Footer />
-    </>
+      </Text>
+    </Container>
   );
 }
 
