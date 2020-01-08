@@ -1,10 +1,7 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
-const {Document, Page} = loadable.lib(() => import('react-pdf/dist/entry.webpack'));
-/*
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
-*/
 import styled from 'styled-components';
 import Fullscreen from 'react-full-screen';
 // eslint-disable-next-line no-unused-vars

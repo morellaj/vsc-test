@@ -29,7 +29,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 200px 0 50px 0;
+  margin-top: 200px;
+  padding-bottom: 100px;
 `;
 
 const Text = styled.div`

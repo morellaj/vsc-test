@@ -1,10 +1,7 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React from 'react';
-const ReactDom = loadable.lib(() => import('react-dom'));
-/*
 import ReactDOM from 'react-dom';
-*/
 import {
   Route, Switch, BrowserRouter,
 } from 'react-router-dom';
@@ -21,9 +18,9 @@ import About from './components/other/About';
 import BookPage from './components/books/BookPage';
 */
 
-const Home = loadable(() => import ('./components/common/footer'));
+const Home = loadable(() => import ('./components/home/HomePage'));
 const Navbar = loadable(() => import ('./components/common/Navbar'));
-const Footer = loadable(() => import ('./components/common/footer'));
+const Footer = loadable(() => import ('./components/common/Footer'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
 const About = loadable(() => import('./components/other/About'));

@@ -6,10 +6,9 @@ import loadable from '@loadable/component';
 
 // Component dependencies
 import IntroPictures from './IntroPictures';
-const TryButton = loadable(() => import('./TryButton'));
+import TryButton from './TryButton';
 const TopicsDisplay = loadable(() => import('./TopicsDisplay'));
 const Details = loadable(() => import('./Details'));
-const Footer = loadable(() => import('../common/Footer'));
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -44,4 +43,5 @@ const TryContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  padding-bottom: 100px;
 `;

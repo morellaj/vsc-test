@@ -30,9 +30,13 @@ const List = styled.ul`
   display: flex;
   justify-content: center;
   margin: 50px 0 30px 0;
+  padding: 0;
   font-size: 18px;
   color: darkgray;
   list-style-type: none;
+  position:absolute;
+  bottom: 0px;
+  width: 100%;
 `;
 
 const FooterItem = styled.li`

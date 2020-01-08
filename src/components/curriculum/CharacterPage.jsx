@@ -5,18 +5,11 @@ import loadable from '@loadable/component';
 
 
 // Component dependencies and data files
-/*
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
-import TopicSubmission from './TopicSubmission';
-import Feedback from './Feedback';
 import UnitArr from './UnitArr';
-*/
-const UnitList = loadable(() => import('./unitList/UnitList'));
-const UnitActivities = loadable(() => import('./unitActivities/UnitActivities'));
 const TopicSubmission = loadable(() => import('./TopicSubmission'));
 const Feedback = loadable(() => import('./Feedback'));
-const UnitArr = loadable(() => import('./UnitArr'));
 import { colors, character } from '../../master.json';
 
 // Constants
@@ -79,4 +72,5 @@ const ActivitiesContainer = styled.div`
   justify-content: center;
   margin: 30px 0 0 0;
   padding-bottom: 50px;
+  min-height: 1000px;
 `;

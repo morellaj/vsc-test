@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 
 // Component dependencies
-import Navbar from '../common/Navbar';
-import Footer from '../common/Footer';
 import Section from './Section';
 import BookDetails from './BookDetails';
 import ListCreator from './ListCreator';
