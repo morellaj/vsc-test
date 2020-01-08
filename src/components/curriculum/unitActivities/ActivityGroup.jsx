@@ -35,7 +35,6 @@ const Container = styled.div`
   margin: 20px;
   border-radius: 5px;
   background-color: white;
-  min-height: 385px;
 `;
 
 const GroupHeader = styled.div`

@@ -33,6 +33,8 @@ SingleActivity.propTypes = {
 
 // Styling
 const Container = styled.div`
+  width: 320px;
+  height: 320px;  
   display: flex;
   justify-content: center;
   align-items: center;
