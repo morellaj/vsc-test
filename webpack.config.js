@@ -68,6 +68,6 @@ module.exports = {
       { from: '_redirects', to: '_redirects', toType: 'file' },
     ]),
     new CleanWebpackPlugin(),
-     new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 };
