@@ -9,6 +9,7 @@ import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 // Component dependencies
 import Navbar from '../common/Navbar';
 import ScreenButton from './ScreenButton';
+import { colors } from '../../colors.json';
 
 // Component for displaying a pdf page
 export default function PDFPage() {
@@ -17,7 +18,8 @@ export default function PDFPage() {
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
   const [full, setFull] = useState(false);
-  const [perLoaded, setPerLoaded] = useState(0);
+  const [perLoaded, setPerLoaded] = useState(0.00);
+  const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
 
   function handleResize() {
@@ -38,14 +40,14 @@ export default function PDFPage() {
   function onDocumentLoadSuccess() {
     setPage(1);
     setLastPage(1);
+    setProgDisplay(false);
     handleResize();
   }
 
-  function onDocumentLoadProgress({ loaded, total }, set) {
-    console.log(loaded);
-    console.log(total);
-    console.log(loaded / total);
-    set(loaded/total);
+  function onDocumentLoadProgress({ loaded }, setProgress) {
+    const num = 1 - Math.exp(-loaded / 3000000);
+    const newNum = (5 * num).toFixed(2);
+    setProgress(newNum);
   }
 
   function onItemClick(e) {
@@ -66,12 +68,16 @@ export default function PDFPage() {
       <InvisNavbar full={full}>
         <Navbar />
       </InvisNavbar>
-      <div>{perLoaded}</div>
+      <ProgressContainer display={progDisplay}>
+        <Progress>
+          {`${perLoaded} / 5MB Loaded...`}
+        </Progress>
+      </ProgressContainer>
       <StyledDoc
         file={file}
-        loading="loading"
+        loading={null}
         error="Book not found :("
-        onLoadProgress={({ loaded, total }) => onDocumentLoadProgress({ loaded, total }, setPerLoaded)}
+        onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
         onLoadSuccess={onDocumentLoadSuccess}
         onItemClick={onItemClick}
         options={{ disableAutoFetch: false, disableStream: false }}
@@ -129,4 +135,25 @@ const Loading = styled.div`
   :hover{
     cursor: pointer;
   }
+`;
+
+const ProgressContainer = styled.div`
+  display: ${(props) => (props.display ? 'block' : 'none')};
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Progress = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: ${colors.LITS.color};
+  font-size: 40px;
+  font-weight: 900;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
 `;

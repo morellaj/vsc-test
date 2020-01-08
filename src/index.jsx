@@ -27,6 +27,9 @@ ReactDOM.render((
       <Route path="/book" component={PDFPage} />
       <Route path="/about" component={About} />
       <Route path="/book-recommendations" component={BookPage} />
+      <Route path="/feedback" component={Home} />
+      <Route path="/update-sign-up" component={Home} />
+      <Route path="/topic-recommendation" component={Home} />
       <Route component={CharacterPage} />
     </Switch>
   </BrowserRouter>), document.getElementById('main'));

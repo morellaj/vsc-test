@@ -32,7 +32,7 @@ ScreenButton.propTypes = {
 
 const Container = styled.div`
   font-size: 25px;
-  background-color: rgba(0, 0, 0, .27);
+  background-color: rgba(0, 0, 0, .4);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -41,6 +41,7 @@ const Container = styled.div`
   align-items: center;
   border-radius: 7px;
   padding: 5px;
+  color: white;
 
   :hover{
     cursor: pointer;
