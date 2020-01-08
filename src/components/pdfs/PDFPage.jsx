@@ -1,14 +1,22 @@
 // Package dependencies
+import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
+const {Document, Page} = loadable.lib(() => import('react-pdf/dist/entry.webpack'));
+/*
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
+*/
 import styled from 'styled-components';
 import Fullscreen from 'react-full-screen';
 // eslint-disable-next-line no-unused-vars
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Component dependencies
+/*
 import ScreenButton from './ScreenButton';
 import Progress from './Progress';
+*/
+const ScreenButton = loadable(() => import('./ScreenButton'));
+const Progress = loadable(() => import('./Progress'));
 
 // Component for displaying a pdf page
 export default function PDFPage() {

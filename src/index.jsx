@@ -1,10 +1,14 @@
 // Package dependencies
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-  Route, Switch, BrowserRouter, hashHistory,
-} from 'react-router-dom';
 import loadable from '@loadable/component';
+import React from 'react';
+const ReactDom = loadable.lib(() => import('react-dom'));
+/*
+import ReactDOM from 'react-dom';
+*/
+import {
+  Route, Switch, BrowserRouter,
+} from 'react-router-dom';
+
 
 // Component dependencies
 /*
@@ -16,6 +20,7 @@ import PDFPage from './components/pdfs/PDFPage';
 import About from './components/other/About';
 import BookPage from './components/books/BookPage';
 */
+
 const Home = loadable(() => import ('./components/common/footer'));
 const Navbar = loadable(() => import ('./components/common/Navbar'));
 const Footer = loadable(() => import ('./components/common/footer'));

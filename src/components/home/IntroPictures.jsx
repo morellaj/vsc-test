@@ -3,13 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component dependencies
-import TryButton from './TryButton';
 import Slides from './Slides';
 import Home8 from '../../../assets/Home8.webp';
 import Home34 from '../../../assets/Home34.webp';
 import Home5 from '../../../assets/Home5.webp';
 import Home12 from '../../../assets/Home12.webp';
 import Home10 from '../../../assets/Home10.webp';
+import TryButton from './TryButton';
 
 
 // Constants
