@@ -67,6 +67,7 @@ const Title = styled.div`
   font-size: 20px;
   margin-bottom: 5px;
   color: black;
+  text-align: center;
 `;
 
 const Status = styled.div`

@@ -1,5 +1,5 @@
 // Package dependencies
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -11,11 +11,17 @@ import { Link } from 'react-router-dom';
 // Component for the description of activities
 /** ******************************** */
 export default function SingleActivity(props) {
+  const [display, setDisplay] = useState(false);
   const { title } = props;
+
+  useEffect(() => {
+    setDisplay(false);
+  }, [title]);
+
   const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
   return (
     <Container>
-      <Link to={`/book?${name}`}><Image src={`assets/${name}.webp`} /></Link>
+      <Link to={`/book?${name}`}><Image display={display} onLoad={() => (setDisplay(true))} src={`assets/${name}.webp`} /></Link>
     </Container>
   );
 }
@@ -42,4 +48,5 @@ const Image = styled.img`
   width: 300px;
   border-radius: 3px;
   box-shadow: 0 0 8px 0 #000000;
+  display: ${(props) => (props.display ? 'block' : 'none')}
 `;
