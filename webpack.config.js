@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// eslint-disable-next-line no-unused-vars
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
@@ -15,6 +16,10 @@ module.exports = {
   resolve: {
     alias: {
       Colors: path.join(__dirname, 'src/data/colors.json'),
+      Data: path.join(__dirname, 'src/data/'),
+      Common: path.join(__dirname, 'src/components/common/'),
+      Icon: path.join(__dirname, 'src/components/common/Icon.jsx'),
+      Constants: path.join(__dirname, 'src/data/constants.js'),
     },
     extensions: ['.js', '.jsx'],
   },

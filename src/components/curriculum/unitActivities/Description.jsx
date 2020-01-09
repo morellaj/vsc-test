@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 
 
 // Component dependencies
+import { defaultCutoff } from 'Constants';
 import More from './More';
-
-// Constants
-const defaultCutoff = 60;
 
 /** ************************************ */
 // Component for the description of activities

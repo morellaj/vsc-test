@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 
 // Component dependencies and data files
 import colors from 'Colors';
-import { list } from './Links';
+import { navbarList } from 'Constants';
 import LogoPicture from '../../../assets/logo-white-small.webp';
 
 
 // Component for displaying the navbar on pages
 export default function Navbar() {
-  const items = list.map((unit) => (
+  const items = navbarList.map((unit) => (
     <Item key={unit.title}>
       <StyledLink to={unit.link}>
         {unit.title}

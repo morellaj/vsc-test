@@ -10,8 +10,8 @@ import ListCreator from './ListCreator';
 
 
 // Data files
-import booksByUnit from '../../data/booksByUnit.json';
-import character from '../../data/character.json';
+import booksByUnit from 'Data/booksByUnit.json';
+import character from 'Data/character.json';
 
 // Constants
 const unitList = {

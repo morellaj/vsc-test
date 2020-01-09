@@ -8,10 +8,6 @@ import Fullscreen from 'react-full-screen';
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Component dependencies
-/*
-import ScreenButton from './ScreenButton';
-import Progress from './Progress';
-*/
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const Progress = loadable(() => import('./Progress'));
 

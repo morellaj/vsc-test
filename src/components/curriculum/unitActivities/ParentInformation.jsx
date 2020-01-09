@@ -5,31 +5,15 @@ import PropTypes from 'prop-types';
 
 // Component dependencies
 import { Link } from 'react-router-dom';
-import Icon from '../../common/Icon';
-
-
-// Constants
-const list = [
-  {
-    id: 1,
-    link: 'book?parents-',
-    icon: 'text',
-    text: 'Parent Informational',
-  },
-  {
-    id: 2,
-    link: 'book-recommendations?',
-    icon: 'reader',
-    text: 'Book Recommendations',
-  },
-];
+import Icon from 'Icon';
+import { parentInformationList } from 'Constants';
 
 /** ************************************ */
 // Component for the description of activities
 /** ******************************** */
 export default function ParentInformation(props) {
   const { unit } = props;
-  const display = list.map((item) => (
+  const display = parentInformationList.map((item) => (
     <PlainLink to={`/${item.link}${unit}`} key={item.id}>
       <Item>
         <Icon icon={item.icon} />

@@ -7,21 +7,11 @@ import styled from 'styled-components';
 
 
 // Component dependencies and data files
+import { unitActivitiesConstants } from 'Constants';
 import Description from './Description';
 import ActivityDisplay from './ActivityDisplay';
 
-
-// Constants
-const iconList = {
-  pretend: { text: 'Guided Pretend', singleEnd: '', multipleEnd: '' },
-  short: { text: 'Short Stories', singleEnd: '', multipleEnd: '' },
-  book: { text: 'Online Interactive Book', multipleEnd: 's' },
-  interactive: { text: 'Interactive Activit', singleEnd: 'y', multipleEnd: 'ies' },
-  quiz: { text: 'Interactive Quiz', singleEnd: '', multipleEnd: 'zes' },
-  parent: { text: 'parent', singleEnd: '', multipleEnd: '' },
-};
-
-const descriptionCutoff = 250;
+const { iconList, descriptionCutoff } = unitActivitiesConstants;
 
 /** ********************************************* */
 // Component for displaying the activities section

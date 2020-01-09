@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // Component dependencies
-import Icon from '../common/Icon';
+import Icon from 'Icon';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {

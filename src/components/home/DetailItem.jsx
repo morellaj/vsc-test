@@ -3,9 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-
 // Component dependencies
-import Icon from '../common/Icon';
+import Icon from 'Icon';
 import colors from 'Colors';
 
 /** ********************************************* */
@@ -32,7 +31,7 @@ export default function DetailItem(props) {
 DetailItem.propTypes = {
   item: PropTypes.objectOf(PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.number
+    PropTypes.number,
   ])).isRequired,
 };
 

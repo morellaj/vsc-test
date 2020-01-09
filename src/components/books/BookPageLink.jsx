@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 // Data files
-import booksByUnit from '../../data/booksByUnit.json';
+import booksByUnit from 'Data/booksByUnit.json';
 
 
 // Component for displaying book pages

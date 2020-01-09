@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Component dependencies
-import { list } from './Links';
+import { navbarList } from 'Constants';
 
 
 // Component for displaying the navbar on pages
 export default function Footer() {
-  const items = list.map((unit) => (
+  const items = navbarList.map((unit) => (
     <FooterItem key={unit.title}>
       <Link to={unit.link} style={{ color: 'inherit', textDecoration: 'none' }}>
         <div>{unit.title}</div>

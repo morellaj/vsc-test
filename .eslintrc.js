@@ -22,12 +22,18 @@ module.exports = {
     'react',
   ],
   rules: {
+    'linebreak-style': "off",
+    "import/named" : "off",
   },
   settings: {
     'import/resolver': {
       alias: {
         map: [
-          ['Colors', './src/data/colors.json']
+          ['Colors', './src/data/colors.json'],
+          ['Data', './src/data/'],
+          ['Common', './src/components/common/'],
+          ['Icon', './src/components/common/Icon.jsx'],
+          ['Constants', './src/data/constants.js'],
         ]
       }
     }

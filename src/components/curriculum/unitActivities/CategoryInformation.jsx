@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 // Component dependencies
-import Icon from '../../common/Icon';
+import Icon from 'Icon';
 
 
 /** ************************************ */

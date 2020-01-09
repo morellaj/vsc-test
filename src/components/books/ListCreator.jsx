@@ -2,10 +2,8 @@
 import React from 'react';
 
 // Component Dependencies
+import books from 'Data/books.json';
 import Book from './Book';
-
-// Data files
-import books from '../../data/books.json';
 
 
 // Function for creating a list of books

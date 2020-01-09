@@ -11,11 +11,8 @@ import UnitArr from './UnitArr';
 const TopicSubmission = loadable(() => import('./TopicSubmission'));
 const Feedback = loadable(() => import('./Feedback'));
 import colors from 'Colors';
-import character from '../../data/character.json';
-
-// Constants
-const unitNumbers = ['hurting-others', 'critical-thinking', 'honesty'];
-
+import character from 'Data/character.json';
+import {characterUnitNumbers} from 'Constants';
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -26,10 +23,10 @@ export default function CharacterPage() {
   const location = window.location.search.slice(1);
   const url = window.location.href;
   const newUrl = url.replace(`?${location}`, '');
-  const locationUnit = unitNumbers.indexOf(location) !== -1
-    ? unitNumbers.indexOf(location) : unitSelected;
+  const locationUnit = characterUnitNumbers.indexOf(location) !== -1
+    ? characterUnitNumbers.indexOf(location) : unitSelected;
   // eslint-disable-next-line no-restricted-globals
-  history.pushState({ id: unitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${unitNumbers[unitSelected]}`);
+  history.pushState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
   if (!done) {
     setUnitSelected(locationUnit);
     setDone(true);
