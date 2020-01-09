@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Component dependencies
-import { colors } from '../../master.json';
+import colors from 'Colors';
 
 
 /** ********************************************* */

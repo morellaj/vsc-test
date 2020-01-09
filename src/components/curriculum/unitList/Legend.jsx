@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 
 // Data files
-import { colors } from '../../../master.json';
+import colors from 'Colors';
 
 
 /** ********************************************* */

@@ -5,7 +5,7 @@ import React from 'react';
 import Book from './Book';
 
 // Data files
-import { books } from '../../master.json';
+import books from '../../data/books.json';
 
 
 // Function for creating a list of books

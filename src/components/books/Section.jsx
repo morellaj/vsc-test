@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // Data files
-import { colors } from '../../master.json';
+import colors from 'Colors';
 
 
 // Component for displaying a section of the book page

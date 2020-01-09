@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Component dependencies
-import { colors } from '../../colors.json';
+import colors from 'Colors';
 
 /** ********************************************* */
 // Component for displaying the home page

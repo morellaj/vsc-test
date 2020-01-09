@@ -23,4 +23,13 @@ module.exports = {
   ],
   rules: {
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['Colors', './src/data/colors.json']
+        ]
+      }
+    }
+  }
 };

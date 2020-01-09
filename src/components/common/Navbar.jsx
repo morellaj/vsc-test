@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 // Component dependencies and data files
-import { colors } from '../../colors.json';
+import colors from 'Colors';
 import { list } from './Links';
 import LogoPicture from '../../../assets/logo-white-small.webp';
 

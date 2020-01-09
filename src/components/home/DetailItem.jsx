@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 // Component dependencies
 import Icon from '../common/Icon';
-import { colors } from '../../master.json';
+import colors from 'Colors';
 
 /** ********************************************* */
 // Component for displaying the home page

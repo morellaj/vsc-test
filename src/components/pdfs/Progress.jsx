@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // Component dependences
-import { colors } from '../../colors.json';
+import colors from 'Colors';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {

@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component dependencies
-import { colors } from '../../master.json';
+import colors from 'Colors';
 
 
 /** ********************************************* */

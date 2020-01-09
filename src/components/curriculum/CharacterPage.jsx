@@ -10,7 +10,8 @@ import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
 const TopicSubmission = loadable(() => import('./TopicSubmission'));
 const Feedback = loadable(() => import('./Feedback'));
-import { colors, character } from '../../master.json';
+import colors from 'Colors';
+import character from '../../data/character.json';
 
 // Constants
 const unitNumbers = ['hurting-others', 'critical-thinking', 'honesty'];

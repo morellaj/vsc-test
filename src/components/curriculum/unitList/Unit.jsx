@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 // Data files
-import { colors } from '../../../master.json';
+import colors from 'Colors';
 
 
 /** ********************************************* */
