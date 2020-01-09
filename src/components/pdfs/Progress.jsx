@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
@@ -15,7 +14,7 @@ export default function ScreenButton(props) {
   return (
     <Container display={progDisplay}>
       <Text>
-        {`${perLoaded} / 5MB Loaded...`}
+        {`${perLoaded} / 5 MB Loaded...`}
       </Text>
     </Container>
   );

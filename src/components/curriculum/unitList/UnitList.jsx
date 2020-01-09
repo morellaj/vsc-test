@@ -16,7 +16,6 @@ export default function UnitList(props) {
   const { unitList, unitSelected, setUnitSelected } = props;
   const unitArr = unitList.map((unit, i) => (
     <Unit
-      // eslint-disable-next-line eqeqeq
       unitSelected={unitSelected == i}
       num={i}
       title={unit.title}

@@ -20,7 +20,6 @@ export default function Slides(props) {
   });
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <Fade {...fadeProperties}>
       {picList}
     </Fade>

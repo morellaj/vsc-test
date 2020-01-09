@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';

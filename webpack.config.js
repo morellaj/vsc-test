@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// eslint-disable-next-line no-unused-vars
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 

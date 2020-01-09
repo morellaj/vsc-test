@@ -15,7 +15,6 @@ export default function CategoryInformation(props) {
   const [open, setOpen] = useState(false);
   const { text } = props;
 
-  // eslint-disable-next-line react/no-array-index-key
   const display = text.map((item, i) => <Text key={i}>{item}</Text>);
 
   return (

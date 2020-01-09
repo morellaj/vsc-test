@@ -1,5 +1,4 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-restricted-syntax */
+
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
