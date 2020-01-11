@@ -18,9 +18,24 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  parser: "babel-eslint",
   plugins: [
     'react',
   ],
   rules: {
+
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['Colors', './src/data/colors.json'],
+          ['Data', './src/data/'],
+          ['Common', './src/components/common/'],
+          ['Icon', './src/components/common/Icon.jsx'],
+          ['Constants', './src/data/constants.js'],
+        ]
+      }
+    }
+  }
 };
