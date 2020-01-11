@@ -1,89 +1,92 @@
- {
-    "I-1": {
-      "order": "1",
-      "title": "Hurting Others",
-      "description": "Few events are as shocking and panic-inducing for parents as when our rage-filled child hurts another kid. We feel an urgent need to prevent it from ever happening and worry about what might happen if we don't do something to stop this behavior. Is there something wrong with my child? Is this violent behavior going to continue through the school years? Could this result in violence as an adult? Is my child's future in danger if I don't do something significant to fix this problem now? Fortunately the answer to all these questions is almost certainly no. Hurting others is a normal part of growing up. Almost every child does it at some point, and most kids stop hurting others on their own. By panicking and resorting to yellling, punishment, or worst of all spanking, we can make the situation worse and halt our child's learning. Instead, when kids hurt each other we should focus on comforting both children and helping them recover emotionally. When feelings are stable, we can help kids reflect on what happened. In addition, we can use resources like books and shows to help kids consider how to handle these situations before they happen.",
-      "activities": {
-        "1": {
-          "order": "1",
-          "title": "Day on the Beach",
-          "subtitle": "Story about Hurting Others",
-          "category": "book"
-        },
-        "2": {
-          "order": "2",
-          "title": "Soccer Fun",
-          "subtitle": "Story about Hurting Others",
-          "category": "book"
-        },
-        "3": {
-          "order": "3",
-          "title": "Snow Time?",
-          "subtitle": "Story about Anger and Things We Don't Get to Choose",
-          "category": "book"
-        },
-        "4": {
-          "order": "4",
-          "title": "Angry Choices",
-          "subtitle": "Short Stories about Hurting Others",
-          "category": "book"
-        }
+{
+  "I-1": {
+    "order": "1",
+    "title": "Hurting Others",
+    "description": "This unit ",
+    "description-old2": "My family often takes a drive to Missouri to visit our relatives, but there is one drive I'll never forget.  Six hours into our drive, everyone is tired, everyone is grumpy, especially my four-year-old daughter.  Thirty minutes from our destination, my harmless, usually gentle daughter does something I never saw coming.  With all her might, she plants the sole of her shoe into her 1-year-old sister's face.  I was shocked. I was panicked.  What a disaster!  How could she do that?  Is there something wrong with her?  I felt the urgent need to prevent this from ever happening again.  But how?  \n\nFortunately I had nothing to panic about because, rather unfortunately, hurting others is a normal part of growing up.  Almost every child does it at some point, and most kids stop hurting others on their own.  In reality, panic and anger was possibly the least productive reaction I could have had.  These negative emotions can lead to yelling, punishing, and worst of all, physically harming our child, all of which halt our child's learning by putting them in a state of fear.\n\nIf we want to stop our children from hurting others, the solution isn't yelling, but learning.  Talk about when your child might feel like hurting someone and what they could do instead.  Use pretend to practice the right response.  Reflect on past situations where your child hurt someone, why they did it, and what the consequences were.  Use kids books and shows to help your child think through these difficult discussions ahead of time.",
+    "description-old": "Few events are as shocking and panic-inducing for parents as when our rage-filled child hurts another kid. We feel an urgent need to prevent it from ever happening and worry about what might happen if we don't do something to stop this behavior. Is there something wrong with my child? Is this violent behavior going to continue through the school years? Could this result in violence as an adult? Is my child's future in danger if I don't do something significant to fix this problem now? Fortunately the answer to all these questions is almost certainly no. Hurting others is a normal part of growing up. Almost every child does it at some point, and most kids stop hurting others on their own. By panicking and resorting to yellling, punishment, or worst of all spanking, we can make the situation worse and halt our child's learning. Instead, when kids hurt each other we should focus on comforting both children and helping them recover emotionally. When feelings are stable, we can help kids reflect on what happened. In addition, we can use resources like books and shows to help kids consider how to handle these situations before they happen.",
+    "activities": {
+      "1": {
+        "order": "1",
+        "title": "Day on the Beach",
+        "subtitle": "Story about Hurting Others",
+        "category": "book"
+      },
+      "2": {
+        "order": "2",
+        "title": "Soccer Fun",
+        "subtitle": "Story about Hurting Others",
+        "category": "book"
+      },
+      "3": {
+        "order": "3",
+        "title": "Snow Time?",
+        "subtitle": "Story about Anger and Things We Don't Get to Choose",
+        "category": "book"
+      },
+      "4": {
+        "order": "4",
+        "title": "Angry Choices",
+        "subtitle": "Short Stories about Hurting Others",
+        "category": "book"
       }
-    },
-    "C-1": {
-      "order": "2",
-      "title": "Critical Thinking",
-      "description": "hit hit hit hit hit hit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hitvvvvhit hit hit hit hithit hit hit hit hitvhit hit hit hit hitvhit hit hit hit hit",
-      "activities": {
-        "1": {
-          "order": "1",
-          "title": "Bad Luck?",
-          "subtitle": "Checking Ideas Out for Yourself",
-          "category": "book"
-        },
-        "2": {
-          "order": "2",
-          "title": "The Furbots",
-          "subtitle": "Toy Advertising",
-          "category": "book"
-        },
-        "3": {
-          "order": "3",
-          "title": "Yelling Magic",
-          "subtitle": "Testing Ideas Before You Believe Them",
-          "category": "book"
-        }
+    }
+  },
+  "C-1": {
+    "order": "2",
+    "title": "Critical Thinking",
+    "description": "hit hit hit hit hit hit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hitvvvvhit hit hit hit hithit hit hit hit hitvhit hit hit hit hitvhit hit hit hit hit",
+    "activities": {
+      "1": {
+        "order": "1",
+        "title": "Bad Luck?",
+        "subtitle": "Checking Ideas Out for Yourself",
+        "category": "book"
+      },
+      "2": {
+        "order": "2",
+        "title": "The Furbots",
+        "subtitle": "Toy Advertising",
+        "category": "book"
+      },
+      "3": {
+        "order": "3",
+        "title": "Yelling Magic",
+        "subtitle": "Testing Ideas Before You Believe Them",
+        "category": "book"
       }
-    },
-    "S-1": {
-      "order": "3",
-      "title": "Honesty",
-      "description": "hit hit hit hit hit hit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hithit hit hit hit hitvvvvhit hit hit hit hithit hit hit hit hitvhit hit hit hit hitvhit hit hit hit hit",
-      "activities": {
-        "1": {
-          "order": "1",
-          "title": "Super Jet 3000",
-          "subtitle": "Lying to Get Things We Want",
-          "category": "book"
-        },
-        "2": {
-          "order": "2",
-          "title": "The Broken Toy",
-          "subtitle": "Lying to Avoid Getting in Trouble",
-          "category": "book"
-        },
-        "3": {
-          "order": "3",
-          "title": "Basketball Contest",
-          "subtitle": "Lying So Others Will Like You",
-          "category": "book"
-        },
-        "4": {
-          "order": "4",
-          "title": "Trust and Honesty",
-          "subtitle": "Short Stories about Honesty",
-          "category": "book"
-        }
+    }
+  },
+  "S-1": {
+    "order": "3",
+    "title": "Honesty",
+    "description": "One day as I arrived home from work I was greeted with strange news; our four-year-old had been eating toothpaste.  And I don't mean simply swallowing some after she brushed her teeth.  She had been sneaking into the bathroom when nobody was around and eating toothpaste straight from the tube.   ",
+    "description-old": "Imagine you are with a group of people, perhaps in a group training session at work.  Imagine you are singled out and asked the question \"Do you ever lie?\"  How would you feel?  What would you say?  On one hand, lying is taboo and viewed as a sign of low integrity.  On the other hand, everyone lies and we all know it.  ",
+    "activities": {
+      "1": {
+        "order": "1",
+        "title": "Super Jet 3000",
+        "subtitle": "Lying to Get Things We Want",
+        "category": "book"
+      },
+      "2": {
+        "order": "2",
+        "title": "The Broken Toy",
+        "subtitle": "Lying to Avoid Getting in Trouble",
+        "category": "book"
+      },
+      "3": {
+        "order": "3",
+        "title": "Basketball Contest",
+        "subtitle": "Lying So Others Will Like You",
+        "category": "book"
+      },
+      "4": {
+        "order": "4",
+        "title": "Trust and Honesty",
+        "subtitle": "Short Stories about Honesty",
+        "category": "book"
       }
     }
   }
+}

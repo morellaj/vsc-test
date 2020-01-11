@@ -9,7 +9,7 @@ import BookImage from './BookImage';
 
 // Component for displaying an individual book
 export default function Book(props) {
-  const {value, currentBook: { subtitle, title, imageLinks }} = props;
+  const { value, subtitle, title, imageLinks } = props;
   const titleDisplay = subtitle ? (
     <Title>
       {`${title}: `}
@@ -18,7 +18,7 @@ export default function Book(props) {
   ) : <Title>{title}</Title>;
   return (
     <Container onClick={() => props.setMoreInfo(value)}>
-      <BookImage images={imageLinks} />
+      <BookImage imageLinks={imageLinks} />
       {titleDisplay}
     </Container>
   );

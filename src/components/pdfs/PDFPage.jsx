@@ -22,6 +22,10 @@ export default function PDFPage() {
   const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   function handleResize() {
     if (window.innerWidth / window.innerHeight <= 16 / 9) {
       setScale(window.innerWidth / 960);
@@ -69,7 +73,7 @@ export default function PDFPage() {
 
 
   return (
-    <Fullscreen enabled={full} onChange={onFullScreenChange}>
+    <StyledFullscreen enabled={full} onChange={onFullScreenChange}>
       <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
       <StyledDoc
         file={file}
@@ -78,7 +82,7 @@ export default function PDFPage() {
         onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
         onLoadSuccess={onDocumentLoadSuccess}
         onItemClick={onItemClick}
-        options={{ disableAutoFetch: true, disableStream: true }}
+        options={{ disableAutoFetch: false, disableStream: false }}
       >
         <MainPage
           display={display}
@@ -94,11 +98,15 @@ export default function PDFPage() {
           <ScreenButton full={full} setFull={setFull} />
         </LastPage>
       </StyledDoc>
-    </Fullscreen>
+    </StyledFullscreen>
   );
 }
 
 // Styling
+const StyledFullscreen = styled(Fullscreen)`
+  margin-top: 20px;
+`;
+
 const StyledDoc = styled(Document)`
   display: flex;
   justify-content: center;

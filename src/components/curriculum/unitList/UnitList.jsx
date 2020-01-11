@@ -36,10 +36,7 @@ export default function UnitList(props) {
 
 // Prop validation
 UnitList.propTypes = {
-  unitList: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ])).isRequired,
+  unitList: PropTypes.arrayOf(PropTypes.object).isRequired,
   unitSelected: PropTypes.number.isRequired,
   setUnitSelected: PropTypes.func.isRequired,
 };

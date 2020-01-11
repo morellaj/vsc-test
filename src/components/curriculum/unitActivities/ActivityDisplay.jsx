@@ -72,11 +72,11 @@ ActivityDisplay.propTypes = {
     PropTypes.string,
     PropTypes.object,
   ])).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 ActivityDisplay.defaultValues = {
-  title: '',
+  title: 'Loading...',
 };
 
 

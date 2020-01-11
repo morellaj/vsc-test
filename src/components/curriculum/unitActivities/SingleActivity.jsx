@@ -21,7 +21,7 @@ export default function SingleActivity(props) {
   const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
   return (
     <Container>
-      <Link to={`/book?${name}`}><Image display={display} onLoad={() => (setDisplay(true))} src={`assets/${name}.webp`} /></Link>
+      <Link to={`/book?${name}`}><Image displayImg={display} onLoad={() => (setDisplay(true))} src={`assets/${name}.webp`} /></Link>
     </Container>
   );
 }
@@ -50,5 +50,5 @@ const Image = styled.img`
   width: 300px;
   border-radius: 3px;
   box-shadow: 0 0 8px 0 #000000;
-  display: ${(props) => (props.display ? 'block' : 'none')}
+  display: ${(props) => (props.displayImg ? 'block' : 'none')}
 `;

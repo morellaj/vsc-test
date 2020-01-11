@@ -6,7 +6,7 @@ import BookImage from './BookImage';
 
 // Component for displaying extra details of a book
 export default function BookDetails(props) {
-  const { book, section, book : { subtitle, title, primary, authors, pages, description, previewLink, infoLink} } = props;
+  const { book, section, book : { subtitle, title, primary, authors, pages, description, previewLink, infoLink, imageLinks} } = props;
   let titleDisplay;
   const primaryText = [];
 
@@ -37,7 +37,7 @@ export default function BookDetails(props) {
           </div>
           <LowerContainer>
             <LowerLeftContainer>
-              <BookImage book={book} />
+              <BookImage imageLinks={imageLinks} />
               <Text>{`By ${authors}`}</Text>
             </LowerLeftContainer>
             <LowerRightContainer>

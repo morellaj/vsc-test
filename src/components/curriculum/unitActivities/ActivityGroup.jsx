@@ -26,7 +26,10 @@ export default function ActivityGroup(props) {
 ActivityGroup.propTypes = {
   text: PropTypes.string.isRequired,
   categoryText: PropTypes.arrayOf(PropTypes.string).isRequired,
-  activities: PropTypes.objectOf(PropTypes.string).isRequired,
+  activities: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.symbol,
+    PropTypes.object
+  ])).isRequired,
 };
 
 // Styling

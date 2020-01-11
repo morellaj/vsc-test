@@ -1,5 +1,5 @@
 // Package dependencies
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import loadable from '@loadable/component';
 
@@ -14,6 +14,11 @@ const Details = loadable(() => import('./Details'));
 // Component for displaying the home page
 /** ********************************************* */
 export default function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  
   return (
     <>
       <IntroPictures />

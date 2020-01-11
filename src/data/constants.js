@@ -97,33 +97,6 @@ export const parentInformationList = [
 
 export const defaultCutoff = 60;
 
-export const activityCategoryText = {
-  book: [
-    'Fun, interactive stories that teach important lessons',
-    'Kids get to make decisions for the characters',
-    'Kids consider the consequences of different choices',
-    'Designed to gradually influence children towards better, more intentional behavior',
-  ],
-  short: [
-    'Collections of short stories that teach important lessons',
-
-  ],
-  quiz: [
-    'Questions about difficult situations presented as a book',
-    'Kids think and answer questions about the topic',
-    "Further internalizes kid's understanding",
-  ],
-  pretend: [
-    'Fun story where kids move around and act out different parts of the story',
-    'Physically acting out the right choice increases the chance that kids will make that choice in real life',
-  ],
-  parent: [
-    'Short article to inform parents on the topic',
-    'Lets parents know what behavior is typical as well as what they can do to influence their child',
-    'Also recommendations for books and shows that offer additional learning',
-  ],
-};
-
 export const navbarList = [
   {
     title: 'Online Books',
@@ -138,3 +111,9 @@ export const navbarList = [
     link: '/feedback',
   },
 ];
+
+export const booksUnitList = {
+  'hurting-others': 'I-1',
+  'critical-thinking': 'C-1',
+  honesty: 'S-1',
+};

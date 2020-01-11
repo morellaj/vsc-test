@@ -28,7 +28,7 @@ export default function Slides(props) {
 
 // Props validation
 Slides.propTypes = {
-  pictureList: PropTypes.arrayOf(PropTypes.number).isRequired,
+  pictureList: PropTypes.arrayOf(PropTypes.object).isRequired,
   fadeProperties: PropTypes.objectOf(PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.number,

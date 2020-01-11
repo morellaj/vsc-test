@@ -1,35 +1,38 @@
 // Package dependencies
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 
 // Component dependencies
 import Section from './Section';
 import BookDetails from './BookDetails';
-import ListCreator from './ListCreator';
-
+import { createBooksObject, createBooksList } from './Functions';
 
 // Data files
+import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
+import {booksUnitList} from 'Constants';
 
-// Constants
-const unitList = {
-  'hurting-others': 'I-1',
-  'critical-thinking': 'C-1',
-  honesty: 'S-1',
-};
+
 
 // Component for displaying book pages
 export default function BookPage() {
   const [moreInfo, setMoreInfo] = useState();
-  const section = unitList[window.location.search.slice(1)];
+  const section = booksUnitList[window.location.search.slice(1)];
   const bookList = booksByUnit[section];
-  const booksObj = {};
-  const primaryList = ListCreator(bookList.primary, booksObj, setMoreInfo);
-  const secondaryList = ListCreator(bookList.secondary, booksObj, setMoreInfo);
-  const details = Object.Prototype.hasOwnProperty.call(booksObj, moreInfo)
-    ? booksObj[moreInfo] : null;
+  const fullList = bookList.primary.concat(bookList.secondary);
+  const booksObject = createBooksObject(fullList, books);
+  const primaryList = createBooksList(bookList.primary, books, setMoreInfo);
+  const secondaryList = createBooksList(bookList.secondary, books, setMoreInfo);
+  const details = booksObject.hasOwnProperty(moreInfo)? booksObject[moreInfo]:null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
+  const bookDetails = details?
+  <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} />:null;
 
   return (
     <Container>
@@ -45,7 +48,7 @@ export default function BookPage() {
         section="Other Recommendations"
         bookList={secondaryList}
       />
-      <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} />
+      {bookDetails}
     </Container>
   );
 }
