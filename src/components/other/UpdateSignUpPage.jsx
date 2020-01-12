@@ -6,13 +6,13 @@ import styled from 'styled-components';
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function Home() {
+export default function UpdateSignUpPage() {
   return (
     <Container>
       <Title>About</Title>
       <Heading>Why Learning is the Solution?</Heading>
       <Text>
-          To be completed
+          To Be Completed
       </Text>
     </Container>
   );

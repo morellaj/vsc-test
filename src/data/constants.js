@@ -93,6 +93,18 @@ export const parentInformationList = [
     icon: 'reader',
     text: 'Book Recommendations',
   },
+  {
+    id: 3,
+    tag: 'learning-goals',
+    icon: 'reader',
+    text: 'Learning Goals',
+  },
+  {
+    id: 4,
+    tag: 'references',
+    icon: 'reader',
+    text: 'References',
+  },
 ];
 
 export const defaultCutoff = 60;

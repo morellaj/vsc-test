@@ -2,14 +2,31 @@
   "I-1": {
     "order": "1",
     "title": "Hurting Others",
-    "important-information": [
+    "references": [
+      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201911/the-foolproof-way-keep-your-child-hitting-other-kids",
+      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201306/when-your-child-hits-your-other-child",
+      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201505/why-kids-hit-siblings-and-how-help-them-stop",
+      "https://www.handinhandparenting.org/article/children-hitting-biting-pushing-helping-children-with-aggression-2/",
+      "https://www.ahaparenting.com/ask-the-doctor-1/7-year-old-hitting-parents-tantrumming",
+      "https://www.ahaparenting.com/blog/child_hits_parent",
+      "https://consumer.healthday.com/encyclopedia/children-s-health-10/child-development-news-124/aggression-ages-6-to-12-645908.html",
+      "https://www.empoweringparents.com/article/stop-aggressive-behavior-in-kids-and-tweens-is-your-child-screaming-pushing-and-hitting/",
+      "https://www.psychologytoday.com/us/blog/creative-development/201808/helping-your-child-anger",
+      "https://www.psychologytoday.com/us/blog/growing-friendships/201806/children-s-anger-management-strategies-work",
+      "https://www.psychologytoday.com/us/blog/passive-aggressive-diaries/201905/what-do-when-kids-turn-their-anger-parents",
+      "https://www.psychologytoday.com/us/blog/passive-aggressive-diaries/201708/how-help-kids-manage-anger",
+      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201901/when-your-child-gets-angry-the-cheat-sheet",
+      "https://www.psychologytoday.com/us/blog/creative-development/201901/how-raise-emotionally-healthy-child",
+      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201704/when-your-child-gets-angry-heres-your-gameplan"
+    ],
+    "importantInformation": [
       "Kids hurting each other sometimes is normal.  Kids often learn to stop hurting others on their own.",
       "The best way to prevent future violence is for kids to learn about the consequences of hurting others and the benefits of picking better options.",
       "You can help kids learn by reflecting on why they hurt someone else, the consequences that resulted, and what they could have done instead.",
       "Yelling, punishing, or spanking won't prevent future violence.  These actions put children in a state of fear, which halts their learning.",
       "Kids can't learn when they are upset.  Immediately after an event happens, focus on comforting both kids and helping them recover.  Save the teaching for later."
     ],
-    "learning-goals": [
+    "learningGoals": [
       "Getting mad is okay.  We all get mad sometimes!",
       "Sometimes when we are mad, we feel like hurting others.  Hurting others is never okay.",
       "When we hurt others, we won't get what we want and other kids won't want to play with us.",
@@ -51,13 +68,24 @@
   "C-1": {
     "order": "2",
     "title": "Critical Thinking",
-    "important-information": [
+    "references": [
+      "https://www.psychologytoday.com/us/blog/memory-medic/201110/teaching-children-think",
+      "http://mabryonline.org/blogs/tyson/archive/2005/08/teaching_children_to_think.html",
+      "https://www.psychologytoday.com/us/blog/memory-medic/201710/how-learn-critical-thinking",
+      "https://www.psychologytoday.com/us/blog/thoughts-thinking/201807/15-things-we-have-learned-about-critical-thinking",
+      "https://www.psychologytoday.com/us/blog/thoughts-thinking/201711/5-tips-critical-thinking",
+      "https://www.psychologytoday.com/us/blog/thoughts-thinking/201901/5-barriers-critical-thinking",
+      "https://www.psychologytoday.com/us/blog/brain-waves/201708/how-children-s-brains-learn-reason",
+      "Steven Novella - \"Your Deceptive Mind: A Scientific Guide to Critical Thinking Skills\" ",
+      "Daniel T. Willingham - \"Why Don't Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom\" "
+    ],
+    "importantInformation": [
       "We aren't born with thinking skills, but develop them through practice.",
       "To develop their thinking skills, kids need the space to think for themselves and come up with their own ideas.",
       "Let kids know they are free to come up with their own ideas and change their minds.  Ask them questions about what they think and why.",
       "Telling kids want to think, giving them all the answers, and solving all their problems for them prevents them from practicing their thinking skills."
     ],
-    "learning-goals": [
+    "learningGoals": [
       "We can believe things that aren't true.  Believing something that isn't true can cause us to make bad choices.",
       "Don't believe something just because someone says it.  Think about what makes sense to you and check things out for yourself!",
       "It's okay not to be sure.  Nobody knows everything.",
@@ -89,13 +117,35 @@
   "S-1": {
     "order": "3",
     "title": "Honesty",
-    "important-information": [
+    "references": [
+      "https://www.psychologytoday.com/us/blog/the-nature-deception/201906/why-is-my-child-lying",
+      "https://www.psychologytoday.com/us/blog/youve-had-baby-now-what/201905/why-children-lie-and-what-do-about-it",
+      "https://www.psychologytoday.com/us/blog/our-gender-ourselves/201303/why-kids-lie",
+      "https://www.psychologytoday.com/us/blog/keep-it-in-mind/201801/why-your-child-s-lies-may-be-sign-intelligence",
+      "https://www.psychologytoday.com/us/blog/good-thinking/201406/why-your-child-lies",
+      "https://www.psychologytoday.com/us/blog/school-and-family-matters/201801/does-your-child-lie",
+      "https://www.psychologytoday.com/us/blog/lets-talk-tween/201906/your-lying-tween",
+      "https://www.psychologytoday.com/us/blog/surviving-your-childs-adolescence/201810/confronting-adolescent-lying-and-what-parents-might",
+      "https://www.psychologytoday.com/us/blog/surviving-your-childs-adolescence/200903/adolescent-lying-what-it-costs-and-what-do",
+      "https://www.psychologytoday.com/us/blog/the-baby-scientist/201704/raising-honest-child",
+      "https://www.psychologytoday.com/us/blog/self-reg/201611/the-truth-about-lying",
+      "https://raisingchildren.net.au/preschoolers/behaviour/common-concerns/lies",
+      "https://www.huffpost.com/entry/what-to-do-when-my-child-_b_5355641",
+      "https://www.wired.com/2014/08/teaching-kids-to-tell-truth/",
+      "https://www.psychologytoday.com/us/blog/going-beyond-intelligence/201803/truth-lies-and-imagination",
+      "https://www.parents.com/kids/development/behavioral/the-truth-about-lying/",
+      "https://www.parents.com/kids/development/behavioral/age-by-age-guide-to-lying/",
+      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201306/honesty-anger-and-parenting",
+      "https://www.psychologytoday.com/us/blog/liking-the-child-you-love/201404/four-steps-raising-honest-teen",
+      "https://www.psychologytoday.com/us/blog/parenting-is-contact-sport/201103/teaching-your-kids-be-honest"
+    ],
+    "importantInformation": [
       "Almost all kids start experimenting with lying around the age of 2 or 3.",
       "All adults tell white lies.  Lying to spare the feelings of others or conceal private information is an important skill for adults to have.",
       "Establish the value of honesty in your family.  Discuss the benefits of honest.  Explain that certain kinds of lying are actually okay. ",
       "Sometimes telling the truth is hard.  Make it safe to be honest by avoiding the use of punishments and praising difficult truth telling."
     ],
-    "learning-goals": [
+    "learningGoals": [
       "Trust is when we know someone will tell the truth.  Trust is when we know someone won’t hurt us or our stuff.",
       "It feels good when other people trust us. It feels good when we can trust other people.",
       "Sometimes we might feel like lying to hide something we did wrong or get something we want.  Bad things almost always happen when we lie.",

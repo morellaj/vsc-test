@@ -18,6 +18,5 @@
     },
     "jumpToAliasFile.alias": {
         "Data": "c:\\vsc-test\\src\\data\\"
-    },
-    "files.autoSave": "afterDelay"
+    }
 }

@@ -16,9 +16,11 @@ const Navbar = loadable(() => import('./components/common/Navbar'));
 const Footer = loadable(() => import('./components/common/Footer'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
-const About = loadable(() => import('./components/other/About'));
+const AboutPage = loadable(() => import('./components/other/AboutPage'));
 const BookPage = loadable(() => import('./components/books/BookPage'));
-
+const FeedbackPage = loadable(() => import('./components/other/FeedbackPage'));
+const UpdateSignUpPage = loadable(() => import('./components/other/UpdateSignUpPage'));
+const TopicRecommendationPage = loadable(() => import('./components/other/TopicRecommendationPage'));
 
 ReactDOM.render((
   <BrowserRouter>
@@ -27,11 +29,11 @@ ReactDOM.render((
       <Route exact path="/" component={Home} />
       <Route path="/units" component={CharacterPage} />
       <Route path="/book" component={PDFPage} />
-      <Route path="/about" component={About} />
+      <Route path="/about" component={AboutPage} />
       <Route path="/book-recommendations" component={BookPage} />
-      <Route path="/feedback" component={Home} />
-      <Route path="/update-sign-up" component={Home} />
-      <Route path="/topic-recommendation" component={Home} />
+      <Route path="/feedback" component={FeedbackPage} />
+      <Route path="/update-sign-up" component={UpdateSignUpPage} />
+      <Route path="/topic-recommendation" component={TopicRecommendationPage} />
       <Route component={CharacterPage} />
     </Switch>
     <Footer />

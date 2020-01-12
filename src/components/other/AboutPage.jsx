@@ -6,10 +6,14 @@ import styled from 'styled-components';
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function FeedbackPage(props) {
+export default function AboutPage() {
   return (
     <Container>
-      To Be Completed
+      <Title>About</Title>
+      <Heading>Why Learning is the Solution?</Heading>
+      <Text>
+          To Be Completed
+      </Text>
     </Container>
   );
 }

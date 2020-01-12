@@ -14,6 +14,7 @@ import UnitArr from './UnitArr';
 
 const TopicSubmission = loadable(() => import('./TopicSubmission'));
 const Feedback = loadable(() => import('./Feedback'));
+const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -21,6 +22,7 @@ const Feedback = loadable(() => import('./Feedback'));
 export default function CharacterPage() {
   const [unitSelected, setUnitSelected] = useState(0);
   const [done, setDone] = useState(false);
+  const [info, setInfo] = useState();
   const location = window.location.search.slice(1);
   const url = window.location.href;
   const newUrl = url.replace(`?${location}`, '');
@@ -43,6 +45,9 @@ export default function CharacterPage() {
 
   const unitName = unitArr[unitSelected].unit;
 
+  const infoDisplay = info
+    ? <InformationDisplay info={info} setInfo={setInfo} unit={unitName} /> : null;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -55,10 +60,15 @@ export default function CharacterPage() {
           unitSelected={unitSelected}
           setUnitSelected={setUnitSelected}
         />
-        <UnitActivities unit={character[unitName]} unitName={unitName} />
+        <UnitActivities
+          unit={character[unitName]}
+          unitName={unitName}
+          setInfo={setInfo}
+        />
       </ActivitiesContainer>
       <TopicSubmission />
       <Feedback />
+      {infoDisplay}
     </ThemeProvider>
   );
 }

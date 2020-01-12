@@ -11,6 +11,7 @@
     "d": "npm run webpack --mode development",
     "dev": "webpack --mode development && node server.js",
     "client": "webpack-dev-server --mode development --devtool cheap-eval-source-map",
+    "client:detailed": "webpack-dev-server --mode development --devtool inline-source-map",
     "server": "nodemon server.js",
     "start:dev": "npm run build:dev && node server.js"
   },

@@ -4,18 +4,29 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // Component dependencies
-import CategoryInformation from './CategoryInformation';
+import Icon from 'Icon';
+import CategoryInformation from '../info/InformationDisplay';
 
 /** ************************************ */
 // Component for the description of activities
 /** ******************************** */
 export default function ActivityGroup(props) {
-  const { text, categoryText, activities } = props;
+  const {
+    text, category, setInfo, activities,
+  } = props;
+
+  function handleClick() {
+    console.log('clicked');
+    setInfo({ type: 'categoryInfo', text: category });
+  }
+
   return (
     <Container>
       <GroupHeader>
         <div>{text}</div>
-        <CategoryInformation categoryText={categoryText} />
+        <IconContainer onClick={handleClick}>
+          <Icon icon="question" onClick={handleClick} />
+        </IconContainer>
       </GroupHeader>
       <Activities>{activities}</Activities>
     </Container>
@@ -51,4 +62,12 @@ const Activities = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
+`;
+
+const IconContainer = styled.div`
+  cursor: pointer;
+  color: gray;
+  font-size: 25px;
+  display:flex;
+  align-items:center;
 `;

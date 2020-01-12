@@ -14,7 +14,7 @@ const { iconList, descriptionCutoff } = unitActivitiesConstants;
 // Component for displaying the activities section
 /** ********************************************* */
 export default function UnitActivities(props) {
-  const { unit, unit: { activities, description, title } } = props;
+  const { unit, setInfo, unit: { activities, description, title } } = props;
 
   const list = {};
   for (const act in activities) {
@@ -43,7 +43,7 @@ export default function UnitActivities(props) {
           <Description description={description} cutoff={descriptionCutoff} />
         </DescriptionContainer>
       </HeaderContainer>
-      <ActivityDisplay list={list} unit={unit} />
+      <ActivityDisplay list={list} unit={unit} setInfo={setInfo} />
     </Container>
   );
 }

@@ -16,7 +16,7 @@ import ParentInformation from './ParentInformation';
 // Component for the description of activities
 /** ******************************** */
 export default function ActivityDisplay(props) {
-  const { list, unit: { title } } = props;
+  const { list, setInfo, unit: { title } } = props;
   const unit = title.replace(/\s+/g, '-').toLowerCase();
   const singleDisplay = [];
   const multipleDisplay = [];
@@ -24,8 +24,9 @@ export default function ActivityDisplay(props) {
   singleDisplay.push(
     <ActivityGroup
       text="Parent Information"
-      categoryText={activityCategoryText.parent}
-      activities={<ParentInformation unit={unit} />}
+      setInfo={setInfo}
+      category="parent"
+      activities={<ParentInformation unit={unit} setInfo={setInfo} />}
       key="parent"
     />,
   );
@@ -41,7 +42,8 @@ export default function ActivityDisplay(props) {
     const display = (
       <ActivityGroup
         text={list[cat].text}
-        categoryText={activityCategoryText[cat]}
+        setInfo={setInfo}
+        category={cat}
         activities={activities}
         key={cat}
       />
