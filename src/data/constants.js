@@ -96,13 +96,13 @@ export const parentInformationList = [
   {
     id: 3,
     tag: 'learning-goals',
-    icon: 'reader',
+    icon: 'smart',
     text: 'Learning Goals',
   },
   {
     id: 4,
     tag: 'references',
-    icon: 'reader',
+    icon: 'list',
     text: 'References',
   },
 ];

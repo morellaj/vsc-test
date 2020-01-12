@@ -104,6 +104,8 @@ const Item = styled.li`
   margin-bottom:10px;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
+  width: fit-content;
 
   :hover{
     background-color: lightgray;

@@ -47,6 +47,7 @@ const Title = styled.div`
 const Label = styled.div`
   font-size: 25px;
   font-weight: 700;
+  margin-bottom: 10px;
 `;
 
 const Text = styled.li`

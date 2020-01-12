@@ -23,10 +23,6 @@ export default function PDFPage() {
   const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   function handleResize() {
     if (window.innerWidth / window.innerHeight <= 16 / 9) {
       setScale(window.innerWidth / 960);
@@ -74,7 +70,11 @@ export default function PDFPage() {
 
 
   return (
-    <StyledFullscreen enabled={full} onChange={onFullScreenChange}>
+    <StyledFullscreen
+      enabled={full}
+      onChange={onFullScreenChange}
+      style={{ 'margin-top': '20px' }}
+    >
       <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
       <StyledDoc
         file={file}
@@ -111,7 +111,7 @@ const StyledFullscreen = styled(Fullscreen)`
 const StyledDoc = styled(Document)`
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 70%;
   margin-bottom: 20px;
 `;
 

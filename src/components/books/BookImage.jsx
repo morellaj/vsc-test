@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 
 // Component for displaying an individual book
 export default function BookImage(props) {
-  const { images, imageLinks: { thumbnail, smallThumbnail } } = props;
+  const { imageLinks, imageLinks: { thumbnail, smallThumbnail } } = props;
   let image;
-  if (!images) {
+  if (!imageLinks) {
     image = <ImageMissing><div>No Image Available</div></ImageMissing>;
   } else if (thumbnail) {
     image = <Image src={thumbnail.replace('http://', 'https://')} />;

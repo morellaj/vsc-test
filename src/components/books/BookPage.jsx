@@ -57,7 +57,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 40px 100px 40px;
 `;
 
 const Header = styled.div`
