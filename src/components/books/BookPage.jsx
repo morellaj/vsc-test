@@ -4,16 +4,15 @@ import styled from 'styled-components';
 
 
 // Component dependencies
-import Section from './Section';
-import BookDetails from './BookDetails';
-import { createBooksObject, createBooksList } from './Functions';
 
 // Data files
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
-import {booksUnitList} from 'Constants';
-
+import { booksUnitList } from 'Constants';
+import { createBooksObject, createBooksList } from './Functions';
+import BookDetails from './BookDetails';
+import Section from './Section';
 
 
 // Component for displaying book pages
@@ -25,14 +24,14 @@ export default function BookPage() {
   const booksObject = createBooksObject(fullList, books);
   const primaryList = createBooksList(bookList.primary, books, setMoreInfo);
   const secondaryList = createBooksList(bookList.secondary, books, setMoreInfo);
-  const details = booksObject.hasOwnProperty(moreInfo)? booksObject[moreInfo]:null;
+  const details = booksObject.hasOwnProperty(moreInfo) ? booksObject[moreInfo] : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
-  const bookDetails = details?
-  <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} />:null;
+  const bookDetails = details
+    ? <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} /> : null;
 
   return (
     <Container>

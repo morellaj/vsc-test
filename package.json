@@ -6,11 +6,13 @@
   "homepage": "learningisthesolution.glitch.me",
   "scripts": {
     "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "start": "npm run build && node server.js",
-    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "d": "npm run webpack --mode development",
+    "dev": "webpack --mode development && node server.js",
+    "client": "webpack-dev-server --mode development --devtool cheap-eval-source-map",
     "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "npm run build:dev && node server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",

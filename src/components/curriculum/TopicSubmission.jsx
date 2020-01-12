@@ -18,7 +18,9 @@ export default function TopicSubmission() {
             Interested in a topic that isn&apos;t available yet or isn&apos;t listed?
             Let us know below!
           </Line>
-          <Explanation>Your feedback will help decide which topics are prioritized next.</Explanation>
+          <Explanation>
+            Your feedback will help decide which topics are prioritized next.
+          </Explanation>
         </TextContainer>
         <InputForm method="GET" action="/submit-form">
           <InputText type="text" placeholder="Request a topic!" required />

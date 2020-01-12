@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 
 // Component dependencies
-import { activityCategoryText } from 'Constants';
+import activityCategoryText from 'Data/activityCategoryText.json';
 import ActivityGroup from './ActivityGroup';
 import SingleActivity from './SingleActivity';
 import ParentInformation from './ParentInformation';

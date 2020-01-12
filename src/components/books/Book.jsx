@@ -9,7 +9,9 @@ import BookImage from './BookImage';
 
 // Component for displaying an individual book
 export default function Book(props) {
-  const { value, subtitle, title, imageLinks } = props;
+  const {
+    value, subtitle, title, imageLinks,
+  } = props;
   const titleDisplay = subtitle ? (
     <Title>
       {`${title}: `}

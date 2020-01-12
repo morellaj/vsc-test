@@ -1,9 +1,12 @@
 {
     "files.exclude": {
         "_redirects": true,
+        ".eslintrc.js": true,
         ".eslintrc.jsa": true,
+        ".git": true,
         ".gitattributes": true,
         ".gitignore": true,
+        ".history": true,
         ".lfsconfig": true,
         ".netlify": true,
         ".vscode": true,

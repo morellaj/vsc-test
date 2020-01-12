@@ -15,7 +15,7 @@ export default function ActivityGroup(props) {
     <Container>
       <GroupHeader>
         <div>{text}</div>
-        <CategoryInformation text={categoryText} />
+        <CategoryInformation categoryText={categoryText} />
       </GroupHeader>
       <Activities>{activities}</Activities>
     </Container>
@@ -28,7 +28,7 @@ ActivityGroup.propTypes = {
   categoryText: PropTypes.arrayOf(PropTypes.string).isRequired,
   activities: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.symbol,
-    PropTypes.object
+    PropTypes.object,
   ])).isRequired,
 };
 

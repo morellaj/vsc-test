@@ -11,9 +11,9 @@ import {
 
 
 // Component dependencies
-const Home = loadable(() => import ('./components/home/HomePage'));
-const Navbar = loadable(() => import ('./components/common/Navbar'));
-const Footer = loadable(() => import ('./components/common/Footer'));
+const Home = loadable(() => import('./components/home/HomePage'));
+const Navbar = loadable(() => import('./components/common/Navbar'));
+const Footer = loadable(() => import('./components/common/Footer'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
 const About = loadable(() => import('./components/other/About'));

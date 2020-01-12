@@ -76,7 +76,7 @@ const Status = styled.div`
 
 const NotAvailable = styled.div`
   position:absolute;
-  font-family: 'Montserrate', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: white;
   font-weight: 900;

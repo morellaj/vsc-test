@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-// Component dependences
+// Component dependencies
 import colors from 'Colors';
 
 // Component for the controls on the pdf page

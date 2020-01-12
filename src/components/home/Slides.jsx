@@ -8,16 +8,14 @@ import PropTypes from 'prop-types';
 // Component for displaying the home page
 /** ********************************************* */
 export default function Slides(props) {
-  const { pictureList, fadeProperties, type } = props;
-  const picList = pictureList.map((pic) => {
-    return (
-      <SlideContainer key={pic.id}>
-        <PicContainer>
-          <Pic src={pic.src} />
-        </PicContainer>
-      </SlideContainer>
-    );
-  });
+  const { pictureList, fadeProperties } = props;
+  const picList = pictureList.map((pic) => (
+    <SlideContainer key={pic.id}>
+      <PicContainer>
+        <Pic src={pic.src} />
+      </PicContainer>
+    </SlideContainer>
+  ));
 
   return (
     <Fade {...fadeProperties}>

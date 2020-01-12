@@ -5,14 +5,15 @@ import loadable from '@loadable/component';
 
 
 // Component dependencies and data files
+import colors from 'Colors';
+import character from 'Data/character.json';
+import { characterUnitNumbers } from 'Constants';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
+
 const TopicSubmission = loadable(() => import('./TopicSubmission'));
 const Feedback = loadable(() => import('./Feedback'));
-import colors from 'Colors';
-import character from 'Data/character.json';
-import {characterUnitNumbers} from 'Constants';
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -25,6 +26,7 @@ export default function CharacterPage() {
   const newUrl = url.replace(`?${location}`, '');
   const locationUnit = characterUnitNumbers.indexOf(location) !== -1
     ? characterUnitNumbers.indexOf(location) : unitSelected;
+  // eslint-disable-next-line no-restricted-globals
   history.pushState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
   if (!done) {
     setUnitSelected(locationUnit);

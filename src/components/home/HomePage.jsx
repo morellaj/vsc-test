@@ -7,6 +7,7 @@ import loadable from '@loadable/component';
 // Component dependencies
 import IntroPictures from './IntroPictures';
 import TryButton from './TryButton';
+
 const TopicsDisplay = loadable(() => import('./TopicsDisplay'));
 const Details = loadable(() => import('./Details'));
 
@@ -14,11 +15,10 @@ const Details = loadable(() => import('./Details'));
 // Component for displaying the home page
 /** ********************************************* */
 export default function Home() {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   });
-  
+
   return (
     <>
       <IntroPictures />
