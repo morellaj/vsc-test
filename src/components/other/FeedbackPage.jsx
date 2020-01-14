@@ -2,14 +2,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function FeedbackPage(props) {
+export default function FeedbackPage() {
   return (
     <Container>
-      To Be Completed
+      <Survey
+        id="survey"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc3pj6Atnic8Xyrn06VKb7LK5xxNJ_YF85ugHTeC2f2UppzHQ/viewform?embedded=true"
+        scrolling="no"
+        height="700px"
+        width="640px"
+      />
+
     </Container>
   );
 }
@@ -17,17 +23,12 @@ export default function FeedbackPage(props) {
 
 // Styling
 const Container = styled.div`
- 
+  justify-content: center;
+  padding-top:20px;
+  display: flex;
+  justify-content: center;
 `;
 
-const Title = styled.div`
-
-`;
-
-const Heading = styled.div`
-
-`;
-
-const Text = styled.div`
-
+const Survey = styled.iframe`
+  border-width: 0;
 `;
