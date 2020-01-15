@@ -1,6 +1,7 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // Component dependencies
 import colors from 'Colors';
@@ -12,21 +13,14 @@ import colors from 'Colors';
 export default function TopicSubmission() {
   return (
     <Container>
-      <FormContainer>
-        <TextContainer>
-          <Line>
-            Interested in a topic that isn&apos;t available yet or isn&apos;t listed?
-            Let us know below!
-          </Line>
-          <Explanation>
-            Your feedback will help decide which topics are prioritized next.
-          </Explanation>
-        </TextContainer>
-        <InputForm method="GET" action="/submit-form">
-          <InputText type="text" placeholder="Request a topic!" required />
-          <InputButton type="submit">Submit</InputButton>
-        </InputForm>
-      </FormContainer>
+      <Line>
+        Interested in topics that aren&apos;t available yet or aren&apos;t listed?
+        Let us know below!
+      </Line>
+      <Explanation>
+        Your input helps decide which topics are prioritized next.
+      </Explanation>
+      <Button to="/topic-recommendation">Recommend New Topics</Button>
     </Container>
   );
 }
@@ -35,16 +29,10 @@ export default function TopicSubmission() {
 // Styling
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 40px;
-`;
-
-const FormContainer = styled.div`
-
-`;
-
-const TextContainer = styled.div`
-
 `;
 
 const Line = styled.div`
@@ -56,28 +44,16 @@ const Explanation = styled.div`
   margin-bottom: 10px;
   font-size: 20px;
 `;
-const InputForm = styled.form`
-  display: flex;
-  justify-content: center;
-`;
 
-const InputText = styled.input`
-  padding: 12px 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 20px;
-  margin-right: 20px;
-`;
-
-const InputButton = styled.button`
-  background-color: ${colors.LITS.color};
-  color: white;
+const Button = styled(Link)`
   padding: 14px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 10px;  
+  background-color: ${colors.LITS.color};
+  color: white;
   cursor: pointer;
   font-size: 20px;
+  text-decoration:none;
 
   :hover{
     background-color: ${colors.LITS.darkColor}

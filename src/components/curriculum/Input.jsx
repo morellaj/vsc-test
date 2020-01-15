@@ -14,12 +14,13 @@ export default function Feedback() {
   return (
     <Container>
       <Line>
-        Have an idea for how the website could be better?  Let us know!
+        <span>Your input is priceless!  </span>
+        <StyledLink to="/feedback">Give Us Feedback</StyledLink>
+        <span>{' or '}</span>
+        <StyledLink to="/topic-recommendation">Recommend Our Next Topics</StyledLink>
+         !
       </Line>
-      <Explanation>
-        Our development is driven by your feedback;
-      </Explanation>
-      <Button to="/topic-recommendation">Feedback</Button>
+
     </Container>
   );
 }
@@ -36,26 +37,16 @@ const Container = styled.div`
 `;
 
 const Line = styled.div`
-  font-weight: 700;
   font-size: 30px;
+  margin-bottom: 20px;
 `;
 
-const Explanation = styled.div`
-  margin-bottom: 10px;
-  font-size: 20px;
-`;
+const StyledLink = styled(Link)`
+    color: ${colors.LITS.color};
+    text-decoration: none;
+    font-weight: 900;
 
-const Button = styled(Link)`
-  padding: 14px 20px;
-  border: none;
-  border-radius: 10px;  
-  background-color: ${colors.LITS.color};
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  text-decoration:none;
-
-  :hover{
-    background-color: ${colors.LITS.darkColor}
-  }
+    :hover {
+        color: ${colors.LITS.darkColor};
+    }
 `;

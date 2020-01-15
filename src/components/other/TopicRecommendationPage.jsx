@@ -1,19 +1,24 @@
 // Package dependencies
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
-
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function TopicRecommendationPage() {
+export default function FeedbackPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <Container>
-      <Title>About</Title>
-      <Heading>Why Learning is the Solution?</Heading>
-      <Text>
-          To Be Completed
-      </Text>
+      <Survey
+        id="survey"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdG54U2Qf6IV8b_U7Orf35XGc8opVX9_H8xV6XQhrWbtd1eJw/viewform?embedded=true"
+        scrolling="no"
+        height="700px"
+        width="640px"
+      />
+
     </Container>
   );
 }
@@ -21,17 +26,12 @@ export default function TopicRecommendationPage() {
 
 // Styling
 const Container = styled.div`
- 
+  justify-content: center;
+  padding-top:20px;
+  display: flex;
+  justify-content: center;
 `;
 
-const Title = styled.div`
-
-`;
-
-const Heading = styled.div`
-
-`;
-
-const Text = styled.div`
-
+const Survey = styled.iframe`
+  border-width: 0;
 `;

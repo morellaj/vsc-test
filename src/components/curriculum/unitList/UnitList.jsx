@@ -2,11 +2,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 // Component dependencies
 import Unit from './Unit';
 import Legend from './Legend';
+import colors from 'Colors';
 
 
 /** ********************************************* */
@@ -29,7 +31,10 @@ export default function UnitList(props) {
     <Container>
       <Legend />
       {unitArr}
-      <RequestText>Have a topic you want us to work on?   Submit it below!</RequestText>
+      <RequestText>
+        <span>{'Have a topic you want us to work on next?  '}</span>
+        <StyledLink to="/topic-recommendation">Click here!</StyledLink>
+      </RequestText>
     </Container>
   );
 }
@@ -50,5 +55,14 @@ const Container = styled.div`
 
 const RequestText = styled.div`
   margin-top: 10px;
-  font-weight: 700;
+`;
+
+const StyledLink = styled(Link)`
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+
+  :hover {
+    color: ${colors.LITS.darkColor};
+  }
 `;

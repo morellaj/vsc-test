@@ -1,11 +1,14 @@
 // Package dependencies
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
 export default function FeedbackPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <Container>
       <Survey

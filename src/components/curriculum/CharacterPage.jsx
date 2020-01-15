@@ -15,6 +15,7 @@ import UnitArr from './UnitArr';
 const TopicSubmission = loadable(() => import('./TopicSubmission'));
 const Feedback = loadable(() => import('./Feedback'));
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
+const Input = loadable(() => import('./Input'));
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -66,8 +67,7 @@ export default function CharacterPage() {
           setInfo={setInfo}
         />
       </ActivitiesContainer>
-      <TopicSubmission />
-      <Feedback />
+      <Input />
       {infoDisplay}
     </ThemeProvider>
   );
