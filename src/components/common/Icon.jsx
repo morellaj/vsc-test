@@ -15,6 +15,8 @@ import {
   faFileAlt,
   faTv,
   faQuestionCircle,
+  faInfoCircle,
+  faCommentDots,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faListAlt,
@@ -38,6 +40,8 @@ const iconList = {
   text: faFileAlt,
   show: faTv,
   question: faQuestionCircle,
+  info: faInfoCircle,
+  comment: faCommentDots,
 };
 
 /** ********************************************* */

@@ -51,5 +51,7 @@ const PicContainer = styled.div`
 
 const Pic = styled.img`
   width: 100%;
+  /*
   max-width: 1100px;
+  */
 `;

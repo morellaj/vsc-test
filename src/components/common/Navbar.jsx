@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 // Component dependencies and data files
 import colors from 'Colors';
 import { navbarList } from 'Constants';
+import Icon from 'Icon';
 import LogoPicture from '../../../assets/logo-white-small.webp';
 
 
@@ -15,7 +16,8 @@ export default function Navbar() {
   const items = navbarList.map((unit) => (
     <Item key={unit.title}>
       <StyledLink to={unit.link}>
-        {unit.title}
+        <Icon icon={unit.icon} />
+        <ItemText>{unit.title}</ItemText>
       </StyledLink>
     </Item>
   ));
@@ -36,16 +38,13 @@ export default function Navbar() {
 const Container = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 5px;
   background-color: ${colors.LITS.color};
 `;
 
 const LogoContainer = styled(Link)`
-  display: flex;
-  flex: 0 0 260px;
-  justify-content: center;
   padding: 5px;
-  border-radius: 30px;
+  border-radius: 5px;
+  margin: 5px 20px;
 
   :hover{
     background-color: ${colors.LITS.darkColor};
@@ -53,8 +52,7 @@ const LogoContainer = styled(Link)`
 `;
 
 const Logo = styled.img`
-  width: 90%;
-  max-width: 250px;
+  height: 50px;
 `;
 
 const List = styled.ul`
@@ -62,8 +60,8 @@ const List = styled.ul`
   justify-content: flex-end;
   align-items:center;
   margin: 0 20px 0 0;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   color: white;
   list-style-type: none;
 `;
@@ -71,7 +69,7 @@ const List = styled.ul`
 const Item = styled.li`
   padding: 10px;
   border-radius: 15px;
-  margin: 10px 30px;
+  margin: 10px;
 
   :hover{
     background-color: ${colors.LITS.darkColor};
@@ -79,6 +77,13 @@ const Item = styled.li`
 `;
 
 const StyledLink = styled(Link)`
+  display: flex;
   color: inherit;
   text-decoration: none;
+`;
+
+const ItemText = styled.div`
+ @media(max-width: 783px) {
+   display: none;
+ }
 `;

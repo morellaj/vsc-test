@@ -112,14 +112,17 @@ export const defaultCutoff = 60;
 export const navbarList = [
   {
     title: 'Online Books',
-    link: '/units',
+    icon: 'reader',
+    link: '/update-sign-up',
   },
   {
     title: 'About',
+    icon: 'info',
     link: '/about',
   },
   {
     title: 'Give Feedback',
+    icon: 'comment',
     link: '/feedback',
   },
 ];

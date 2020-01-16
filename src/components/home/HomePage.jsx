@@ -20,7 +20,7 @@ export default function Home() {
   });
 
   return (
-    <>
+    <Container>
       <IntroPictures />
       <SectionLabel>CURRENT TOPICS</SectionLabel>
       <TopicsDisplay />
@@ -28,12 +28,17 @@ export default function Home() {
       <TryContainer>
         <TryButton />
       </TryContainer>
-    </>
+    </Container>
   );
 }
 
 
 // Styling
+const Container = styled.div`
+  font-size: 16px;
+  line-height: 1.5;
+`;
+
 const SectionLabel = styled.h1`
   display: flex;
   justify-content: center;

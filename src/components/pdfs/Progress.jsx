@@ -38,7 +38,6 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  font-family: 'Montserrat', sans-serif;
   color: white;
   background-color: ${colors.LITS.color};
   font-size: 40px;
