@@ -7,7 +7,7 @@ import { detailsConstants } from 'Constants';
 import DetailItem from './DetailItem';
 import DetailsSlides from './DetailsSlides';
 
-const { textList, pictureList, slideProperties } = detailsConstants;
+const { textList, pictureList } = detailsConstants;
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -49,6 +49,10 @@ const Heading = styled.div`
   @media(max-width: 1050px){
     font-size: 28px;
   }
+
+  @media(max-width: 900px){
+    font-size: 24px;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -81,9 +85,8 @@ const RightContainer = styled.div`
 `;
 
 const SlideshowContainer = styled.div`
-  max-width: 700px;
-
-  @media (max-width: 1000px) {
-    margin-bottom: 20px;
-  }
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  position:relative;
 `;

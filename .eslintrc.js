@@ -37,6 +37,7 @@ module.exports = {
           ['Common', './src/components/common/'],
           ['Icon', './src/components/common/Icon.jsx'],
           ['Constants', './src/data/constants.js'],
+          ['Assets', './assets/'],
         ]
       }
     }

@@ -60,12 +60,6 @@ export const detailsConstants = {
   ],
 };
 
-export const introSlideProperties = {
-  duration: 5000,
-  transitionDuration: 1000,
-  arrows: false,
-};
-
 export const characterUnitNumbers = ['hurting-others', 'critical-thinking', 'honesty'];
 
 export const unitActivitiesConstants = {
@@ -132,3 +126,5 @@ export const booksUnitList = {
   'critical-thinking': 'C-1',
   honesty: 'S-1',
 };
+
+export const introPicCount = 5;

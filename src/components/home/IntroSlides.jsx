@@ -4,33 +4,27 @@ import useInterval from 'react-useinterval';
 import styled from 'styled-components';
 import ReactTimeout from 'react-timeout';
 
+// Data dependencies
+import { introPicCount } from 'Constants';
+
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-function HomeSlides(props) {
+function IntroSlides() {
   const [count, setCount] = useState(0);
   const [mode, setMode] = useState(false);
-  const { pictureList } = props;
-  const picList = pictureList.map((pic, i) => (
-    <SlideContainer
-      iFactor={pic.iFactor}
-      fFactor={pic.fFactor}
-      iBottom={pic.iBottom}
-      fBottom={pic.fBottom}
-      iLeft={pic.iLeft}
-      fLeft={pic.fLeft}
-      iWidth={pic.iWidth}
-      fWidth={pic.fWidth}
-      value={i}
-      count={count}
-      mode={mode}
-      key={pic.id}
-    >
-      <PicContainer>
-        <Pic src={pic.src} />
-      </PicContainer>
-    </SlideContainer>
-  ));
+  const picList = [];
+  for (let i = 0; i < introPicCount; i += 1) {
+    picList.push(
+      <SlideContainer value={i} count={count} mode={mode} key={i}>
+        <PicContainer>
+          <source srcSet={`Assets/Home${i + 1}.webp`} />
+          <Pic src={`Assets/Home${i + 1}.jpg`} />
+        </PicContainer>
+      </SlideContainer>,
+    );
+  }
+
 
   function start() {
     setMode(true);
@@ -49,7 +43,7 @@ function HomeSlides(props) {
     setTimeout(start, 1);
   }, []);
 
-  useInterval(counter, 5000);
+  useInterval(counter, 10000);
 
 
   return (
@@ -59,10 +53,7 @@ function HomeSlides(props) {
   );
 }
 
-export default ReactTimeout(Slides);
-
-// Props validation
-
+export default ReactTimeout(IntroSlides);
 
 // Styling
 const SlideContainer = styled.div`
@@ -71,26 +62,27 @@ const SlideContainer = styled.div`
   align-items: center;
   overflow: hidden;
   opacity: ${(props) => (props.count === props.value ? 1 : 0)};
-  transition: opacity 1s, width 20s;
+  transition: opacity 1s, width 10s;
+  transition-timing-function: linear;
   position: absolute;
   bottom: 0;
   box-shadow: 0 0 0 #000;
   transform: translate3d(0, 0, 0);
 
   width: ${(props) => (
-    props.mode ? `${118.6 * props.iFactor}%` : `${118.6 * props.fFactor}%`)};
+    props.mode ? `${118.6 * 1}%` : `${118.6 * 1.1}%`)};
 
 
   @media (min-width: 1280px){
     width: ${(props) => (
-    props.mode ? `${1519 * props.iFactor}px` : `${1519 * props.fFactor}px`)}};
+    props.mode ? `${1519 * 1}px` : `${1519 * 1.1}px`)}};
 
   @media (min-width: 1532px){
     width: ${(props) => (
-    props.mode ? `${100 * props.iFactor}%` : `${100 * props.fFactor}%`)}};
+    props.mode ? `${100 * 1}%` : `${100 * 1.1}%`)}};
 `;
 
-const PicContainer = styled.div`
+const PicContainer = styled.picture`
   display: flex;
   width: 100%;
   justify-content: center;
@@ -98,7 +90,4 @@ const PicContainer = styled.div`
 
 const Pic = styled.img`
   width: 100%;
-  /*
-  max-width: 1100px;
-  */
 `;
