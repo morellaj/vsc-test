@@ -2,7 +2,6 @@
 import React from 'react';
 import { Fade } from 'react-slideshow-image';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -24,15 +23,6 @@ export default function Slides(props) {
   );
 }
 
-// Props validation
-Slides.propTypes = {
-  pictureList: PropTypes.arrayOf(PropTypes.object).isRequired,
-  fadeProperties: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.number,
-  ])).isRequired,
-  type: PropTypes.string.isRequired,
-};
 
 
 // Styling

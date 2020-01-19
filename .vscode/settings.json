@@ -1,7 +1,6 @@
 {
     "files.exclude": {
         "_redirects": true,
-        ".eslintrc.js": true,
         ".eslintrc.jsa": true,
         ".git": true,
         ".gitattributes": true,

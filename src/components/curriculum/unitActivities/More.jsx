@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 
 /** ************************************ */
@@ -16,13 +15,6 @@ export default function More(props) {
     </MoreSpan>
   );
 }
-
-// Props validation
-More.propTypes = {
-  more: PropTypes.bool.isRequired,
-  setMore: PropTypes.func.isRequired,
-};
-
 
 // Styling
 const MoreSpan = styled.span`

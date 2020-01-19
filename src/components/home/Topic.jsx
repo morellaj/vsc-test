@@ -1,86 +1,135 @@
 // Package dependencies
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
+// Data dependencies
+import colors from 'Colors';
+import Icon from 'Icon';
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
 export default function Topic(props) {
-  const { status, text } = props;
+  const [hover, setHover] = useState(false);
+  const {
+    done, text, imgStyle, containerStyle,
+  } = props;
   const unit = text.replace(/\s+/g, '-').toLowerCase();
+
+  function handleMouseOver() {
+    setHover(true);
+  }
+
+  function handleMouseOut() {
+    setHover(false);
+  }
+
   return (
-    <Container>
-      <Image src={`./assets/${unit}.webp`} status={status} />
-      <NotAvailable status={status}>Not Available Yet</NotAvailable>
-      <TextContainer>
-        <Title>{text}</Title>
-        <Status status={status}>{status}</Status>
-      </TextContainer>
+    <Container onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+      <NotFinished done={done}>
+        <NotAvailable>Not Available Yet</NotAvailable>
+      </NotFinished>
+      <ImageContainer style={containerStyle}>
+        <ImageCover done={done} hover={hover}>
+          <CoverText>
+            Click to see books
+            <Icon icon="arrow" />
+          </CoverText>
+        </ImageCover>
+        <Image src={`./assets/${unit}.webp`} style={imgStyle} />
+      </ImageContainer>
+      <Title>{text}</Title>
     </Container>
   );
 }
 
-Topic.propTypes = {
-  status: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-};
 
 // Styling
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   margin: 30px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
   width: 250px;
   height: 250px;
-  box-shadow: 0 0 20px 0 #000000;
+  box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
   background-color:white;
+
+  @media (max-width: 1000px){
+    width: 150px;
+    height: 150px;
+  };
 `;
 
-const Image = styled.img`
-  max-width: 250px;
-  max-height: 250px;
-  border-radius: 20px;
-  opacity: ${(props) => (props.status === 'Available' ? 1 : 0.7)};
-`;
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const NotFinished = styled.div`
+  position: absolute;
+  height: 100%;
+  z-index: 5;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: ${(props) => (props.done ? 'none' : 'flex')};
   justify-content: center;
   align-items: center;
+`;
+
+const NotAvailable = styled.div`
+  font-size: 14px;
+  color: white;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px 10px;
+  border-radius: 5px;
+
+  @media(max-width: 1000px){
+    font-size: 12px;
+  }
+`;
+
+
+const ImageContainer = styled.div`
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+
+  @media(max-width: 1000px){
+    height: 130px;
+    font-size: 14px;
+  };
+`;
+
+const ImageCover = styled.div`
   position: absolute;
-  top: -30px;
-  padding: 10px;
-  border: 3px solid black;
-  border-radius: 20px;
-  max-width: 200px;
-  background-color: white;
-  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  transition: background-color 1s;
+  background-color: rgba(0, 94, 167, .7);
+  display: ${(props) => (props.done && props.hover ? 'flex' : 'none')};
+`;
+
+const CoverText = styled.div`
+  
+`;
+const Image = styled.img`
+  position: absolute;
+  width: 100%;
+  max-height: 250px;
 `;
 
 const Title = styled.div`
   font-size: 20px;
-  margin-bottom: 5px;
-  color: black;
-  text-align: center;
-`;
-
-const Status = styled.div`
-  color: ${(props) => (props.status === 'Available' ? 'green' : 'darkslategray')}
-`;
-
-const NotAvailable = styled.div`
-  position:absolute;
-  font-size: 14px;
   color: white;
-  font-weight: 900;
-  background-color: rgba(0, 0, 0, .5);
-  padding: 2px 10px;
-  border-radius: 20px;
-  display: ${(props) => (props.status === 'Available' ? 'none' : 'block')}
+  font-weight: 500;
+  text-align: center;
+  height: 30px;
+  background-color: ${colors.LITS.darkColor};
+
+  @media(max-width:1000px){
+    font-size: 14px;
+  };
 `;

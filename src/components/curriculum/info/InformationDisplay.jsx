@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import CategoryInformation from './CategoryInformation';
@@ -36,11 +35,6 @@ export default function InformationDisplay(props) {
     </Container>
   );
 }
-
-// Props validation
-CategoryInformation.propTypes = {
-  text: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 
 // Styling

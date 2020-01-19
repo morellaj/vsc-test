@@ -4,39 +4,66 @@ import styled from 'styled-components';
 
 // Component dependencies
 import { introSlideProperties } from 'Constants';
-import Slides from './Slides';
-import NewSlides from './NewSlides';
-import Home8 from '../../../assets/Home8.webp';
-import Home34 from '../../../assets/Home34.webp';
+import IntroSlides from './IntroSlides';
+import Home1 from '../../../assets/Home1.webp';
+import Home2 from '../../../assets/Home2.webp';
+import Home3 from '../../../assets/Home3.webp';
+import Home4 from '../../../assets/Home4.webp';
 import Home5 from '../../../assets/Home5.webp';
-import Home12 from '../../../assets/Home12.webp';
-import Home10 from '../../../assets/Home10.webp';
 import TryButton from './TryButton';
 
 // Constants
 const pictureList = [
   {
     id: 1,
-    src: Home8,
+    src: Home1,
     iLeft: 0,
     fLeft: 0,
     iBottom: 0,
     fBottom: 0,
     iWidth: '100%',
     fWidth: '110%',
+    iFactor: '1',
+    fFactor: '1.1',
   },
   {
     id: 2,
-    src: Home34,
+    src: Home2,
     iLeft: 0,
     fLeft: 0,
     iBottom: 0,
     fBottom: 0,
     iWidth: '110%',
     fWidth: '100%',
+    iFactor: '1.1',
+    fFactor: '1',
   },
   {
     id: 3,
+    src: Home3,
+    iLeft: 0,
+    fLeft: 0,
+    iBottom: 0,
+    fBottom: 0,
+    iWidth: '100%',
+    fWidth: '110%',
+    iFactor: '1',
+    fFactor: '1.1',
+  },
+  {
+    id: 4,
+    src: Home4,
+    iLeft: 0,
+    fLeft: 0,
+    iBottom: 0,
+    fBottom: 0,
+    iWidth: '110%',
+    fWidth: '100%',
+    iFactor: '1.1',
+    fFactor: '1',
+  },
+  {
+    id: 5,
     src: Home5,
     iLeft: 0,
     fLeft: 0,
@@ -44,26 +71,8 @@ const pictureList = [
     fBottom: 0,
     iWidth: '100%',
     fWidth: '110%',
-  },
-  {
-    id: 4,
-    src: Home12,
-    iLeft: 0,
-    fLeft: 0,
-    iBottom: 0,
-    fBottom: 0,
-    iWidth: '110%',
-    fWidth: '100%',
-  },
-  {
-    id: 5,
-    src: Home10,
-    iLeft: 0,
-    fLeft: 0,
-    iBottom: 0,
-    fBottom: 0,
-    iWidth: '100%',
-    fWidth: '110%',
+    iFactor: '1',
+    fFactor: '1.1',
   },
 ];
 
@@ -74,7 +83,7 @@ export default function IntroParagraph() {
   return (
     <Container>
       <SlidesContainer>
-        <NewSlides pictureList={pictureList} type="Home" fadeProperties={introSlideProperties} />
+        <IntroSlides pictureList={pictureList} type="Home" fadeProperties={introSlideProperties} />
         <TryButtonContainer>
           <TryButton />
         </TryButtonContainer>
@@ -100,19 +109,17 @@ const Container = styled.div`
   overflow: hidden;
   height: 619px;
 
-  @media(max-width:1115px){
-    height: 55vw;
+  @media(max-width: 1280px){
+    height: 47vw;
   }
 `;
 
 const SlidesContainer = styled.div`
   width: 100%;
-  /*
-  max-width: 1100px;
-  height: 55vw;
-  */
   max-height: 618.75px;
   position: relative;
+  display: flex;
+  justify-content:center;
 `;
 
 const IntroTextContainer = styled.div`

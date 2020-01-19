@@ -2,7 +2,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 
 // Component dependencies
@@ -64,18 +63,7 @@ export default function ActivityDisplay(props) {
   );
 }
 
-// Props validation
-ActivityDisplay.propTypes = {
-  unit: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ])).isRequired,
-  list: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ])).isRequired,
-  title: PropTypes.string,
-};
+
 
 ActivityDisplay.defaultValues = {
   title: 'Loading...',

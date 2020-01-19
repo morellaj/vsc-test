@@ -42,11 +42,16 @@ const Container = styled.div`
 const SectionLabel = styled.h1`
   display: flex;
   justify-content: center;
-  margin: 70px 0 40px 0;
-  font-size: 30px;
+  margin-top: 70px;
+  margin-bottom: 0;
+  font-size: 2vw;
   font-weight: 700;
   color: dimgray;
   text-decoration: underline;
+
+  @media(max-width: 1000px){
+    font-size: 20px;
+  }
 `;
 
 const TryContainer = styled.div`

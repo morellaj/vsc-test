@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import character from 'Data/character.json';
@@ -23,8 +22,6 @@ export default function References(props) {
     </>
   );
 }
-
-// Props validation
 
 
 // Styling

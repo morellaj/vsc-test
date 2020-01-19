@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import Icon from 'Icon';
@@ -32,16 +31,6 @@ export default function ActivityGroup(props) {
     </Container>
   );
 }
-
-// Props validation
-ActivityGroup.propTypes = {
-  text: PropTypes.string.isRequired,
-  categoryText: PropTypes.arrayOf(PropTypes.string).isRequired,
-  activities: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.symbol,
-    PropTypes.object,
-  ])).isRequired,
-};
 
 // Styling
 const Container = styled.div`

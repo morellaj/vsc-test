@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 
 // Data files
@@ -30,15 +29,6 @@ export default function Unit(props) {
     </Container>
   );
 }
-
-// Prop validation
-Unit.propTypes = {
-  char: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  num: PropTypes.number.isRequired,
-  setUnitSelected: PropTypes.func.isRequired,
-  unitSelected: PropTypes.bool.isRequired,
-};
 
 // Styling
 const Container = styled.div`

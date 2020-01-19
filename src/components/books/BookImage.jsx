@@ -1,8 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-
 
 // Component for displaying an individual book
 export default function BookImage(props) {
@@ -23,17 +21,6 @@ export default function BookImage(props) {
 }
 
 // Props validation
-BookImage.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  thumbnail: PropTypes.string,
-  smallThumbnail: PropTypes.string,
-};
-
-BookImage.defaultValues = {
-  thumbnail: undefined,
-  smallThumbNail: undefined,
-};
-
 
 // Styling
 const Container = styled.div`

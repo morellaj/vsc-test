@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // Component dependencies
 import { detailsConstants } from 'Constants';
 import DetailItem from './DetailItem';
-import Slides from './Slides';
+import DetailsSlides from './DetailsSlides';
 
 const { textList, pictureList, slideProperties } = detailsConstants;
 
@@ -19,11 +19,15 @@ export default function Details() {
       <Heading>Improving your kid&#39;s behavior has never been this easy, or this fun!</Heading>
       <ContentContainer>
         <TextContainer>
-          {itemList}
+          <List>
+            {itemList}
+          </List>
         </TextContainer>
-        <SlideshowContainer>
-          <Slides pictureList={pictureList} type="Detail" fadeProperties={slideProperties} />
-        </SlideshowContainer>
+        <RightContainer>
+          <SlideshowContainer>
+            <DetailsSlides pictureList={pictureList} />
+          </SlideshowContainer>
+        </RightContainer>
       </ContentContainer>
     </Container>
   );
@@ -32,27 +36,54 @@ export default function Details() {
 // Styling
 const Container = styled.section`
   margin-top: 50px;
-  padding: 20px;
+  padding: 10px 0;
   background-color: rgb(1,145,218, .1);
 `;
 
-const Heading = styled.h1`
+const Heading = styled.div`
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 33px;
+
+  @media(max-width: 1050px){
+    font-size: 28px;
+  }
 `;
 
 const ContentContainer = styled.div`
   display: flex;
+
+  @media (max-width: 1000px){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `;
 
-const TextContainer = styled.ul`
+const TextContainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 50%;
-  font-size: 25px;
+`;
+
+const List = styled.ul`
+  font-size: 18px;
   list-style-type: none;
-  padding-right: 30px;
+  padding: 0;
+  margin: 0;
+  max-width: 450px;
+`;
+
+const RightContainer = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
 `;
 
 const SlideshowContainer = styled.div`
-  width: 50%;
+  max-width: 700px;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 20px;
+  }
 `;

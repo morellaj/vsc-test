@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import { Link } from 'react-router-dom';
@@ -75,11 +74,6 @@ export default function ParentInformation(props) {
     </Container>
   );
 }
-
-// Prop validation
-ParentInformation.propTypes = {
-  unit: PropTypes.string.isRequired,
-};
 
 
 // Styling

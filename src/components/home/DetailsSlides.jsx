@@ -2,17 +2,17 @@
 import React, { useState, useEffect } from 'react';
 import useInterval from 'react-useinterval';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import ReactTimeout from 'react-timeout';
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-function Slides(props) {
-  const [count, setCount] = useState(-2);
+function IntroSlides(props) {
+  const [count, setCount] = useState(0);
   const { pictureList } = props;
   const picList = pictureList.map((pic, i) => (
     <SlideContainer
+      iFactor={pic.iFactor}
+      fFactor={pic.fFactor}
       iBottom={pic.iBottom}
       fBottom={pic.fBottom}
       iLeft={pic.iLeft}
@@ -21,6 +21,7 @@ function Slides(props) {
       fWidth={pic.fWidth}
       value={i}
       count={count}
+      mode={mode}
       key={pic.id}
     >
       <PicContainer>
@@ -30,12 +31,11 @@ function Slides(props) {
   ));
 
   function start() {
-    console.log('start');
-    setCount(0);
+    setMode(true);
   }
 
   function counter() {
-
+    setMode(!mode);
     if (count < picList.length - 1) {
       setCount(count + 1);
     } else {
@@ -57,7 +57,7 @@ function Slides(props) {
   );
 }
 
-export default ReactTimeout(Slides);
+export default ReactTimeout(IntroSlides);
 
 // Props validation
 
@@ -69,14 +69,23 @@ const SlideContainer = styled.div`
   align-items: center;
   overflow: hidden;
   opacity: ${(props) => (props.count === props.value ? 1 : 0)};
-  transition: opacity 1s, left 20s, bottom 20s, width 20s;
+  transition: opacity 1s, width 20s;
   position: absolute;
   bottom: 0;
-  width: ${(props) => (props.count < props.value - 1 ? props.iWidth : props.fWidth)};
-  left: ${(props) => (props.count < props.value - 1 ? props.iLeft : props.fLeft)};
-  bottom: ${(props) => (props.count < props.value - 1 ? props.iBottom : props.fBottom)};
   box-shadow: 0 0 0 #000;
   transform: translate3d(0, 0, 0);
+
+  width: ${(props) => (
+    props.mode ? `${118.6 * props.iFactor}%` : `${118.6 * props.fFactor}%`)};
+
+
+  @media (min-width: 1280px){
+    width: ${(props) => (
+    props.mode ? `${1519 * props.iFactor}px` : `${1519 * props.fFactor}px`)}};
+
+  @media (min-width: 1532px){
+    width: ${(props) => (
+    props.mode ? `${100 * props.iFactor}%` : `${100 * props.fFactor}%`)}};
 `;
 
 const PicContainer = styled.div`

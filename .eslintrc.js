@@ -26,6 +26,7 @@ module.exports = {
     'linebreak-style': "off",
     "import/named" : "off",
     "strict":0,
+    "react/prop-types":"off",
   },
   settings: {
     'import/resolver': {

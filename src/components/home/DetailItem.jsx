@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import Icon from 'Icon';
@@ -27,17 +26,10 @@ export default function DetailItem(props) {
   );
 }
 
-// Prop validation
-DetailItem.propTypes = {
-  item: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ])).isRequired,
-};
 
 // Styling
 const Container = styled.li`
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   display: flex;
 `;
 
@@ -46,6 +38,7 @@ const IconContainer = styled.div`
   justify-content: center;
   width: 31.25px;
   color: ${colors.LITS.color};
+  padding-top: 3px;
 `;
 
 const TextContainer = styled.div`
@@ -53,5 +46,5 @@ const TextContainer = styled.div`
 `;
 
 const Label = styled.span`
-  font-weight: 900;
+  font-weight: 700;
 `;

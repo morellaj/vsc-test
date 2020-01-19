@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import colors from 'Colors';
@@ -19,12 +18,6 @@ export default function ScreenButton(props) {
     </Container>
   );
 }
-
-// Prop type verification
-ScreenButton.propTypes = {
-  perLoaded: PropTypes.func.isRequired,
-  progDisplay: PropTypes.bool.isRequired,
-};
 
 // Styling
 const Container = styled.div`

@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import Icon from 'Icon';
@@ -24,11 +23,6 @@ export default function ScreenButton(props) {
   );
 }
 
-// Prop type verification
-ScreenButton.propTypes = {
-  setFull: PropTypes.func.isRequired,
-  full: PropTypes.bool.isRequired,
-};
 
 const Container = styled.div`
   font-size: 25px;

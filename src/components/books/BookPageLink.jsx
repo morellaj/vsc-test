@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 
 // Data files
@@ -21,8 +20,3 @@ export default function BookPageLink(props) {
   );
 }
 
-// Prop validation
-BookPageLink.propTypes = {
-  unit: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
-};

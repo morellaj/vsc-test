@@ -1,7 +1,6 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import { Link } from 'react-router-dom';
@@ -26,10 +25,6 @@ export default function SingleActivity(props) {
   );
 }
 
-// Prop validation
-SingleActivity.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 // Styling
 const Container = styled.div`

@@ -1,6 +1,5 @@
 // Package dependencies
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBook,
@@ -17,6 +16,7 @@ import {
   faQuestionCircle,
   faInfoCircle,
   faCommentDots,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faListAlt,
@@ -42,6 +42,7 @@ const iconList = {
   question: faQuestionCircle,
   info: faInfoCircle,
   comment: faCommentDots,
+  arrow: faArrowRight,
 };
 
 /** ********************************************* */
@@ -58,8 +59,3 @@ export default function Icon(props) {
     </>
   );
 }
-
-// Props validation
-Icon.propTypes = {
-  icon: PropTypes.string.isRequired,
-};

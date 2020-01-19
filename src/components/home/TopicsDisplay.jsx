@@ -12,52 +12,87 @@ const topicList = [
   {
     id: 1,
     text: 'Hurting Others',
-    status: 'Available',
+    done: true,
+    imgStyle: {},
+    containerStyle: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   {
     id: 2,
     text: 'Critical Thinking',
-    status: 'Available',
+    done: true,
+    imgStyle: {},
+    containerStyle: {},
   },
   {
     id: 3,
     text: 'Honesty',
-    status: 'Available',
+    done: true,
+    imgStyle: { bottom: '0' },
+    containerStyle: {},
   },
   {
     id: 4,
     text: 'Thinking for Yourself',
-    status: 'Date TBD',
+    done: false,
+    imgStyle: { top: '0' },
+    containerStyle: {},
   },
   {
     id: 5,
     text: 'Anger',
-    status: 'Date TBD',
+    done: false,
+    imgStyle: { top: '20px' },
+    containerStyle: {},
   },
   {
     id: 6,
     text: 'Sharing',
-    status: 'Date TBD',
+    done: false,
+    imgStyle: {},
+    containerStyle: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   {
     id: 7,
     text: 'Gratitude',
-    status: 'Date TBD',
+    done: false,
+    imgStyle: {},
+    containerStyle: {},
   },
   {
     id: 8,
     text: 'Caring',
-    status: 'Date TBD',
+    done: false,
+    imgStyle: {},
+    containerStyle: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   {
     id: 9,
-    text: 'Making the World a Better Place',
-    status: 'Date TBD',
+    text: 'Making the World Better',
+    done: false,
+    imgStyle: {},
+    containerStyle: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   {
     id: 10,
     text: 'Diversity',
-    status: 'Date TBD',
+    done: false,
+    imgStyle: {},
+    containerStyle: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
 ];
 
@@ -66,15 +101,28 @@ const topicList = [
 /** ********************************************* */
 export default function TopicsDisplay() {
   const list = topicList.map((item) => {
-    if (item.status === 'Available') {
+    if (item.done) {
       return (
-        <Link to={`/units?${item.text.replace(/\s+/g, '-').toLowerCase()}`} key={item.id}>
-          <Topic status={item.status} text={item.text} />
-        </Link>
+        <StyledLink to={`/units?${item.text.replace(/\s+/g, '-').toLowerCase()}`} key={item.id}>
+          <Topic
+            done={item.done}
+            text={item.text}
+            imgStyle={item.imgStyle}
+            containerStyle={item.containerStyle}
+          />
+        </StyledLink>
       );
     }
 
-    return <Topic status={item.status} text={item.text} key={item.id} />;
+    return (
+      <Topic
+        done={item.done}
+        text={item.text}
+        imgStyle={item.imgStyle}
+        containerStyle={item.containerStyle}
+        key={item.id}
+      />
+    );
   });
 
   return (
@@ -98,4 +146,8 @@ const DisplayContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 50px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

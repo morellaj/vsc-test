@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Data files
 import colors from 'Colors';
@@ -19,11 +18,6 @@ export default function Section(props) {
     </Container>
   );
 }
-
-Section.propTypes = {
-  section: PropTypes.string.isRequired,
-  bookList: PropTypes.arrayOf(PropTypes.number).isRequired,
-};
 
 
 // Styling

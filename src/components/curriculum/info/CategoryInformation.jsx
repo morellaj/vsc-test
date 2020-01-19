@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 // Component dependencies
 import activityCategoryText from 'Data/activityCategoryText.json';
@@ -31,10 +30,6 @@ export default function CategoryInformation(props) {
   );
 }
 
-// Props validation
-CategoryInformation.propTypes = {
-  text: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 
 // Styling

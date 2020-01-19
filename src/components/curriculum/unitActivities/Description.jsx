@@ -1,6 +1,5 @@
 // Package dependencies
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 
 // Component dependencies
@@ -21,13 +20,6 @@ export default function Description(props) {
     </div>
   );
 }
-
-
-// Props validation
-Description.propTypes = {
-  cutoff: PropTypes.number,
-  description: PropTypes.string.isRequired,
-};
 
 Description.defaultProps = {
   cutoff: defaultCutoff,

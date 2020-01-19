@@ -1,7 +1,6 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
@@ -38,13 +37,6 @@ export default function UnitList(props) {
     </Container>
   );
 }
-
-// Prop validation
-UnitList.propTypes = {
-  unitList: PropTypes.arrayOf(PropTypes.object).isRequired,
-  unitSelected: PropTypes.number.isRequired,
-  setUnitSelected: PropTypes.func.isRequired,
-};
 
 
 // Styling
