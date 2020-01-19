@@ -75,7 +75,6 @@ const SlideContainer = styled.div`
 
   @media(min-width: 700px) and (max-width: 800px){
     width: 700px;
-    height: auto;
   }
 
   @media (min-width: 1280px){
@@ -89,6 +88,7 @@ const SlideContainer = styled.div`
 
 const PicContainer = styled.picture`
   display: flex;
+  align-items: flex-end;
   width: 100%;
   justify-content: center;
 `;
