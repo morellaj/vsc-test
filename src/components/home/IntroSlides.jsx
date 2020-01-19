@@ -73,10 +73,6 @@ const SlideContainer = styled.div`
   width: ${(props) => (
     props.mode ? `${118.6 * 1}%` : `${118.6 * 1.1}%`)};
 
-  @media(min-width: 700px) and (max-width: 800px){
-    width: 700px;
-  }
-
   @media (min-width: 1280px){
     width: ${(props) => (
     props.mode ? `${1519 * 1}px` : `${1519 * 1.1}px`)}};
