@@ -1,10 +1,4 @@
-export const detailsConstants = {
-  slideProperties: {
-    duration: 10000,
-    transitionDuration: 1000,
-    arrows: false,
-  },
-  textList: [
+export const detailsText = [
     {
       id: 1,
       label: 'Engaging',
@@ -35,30 +29,7 @@ export const detailsConstants = {
       text: ' Guided by feedback and request from our users',
       icon: 'shake',
     },
-  ],
-  pictureList: [
-    {
-      id: 1,
-      src: '../../assets/Detail1.webp',
-    },
-    {
-      id: 2,
-      src: '../../assets/Detail9.webp',
-    },
-    {
-      id: 3,
-      src: '../../assets/Detail3.webp',
-    },
-    {
-      id: 4,
-      src: '../../assets/Detail4.webp',
-    },
-    {
-      id: 5,
-      src: '../../assets/Detail7.webp',
-    },
-  ],
-};
+  ];
 
 export const characterUnitNumbers = ['hurting-others', 'critical-thinking', 'honesty'];
 

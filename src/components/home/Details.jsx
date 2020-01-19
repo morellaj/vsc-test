@@ -3,17 +3,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component dependencies
-import { detailsConstants } from 'Constants';
+import { detailsText } from 'Constants';
 import DetailItem from './DetailItem';
 import DetailsSlides from './DetailsSlides';
-
-const { textList, pictureList } = detailsConstants;
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
 export default function Details() {
-  const itemList = textList.map((item) => <DetailItem item={item} key={item.id} />);
+  const itemList = detailsText.map((item) => <DetailItem item={item} key={item.id} />);
   return (
     <Container>
       <Heading>Improving your kid&#39;s behavior has never been this easy, or this fun!</Heading>
@@ -25,7 +23,7 @@ export default function Details() {
         </TextContainer>
         <RightContainer>
           <SlideshowContainer>
-            <DetailsSlides pictureList={pictureList} />
+            <DetailsSlides />
           </SlideshowContainer>
         </RightContainer>
       </ContentContainer>

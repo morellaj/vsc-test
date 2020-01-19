@@ -6,20 +6,18 @@ import styled from 'styled-components';
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function DetailsSlides(props) {
+export default function DetailsSlides() {
   const [count, setCount] = useState(0);
-  const { pictureList } = props;
-  const picList = pictureList.map((pic, i) => (
-    <SlideContainer
-      count={count}
-      value={i}
-      key={pic.id}
-    >
-      <PicContainer>
-        <Pic src={pic.src} />
-      </PicContainer>
+  let picList = [];
+  for (let i = 0; i < 5; i += 1) {
+    picList.push(
+      <SlideContainer count={count} value={i} key={i}>
+        <PicContainer>
+          <Pic src={'Assets/' + (i + 1) + '.webp'} />
+        </PicContainer>
     </SlideContainer>
-  ));
+    )
+  };
 
   function counter() {
     if (count < picList.length - 1) {
@@ -30,7 +28,6 @@ export default function DetailsSlides(props) {
   }
 
   useInterval(counter, 5000);
-
 
   return (
     <>
