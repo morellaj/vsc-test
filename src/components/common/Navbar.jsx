@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import colors from 'Colors';
 import { navbarList } from 'Constants';
 import Icon from 'Icon';
-import LogoPicture from 'Assets/logo-white-small.webp';
-
 
 // Component for displaying the navbar on pages
 export default function Navbar() {
@@ -25,7 +23,11 @@ export default function Navbar() {
   return (
     <Container>
       <LogoContainer to="/">
-        <Logo src={LogoPicture} alt="Learning is the Solution logo" />
+        <picture>
+          <source src="Assets/logo-white-small.webp" type="image/webp" />
+          <source src="Assets/logo-white-small.png" type="image/png" />
+          <Logo src="Assets/logo-white-small.png" alt="Learning is the Solution logo" type="image/png" />
+        </picture>
       </LogoContainer>
       <List>
         {items}
