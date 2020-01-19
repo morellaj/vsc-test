@@ -23,7 +23,12 @@ export default function Topic(props) {
   }
 
   return (
-    <Container onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+    <Container
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+      onFocus={handleMouseOver}
+      onBlur={handleMouseOut}
+    >
       <NotFinished done={done}>
         <NotAvailable>Not Available Yet</NotAvailable>
       </NotFinished>

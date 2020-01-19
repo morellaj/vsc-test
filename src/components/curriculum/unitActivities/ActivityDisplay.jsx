@@ -78,11 +78,19 @@ const Container = styled.div`
 const SingleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 350px;
+
+  @media(max-width: 1200px){
+    width: 250px;
+  }
 `;
 
 const MultipleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 600px;
+
+  @media(max-width: 1200px) {
+    width: 500px;
+  }
 `;

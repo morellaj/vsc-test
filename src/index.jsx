@@ -26,7 +26,7 @@ ReactDOM.render((
   <BrowserRouter>
     <Navbar />
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={CharacterPage} />
       <Route path="/units" component={CharacterPage} />
       <Route path="/book" component={PDFPage} />
       <Route path="/about" component={AboutPage} />

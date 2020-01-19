@@ -12,8 +12,6 @@ import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
 
-const TopicSubmission = loadable(() => import('./TopicSubmission'));
-const Feedback = loadable(() => import('./Feedback'));
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
 const Input = loadable(() => import('./Input'));
 
@@ -55,7 +53,7 @@ export default function CharacterPage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ActivitiesContainer>
+      <Container>
         <UnitList
           unitList={unitArr}
           unitSelected={unitSelected}
@@ -66,7 +64,7 @@ export default function CharacterPage() {
           unitName={unitName}
           setInfo={setInfo}
         />
-      </ActivitiesContainer>
+      </Container>
       <Input />
       {infoDisplay}
     </ThemeProvider>
@@ -75,11 +73,17 @@ export default function CharacterPage() {
 
 
 // Styling
-const ActivitiesContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 30px 0 0 0;
   padding-bottom: 50px;
   min-height: 1000px;
+
+  @media(max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+  }
 `;

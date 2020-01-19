@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 // Component dependencies
 import Icon from 'Icon';
-import CategoryInformation from '../info/InformationDisplay';
 
 /** ************************************ */
 // Component for the description of activities
@@ -15,7 +14,6 @@ export default function ActivityGroup(props) {
   } = props;
 
   function handleClick() {
-    console.log('clicked');
     setInfo({ type: 'categoryInfo', text: category });
   }
 
@@ -38,13 +36,23 @@ const Container = styled.div`
   margin: 20px;
   border-radius: 5px;
   background-color: white;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+
+  @media(max-width: 1200px) {
+    margin: 10px;
+  }
 `;
 
 const GroupHeader = styled.div`
   display: flex;
   margin: 10px;
-  font-size: 36px;
-  border-bottom: 1px solid ${(props) => props.theme.color}
+  font-size: 25px;
+  font-weight: 500;
+  border-bottom: 1px solid ${(props) => props.theme.color};
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  })
 `;
 
 const Activities = styled.div`
@@ -56,7 +64,7 @@ const Activities = styled.div`
 const IconContainer = styled.div`
   cursor: pointer;
   color: gray;
-  font-size: 25px;
+  font-size: 16px;
   display:flex;
   align-items:center;
 `;

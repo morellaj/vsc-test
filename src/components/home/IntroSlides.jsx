@@ -39,7 +39,7 @@ function IntroSlides() {
       setMode(0);
     }
     if (count < picList.length - 1) {
-      setCount(count + 1 );
+      setCount(count );
     } else {
       setCount(0);
     }

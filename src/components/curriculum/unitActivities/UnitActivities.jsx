@@ -54,8 +54,13 @@ export default function UnitActivities(props) {
 
 // Styling
 const Container = styled.div`
-  width: 1100px;
+  width: 950px;
   margin: 0 20px;
+
+  @media(max-width: 1200px){
+    width: 750px;
+    margin: 0;
+  }
 `;
 
 const HeaderContainer = styled.div`
@@ -63,6 +68,10 @@ const HeaderContainer = styled.div`
   color: white;
   background-color: ${(props) => props.theme.color};
   margin: 0 20px;
+
+  @media(max-width: 1200px) {
+    margin: 0 10px;
+  }
 `;
 
 const Title = styled.h1`

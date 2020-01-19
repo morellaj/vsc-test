@@ -16,7 +16,6 @@ export default function ParentInformation(props) {
 
   function handleClick(e) {
     // setInfo({ type: 'categoryInfo', text: 'parent' });
-    console.log(e.target.getAttribute('value'));
     setInfo({ type: e.target.getAttribute('value'), text: unit });
   }
 
@@ -42,30 +41,6 @@ export default function ParentInformation(props) {
     }
   });
 
-  /*
-  const display = parentInformationList.map((item) => {
-    let temp;
-    if (item.link) {
-      temp = (
-        <PlainLink to={`/${item.link}${unit}`} key={item.id}>
-          <Item>
-            <Icon icon={item.icon} />
-            <Text>{item.text}</Text>
-          </Item>
-        </PlainLink>
-      );
-    } else {
-      temp = (
-        <Item onClick={handleClick(item.tag)} key={item.id}>
-          <Icon icon={item.icon} />
-          <Text>{item.text}</Text>
-        </Item>
-      );
-    }
-    return temp;
-  });
-  */
-
   return (
     <Container>
       <List>
@@ -78,7 +53,11 @@ export default function ParentInformation(props) {
 
 // Styling
 const Container = styled.div`
-  font-size: 25px;
+  font-size: 20px;
+
+  @media(max-width: 1200px){
+    font-size: 16px;
+  }
 `;
 
 const List = styled.ul`
@@ -86,6 +65,10 @@ const List = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1200px) {
+    margin: 5px;
+  }
 `;
 
 const PlainLink = styled(Link)`
@@ -103,6 +86,11 @@ const Item = styled.li`
 
   :hover{
     background-color: lightgray;
+  }
+
+  @media(max-width: 1200px) {
+    padding: 5px;
+    margin-bottom: 5px;
   }
 `;
 

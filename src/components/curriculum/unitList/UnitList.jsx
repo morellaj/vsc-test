@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 // Component dependencies
 import colors from 'Colors';
 import Unit from './Unit';
-import Legend from './Legend';
 
 
 /** ********************************************* */
@@ -28,7 +27,6 @@ export default function UnitList(props) {
 
   return (
     <Container>
-      <Legend />
       {unitArr}
       <RequestText>
         <span>{'Have a topic you want us to work on next?  '}</span>
@@ -43,10 +41,25 @@ export default function UnitList(props) {
 const Container = styled.div`
   width: 200px;
   margin: 0 20px;
+
+  @media(max-width: 1200px){
+    margin: 0 10px;
+  }
+
+  @media(max-width: 1000px) {
+    display: flex;
+    width: 730px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 `;
 
 const RequestText = styled.div`
   margin-top: 10px;
+
+  @media(max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const StyledLink = styled(Link)`

@@ -23,9 +23,9 @@ export default function Unit(props) {
       color={colors[char].color}
       unitSelected={unitSelected}
     >
-      <div value={num}>
+      <Text value={num}>
         {title}
-      </div>
+      </Text>
     </Container>
   );
 }
@@ -47,5 +47,19 @@ const Container = styled.div`
 
   :hover {
     background-color: ${(props) => (props.unitSelected ? props.color : '#D9D9D9')};
+  };
+
+  @media(max-width: 1000px) {
+    width: 200px;
+    border-left: none;
+    border-bottom: 7px solid ${(props) => props.color};
+    font-size: 20px;
+  };
+`;
+
+const Text = styled.div`
+  @media(max-width: 1000px) {
+    width: 100%;
+    text-align: center;
   }
 `;
