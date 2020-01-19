@@ -59,7 +59,6 @@ export default ReactTimeout(IntroSlides);
 // Styling
 const SlideContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -76,6 +75,7 @@ const SlideContainer = styled.div`
 
   @media(min-width: 700px) and (max-width: 800px){
     width: 700px;
+    height: auto;
   }
 
   @media (min-width: 1280px){
