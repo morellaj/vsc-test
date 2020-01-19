@@ -43,6 +43,7 @@
     "react-timeout": "^1.2.0",
     "react-useinterval": "^1.0.1",
     "styled-components": "^4.4.1",
+    "typeface-roboto": "0.0.75",
     "webpack-dev-server": "^3.10.1"
   },
   "devDependencies": {

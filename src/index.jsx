@@ -1,7 +1,7 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React from 'react';
-
+import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 
 
@@ -26,7 +26,7 @@ ReactDOM.render((
   <BrowserRouter>
     <Navbar />
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={CharacterPage} />
       <Route path="/units" component={CharacterPage} />
       <Route path="/book" component={PDFPage} />
       <Route path="/about" component={AboutPage} />

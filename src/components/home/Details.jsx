@@ -1,11 +1,12 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import loadable from '@loadable/component';
 
 // Component dependencies
 import { detailsText } from 'Constants';
-import DetailItem from './DetailItem';
-import DetailsSlides from './DetailsSlides';
+const DetailItem = loadable(() => import('./DetailItem'));
+const DetailsSlides = loadable(() => import('./DetailsSlides'));
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -43,6 +44,7 @@ const Heading = styled.div`
   margin-top: 10px;
   margin-bottom: 25px;
   font-size: 33px;
+  padding: 0 3px;
 
   @media(max-width: 1050px){
     font-size: 28px;
@@ -50,6 +52,10 @@ const Heading = styled.div`
 
   @media(max-width: 900px){
     font-size: 24px;
+  }
+
+  @media(max-width: 500px){
+    font-size: 16px;
   }
 `;
 
@@ -78,6 +84,7 @@ const List = styled.ul`
   padding: 0;
   margin: 0;
   max-width: 450px;
+  padding: 0 3px;
 `;
 
 const RightContainer = styled.div`
@@ -95,4 +102,12 @@ const SlideshowContainer = styled.div`
   width: 100%;
   height: 300px;
   position:relative;
+
+  @media(max-width: 500px){
+    height: 250px;
+  }
+
+  @media(max-width: 350px){
+    height: 200px;
+  }
 `;

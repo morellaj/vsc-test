@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import colors from 'Colors';
 import { navbarList } from 'Constants';
 import Icon from 'Icon';
-import LogoPicture from '../../../assets/logo-white-small.webp';
+import LogoPicture from 'Assets/logo-white-small.webp';
 
 
 // Component for displaying the navbar on pages
@@ -49,10 +49,18 @@ const LogoContainer = styled(Link)`
   :hover{
     background-color: ${colors.LITS.darkColor};
   }
+
+  @media(max-width: 500px){
+    margin: 5px;
+  }
 `;
 
 const Logo = styled.img`
   height: 50px;
+
+  @media(max-width: 500px) {
+    height: 40px;
+  }
 `;
 
 const List = styled.ul`
@@ -64,15 +72,24 @@ const List = styled.ul`
   font-weight: 500;
   color: white;
   list-style-type: none;
+
+  @media(max-width: 500px){
+    padding: 0;
+  }
 `;
 
 const Item = styled.li`
-  padding: 10px;
-  border-radius: 15px;
+  padding: 7px;
+  border-radius: 5px;
   margin: 10px;
 
   :hover{
     background-color: ${colors.LITS.darkColor};
+  }
+
+  @media(max-width: 500px) {
+    padding: 5px;
+    margin: 5px;
   }
 `;
 

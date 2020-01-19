@@ -25,4 +25,5 @@ const Container = styled.div`
   margin: 2px 0;
   background-color: ${colors.LITS.color};
   color: white;
+  border-radius:3px;
 `;

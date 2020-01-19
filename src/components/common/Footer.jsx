@@ -37,6 +37,10 @@ const List = styled.ul`
   position:absolute;
   bottom: 0px;
   width: 100%;
+
+  @media(max-width: 500px){
+    font-size: 14px;
+  }
 `;
 
 const FooterItem = styled.li`

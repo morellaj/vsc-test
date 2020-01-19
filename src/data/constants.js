@@ -141,7 +141,7 @@ export const navbarList = [
   {
     title: 'Online Books',
     icon: 'reader',
-    link: '/update-sign-up',
+    link: '/units',
   },
   {
     title: 'About',

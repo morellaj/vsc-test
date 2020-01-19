@@ -75,4 +75,5 @@ const Title = styled.h1`
 const DescriptionContainer = styled.div`
   margin: 0;
   padding: 10px;
+  line-height: 1.5;
 `;

@@ -2,11 +2,12 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import loadable from '@loadable/component';
 import { Link } from 'react-router-dom';
 
 // Component dependencies
 import { topicList } from 'Constants';
-import Topic from './Topic';
+const Topic = loadable(() => import('./Topic'));
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -56,6 +57,14 @@ const DisplayContainer = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 50px;
+
+  @media(max-width: 1000px){
+    padding: 0 30px;
+  }
+
+  @media(max-width: 500px){
+    padding: 0 10px;
+  }
 `;
 
 const StyledLink = styled(Link)`

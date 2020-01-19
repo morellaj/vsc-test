@@ -60,6 +60,13 @@ const Container = styled.div`
   @media (max-width: 1000px){
     width: 150px;
     height: 150px;
+    margin: 20px 10px;
+  };
+
+  @media (max-width: 500px){
+    width: 100px;
+    height: 100px;
+    margin: 15px 8px;
   };
 `;
 
@@ -85,6 +92,10 @@ const NotAvailable = styled.div`
   @media(max-width: 1000px){
     font-size: 12px;
   }
+
+  @media(max-width: 500px){
+    font-size: 10px;
+  }
 `;
 
 
@@ -99,6 +110,11 @@ const ImageContainer = styled.div`
   @media(max-width: 1000px){
     height: 130px;
     font-size: 14px;
+  };
+
+  @media(max-width: 500px){
+    height: 85px;
+    font-size: 12px;
   };
 `;
 
@@ -132,6 +148,10 @@ const Title = styled.div`
 
   @media(max-width:1000px){
     font-size: 14px;
+  };
+
+  @media(max-width:500px){
+    font-size: 10px;
   };
 `;
 

@@ -43,6 +43,7 @@ const Container = styled.div`
   color: ${(props) => (props.unitSelected ? 'white' : 'black')};
   background-color: ${(props) => (props.unitSelected ? props.color : 'white')};
   cursor: pointer;
+  border-radius: 3px;
 
   :hover {
     background-color: ${(props) => (props.unitSelected ? props.color : '#D9D9D9')};
