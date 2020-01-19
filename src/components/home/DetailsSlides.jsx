@@ -13,7 +13,9 @@ export default function DetailsSlides() {
     picList.push(
       <SlideContainer count={count} value={i} key={i}>
         <PicContainer>
-          <Pic src={'Assets/' + (i + 1) + '.webp'} />
+          <source srcSet={'Assets/Detail' + (i + 1) + '.webp'} type="image/webp"/>
+          <source srcSet={'Assets/Detail' + (i + 1) + '.jpg'} type="image/jpeg"/>
+          <Pic src={'Assets/Detail' + (i + 1) + '.jpg'} type="image/jpeg" />
         </PicContainer>
     </SlideContainer>
     )
@@ -46,7 +48,7 @@ const SlideContainer = styled.div`
   transform: translate3d(0, 0, 0);
 `;
 
-const PicContainer = styled.div`
+const PicContainer = styled.picture`
   display: flex;
   width: 100%;
   justify-content: center;

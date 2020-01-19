@@ -66,6 +66,10 @@ const TextContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 50%;
+
+  @media(max-width: 1000px){
+    width: 100%;
+  }
 `;
 
 const List = styled.ul`
@@ -80,6 +84,10 @@ const RightContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: center;
+
+  @media(max-width: 1000px){
+    width: 100%;
+  }
 `;
 
 const SlideshowContainer = styled.div`
