@@ -25,7 +25,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
-    port: 3000,
+    port: 3001,
     open: true,
     proxy: {
       '/api': 'http://localhost:8080',
@@ -60,6 +60,7 @@ module.exports = {
     ],
   },
   plugins: [
+    /*
     new CompressionPlugin({
       filename: '[path].br[query]',
       algorithm: 'brotliCompress',
@@ -69,6 +70,7 @@ module.exports = {
       minRatio: 0.8,
       deleteOriginalAssets: false,
     }),
+    */
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
