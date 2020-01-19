@@ -18,7 +18,7 @@ function IntroSlides() {
     picList.push(
       <SlideContainer value={i} count={count} mode={mode} key={i}>
         <PicContainer>
-          <source srcSet={`Assets/Home${i + 1}.webp`} />
+          <source srcSet={`Assets/Home${i + 1}.jpg`} />
           <Pic src={`Assets/Home${i + 1}.jpg`} />
         </PicContainer>
       </SlideContainer>,
