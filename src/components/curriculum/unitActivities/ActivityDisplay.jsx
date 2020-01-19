@@ -64,7 +64,6 @@ export default function ActivityDisplay(props) {
 }
 
 
-
 ActivityDisplay.defaultValues = {
   title: 'Loading...',
 };

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 
 // Component dependencies
+import colors from 'Colors';
 import Unit from './Unit';
 import Legend from './Legend';
-import colors from 'Colors';
 
 
 /** ********************************************* */

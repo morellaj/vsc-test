@@ -31,7 +31,6 @@ export default function CategoryInformation(props) {
 }
 
 
-
 // Styling
 const Title = styled.div`
   margin: 10px;

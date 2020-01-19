@@ -11,9 +11,7 @@ import Icon from 'Icon';
 /** ********************************************* */
 export default function Topic(props) {
   const [hover, setHover] = useState(false);
-  const {
-    done, text, imgStyle, containerStyle,
-  } = props;
+  const { done, text, imgStyle } = props;
   const unit = text.replace(/\s+/g, '-').toLowerCase();
 
   function handleMouseOver() {
@@ -29,14 +27,18 @@ export default function Topic(props) {
       <NotFinished done={done}>
         <NotAvailable>Not Available Yet</NotAvailable>
       </NotFinished>
-      <ImageContainer style={containerStyle}>
+      <ImageContainer>
         <ImageCover done={done} hover={hover}>
           <CoverText>
             Click to see books
             <Icon icon="arrow" />
           </CoverText>
         </ImageCover>
-        <Image src={`./assets/${unit}.webp`} style={imgStyle} />
+        <Picture>
+          <source srcSet={`./assets/${unit}.webp`} type="image/webp" />
+          <source srcSet={`./assets/${unit}.jpeg`} type="image/jpeg" />
+          <Image src={`./assets/${unit}.jpg`} type="image/jpeg" style={imgStyle} />
+        </Picture>
       </ImageContainer>
       <Title>{text}</Title>
     </Container>
@@ -116,9 +118,8 @@ const CoverText = styled.div`
   
 `;
 const Image = styled.img`
-  position: absolute;
   width: 100%;
-  max-height: 250px;
+  position:absolute;
 `;
 
 const Title = styled.div`
@@ -132,4 +133,11 @@ const Title = styled.div`
   @media(max-width:1000px){
     font-size: 14px;
   };
+`;
+
+const Picture = styled.picture`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: relative;
 `;

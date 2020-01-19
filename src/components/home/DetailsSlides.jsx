@@ -8,18 +8,18 @@ import styled from 'styled-components';
 /** ********************************************* */
 export default function DetailsSlides() {
   const [count, setCount] = useState(0);
-  let picList = [];
+  const picList = [];
   for (let i = 0; i < 5; i += 1) {
     picList.push(
       <SlideContainer count={count} value={i} key={i}>
         <PicContainer>
-          <source srcSet={'Assets/Detail' + (i + 1) + '.webp'} type="image/webp"/>
-          <source srcSet={'Assets/Detail' + (i + 1) + '.jpg'} type="image/jpeg"/>
-          <Pic src={'Assets/Detail' + (i + 1) + '.jpg'} type="image/jpeg" />
+          <source srcSet={`Assets/Detail${i + 1}.webp`} type="image/webp" />
+          <source srcSet={`Assets/Detail${i + 1}.jpg`} type="image/jpeg" />
+          <Pic src={`Assets/Detail${i + 1}.jpg`} type="image/jpeg" />
         </PicContainer>
-    </SlideContainer>
-    )
-  };
+      </SlideContainer>,
+    );
+  }
 
   function counter() {
     if (count < picList.length - 1) {

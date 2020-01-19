@@ -12,13 +12,9 @@ export default function LearningGoals(props) {
   const { unit } = props;
   const { learningGoals, importantInformation } = character[unit];
 
-  const learningGoalsDisplay = learningGoals.map((goal) => {
-    return <Text>{goal}</Text>;
-  });
+  const learningGoalsDisplay = learningGoals.map((goal) => <Text>{goal}</Text>);
 
-  const importantInformationDisplay = importantInformation.map((info) => {
-    return <Text>{info}</Text>;
-  });
+  const importantInformationDisplay = importantInformation.map((info) => <Text>{info}</Text>);
   return (
     <>
       <Title>Topic Goals</Title>
@@ -35,7 +31,6 @@ export default function LearningGoals(props) {
 }
 
 // Props validation
-
 
 
 // Styling

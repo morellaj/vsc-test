@@ -29,9 +29,9 @@ export default function InformationDisplay(props) {
 
   return (
     <Container onClick={() => { setInfo(null); }}>
-        <InfoContainer>
-          {display}
-        </InfoContainer>
+      <InfoContainer>
+        {display}
+      </InfoContainer>
     </Container>
   );
 }
