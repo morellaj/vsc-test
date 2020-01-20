@@ -46,6 +46,7 @@ export default function PDFPage(props) {
   }
 
   useEffect(() => {
+    setFullCap(true);
     if (document.getElementById('fullscreen').requestFullscreen) {
       setFullCap(true);
     }
@@ -83,8 +84,17 @@ export default function PDFPage(props) {
   }
 
   function click() {
+    const elem = document.getElementById('fullscreen');
     if (!full) {
-      document.getElementById('fullscreen').requestFullscreen();
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
     } else {
       document.exitFullscreen();
     }
