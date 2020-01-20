@@ -13,7 +13,7 @@ export default function ScreenButton(props) {
   return (
     <Container display={progDisplay}>
       <Text>
-        {`${perLoaded} / 5 MB Loaded...`}
+        {`${perLoaded}% Loaded...`}
       </Text>
     </Container>
   );

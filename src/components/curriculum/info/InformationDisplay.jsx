@@ -42,13 +42,14 @@ const Container = styled.div`
   font-size: 25px;
   background-color: rgba(0, 0, 0, .5);
   color: black;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   display:flex;
   justify-content:center;
+  align-items: center;
 `;
 
 const InfoContainer = styled.div`
@@ -59,5 +60,4 @@ const InfoContainer = styled.div`
   max-width: 80%;
   padding: 20px;
   font-size: 20px;
-  margin-top:100px;
 `;

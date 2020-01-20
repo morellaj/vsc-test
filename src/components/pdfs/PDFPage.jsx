@@ -3,25 +3,28 @@ import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import styled from 'styled-components';
-import Fullscreen from 'react-full-screen';
 // eslint-disable-next-line no-unused-vars
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Component dependencies
 const ScreenButton = loadable(() => import('./ScreenButton'));
+const BackButton = loadable(() => import('./BackButton'));
 const Progress = loadable(() => import('./Progress'));
 
 // Component for displaying a pdf page
-export default function PDFPage() {
+export default function PDFPage(props) {
   const [page, setPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
   const [full, setFull] = useState(false);
-  const [screenActual, setScreenActual] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
+
+  function handleGoBack() {
+    props.history.goBack();
+  }
 
   function handleResize() {
     if (window.innerWidth / window.innerHeight <= 16 / 9) {
@@ -31,10 +34,21 @@ export default function PDFPage() {
     }
   }
 
+
+  function onFullScreenChange() {
+    if (!document.isFullScreen && !document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+      setFull(false);
+    } else {
+      setFull(true);
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('resize', handleResize);
+    document.addEventListener('fullscreenchange', onFullScreenChange);
     return () => {
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('fullscreenchange', onFullScreenChange);
     };
   });
 
@@ -47,13 +61,8 @@ export default function PDFPage() {
 
   function onDocumentLoadProgress({ loaded }, setProgress) {
     const num = 1 - Math.exp(-loaded / 3000000);
-    const newNum = (5 * num).toFixed(2);
+    const newNum = (100 * num).toFixed(0);
     setProgress(newNum);
-  }
-
-  function onFullScreenChange() {
-    setScreenActual(!screenActual);
-    setFull(!screenActual);
   }
 
   function onItemClick(e) {
@@ -68,12 +77,18 @@ export default function PDFPage() {
     }
   }
 
+  function click() {
+    if (!full) {
+      document.getElementById('fullscreen').requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
 
   return (
-    <StyledFullscreen
-      enabled={full}
-      onChange={onFullScreenChange}
-      style={{ 'margin-top': '20px' }}
+    <Container
+      id="fullscreen"
     >
       <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
       <StyledDoc
@@ -92,20 +107,21 @@ export default function PDFPage() {
           renderTextLayer={false}
           onRenderSuccess={pageRender}
         >
-          <ScreenButton full={full} setFull={setFull} />
+          <ScreenButton full={full} click={click} />
+          <BackButton full={full} goBack={handleGoBack} />
         </MainPage>
         <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
           <Loading>Loading...</Loading>
-          <ScreenButton full={full} setFull={setFull} />
+          <ScreenButton full={full} click={click} />
         </LastPage>
       </StyledDoc>
-    </StyledFullscreen>
+    </Container>
   );
 }
 
 // Styling
-const StyledFullscreen = styled(Fullscreen)`
-  margin-top: 20px;
+const Container = styled.div`
+
 `;
 
 const StyledDoc = styled(Document)`
@@ -134,6 +150,7 @@ const Loading = styled.div`
   align-items: center;
   border-radius: 7px;
   padding: 5px;
+  display: none;
 
   :hover{
     cursor: pointer;

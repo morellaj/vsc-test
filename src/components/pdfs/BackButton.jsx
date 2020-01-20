@@ -6,36 +6,30 @@ import styled from 'styled-components';
 import Icon from 'Icon';
 
 // Component for the controls on the pdf page
-export default function ScreenButton(props) {
-  const { full, setFull, click } = props;
-  function handleClick() {
-    setFull(!full);
-  }
-
-  const icon = full ? 'compress' : 'expand';
-  const text = full ? 'Exit Full Screen' : 'Full Screen';
-
+export default function BackButton(props) {
+  const { goBack, full } = props;
   return (
-    <Container onClick={click}>
-      <Icon icon={icon} />
-      {text}
+    <Container onClick={goBack} full={full}>
+      <Icon icon="back" />
+      Go back
     </Container>
   );
 }
 
 
 const Container = styled.div`
+  z-index: 10;
   font-size: 25px;
   background-color: rgba(0, 0, 0, .4);
   position: absolute;
   top: 10px;
-  right: 10px;
-  display: flex;
+  left:  10px;
   justify-content: center;
   align-items: center;
   border-radius: 7px;
   padding: 5px;
   color: white;
+  display: ${(props) => (props.full ? 'none' : 'flex')};
 
   :hover{
     cursor: pointer;

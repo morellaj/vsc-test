@@ -11,8 +11,7 @@ import {
 
 
 // Component dependencies
-const Home = loadable(() => import('./components/home/HomePage'));
-const Navbar = loadable(() => import('./components/common/Navbar'));
+const HomePage = loadable(() => import('./components/home/HomePage'));
 const Footer = loadable(() => import('./components/common/Footer'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
@@ -24,9 +23,8 @@ const TopicRecommendationPage = loadable(() => import('./components/other/TopicR
 
 ReactDOM.render((
   <BrowserRouter>
-    <Navbar />
     <Switch>
-      <Route exact path="/" component={CharacterPage} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/units" component={CharacterPage} />
       <Route path="/book" component={PDFPage} />
       <Route path="/about" component={AboutPage} />

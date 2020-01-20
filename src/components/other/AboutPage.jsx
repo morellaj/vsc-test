@@ -1,6 +1,7 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import Navbar from 'Common/Navbar';
 
 
 /** ********************************************* */
@@ -8,13 +9,16 @@ import styled from 'styled-components';
 /** ********************************************* */
 export default function AboutPage() {
   return (
-    <Container>
-      <Title>About</Title>
-      <Heading>Why Learning is the Solution?</Heading>
-      <Text>
+    <>
+      <Navbar />
+      <Container>
+        <Title>About</Title>
+        <Heading>Why Learning is the Solution?</Heading>
+        <Text>
           To Be Completed
-      </Text>
-    </Container>
+        </Text>
+      </Container>
+    </>
   );
 }
 

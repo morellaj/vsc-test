@@ -34,12 +34,12 @@ export default function CategoryInformation(props) {
 // Styling
 const Title = styled.div`
   margin: 10px;
-  font-size: 36px;
+  font-size: 25px;
   border-bottom: 1px solid ${(props) => props.theme.color}
 `;
 
 const Label = styled.div`
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
 `;
@@ -51,6 +51,8 @@ const Text = styled.li`
 
 const TextContainer = styled.ul`
   margin: 0;
+  list-style: none;
+  padding-left: 10px;
 `;
 
 const SectionContainer = styled.div`

@@ -17,6 +17,7 @@ import {
   faInfoCircle,
   faCommentDots,
   faArrowRight,
+  faArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faListAlt,
@@ -43,6 +44,7 @@ const iconList = {
   info: faInfoCircle,
   comment: faCommentDots,
   arrow: faArrowRight,
+  back: faArrowLeft,
 };
 
 /** ********************************************* */

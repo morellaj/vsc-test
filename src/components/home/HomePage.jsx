@@ -5,6 +5,7 @@ import loadable from '@loadable/component';
 
 
 // Component dependencies
+import Navbar from 'Common/Navbar';
 import IntroPictures from './IntroPictures';
 import TryButton from './TryButton';
 
@@ -20,15 +21,18 @@ export default function Home() {
   });
 
   return (
-    <Container>
-      <IntroPictures />
-      <SectionLabel>CURRENT TOPICS</SectionLabel>
-      <TopicsDisplay />
-      <Details />
-      <TryContainer>
-        <TryButton />
-      </TryContainer>
-    </Container>
+    <>
+      <Navbar />
+      <Container>
+        <IntroPictures />
+        <SectionLabel>CURRENT TOPICS</SectionLabel>
+        <TopicsDisplay />
+        <Details />
+        <TryContainer>
+          <TryButton />
+        </TryContainer>
+      </Container>
+    </>
   );
 }
 

@@ -1,54 +1,58 @@
 {
     "book": {
-      "title": "Online Interactive Books",
+      "title": "Interactive Books",
       "sections": [
         {
           "label": "What Are They?",
           "text": [
-            "Fun, interactive stories that teach important lessons",
-            "Kids get to make decisions for the characters",
-            "Kids consider the consequences of different choices"
+            "Fun, interactive stories that teach important lessons.",
+            "Kids make decisions for the characters and consider the consequences of different choices."
           ]
         },
         {
           "label": "How Are They Useful?",
           "text": [
-            "Designed to gradually influence children towards better, more intentional behavior",
-            "Utilizes two proven learning tools - stories and thinking"
+            "Designed to promote mindful choices that bring good consequences.",
+            "Utilizes interesting stories to deliver the message and has kids think for themselves."
           ]
         }
       ]
     },
     "short": {
-      "title": "Online Short Stories",
+      "title": "Short Stories",
       "sections": [
         {
           "label": "What Are They?",
           "text": [
-            "Collections of short stories that teach important lesson",
-            "Each short story ends with key messages for kids"
+            "Collections of short stories that each end with a key takeaway.",
+            "Summarizes the learning goals of the topic."
           ]
         },
         {
           "label": "How Are They Useful?",
           "text": [
-            "Directly delivers major takeaways from the topic",
-            "Great review to make sure kids got the most important messages"
+            "Not as engaging as interactive stories, but delivers the key takeaways more directly.",
+            "Great review after reading the other stories in the topic."
           ]
         }
       ]
     },
     "parent": {
-      "title": "Parent Information",
+      "title": "Parent Info",
       "sections": [
         {
           "label": "What Is It?",
           "text": [
-            "Collection of information that parents might find useful",
-            "\"Learning Goals\" lays out the learning goals for this topic as well as important information for parents",
-            "\"Parent Informational\" is a short article that summarizes important information about this topic - what to expect, what to do, and what not to do",
-            "\"Book Recommendations\" provides highly reviewed books that could be purchased or borrowed from a library",
-            "\"Parent Resources\" provides links to other articles and books that parents might find interesting"
+            "Various resources that parents might find useful.",
+            "Includes important information for parents to know, learning goals, offline book recommendations, and references."
+          ]
+        },
+        {
+          "label": "How Are They Useful?",
+          "text": [
+            "Parent Informational is critical for providing parents the understanding they need to continue the learning offline.",
+            "Offline books are excellent for extending the online learning.",
+            "Learning goals help parents be aware of the messages that need to be delivered."
           ]
         }
       ]
