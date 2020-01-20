@@ -18,9 +18,11 @@ export default function PDFPage(props) {
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
   const [full, setFull] = useState(false);
+  const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
+
 
   function handleGoBack() {
     props.history.goBack();
@@ -44,6 +46,9 @@ export default function PDFPage(props) {
   }
 
   useEffect(() => {
+    if (document.getElementById('fullscreen').requestFullscreen) {
+      setFullCap(true);
+    }
     window.addEventListener('resize', handleResize);
     document.addEventListener('fullscreenchange', onFullScreenChange);
     return () => {
@@ -107,12 +112,13 @@ export default function PDFPage(props) {
           renderTextLayer={false}
           onRenderSuccess={pageRender}
         >
-          <ScreenButton full={full} click={click} />
+          <ScreenButton fullCap={fullCap} full={full} click={click} />
           <BackButton full={full} goBack={handleGoBack} />
         </MainPage>
         <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
           <Loading>Loading...</Loading>
-          <ScreenButton full={full} click={click} />
+          <ScreenButton fullCap={fullCap} full={full} click={click} />
+          <BackButton full={full} goBack={handleGoBack} />
         </LastPage>
       </StyledDoc>
     </Container>

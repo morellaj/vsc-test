@@ -7,7 +7,7 @@ import Icon from 'Icon';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {
-  const { full, setFull, click } = props;
+  const { fullCap, full, click } = props;
   function handleClick() {
     setFull(!full);
   }
@@ -16,7 +16,7 @@ export default function ScreenButton(props) {
   const text = full ? 'Exit Full Screen' : 'Full Screen';
 
   return (
-    <Container onClick={click}>
+    <Container fullCap={fullCap} onClick={click}>
       <Icon icon={icon} />
       {text}
     </Container>
@@ -36,6 +36,7 @@ const Container = styled.div`
   border-radius: 7px;
   padding: 5px;
   color: white;
+  display: ${(props) => (props.fullCap ? 'flex' : 'none')};
 
   :hover{
     cursor: pointer;
