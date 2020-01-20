@@ -55,6 +55,17 @@ const Container = styled.div`
     border-bottom: 7px solid ${(props) => props.color};
     font-size: 20px;
   };
+
+  @media(max-width: 780px) {
+    width: 150px;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  @media(max-width: 540px) {
+    width: 120px;
+    font-size: 14px;
+  }
 `;
 
 const Text = styled.div`

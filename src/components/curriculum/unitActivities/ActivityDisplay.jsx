@@ -22,7 +22,7 @@ export default function ActivityDisplay(props) {
 
   singleDisplay.push(
     <ActivityGroup
-      text="Parent Information"
+      text="Parent Info"
       setInfo={setInfo}
       category="parent"
       activities={<ParentInformation unit={unit} setInfo={setInfo} />}
@@ -73,6 +73,11 @@ ActivityDisplay.defaultValues = {
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media(max-width: 780px) {
+    justify-content: center;
+  };
+  
 `;
 
 const SingleContainer = styled.div`
@@ -81,8 +86,12 @@ const SingleContainer = styled.div`
   width: 350px;
 
   @media(max-width: 1200px){
-    width: 250px;
-  }
+    width: 260px;
+  };
+
+  @media(max-width: 540px) {
+    width: 200px;
+  };
 `;
 
 const MultipleContainer = styled.div`
@@ -92,5 +101,14 @@ const MultipleContainer = styled.div`
 
   @media(max-width: 1200px) {
     width: 500px;
-  }
+  };
+
+  @media(max-width: 780px) {
+    flex-direction: column;
+    width: 280px;
+  };
+
+  @media(max-width: 540px) {
+    width: 200px;
+  };
 `;

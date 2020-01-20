@@ -61,6 +61,10 @@ const Container = styled.div`
     width: 750px;
     margin: 0;
   }
+
+  @media(max-width: 780px) {
+    width: 100%;
+  }
 `;
 
 const HeaderContainer = styled.div`
@@ -71,6 +75,10 @@ const HeaderContainer = styled.div`
 
   @media(max-width: 1200px) {
     margin: 0 10px;
+  }
+
+  @media(max-width: 1000px) {
+    display: none;
   }
 `;
 

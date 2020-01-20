@@ -100,7 +100,7 @@ export const unitActivitiesConstants = {
   iconList: {
     pretend: { text: 'Guided Pretend', singleEnd: '', multipleEnd: '' },
     short: { text: 'Short Stories', singleEnd: '', multipleEnd: '' },
-    book: { text: 'Online Interactive Book', multipleEnd: 's' },
+    book: { text: 'Interactive Book', multipleEnd: 's' },
     interactive: { text: 'Interactive Activit', singleEnd: 'y', multipleEnd: 'ies' },
     quiz: { text: 'Interactive Quiz', singleEnd: '', multipleEnd: 'zes' },
     parent: { text: 'parent', singleEnd: '', multipleEnd: '' },

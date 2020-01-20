@@ -52,7 +52,11 @@ const GroupHeader = styled.div`
 
   @media (max-width: 1200px) {
     font-size: 20px;
-  })
+  };
+
+  @media (max-width: 540px) {
+    font-size: 16px;
+  };
 `;
 
 const Activities = styled.div`

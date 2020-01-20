@@ -37,13 +37,13 @@ export default function Topic(props) {
       onFocus={handleMouseOver}
       onBlur={handleMouseOut}
     >
-      <ImageContainer>
-        <ImageCover hover={hover}>
-          <CoverText>
+      <ImageCover hover={hover}>
+        <CoverText>
             Click to read
-            <Icon icon="arrow" />
-          </CoverText>
-        </ImageCover>
+          <Icon icon="arrow" />
+        </CoverText>
+      </ImageCover>
+      <ImageContainer>
         <Picture>
           <source srcSet={`Assets/${name}.webp`} type="image/webp" />
           <source srcSet={`Assets/${name}.jpg`} type="image/jpeg" />
@@ -69,11 +69,14 @@ const StyledLink = styled(Link)`
   position: relative;
   overflow: hidden;
   width: 250px;
-  box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
   background-color:white;
 
   @media (max-width: 1200px){
     width: 200px;
+  };
+
+  @media (max-width: 540px) {
+    width: 125px;
   };
 
 `;
@@ -83,12 +86,13 @@ const ImageContainer = styled.div`
   height: 250px;
   overflow: hidden;
   position: relative;
-  font-size: 20px;
-  color: white;
-  font-weight: 500;
 
   @media(max-width: 1200px){
     height: 200px;
+  };
+
+  @media(max-width: 540px) {
+    height: 125px;
   };
 `;
 
@@ -99,6 +103,9 @@ const ImageCover = styled.div`
   height: 100%;
   width: 100%;
   z-index: 5;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
   transition: background-color 1s;
   background-color: rgba(0, 94, 167, .7);
   display: ${(props) => (props.hover ? 'flex' : 'none')};
@@ -114,18 +121,18 @@ const Image = styled.img`
 
 const Title = styled.div`
   font-size: 20px;
-  color: white;
   font-weight: 500;
+  color: black;
   text-align: center;
   padding: 5px;
-  background-color: ${colors.LITS.darkColor};
+  background-color: #EEECEF;
 
   @media(max-width:1200px){
     font-size: 18px;
   };
 
-  @media(max-width:500px){
-    font-size: 10px;
+  @media(max-width:540px){
+    font-size: 14px;
   };
 `;
 

@@ -37,8 +37,13 @@ const Container = styled.div`
 `;
 
 const Line = styled.div`
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 2vw;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+
+  @media(max-width: 800px) {
+    font-size: 16px;
+  }
 `;
 
 const StyledLink = styled(Link)`

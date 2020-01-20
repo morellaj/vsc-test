@@ -52,6 +52,12 @@ const Container = styled.div`
     justify-content: space-between;
     margin-bottom: 20px;
   }
+
+  @media(max-width: 780px) {
+    width: 100%;
+    margin: 10px 20px;
+    justify-content: center;
+  }
 `;
 
 const RequestText = styled.div`

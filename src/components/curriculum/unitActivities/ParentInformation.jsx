@@ -57,7 +57,11 @@ const Container = styled.div`
 
   @media(max-width: 1200px){
     font-size: 16px;
-  }
+  };
+
+  @media(max-width: 540px) {
+    font-size: 12px;
+  };
 `;
 
 const List = styled.ul`
