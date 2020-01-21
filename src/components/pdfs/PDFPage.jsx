@@ -62,10 +62,27 @@ export default function PDFPage(props) {
     }
 
     window.addEventListener('resize', handleResize);
+    if (elem.requestFullscreen) {
+      document.addEventListener('fullscreenchange', onFullScreenChange);
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      document.addEventListener('mozfullscreenchange', onFullScreenChange);
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      document.addEventListener('webkitfullscreenchange', onFullScreenChange);
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      document.addEventListener('msfullscreenchange', onFullScreenChange);
+    }
     document.addEventListener('fullscreenchange', onFullScreenChange);
     return () => {
       window.removeEventListener('resize', handleResize);
-      document.removeEventListener('fullscreenchange', onFullScreenChange);
+      if (elem.requestFullscreen) {
+        document.removeEventListener('fullscreenchange', onFullScreenChange);
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        document.removeEventListener('mozfullscreenchange', onFullScreenChange);
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        document.removeEventListener('webkitfullscreenchange', onFullScreenChange);
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        document.removeEventListener('msfullscreenchange', onFullScreenChange);
+      }
     };
   });
 
@@ -106,16 +123,20 @@ export default function PDFPage(props) {
       } else if (elem.msRequestFullscreen) { /* IE/Edge */
         elem.msRequestFullscreen();
       }
-    } else {
+    } else if (document.exitFullscreen) {
       document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { /* Firefox */
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE/Edge */
+      document.msExitFullscreen();
     }
   }
 
 
   return (
-    <Container
-      id="fullscreen"
-    >
+    <Container id="fullscreen">
       <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
       <StyledDoc
         file={file}
