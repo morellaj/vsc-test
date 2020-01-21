@@ -33,13 +33,12 @@ function IntroSlides() {
 
   function counter() {
     if (mode < 3) {
-      setMode (mode + 1 );
-    }
-    else{
+      setMode(mode + 1);
+    } else {
       setMode(0);
     }
     if (count < picList.length - 1) {
-      setCount(count );
+      setCount(count + 1);
     } else {
       setCount(0);
     }
@@ -83,11 +82,11 @@ const SlideContainer = styled.div`
 
   @media (min-width: 1280px){
     width: ${(props) => (
-      props.mode === 1 || props.mode === 2 ? `${1519 * 1}px` : `${1519 * 1.1}px`)}};
+    props.mode === 1 || props.mode === 2 ? `${1519 * 1}px` : `${1519 * 1.1}px`)}};
 
   @media (min-width: 1532px){
     width: ${(props) => (
-      props.mode === 1 || props.mode === 2 ? `${105 * 1}%` : `${105 * 1.1}%`)}};
+    props.mode === 1 || props.mode === 2 ? `${105 * 1}%` : `${105 * 1.1}%`)}};
 `;
 
 const PicContainer = styled.picture`

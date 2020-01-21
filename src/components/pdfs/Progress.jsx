@@ -21,13 +21,13 @@ export default function ScreenButton(props) {
 
 // Styling
 const Container = styled.div`
-  display: ${(props) => (props.display ? 'block' : 'none')};
-  display: flex;
+  display: ${(props) => (props.display ? 'flex' : 'none')};
   position: absolute;
   width: 100%;
   height: 70%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 20px;
 `;
 
 const Text = styled.div`
@@ -36,6 +36,18 @@ const Text = styled.div`
   font-size: 40px;
   font-weight: 900;
   padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px black;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
+  border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.35) rgba(0,0,0,0.55);
+
+  @media (max-width: 1000px) {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    font-weight: 500;
+  }
 `;

@@ -26,16 +26,19 @@ const Container = styled.div`
   background-color: rgba(0, 0, 0, .4);
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 7px;
   padding: 5px;
   color: white;
+  cursor: pointer;
   display: ${(props) => (props.fullCap ? 'flex' : 'none')};
 
-  :hover{
-    cursor: pointer;
+  @media( max-width: 1000px) {
+    font-size: 2.4vw;
+    top: 1vw;
+    right: 1.5vw
   }
 `;
