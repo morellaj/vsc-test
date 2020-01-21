@@ -11,10 +11,12 @@ export default function Section(props) {
   const { section, bookList } = props;
   return (
     <Container>
-      <SectionHeader>{section}</SectionHeader>
-      <BooksContainer>
-        {bookList}
-      </BooksContainer>
+      <InnerContainer>
+        <SectionHeader>{section}</SectionHeader>
+        <BooksContainer>
+          {bookList}
+        </BooksContainer>
+      </InnerContainer>
     </Container>
   );
 }
@@ -22,20 +24,49 @@ export default function Section(props) {
 
 // Styling
 const Container = styled.div`
-  padding: 20px 20px 0 20px;
   margin-bottom: 20px;
   border-radius: 20px;
-  max-width: 1100px;
+  width: 100%;
   background-color: white;
+  border-radius: 5px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+
+  @media(max-width: 1200px) {
+    
+  }
+`;
+
+const InnerContainer = styled.div`
+  margin: 20px;
 `;
 
 const BooksContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  margin-top: 20px;
+
+  @media (max-width: 912px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 678px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
-const SectionHeader = styled.h1`
+const SectionHeader = styled.div`
   margin: 0;
   border-bottom: 1px solid ${colors.LITS.color};
+  font-size: 25px;
+  font-weight: 500;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  };
+
+  @media (max-width: 540px) {
+    font-size: 16px;
+  };
 `;

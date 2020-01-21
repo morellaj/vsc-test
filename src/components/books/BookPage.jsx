@@ -1,63 +1,70 @@
 // Package dependencies
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 
 // Component dependencies
 
 // Data files
+import Navbar from 'Common/Navbar';
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
 import { booksUnitList } from 'Constants';
-import { createBooksObject, createBooksList } from './Functions';
-import BookDetails from './BookDetails';
+import { createBooksList } from './Functions';
 import Section from './Section';
 
 
 // Component for displaying book pages
 export default function BookPage() {
-  const [moreInfo, setMoreInfo] = useState();
   const section = booksUnitList[window.location.search.slice(1)];
   const bookList = booksByUnit[section];
-  const fullList = bookList.primary.concat(bookList.secondary);
-  const booksObject = createBooksObject(fullList, books);
-  const primaryList = createBooksList(bookList.primary, books, setMoreInfo);
-  const secondaryList = createBooksList(bookList.secondary, books, setMoreInfo);
-  const details = booksObject.hasOwnProperty(moreInfo) ? booksObject[moreInfo] : null;
+  const primaryList = createBooksList(bookList.primary, books);
+  const secondaryList = createBooksList(bookList.secondary, books);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
-  const bookDetails = details
-    ? <BookDetails section={section} book={details} setMoreInfo={setMoreInfo} /> : null;
-
   return (
-    <Container>
-      <Header>
-        <HeaderTitle>Book Recommendations</HeaderTitle>
-        <HeaderSubTitle>{`${section}: ${character[section].title}`}</HeaderSubTitle>
-      </Header>
-      <Section
-        section="Our Favorites"
-        bookList={primaryList}
-      />
-      <Section
-        section="Other Recommendations"
-        bookList={secondaryList}
-      />
-      {bookDetails}
-    </Container>
+    <>
+      <Navbar />
+      <Container>
+        <InnerContainer>
+          <Header>
+            <HeaderTitle>Book Recommendations</HeaderTitle>
+            <HeaderSubTitle>{`${section}: ${character[section].title}`}</HeaderSubTitle>
+          </Header>
+          <Disclaimer>
+          *Click a book to see it on Amazon.
+          Your purchases help us remain independent and ad-free.
+          </Disclaimer>
+          <Section
+            section="Our Favorites"
+            bookList={primaryList}
+          />
+          <Section
+            section="Other Recommendations"
+            bookList={secondaryList}
+          />
+        </InnerContainer>
+      </Container>
+    </>
   );
 }
 
 // Styling
 const Container = styled.div`
   display: flex;
+  justify-content: center;
+  padding: 0 10px 100px 10px;
+`;
+
+const InnerContainer = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 40px 100px 40px;
+  max-width: 840px;
 `;
 
 const Header = styled.div`
@@ -67,11 +74,28 @@ const Header = styled.div`
   margin: 20px;
 `;
 
+const Disclaimer = styled.div`
+  width: 100%;
+
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
+`;
+
 const HeaderTitle = styled.div`
   font-size: 35px;
   font-weight: 600;
+  text-align: center;
+
+  @media (max-width: 500px) {
+    font-size: 28px;
+  }
 `;
 
 const HeaderSubTitle = styled.div`
   font-size: 28px;
+
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
 `;

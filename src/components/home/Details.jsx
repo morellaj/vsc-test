@@ -5,6 +5,7 @@ import loadable from '@loadable/component';
 
 // Component dependencies
 import { detailsText } from 'Constants';
+
 const DetailItem = loadable(() => import('./DetailItem'));
 const DetailsSlides = loadable(() => import('./DetailsSlides'));
 
@@ -104,10 +105,6 @@ const SlideshowContainer = styled.div`
   position:relative;
 
   @media(max-width: 500px){
-    height: 250px;
-  }
-
-  @media(max-width: 350px){
-    height: 200px;
+    height: 60vw;
   }
 `;

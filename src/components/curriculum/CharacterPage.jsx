@@ -28,8 +28,7 @@ export default function CharacterPage() {
   const newUrl = url.replace(`?${location}`, '');
   const locationUnit = characterUnitNumbers.indexOf(location) !== -1
     ? characterUnitNumbers.indexOf(location) : unitSelected;
-  // eslint-disable-next-line no-restricted-globals
-  history.pushState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
+  window.history.replaceState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
   if (!done) {
     setUnitSelected(locationUnit);
     setDone(true);
