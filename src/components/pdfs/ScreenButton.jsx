@@ -7,16 +7,13 @@ import Icon from 'Icon';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {
-  const { fullCap, full, click } = props;
-  function handleClick() {
-    setFull(!full);
-  }
+  const { fullCap, full, fullscreenClick } = props;
 
   const icon = full ? 'compress' : 'expand';
   const text = full ? 'Exit Full Screen' : 'Full Screen';
 
   return (
-    <Container fullCap={fullCap} onClick={click}>
+    <Container fullCap={fullCap} onClick={fullscreenClick}>
       <Icon icon={icon} />
       {text}
     </Container>

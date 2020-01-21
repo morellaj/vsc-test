@@ -23,7 +23,6 @@ export default function PDFPage(props) {
   const [progDisplay, setProgDisplay] = useState(true);
   const file = `/assets/${window.location.search.slice(1)}.pdf`;
 
-
   function handleGoBack() {
     props.history.goBack();
   }
@@ -38,7 +37,13 @@ export default function PDFPage(props) {
 
 
   function onFullScreenChange() {
-    if (!document.isFullScreen && !document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+    if (
+      !document.isFullScreen
+      && !document.fullscreenElement
+      && !document.webkitFullscreenElement
+      && !document.mozFullScreenElement
+      && !document.msFullscreenElement
+    ) {
       setFull(false);
     } else {
       setFull(true);
@@ -46,10 +51,16 @@ export default function PDFPage(props) {
   }
 
   useEffect(() => {
-    setFullCap(true);
-    if (document.getElementById('fullscreen').requestFullscreen) {
+    const elem = document.getElementById('fullscreen');
+    if (
+      elem.requestFullscreen
+      || elem.mozRequestFullScreen
+      || elem.webkitRequestFullScreen
+      || elem.msRequestFullScreen
+    ) {
       setFullCap(true);
     }
+
     window.addEventListener('resize', handleResize);
     document.addEventListener('fullscreenchange', onFullScreenChange);
     return () => {
@@ -83,7 +94,7 @@ export default function PDFPage(props) {
     }
   }
 
-  function click() {
+  function fullscreenClick() {
     const elem = document.getElementById('fullscreen');
     if (!full) {
       if (elem.requestFullscreen) {
@@ -122,12 +133,20 @@ export default function PDFPage(props) {
           renderTextLayer={false}
           onRenderSuccess={pageRender}
         >
-          <ScreenButton fullCap={fullCap} full={full} click={click} />
+          <ScreenButton
+            fullCap={fullCap}
+            full={full}
+            fullscreenClick={fullscreenClick}
+          />
           <BackButton full={full} goBack={handleGoBack} />
         </MainPage>
         <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
           <Loading>Loading...</Loading>
-          <ScreenButton fullCap={fullCap} full={full} click={click} />
+          <ScreenButton
+            fullCap={fullCap}
+            full={full}
+            fullscreenClick={fullscreenClick}
+          />
           <BackButton full={full} goBack={handleGoBack} />
         </LastPage>
       </StyledDoc>
