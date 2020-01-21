@@ -24,7 +24,7 @@ const TopicRecommendationPage = loadable(() => import('./components/other/TopicR
 ReactDOM.render((
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={BookPage} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/units" component={CharacterPage} />
       <Route path="/book" component={PDFPage} />
       <Route path="/about" component={AboutPage} />
