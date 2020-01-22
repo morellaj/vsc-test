@@ -162,3 +162,11 @@ export const booksUnitList = {
 };
 
 export const introPicCount = 5;
+
+export const TeamData = [
+  {
+    name: 'Alex',
+    responsibility: 'ENGINEERING',
+    description: 'Alex ',
+  },
+];

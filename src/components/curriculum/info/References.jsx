@@ -12,12 +12,17 @@ export default function References(props) {
   const { unit } = props;
   const { references } = character[unit];
 
-  const referencesDisplay = references.map((info) => <Text>{info}</Text>);
+  const referencesDisplay = references.map((info) => <Text><a href={info} target="_blank" rel="noreferrer noopener">{info}</a></Text>);
   return (
     <>
       <Title>References</Title>
       <Section>
-        {referencesDisplay}
+        <TextContainer>
+          The resources below were used to create the materials for this topic and can provide additional information:
+          <Links>
+            {referencesDisplay}
+          </Links>
+        </TextContainer>
       </Section>
     </>
   );
@@ -27,18 +32,31 @@ export default function References(props) {
 // Styling
 const Title = styled.div`
   margin: 10px;
-  font-size: 36px;
-  border-bottom: 1px solid ${(props) => props.theme.color}
-`;
-
-const Label = styled.div`
   font-size: 25px;
-  font-weight: 700;
+  border-bottom: 1px solid ${(props) => props.theme.color};
+
+  @media(max-width: 750px) {
+    font-size: 20px;
+  };
 `;
 
 const Text = styled.li`
   margin-bottom: 10px;
   color: black;
+`;
+
+const Links = styled.ul`
+  margin: 10px 0 0 0;
+  list-style: none;
+  padding-left: 10px;
+  font-size: 12px;
+`;
+
+const TextContainer = styled.div`
+
+@media(max-width: 750px) {
+    font-size: 14px;
+  };
 `;
 
 const Section = styled.div`

@@ -3,6 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from 'Common/Navbar';
 
+// Component dependencies
+import Intro from './Intro';
+
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -12,11 +15,8 @@ export default function AboutPage() {
     <>
       <Navbar />
       <Container>
-        <Title>About</Title>
-        <Heading>Why Learning is the Solution?</Heading>
-        <Text>
-          To Be Completed
-        </Text>
+        <Intro />
+        <TeamContainer />
       </Container>
     </>
   );
@@ -25,17 +25,11 @@ export default function AboutPage() {
 
 // Styling
 const Container = styled.div`
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const Title = styled.div`
-
-`;
-
-const Heading = styled.div`
-
-`;
-
-const Text = styled.div`
-
+const TeamContainer = styled.div`
+  
 `;

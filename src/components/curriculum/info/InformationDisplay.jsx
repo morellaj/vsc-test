@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component dependencies
+import Icon from 'Icon';
 import CategoryInformation from './CategoryInformation';
 import LearningGoals from './LearningGoals';
 import References from './References';
@@ -29,7 +30,10 @@ export default function InformationDisplay(props) {
 
   return (
     <Container onClick={() => { setInfo(null); }}>
-      <InfoContainer>
+      <InfoContainer onClick={(e) => (e.stopPropagation())}>
+        <IconContainer onClick={() => { setInfo(null); }}>
+          <Icon icon="exit" />
+        </IconContainer>
         {display}
       </InfoContainer>
     </Container>
@@ -52,12 +56,29 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const IconContainer = styled.div`
+  font-size: 25px;
+  top: 10px;
+  position: absolute;
+  right: 10px;
+  color: #d3d3d3;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 3px;
+
+  :hover {
+    color: white;
+    background-color: #d3d3d3;
+  }
+
+`;
+
 const InfoContainer = styled.div`
   position:absolute;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 8px 0 #000000;
   max-width: 80%;
   padding: 20px;
-  font-size: 20px;
+  font-size: 16px;
 `;

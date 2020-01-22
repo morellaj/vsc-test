@@ -17,14 +17,18 @@ export default function LearningGoals(props) {
   const importantInformationDisplay = importantInformation.map((info) => <Text>{info}</Text>);
   return (
     <>
-      <Title>Topic Goals</Title>
+      <Title>Learning Goals</Title>
       <Section>
         <Label>Learning Goals for Kids</Label>
-        {learningGoalsDisplay}
+        <TextContainer>
+          {learningGoalsDisplay}
+        </TextContainer>
       </Section>
       <Section>
         <Label>Important Information for Parents</Label>
-        {importantInformationDisplay}
+        <TextContainer>
+          {importantInformationDisplay}
+        </TextContainer>
       </Section>
     </>
   );
@@ -36,14 +40,22 @@ export default function LearningGoals(props) {
 // Styling
 const Title = styled.div`
   margin: 10px;
-  font-size: 36px;
-  border-bottom: 1px solid ${(props) => props.theme.color}
+  font-size: 25px;
+  border-bottom: 1px solid ${(props) => props.theme.color};
+
+  @media(max-width: 750px) {
+    font-size: 20px;
+  };
 `;
 
 const Label = styled.div`
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+
+  @media(max-width: 750px) {
+    font-size: 16px;
+  };
 `;
 
 const Text = styled.li`
@@ -53,4 +65,14 @@ const Text = styled.li`
 
 const Section = styled.div`
   margin: 0 10px 20px 10px;
+`;
+
+const TextContainer = styled.ul`
+  margin: 0;
+  list-style: none;
+  padding-left: 10px;
+
+  @media(max-width: 750px) {
+    font-size: 14px;
+  };
 `;

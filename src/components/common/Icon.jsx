@@ -18,6 +18,7 @@ import {
   faCommentDots,
   faArrowRight,
   faArrowLeft,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faListAlt,
@@ -45,6 +46,7 @@ const iconList = {
   comment: faCommentDots,
   arrow: faArrowRight,
   back: faArrowLeft,
+  exit: faTimes,
 };
 
 /** ********************************************* */
