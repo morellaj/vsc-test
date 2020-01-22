@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 // Data dependencies
 import { Link } from 'react-router-dom';
-import colors from 'Colors';
 import Icon from 'Icon';
 
 /** ********************************************* */
@@ -48,7 +47,7 @@ export default function Topic(props) {
           <source srcSet={`Assets/${name}.webp`} type="image/webp" />
           <source srcSet={`Assets/${name}.jpg`} type="image/jpeg" />
           <Image
-            displayImg={display}
+            display={display}
             onLoad={() => (setDisplay(true))}
             src={`Assets/${name}.jpg`}
             type="image/jpeg"
@@ -117,6 +116,7 @@ const CoverText = styled.div`
 const Image = styled.img`
   width: 100%;
   position:absolute;
+  display: ${(props) => (props.display ? 'block' : 'none')}
 `;
 
 const Title = styled.div`

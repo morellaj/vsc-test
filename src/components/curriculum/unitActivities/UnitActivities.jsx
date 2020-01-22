@@ -83,7 +83,7 @@ const HeaderContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  border-bottom: ${(props) => (props.description ? '1px solid white' : null)};
+  /*border-bottom: ${(props) => (props.description ? '1px solid white' : null)};*/
   padding: ${(props) => (props.description ? '10px 0' : '10px 0 0 0')};
   margin: 0 10px;
   font-size: 40px;
@@ -93,4 +93,5 @@ const DescriptionContainer = styled.div`
   margin: 0;
   padding: 10px;
   line-height: 1.5;
+  display: none;
 `;

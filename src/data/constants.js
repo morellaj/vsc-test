@@ -26,7 +26,7 @@ export const detailsText = [
   {
     id: 5,
     label: 'Community-Driven',
-    text: ' Guided by feedback and request from our users',
+    text: ' Guided by feedback and requests from our users',
     icon: 'shake',
   },
 ];
@@ -155,6 +155,29 @@ export const navbarList = [
   },
 ];
 
+export const footerList = [
+  {
+    title: 'Online Books',
+    link: '/units',
+  },
+  {
+    title: 'About',
+    link: '/about',
+  },
+  {
+    title: 'Give Feedback',
+    link: '/feedback',
+  },
+  {
+    title: 'Update Sign-Up',
+    link: '/update-sign-up',
+  },
+  {
+    title: 'Contact Us',
+    link: '/contact',
+  },
+];
+
 export const booksUnitList = {
   'hurting-others': 'I-1',
   'critical-thinking': 'C-1',
@@ -163,10 +186,34 @@ export const booksUnitList = {
 
 export const introPicCount = 5;
 
-export const TeamData = [
+export const teamData = [
   {
     name: 'Alex',
-    responsibility: 'ENGINEERING',
-    description: 'Alex ',
+    responsibilities: [
+      'Engineering',
+      'Content',
+    ],
+    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games, board games, and hiking.',
+  },
+  {
+    name: 'Emily',
+    responsibilities: [
+      'Content',
+    ],
+    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games and board games, especially when playing them with his kids.',
+  },
+  {
+    name: 'Macie',
+    responsibilities: [
+      'Testing',
+    ],
+    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games and board games, especially when playing them with his kids.',
+  },
+  {
+    name: 'Claire',
+    responsibilities: [
+      'Testing',
+    ],
+    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games and board games, especially when playing them with his kids.',
   },
 ];

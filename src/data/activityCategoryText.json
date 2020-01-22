@@ -5,15 +5,15 @@
         {
           "label": "What Are They?",
           "text": [
-            "Fun, interactive stories that teach important lessons.",
-            "Kids make decisions for the characters and consider the consequences of different choices."
+            "Fun, interactive stories that teach important lessons",
+            "Kids make decisions for the characters and consider the consequences of different choices"
           ]
         },
         {
           "label": "How Are They Useful?",
           "text": [
-            "Designed to promote mindful choices that bring good consequences.",
-            "Utilizes interesting stories to deliver the message and has kids think for themselves."
+            "Designed to promote effective decision-making",
+            "Utilizes engaging stories to deliver the message and has kids think for themselves"
           ]
         }
       ]
@@ -24,15 +24,16 @@
         {
           "label": "What Are They?",
           "text": [
-            "Collections of short stories that each end with a key takeaway.",
-            "Summarizes the learning goals of the topic."
+            "Collections of short stories",
+            "Each short story ends with key takeaways",
+            "Summarizes the learning goals of the topic"
           ]
         },
         {
           "label": "How Are They Useful?",
           "text": [
-            "Not as engaging as interactive stories, but delivers the key takeaways more directly.",
-            "Great review after reading the other stories in the topic."
+            "Less involved than interactive stories, but delivers the key takeaways more directly",
+            "Great review after reading the other stories in the topic"
           ]
         }
       ]
@@ -43,16 +44,16 @@
         {
           "label": "What Is It?",
           "text": [
-            "Various resources that parents might find useful.",
-            "Includes important information for parents to know, learning goals, offline book recommendations, and references."
+            "Various resources that parents might find useful",
+            "Includes important information for parents to know, learning goals, offline book recommendations, and references"
           ]
         },
         {
           "label": "How Is It Useful?",
           "text": [
-            "Parent Informational is critical for providing parents the understanding they need to continue the learning offline.",
-            "Offline books are excellent for extending the online learning.",
-            "Learning goals help parents be aware of the messages that need to be delivered."
+            "Parent Informational is critical for providing parents the understanding they need to continue the learning offline",
+            "Offline books are excellent for extending the online learning",
+            "Learning goals help parents be aware of the messages that need to be delivered"
           ]
         }
       ]

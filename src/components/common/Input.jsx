@@ -20,7 +20,10 @@ export default function Feedback() {
         <StyledLink to="/topic-recommendation">Recommend Our Next Topics</StyledLink>
          !
       </Line>
-
+      <Line>
+        <StyledLink to="/update-sign-up">Sign Up</StyledLink>
+        <span>{' to receive updates as we add new content!'}</span>
+      </Line>
     </Container>
   );
 }
@@ -40,9 +43,11 @@ const Line = styled.div`
   font-size: 2vw;
   margin: 0 10px 20px 10px;
   text-align: center;
+  margin-top: 30px;
 
   @media(max-width: 800px) {
     font-size: 16px;
+    margin-top: 20px;
   }
 `;
 

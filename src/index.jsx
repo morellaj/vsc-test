@@ -20,6 +20,7 @@ const BookPage = loadable(() => import('./components/books/BookPage'));
 const FeedbackPage = loadable(() => import('./components/other/FeedbackPage'));
 const UpdateSignUpPage = loadable(() => import('./components/other/UpdateSignUpPage'));
 const TopicRecommendationPage = loadable(() => import('./components/other/TopicRecommendationPage'));
+const ContactPage = loadable(() => import('./components/other/ContactPage'));
 
 ReactDOM.render((
   <BrowserRouter>
@@ -32,6 +33,7 @@ ReactDOM.render((
       <Route path="/feedback" component={FeedbackPage} />
       <Route path="/update-sign-up" component={UpdateSignUpPage} />
       <Route path="/topic-recommendation" component={TopicRecommendationPage} />
+      <Route path="/contact" component={ContactPage} />
       <Route component={CharacterPage} />
     </Switch>
     <Footer />

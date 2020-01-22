@@ -81,7 +81,6 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  padding: 7px;
   border-radius: 5px;
   margin: 10px;
 
@@ -90,7 +89,6 @@ const Item = styled.li`
   }
 
   @media(max-width: 500px) {
-    padding: 5px;
     margin: 5px;
   }
 `;
@@ -99,6 +97,11 @@ const StyledLink = styled(Link)`
   display: flex;
   color: inherit;
   text-decoration: none;
+  padding: 7px;
+
+  @media(max-width: 500px) {
+    padding: 5px;
+  }
 `;
 
 const ItemText = styled.div`

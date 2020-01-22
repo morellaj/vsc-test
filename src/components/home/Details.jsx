@@ -35,8 +35,7 @@ export default function Details() {
 
 // Styling
 const Container = styled.section`
-  margin-top: 50px;
-  padding: 10px 0;
+  padding: 30px 0;
   background-color: rgb(1,145,218, .1);
 `;
 

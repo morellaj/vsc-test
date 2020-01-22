@@ -1,24 +1,58 @@
 // Package dependencies
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+// Data dependencies
+import colors from 'Colors';
 
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function TeamMember() {
+export default function TeamMember(props) {
+  const [hover, setHover] = useState(false);
+  const { name, responsibilities, description } = props;
+  const image = name.toLowerCase();
+  const resp = responsibilities.map((item) => (
+    <Responsibility>{item}</Responsibility>
+  ));
+
+  function handleMouseOver() {
+    setHover(true);
+  }
+
+  function handleMouseOut() {
+    setHover(false);
+  }
+
   return (
     <Container>
-      <Heading>
-        We provide the tools parents need to raise happy kids who make effective decisions.
-      </Heading>
-      <Paragraph>
-        We believe that
-        {' '}
-        <Emphasis>every child</Emphasis>
-        {' '}
-        has the potential for a fulfilling life packed with achievement and contribution.  But this potential is only realized if kids get the the learning experiences they need.  We are making it easy for parents to provide these experiences through engaging, interactive resources that are openly accessible online.
-      </Paragraph>
+      <ImageContainer
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+        onFocus={handleMouseOver}
+        onBlur={handleMouseOut}
+      >
+        <Picture hover={hover} top>
+          <source srcSet={`Assets/${image}.webp`} type="image/webp" />
+          <source srcSet={`Assets/${image}.jpg`} type="image/jpeg" />
+          <Image src={`Assets/${image}.jpg`} type="image/jpeg" />
+        </Picture>
+        <Picture>
+          <source srcSet={`Assets/${image}2.webp`} type="image/webp" />
+          <source srcSet={`Assets/${image}2.jpg`} type="image/jpeg" />
+          <Image src={`Assets/${image}2.jpg`} type="image/jpeg" />
+        </Picture>
+      </ImageContainer>
+      <TextContainer>
+        <UpperContainer>
+          <Name>{name}</Name>
+          <Responsibilities>{resp}</Responsibilities>
+        </UpperContainer>
+        <LowerContainer>
+          {description}
+        </LowerContainer>
+      </TextContainer>
     </Container>
   );
 }
@@ -26,24 +60,95 @@ export default function TeamMember() {
 
 // Styling
 const Container = styled.div`
-  width: 700px;
-  margin-top: 100px;
+  display: flex;
+  border-radius: 5px;
+  background-color: white;
+  padding: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+  @media(max-width: 700px) {
+    padding: 20px;
+  }
+
 `;
 
-const Heading = styled.div`
-  font-weight: 900;
-  font-size: 65px;
-  line-height: 1;
+const ImageContainer = styled.div`
+  width: 140px;
+  height: 220px;
+  border-radius: 5px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 140px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 380px) {
+    margin-right: 10px;
+  }
 `;
 
-const Paragraph = styled.div`
-  font-size: 14px;
-  padding: 50px 100px 0 0;
-  line-height: 1.5;
+const Picture = styled.picture`
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: ${(props) => (props.top ? '5' : '1')};
+  display: ${(props) => (props.hover ? 'none' : 'flex')};
 `;
 
-const Emphasis = styled.span`
-  text-decoration: underline;
+const Image = styled.img`
+  height: 100%;
+`;
+
+const TextContainer = styled.div`
+  color: black;
+`;
+
+const UpperContainer = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px 0;
+  border-bottom: 1px solid ${colors.LITS.color};
+
+  @media(max-width: 480px) {
+    padding: 16px 0 5px 0;
+  }
+`;
+
+const Name = styled.div`
+  color: black;
   font-weight: 500;
-  font-style: italic;
+  font-size: 15px;
+`;
+
+const Responsibilities = styled.div`
+  color: gray;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+`;
+
+const Responsibility = styled.div`
+  color: gray;
+`;
+
+const LowerContainer = styled.div`
+  padding-top: 16px;
+  line-height: 1.5;
+  font-size: 14px;
+
+  @media (max-width: 480px) {
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 1.3;
+  }
 `;

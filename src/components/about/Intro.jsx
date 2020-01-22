@@ -10,7 +10,7 @@ export default function Intro() {
   return (
     <Container>
       <Heading>
-        We provide the tools parents need to raise happy kids who make effective decisions.
+        We provide the tools parents need to raise happy kids who make good decisions.
       </Heading>
       <Paragraph>
         We believe that
@@ -28,18 +28,38 @@ export default function Intro() {
 const Container = styled.div`
   width: 700px;
   margin-top: 100px;
+
+  @media(max-width: 1000px) {
+    width: 450px;
+  }
+
+  @media(max-width: 480px) {
+    width: 300px;
+  }
 `;
 
 const Heading = styled.div`
   font-weight: 900;
   font-size: 65px;
   line-height: 1;
+
+  @media(max-width: 1000px) {
+    font-size: 45px;
+  }
+
+  @media(max-width: 480px) {
+    font-size: 35px;
+  }
 `;
 
 const Paragraph = styled.div`
   font-size: 14px;
-  padding: 50px 100px 0 0;
+  padding: 20px 100px 0 0;
   line-height: 1.5;
+
+  @media(max-width: 1000px) {
+    padding-right: 35px;
+  }
 `;
 
 const Emphasis = styled.span`

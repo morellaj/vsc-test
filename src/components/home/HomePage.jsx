@@ -25,9 +25,9 @@ export default function Home() {
       <Navbar />
       <Container>
         <IntroPictures />
+        <Details />
         <SectionLabel>CURRENT TOPICS</SectionLabel>
         <TopicsDisplay />
-        <Details />
         <TryContainer>
           <TryButton />
         </TryContainer>
@@ -46,7 +46,7 @@ const Container = styled.div`
 const SectionLabel = styled.h1`
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 0;
   font-size: 2vw;
   font-weight: 700;

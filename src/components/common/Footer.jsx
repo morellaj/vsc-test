@@ -4,16 +4,16 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Component dependencies
-import { navbarList } from 'Constants';
+import { footerList } from 'Constants';
 
 
 // Component for displaying the navbar on pages
 export default function Footer() {
-  const items = navbarList.map((unit) => (
+  const items = footerList.map((unit) => (
     <FooterItem key={unit.title}>
-      <Link to={unit.link} style={{ color: 'inherit', textDecoration: 'none' }}>
-        <div>{unit.title}</div>
-      </Link>
+      <StyledLink to={unit.link}>
+        {unit.title}
+      </StyledLink>
     </FooterItem>
   ));
 
@@ -29,10 +29,9 @@ export default function Footer() {
 const List = styled.ul`
   display: flex;
   justify-content: center;
-  margin: 50px 0 30px 0;
+  margin-bottom: 30px;
   padding: 0;
-  font-size: 18px;
-  color: darkgray;
+  font-size: 16px;
   list-style-type: none;
   position:absolute;
   bottom: 0px;
@@ -45,4 +44,16 @@ const List = styled.ul`
 
 const FooterItem = styled.li`
   margin: 0 15px;
+`;
+
+const StyledLink = styled(Link)`
+  padding: 5px;
+  border-radius: 5px;
+  color: darkgray;
+  text-decoration: none;
+
+  :hover {
+    background-color: gray;
+    color: white;
+  }
 `;

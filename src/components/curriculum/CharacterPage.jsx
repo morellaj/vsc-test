@@ -14,7 +14,7 @@ import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
 
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
-const Input = loadable(() => import('./Input'));
+const Input = loadable(() => import('Common/Input'));
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -49,7 +49,7 @@ export default function CharacterPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
 
   return (
     <>
@@ -81,8 +81,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 30px 0 0 0;
-  padding-bottom: 50px;
-  min-height: 1000px;
+  min-height: 800px;
 
   @media(max-width: 1000px) {
     flex-direction: column;

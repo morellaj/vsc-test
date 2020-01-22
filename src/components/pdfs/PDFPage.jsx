@@ -10,6 +10,7 @@ import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const BackButton = loadable(() => import('./BackButton'));
 const Progress = loadable(() => import('./Progress'));
+const Input = loadable(() => import('Common/Input'));
 
 // Component for displaying a pdf page
 export default function PDFPage(props) {
@@ -86,6 +87,10 @@ export default function PDFPage(props) {
     };
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   function onDocumentLoadSuccess() {
     setPage(1);
     setLastPage(1);
@@ -136,6 +141,7 @@ export default function PDFPage(props) {
 
 
   return (
+    <>
     <Container id="fullscreen">
       <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
       <StyledDoc
@@ -172,12 +178,14 @@ export default function PDFPage(props) {
         </LastPage>
       </StyledDoc>
     </Container>
+    <Input />
+    </>
   );
 }
 
 // Styling
 const Container = styled.div`
-
+  min-height: 700px;
 `;
 
 const StyledDoc = styled(Document)`
