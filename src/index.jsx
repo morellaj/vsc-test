@@ -34,7 +34,6 @@ ReactDOM.render((
       <Route path="/update-sign-up" component={UpdateSignUpPage} />
       <Route path="/topic-recommendation" component={TopicRecommendationPage} />
       <Route path="/contact" component={ContactPage} />
-      <Route component={CharacterPage} />
     </Switch>
     <Footer />
   </BrowserRouter>), document.getElementById('main'));
