@@ -11,7 +11,7 @@ import colors from 'Colors';
 /** ********************************************* */
 export default function TryButton() {
   return (
-    <Container to="book?the-furbots">Read a book</Container>
+    <Container to="book?super-jet-3000">Read a book</Container>
   );
 }
 
