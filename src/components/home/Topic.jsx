@@ -42,7 +42,7 @@ export default function Topic(props) {
         <Picture>
           <source srcSet={`./assets/${unit}.webp`} type="image/webp" />
           <source srcSet={`./assets/${unit}.jpg`} type="image/jpeg" />
-          <Image src={`./assets/${unit}.jpg`} type="image/jpeg" style={imgStyle} />
+          <Image alt={`book unit - ${unit}`} src={`./assets/${unit}.jpg`} type="image/jpeg" style={imgStyle} />
         </Picture>
       </ImageContainer>
       <Title>{text}</Title>

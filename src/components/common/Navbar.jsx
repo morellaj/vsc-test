@@ -26,7 +26,11 @@ export default function Navbar() {
         <picture>
           <source srcSet="Assets/logo-white-small.webp" type="image/webp" />
           <source srcSet="Assets/logo-white-small.png" type="image/png" />
-          <Logo src="Assets/logo-white-small.png" alt="Learning is the Solution logo" type="image/png" />
+          <Logo
+            src="Assets/logo-white-small.png"
+            alt="Learning is the Solution logo"
+            type="image/png"
+          />
         </picture>
       </LogoContainer>
       <List>

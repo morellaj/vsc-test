@@ -16,7 +16,7 @@ export default function Book(props) {
   return (
     <Container href={link} target="_blank">
       <BookContainer>
-        <Image src={image} />
+        <Image alt={title} src={image} />
       </BookContainer>
       {titleDisplay}
     </Container>

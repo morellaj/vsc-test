@@ -36,12 +36,20 @@ export default function TeamMember(props) {
         <Picture hover={hover} top>
           <source srcSet={`Assets/${image}.webp`} type="image/webp" />
           <source srcSet={`Assets/${image}.jpg`} type="image/jpeg" />
-          <Image src={`Assets/${image}.jpg`} type="image/jpeg" />
+          <Image
+            alt={`${name}, a member of our team`}
+            src={`Assets/${image}.jpg`}
+            type="image/jpeg"
+          />
         </Picture>
         <Picture>
           <source srcSet={`Assets/${image}2.webp`} type="image/webp" />
           <source srcSet={`Assets/${image}2.jpg`} type="image/jpeg" />
-          <Image src={`Assets/${image}2.jpg`} type="image/jpeg" />
+          <Image
+            alt={`${name}, a member of our team`}
+            src={`Assets/${image}2.jpg`}
+            type="image/jpeg"
+          />
         </Picture>
       </ImageContainer>
       <TextContainer>

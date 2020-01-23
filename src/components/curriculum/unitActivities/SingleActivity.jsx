@@ -48,6 +48,7 @@ export default function Topic(props) {
           <source srcSet={`Assets/${name}.jpg`} type="image/jpeg" />
           <Image
             display={display}
+            alt={`book - ${name}`}
             onLoad={() => (setDisplay(true))}
             src={`Assets/${name}.jpg`}
             type="image/jpeg"

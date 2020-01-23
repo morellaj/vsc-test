@@ -20,7 +20,11 @@ function IntroSlides() {
         <PicContainer>
           <source srcSet={`Assets/Home${i + 1}.webp`} type="image/webp" />
           <source srcSet={`Assets/Home${i + 1}.jpg`} type="image/jpeg" />
-          <Pic src={`Assets/Home${i + 1}.jpg`} type="image/jpeg" />
+          <Pic
+            alt="pages from online books"
+            src={`Assets/Home${i + 1}.jpg`}
+            type="image/jpeg"
+          />
         </PicContainer>
       </SlideContainer>,
     );
