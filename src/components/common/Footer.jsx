@@ -44,7 +44,7 @@ const List = styled.ul`
 `;
 
 const FooterItem = styled.li`
-  margin: 2px 15px;
+  margin: 7px 15px;
 `;
 
 const StyledLink = styled(Link)`

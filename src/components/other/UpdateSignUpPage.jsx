@@ -1,6 +1,6 @@
 /* eslint-disable no-return-assign */
 // Package dependencies
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import Navbar from 'Common/Navbar';
@@ -14,6 +14,9 @@ export default function UpdateSignUpPage() {
   let email;
   let firstName;
   let lastName;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <Navbar />
