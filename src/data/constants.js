@@ -169,7 +169,7 @@ export const footerList = [
     link: '/feedback',
   },
   {
-    title: 'Update Sign-Up',
+    title: 'Email Sign-Up',
     link: '/update-sign-up',
   },
   {
@@ -193,27 +193,29 @@ export const teamData = [
       'Engineering',
       'Content',
     ],
-    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games, board games, and hiking.',
+    description: 'Alex led an award-winning semiconductor engineering team at Texas Instruments.  He loves coding and developing products that help kids learn.  Alex enjoys playing games with his kids and wearing pajamas all day.',
   },
   {
     name: 'Emily',
     responsibilities: [
       'Content',
+      'Quality',
     ],
-    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games and board games, especially when playing them with his kids.',
+    description: 'Emily studied Chemical Engineering at Rose-Hulman Institute of Technology,  and now devotes her time to helping our testing team learn and grow.  She loves music, Disney, spending time with family, and eating cookies.',
   },
   {
     name: 'Macie',
     responsibilities: [
+      'Quality',
       'Testing',
     ],
-    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games and board games, especially when playing them with his kids.',
+    description: "Macie makes sure that everything we make is kid-approved.  If it isn't fun, it isn't allowed!  Oh, and typos are completely unnacceptable.  Macie enjoys doing crafts, playing Zelda, and going on adventures in the woods.",
   },
   {
     name: 'Claire',
     responsibilities: [
       'Testing',
     ],
-    description: 'Alex worked as a semiconductor engineer at Texas Instruments, where he led an award-winning team responsible for maintaining and improving semiconductor manufacturing equipment.  He enjoys video games and board games, especially when playing them with his kids.',
+    description: "Claire is our junior tester.  She ensures that our books are funny and have words that are appropriate for early readers.  Claire also monitors for anyone that might be working too hard - we can't have that!  She loves doing crafts, wearing animal costumes, and listening to music from Frozen 2.",
   },
 ];

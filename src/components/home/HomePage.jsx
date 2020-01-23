@@ -5,7 +5,7 @@ import loadable from '@loadable/component';
 
 
 // Component dependencies
-import Navbar from 'Common/Navbar';
+import Navbar from 'Common/Navbar.jsx';
 import IntroPictures from './IntroPictures';
 import TryButton from './TryButton';
 

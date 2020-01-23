@@ -15,7 +15,11 @@ export default function DetailsSlides() {
         <PicContainer>
           <source srcSet={`Assets/Detail${i + 1}.webp`} type="image/webp" />
           <source srcSet={`Assets/Detail${i + 1}.jpg`} type="image/jpeg" />
-          <Pic src={`Assets/Detail${i + 1}.jpg`} type="image/jpeg" />
+          <Pic
+            alt="pictures of online books"
+            src={`Assets/Detail${i + 1}.jpg`}
+            type="image/jpeg"
+          />
         </PicContainer>
       </SlideContainer>,
     );

@@ -14,7 +14,7 @@ export default function TeamMember(props) {
   const { name, responsibilities, description } = props;
   const image = name.toLowerCase();
   const resp = responsibilities.map((item) => (
-    <Responsibility>{item}</Responsibility>
+    <Responsibility key={item}>{item}</Responsibility>
   ));
 
   function handleMouseOver() {

@@ -11,7 +11,7 @@ export default function ScreenButton(props) {
 
 
   return (
-    <Container display={progDisplay}>
+    <Container progDisplay={progDisplay}>
       <Text>
         {`${perLoaded}% Loaded...`}
       </Text>
@@ -21,7 +21,7 @@ export default function ScreenButton(props) {
 
 // Styling
 const Container = styled.div`
-  display: ${(props) => (props.display ? 'flex' : 'none')};
+  display: ${(props) => (props.progDisplay ? 'flex' : 'none')};
   position: absolute;
   width: 100%;
   height: 70%;

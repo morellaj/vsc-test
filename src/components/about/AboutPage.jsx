@@ -18,6 +18,7 @@ export default function AboutPage() {
       name={item.name}
       description={item.description}
       responsibilities={item.responsibilities}
+      key={item.name}
     />
   ));
   return (
