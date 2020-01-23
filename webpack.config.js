@@ -65,6 +65,7 @@ module.exports = {
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
       { from: '_redirects', to: '_redirects', toType: 'file' },
+      { from: 'robots.txt', to: 'robots.txt', toType: 'file' },
     ]),
     new CleanWebpackPlugin(),
     // new BundleAnalyzerPlugin(),
