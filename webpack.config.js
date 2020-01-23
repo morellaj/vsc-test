@@ -2,8 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 // eslint-disable-next-line no-unused-vars
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+//  const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
 module.exports = {
@@ -62,6 +63,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new GenerateSW(),
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
       { from: '_redirects', to: '_redirects', toType: 'file' },

@@ -3,8 +3,6 @@ import loadable from '@loadable/component';
 import React from 'react';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
-
-
 import {
   Route, Switch, BrowserRouter,
 } from 'react-router-dom';

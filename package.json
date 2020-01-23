@@ -45,7 +45,8 @@
     "react-useinterval": "^1.0.1",
     "styled-components": "^4.4.1",
     "typeface-roboto": "0.0.75",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.10.1",
+    "workbox-webpack-plugin": "4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
