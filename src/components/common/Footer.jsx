@@ -28,6 +28,7 @@ export default function Footer() {
 // Styling
 const List = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 30px;
   padding: 0;
@@ -37,13 +38,13 @@ const List = styled.ul`
   bottom: 0px;
   width: 100%;
 
-  @media(max-width: 500px){
+  @media(max-width: 750px){
     font-size: 14px;
   }
 `;
 
 const FooterItem = styled.li`
-  margin: 0 15px;
+  margin: 2px 15px;
 `;
 
 const StyledLink = styled(Link)`
