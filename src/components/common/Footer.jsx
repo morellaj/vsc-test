@@ -41,6 +41,10 @@ const List = styled.ul`
   @media(max-width: 750px){
     font-size: 14px;
   }
+
+  @media(max-width: 350px){
+    font-size: 10px;
+  }
 `;
 
 const FooterItem = styled.li`

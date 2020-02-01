@@ -10,7 +10,6 @@ import {
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
-const Footer = loadable(() => import('./components/common/Footer'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
 const AboutPage = loadable(() => import('./components/about/AboutPage'));
@@ -19,6 +18,7 @@ const FeedbackPage = loadable(() => import('./components/other/FeedbackPage'));
 const UpdateSignUpPage = loadable(() => import('./components/other/UpdateSignUpPage'));
 const TopicRecommendationPage = loadable(() => import('./components/other/TopicRecommendationPage'));
 const ContactPage = loadable(() => import('./components/other/ContactPage'));
+// const SitemapBuilder = loadable(() => import('./components/other/SitemapBuilder'));
 
 ReactDOM.render((
   <BrowserRouter>
@@ -33,5 +33,4 @@ ReactDOM.render((
       <Route path="/topic-recommendation" component={TopicRecommendationPage} />
       <Route path="/contact" component={ContactPage} />
     </Switch>
-    <Footer />
   </BrowserRouter>), document.getElementById('main'));

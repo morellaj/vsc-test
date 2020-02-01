@@ -1,11 +1,14 @@
 // Package dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
 
 
 // Component dependencies
-import Navbar from 'Common/Navbar.jsx';
+import Navbar from 'Navbar';
+import Footer from 'Footer';
+import PageHeadInfo from 'Data/pageHeadInfo.json';
 import IntroPictures from './IntroPictures';
 import TryButton from './TryButton';
 
@@ -16,12 +19,18 @@ const Details = loadable(() => import('./Details'));
 // Component for displaying the home page
 /** ********************************************* */
 export default function Home() {
+  const { title, description } = PageHeadInfo.HomePage;
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <Container>
         <IntroPictures />
@@ -32,6 +41,7 @@ export default function Home() {
           <TryButton />
         </TryContainer>
       </Container>
+      <Footer />
     </>
   );
 }

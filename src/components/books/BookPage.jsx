@@ -1,12 +1,14 @@
 // Package dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 
 // Component dependencies
 
 // Data files
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
+import Footer from 'Footer';
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
@@ -18,6 +20,7 @@ import Section from './Section';
 // Component for displaying book pages
 export default function BookPage() {
   const section = booksUnitList[window.location.search.slice(1)];
+  const { bookTitle, description } = character[section];
   const bookList = booksByUnit[section];
   const primaryList = createBooksList(bookList.primary, books);
   const secondaryList = createBooksList(bookList.secondary, books);
@@ -28,6 +31,11 @@ export default function BookPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{bookTitle}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <Container>
         <InnerContainer>
@@ -48,6 +56,7 @@ export default function BookPage() {
           />
         </InnerContainer>
       </Container>
+      <Footer />
     </>
   );
 }

@@ -79,4 +79,8 @@ const TryButtonContainer = styled.div`
   width: 100%;
   position: absolute;
   bottom: 20px;
+
+  @media(max-width: 500px) {
+    bottom: 4vw;
+  }
 `;

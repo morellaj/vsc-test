@@ -1,5 +1,6 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import loadable from '@loadable/component';
 
@@ -8,13 +9,14 @@ import loadable from '@loadable/component';
 import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
+import Footer from 'Footer';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
 
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
-const Input = loadable(() => import('Common/Input'));
+const Input = loadable(() => import('Input'));
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -34,6 +36,7 @@ export default function CharacterPage() {
     setDone(true);
   }
   const unitArr = UnitArr(character);
+  const { title, subtitle, description } = character[unitArr[unitSelected].unit];
   const colorTheme = unitArr.length ? colors[unitArr[unitSelected].unit.charAt(0)] : null;
   const theme = colorTheme ? {
     color: colorTheme.color,
@@ -53,6 +56,11 @@ export default function CharacterPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${title}: ${subtitle}`}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <ThemeProvider theme={theme}>
         <Container>
@@ -70,6 +78,7 @@ export default function CharacterPage() {
         <Input />
         {infoDisplay}
       </ThemeProvider>
+      <Footer />
     </>
   );
 }

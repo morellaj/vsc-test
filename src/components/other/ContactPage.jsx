@@ -1,17 +1,26 @@
 // Package dependencies
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import Navbar from 'Common/Navbar';
+import PageHeadInfo from 'Data/pageHeadInfo.json';
+import Navbar from 'Navbar';
+import Footer from 'Footer';
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
 export default function FeedbackPage() {
+  const { title, description } = PageHeadInfo.ContactPage;
   useEffect(() => {
     window.scrollTo(0, 0);
   });
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <Container>
         <Survey
@@ -21,8 +30,8 @@ export default function FeedbackPage() {
           height="700px"
           width="640px"
         />
-
       </Container>
+      <Footer />
     </>
   );
 }

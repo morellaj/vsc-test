@@ -3,7 +3,10 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import Navbar from 'Common/Navbar';
+import { Helmet } from 'react-helmet';
+import PageHeadInfo from 'Data/pageHeadInfo.json';
+import Navbar from 'Navbar';
+import Footer from 'Footer';
 import colors from 'Colors';
 
 
@@ -11,6 +14,7 @@ import colors from 'Colors';
 // Component for displaying the home page
 /** ********************************************* */
 export default function UpdateSignUpPage() {
+  const { title, description } = PageHeadInfo.UpdateSignUpPage;
   let email;
   let firstName;
   useEffect(() => {
@@ -18,6 +22,11 @@ export default function UpdateSignUpPage() {
   });
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <Container>
         <MailchimpSubscribe
@@ -57,6 +66,7 @@ export default function UpdateSignUpPage() {
           )}
         />
       </Container>
+      <Footer />
     </>
   );
 }

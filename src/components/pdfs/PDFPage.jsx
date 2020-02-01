@@ -3,18 +3,22 @@ import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 // eslint-disable-next-line no-unused-vars
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Component dependencies
+import Navbar from 'Navbar';
+import bookInfo from 'Data/bookInfo.json';
+
 const ScreenButton = loadable(() => import('./ScreenButton'));
-const BackButton = loadable(() => import('./BackButton'));
 const Progress = loadable(() => import('./Progress'));
-const Input = loadable(() => import('Common/Input'));
+const ContinueReading = loadable(() => import('./ContinueReading'));
 
 // Component for displaying a pdf page
-export default function PDFPage(props) {
+export default function PDFPage() {
   const [page, setPage] = useState(1);
+  const [initialPage, setInitialPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
@@ -22,17 +26,24 @@ export default function PDFPage(props) {
   const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
-  const file = `/assets/${window.location.search.slice(1)}.pdf`;
-
-  function handleGoBack() {
-    props.history.goBack();
-  }
+  const book = window.location.search.slice(1);
+  const file = `/assets/${book}.pdf`;
+  const { title, subtitle, description } = bookInfo[book];
 
   function handleResize() {
-    if (window.innerWidth / window.innerHeight <= 16 / 9) {
+    const { innerWidth } = window;
+    let navbarLoss;
+    if (full) {
+      navbarLoss = 0;
+    } else if (innerWidth > 500) {
+      navbarLoss = 74;
+    } else {
+      navbarLoss = 64;
+    }
+    if (window.innerWidth / (window.innerHeight - navbarLoss) <= 960 / (540)) {
       setScale(window.innerWidth / 960);
     } else {
-      setScale(window.innerHeight / 540);
+      setScale((window.innerHeight - navbarLoss) / (540));
     }
   }
 
@@ -74,6 +85,9 @@ export default function PDFPage(props) {
     }
     document.addEventListener('fullscreenchange', onFullScreenChange);
     return () => {
+      localStorage.setItem(book, page);
+
+
       window.removeEventListener('resize', handleResize);
       if (elem.requestFullscreen) {
         document.removeEventListener('fullscreenchange', onFullScreenChange);
@@ -88,12 +102,18 @@ export default function PDFPage(props) {
   });
 
   useEffect(() => {
+    handleResize();
+  }, [full]);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
+    const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
+    setInitialPage(initial);
   }, []);
 
   function onDocumentLoadSuccess() {
-    setPage(1);
-    setLastPage(1);
+    setPage(initialPage);
+    setLastPage(initialPage);
     setProgDisplay(false);
     handleResize();
   }
@@ -142,57 +162,65 @@ export default function PDFPage(props) {
 
   return (
     <>
-    <Container id="fullscreen">
-      <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
-      <StyledDoc
-        file={file}
-        loading={null}
-        error="Book not found :("
-        onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
-        onLoadSuccess={onDocumentLoadSuccess}
-        onItemClick={onItemClick}
-        options={{ disableAutoFetch: false, disableStream: false }}
-      >
-        <MainPage
-          display={display}
-          pageNumber={page}
-          scale={scale}
-          renderTextLayer={false}
-          onRenderSuccess={pageRender}
+      <Helmet>
+        <title>{`${title}: ${subtitle}`}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
+      <Navbar />
+      <Container id="fullscreen">
+        <ContinueReading
+          initialPage={initialPage}
+          setInitialPage={setInitialPage}
+          setPage={setPage}
+          setLastPage={setLastPage}
+        />
+        <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
+        <StyledDoc
+          file={file}
+          loading={null}
+          error="Book not found :("
+          onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
+          onLoadSuccess={onDocumentLoadSuccess}
+          onItemClick={onItemClick}
+          options={{ disableAutoFetch: false, disableStream: false }}
         >
-          <ScreenButton
-            fullCap={fullCap}
-            full={full}
-            fullscreenClick={fullscreenClick}
-          />
-          <BackButton full={full} goBack={handleGoBack} />
-        </MainPage>
-        <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
-          <Loading>Loading...</Loading>
-          <ScreenButton
-            fullCap={fullCap}
-            full={full}
-            fullscreenClick={fullscreenClick}
-          />
-          <BackButton full={full} goBack={handleGoBack} />
-        </LastPage>
-      </StyledDoc>
-    </Container>
-    <Input />
+          <MainPage
+            display={display}
+            pageNumber={page}
+            scale={scale}
+            renderTextLayer={false}
+            onRenderSuccess={pageRender}
+          >
+            <ScreenButton
+              fullCap={fullCap}
+              full={full}
+              fullscreenClick={fullscreenClick}
+            />
+          </MainPage>
+          <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
+            <Loading>Loading...</Loading>
+            <ScreenButton
+              fullCap={fullCap}
+              full={full}
+              fullscreenClick={fullscreenClick}
+            />
+          </LastPage>
+        </StyledDoc>
+      </Container>
     </>
   );
 }
 
 // Styling
 const Container = styled.div`
-  min-height: 700px;
+
 `;
 
 const StyledDoc = styled(Document)`
   display: flex;
   justify-content: center;
   height: 70%;
-  margin-bottom: 20px;
 `;
 
 const MainPage = styled(Page)`
