@@ -18,6 +18,7 @@ const FeedbackPage = loadable(() => import('./components/other/FeedbackPage'));
 const UpdateSignUpPage = loadable(() => import('./components/other/UpdateSignUpPage'));
 const TopicRecommendationPage = loadable(() => import('./components/other/TopicRecommendationPage'));
 const ContactPage = loadable(() => import('./components/other/ContactPage'));
+// const SitemapBuilder = loadable(() => import('./components/other/SitemapBuilder'));
 
 ReactDOM.render((
   <BrowserRouter>

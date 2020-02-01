@@ -71,6 +71,7 @@ module.exports = {
       { from: 'assets', to: 'assets' },
       { from: '_redirects', to: '_redirects', toType: 'file' },
       { from: 'robots.txt', to: 'robots.txt', toType: 'file' },
+      { from: 'sitemap.xml', to: 'sitemap.xml', toType: 'file' },
     ]),
     new CleanWebpackPlugin(),
     // new BundleAnalyzerPlugin(),
