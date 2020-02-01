@@ -55,7 +55,6 @@ export default function Topic(props) {
           />
         </Picture>
       </ImageContainer>
-      <Title>{title}</Title>
     </StyledLink>
   );
 }
