@@ -14,15 +14,10 @@ export default function Feedback() {
   return (
     <Container>
       <Line>
-        <span>Your input is priceless!  </span>
         <StyledLink to="/feedback">Give Us Feedback</StyledLink>
         <span>{' or '}</span>
-        <StyledLink to="/topic-recommendation">Recommend Our Next Topics</StyledLink>
+        <StyledLink to="/update-sign-up">Sign Up for Updates</StyledLink>
          !
-      </Line>
-      <Line>
-        <StyledLink to="/update-sign-up">Sign Up</StyledLink>
-        <span>{' to receive updates as we add new content!'}</span>
       </Line>
     </Container>
   );
