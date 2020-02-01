@@ -119,23 +119,6 @@ const Image = styled.img`
   display: ${(props) => (props.display ? 'block' : 'none')}
 `;
 
-const Title = styled.div`
-  font-size: 20px;
-  font-weight: 500;
-  color: black;
-  text-align: center;
-  padding: 5px;
-  background-color: #EEECEF;
-
-  @media(max-width:1200px){
-    font-size: 18px;
-  };
-
-  @media(max-width:540px){
-    font-size: 14px;
-  };
-`;
-
 const Picture = styled.picture`
   display: flex;
   height: 100%;

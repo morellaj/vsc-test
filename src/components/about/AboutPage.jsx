@@ -1,6 +1,8 @@
 // Package dependencies
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
 
@@ -14,6 +16,7 @@ import TeamMember from './TeamMember';
 // Component for displaying the home page
 /** ********************************************* */
 export default function AboutPage() {
+  const { title, description } = PageHeadInfo.AboutPage;
   const team = teamData.map((item) => (
     <TeamMember
       name={item.name}
@@ -24,6 +27,11 @@ export default function AboutPage() {
   ));
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <Container>
         <Intro />

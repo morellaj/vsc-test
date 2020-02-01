@@ -1,5 +1,6 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import loadable from '@loadable/component';
 
@@ -35,6 +36,7 @@ export default function CharacterPage() {
     setDone(true);
   }
   const unitArr = UnitArr(character);
+  const { title, subtitle, description } = character[unitArr[unitSelected].unit];
   const colorTheme = unitArr.length ? colors[unitArr[unitSelected].unit.charAt(0)] : null;
   const theme = colorTheme ? {
     color: colorTheme.color,
@@ -54,6 +56,11 @@ export default function CharacterPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${title}: ${subtitle}`}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <ThemeProvider theme={theme}>
         <Container>

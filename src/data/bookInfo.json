@@ -1,0 +1,57 @@
+{
+  "day-on-the-beach":{
+    "title": "Day on the Beach",
+    "subtitle": "Story that teaches kids about pushing and hitting",
+    "description": "Child who is hitting?  This engaging story can help them understand the consequences of hurting others and the benefits of playing nice."
+  },
+  "soccer-fun": {
+    "title": "Soccer Fun",
+    "subtitle": "Story that teaches kids about hurting others",
+    "description": "Kid is hurting others?  This engaging story can help them understand the consequences of hurting others and the benefits of playing nice."
+  },
+  "snow-time" : {
+    "title": "Snow Time?",
+    "subtitle": "Story that teaches kids about anger",
+    "description": "Child who has trouble controlling their anger?  This engaging story can help them understand the benefits of controlling their anger and how to do it."
+  },
+  "angry-choices" : {
+    "title": "Angry Choices",
+    "subtitle": "Stories that teach kids about hitting, hurting others, and anger",
+    "description": "Collection of engaging short stories that help kids understand the benefits of controlling their anger and what they can do instead."
+  },
+  "bad-luck": {
+    "title": "Bad Luck",
+    "subtitle": "Story that teaches kids about thinking for themselves",
+    "description": "Want to teach your child to be less gullible?  This engaging story teaches kids about the benefits of checking ideas out for yourself and not believing everything you hear."
+  },
+  "the-furbots": {
+    "title": "The Furbots",
+    "subtitle": "Story that teaches kids to question advertising",
+    "description": "Is your child heavily influenced by advertising?  This engaging story teaches kids about the motivation behind advertising and the risks of believing everything they hear."
+  },
+  "yelling-magic": {
+    "title": "Yelling Magic",
+    "subtitle": "Story that teaches kids to think critically",
+    "description": "Worried that your child is too gullible?  This engaging story teaches kids about the importance of thinking critically and investigating their ideas."
+  },
+  "super-jet-3000": {
+    "title": "Super Jet 3000",
+    "subtitle": "Story that teaches kids about honesty",
+    "description": "Want your child to be more honest?  This engaging story teaches kids about the benefits of honesty and the risk of lying to get the things we want."
+  },
+  "the-broken-toy": {
+    "title": "The Broken Toy",
+    "subtitle": "Story that teaches kids not to lie",
+    "description": "Catch your child lying to you?  This engaging story teaches kids about the benefits of honesty and the consequences of lying to avoid getting in trouble."
+  },
+  "basketball-contest": {
+    "title": "Basketball Contest",
+    "subtitle": "Story that teaches about telling the truth",
+    "description": "Worried about your child's lying?  This engaging story teaches kids about the benefits of honesty and the consequences of lying to make others like them."
+  },
+  "trust-and-honesty": {
+    "title": "Trust and Honesty",
+    "subtitle": "Stories that teaches kids about lying",
+    "description": "Worried about your child's lying?  This collection of engaging stories teaches kids about the benefits of honesty."
+  }
+}

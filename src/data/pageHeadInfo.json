@@ -1,0 +1,27 @@
+{
+  "HomePage":{
+    "title": "Online stories that inspire kids to make good choices",
+    "description": "Learning is the Solution offers online books that are free, engaging, and easy-to-use.  Kids enjoy the stories while learning and developing character."
+  },
+  "ContactPage":{
+    "title": "Learning is the Solution: Contacts Page",
+    "description": "Contact us by submitting a message or emailing us.  We love to hear from you!"
+  },
+  "FeedbackPage":{
+    "title": "Learning is the Solution: Feedback Page",
+    "description": "Learning is the Solution's development is driven by feedback and request from our users.  Let us know what if we are doing a good job or if we need to change something!"
+  },
+  "TopicRecommendationPage":{
+    "title": "Learning is the Solution: New Topic Page",
+    "description": "Learning is the Solution's development is driven by feedback and request from our users.  Let us know what you would like us to add!"
+  },
+  "UpdateSignUpPage":{
+    "title": "Learning is the Solution: Update Sign-Up Page",
+    "description": "Sign up to receive email updates on new content and changes to the website."
+  },
+  "AboutPage":{
+    "title": "Learning is the Solution: About our Team",
+    "description": "We provide the tools parents need to raise happy kids who make good decisions.  We believe that every child has the potential for a fulfilling life packed with achievement and contribution. But this potential is only realized if kids get the the learning experiences they need. We are making it easy for parents to provide these experiences through engaging, interactive resources that are openly accessible online."
+  }
+
+}

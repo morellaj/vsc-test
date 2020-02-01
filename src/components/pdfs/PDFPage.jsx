@@ -3,11 +3,13 @@ import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 // eslint-disable-next-line no-unused-vars
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
 // Component dependencies
 import Navbar from 'Navbar';
+import bookInfo from 'Data/bookInfo.json';
 
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const Progress = loadable(() => import('./Progress'));
@@ -26,6 +28,7 @@ export default function PDFPage() {
   const [progDisplay, setProgDisplay] = useState(true);
   const book = window.location.search.slice(1);
   const file = `/assets/${book}.pdf`;
+  const { title, subtitle, description } = bookInfo[book];
 
   function handleResize() {
     const { innerWidth } = window;
@@ -159,6 +162,11 @@ export default function PDFPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${title}: ${subtitle}`}</title>
+        <meta name="description" content={description} />
+        <meta charset="utf-8" />
+      </Helmet>
       <Navbar />
       <Container id="fullscreen">
         <ContinueReading
