@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -21,8 +22,8 @@ export default function FeedbackPage() {
           height="700px"
           width="640px"
         />
-
       </Container>
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 import colors from 'Colors';
 
 
@@ -57,6 +58,7 @@ export default function UpdateSignUpPage() {
           )}
         />
       </Container>
+      <Footer />
     </>
   );
 }

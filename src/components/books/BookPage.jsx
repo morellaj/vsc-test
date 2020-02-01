@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 // Data files
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
@@ -48,6 +49,7 @@ export default function BookPage() {
           />
         </InnerContainer>
       </Container>
+      <Footer />
     </>
   );
 }

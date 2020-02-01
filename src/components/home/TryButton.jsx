@@ -34,6 +34,11 @@ const Container = styled(Link)`
     padding: 10px 15px;
   }
 
+  @media(max-width: 500px) {
+    font-size: 3.5vw;
+    padding: 2vw 3vw;
+  }
+
   :hover{
     background-color: ${colors.LITS.darkColor}
   }

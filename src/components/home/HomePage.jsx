@@ -6,6 +6,7 @@ import loadable from '@loadable/component';
 
 // Component dependencies
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 import IntroPictures from './IntroPictures';
 import TryButton from './TryButton';
 
@@ -32,6 +33,7 @@ export default function Home() {
           <TryButton />
         </TryContainer>
       </Container>
+      <Footer />
     </>
   );
 }

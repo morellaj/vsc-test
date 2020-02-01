@@ -9,6 +9,7 @@ import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
@@ -70,6 +71,7 @@ export default function CharacterPage() {
         <Input />
         {infoDisplay}
       </ThemeProvider>
+      <Footer />
     </>
   );
 }

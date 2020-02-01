@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from 'Navbar';
+import Footer from 'Footer';
 
 // Component dependencies
 import { teamData } from 'Constants';
@@ -30,6 +31,7 @@ export default function AboutPage() {
           {team}
         </TeamContainer>
       </Container>
+      <Footer />
     </>
   );
 }
