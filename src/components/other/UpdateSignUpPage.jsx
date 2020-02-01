@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
 import colors from 'Colors';
 
 

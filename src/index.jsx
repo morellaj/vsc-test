@@ -10,7 +10,7 @@ import {
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
-const Footer = loadable(() => import('./components/common/Footer'));
+const Footer = loadable(() => import('Footer'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = loadable(() => import('./components/pdfs/PDFPage'));
 const AboutPage = loadable(() => import('./components/about/AboutPage'));

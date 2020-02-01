@@ -8,13 +8,13 @@ import loadable from '@loadable/component';
 import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
 
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
-const Input = loadable(() => import('Common/Input'));
+const Input = loadable(() => import('Input'));
 
 /** ********************************************* */
 // Component for displaying the science page

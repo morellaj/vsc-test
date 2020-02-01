@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // Component dependencies
 
 // Data files
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';

@@ -35,7 +35,10 @@ module.exports = {
           ['Colors', './src/data/colors.json'],
           ['Data', './src/data/'],
           ['Common', './src/components/common/'],
+          ['Footer', './src/components/common/Footer.jsx'],
           ['Icon', './src/components/common/Icon.jsx'],
+          ['Input', './src/components/common/Input.jsx'],
+          ['Navbar', './src/components/common/Navbar.jsx'],
           ['Constants', './src/data/constants.js'],
           ['Assets', './assets/'],
         ]

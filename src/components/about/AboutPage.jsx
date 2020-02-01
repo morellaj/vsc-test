@@ -1,7 +1,7 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
 
 // Component dependencies
 import { teamData } from 'Constants';

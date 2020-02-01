@@ -1,7 +1,7 @@
 // Package dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Navbar from 'Common/Navbar';
+import Navbar from 'Navbar';
 
 /** ********************************************* */
 // Component for displaying the home page
