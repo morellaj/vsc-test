@@ -3,21 +3,66 @@
     "order": "1",
     "title": "Hurting Others",
     "references": [
-      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201911/the-foolproof-way-keep-your-child-hitting-other-kids",
-      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201306/when-your-child-hits-your-other-child",
-      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201505/why-kids-hit-siblings-and-how-help-them-stop",
-      "https://www.handinhandparenting.org/article/children-hitting-biting-pushing-helping-children-with-aggression-2/",
-      "https://www.ahaparenting.com/ask-the-doctor-1/7-year-old-hitting-parents-tantrumming",
-      "https://www.ahaparenting.com/blog/child_hits_parent",
-      "https://consumer.healthday.com/encyclopedia/children-s-health-10/child-development-news-124/aggression-ages-6-to-12-645908.html",
-      "https://www.empoweringparents.com/article/stop-aggressive-behavior-in-kids-and-tweens-is-your-child-screaming-pushing-and-hitting/",
-      "https://www.psychologytoday.com/us/blog/creative-development/201808/helping-your-child-anger",
-      "https://www.psychologytoday.com/us/blog/growing-friendships/201806/children-s-anger-management-strategies-work",
-      "https://www.psychologytoday.com/us/blog/passive-aggressive-diaries/201905/what-do-when-kids-turn-their-anger-parents",
-      "https://www.psychologytoday.com/us/blog/passive-aggressive-diaries/201708/how-help-kids-manage-anger",
-      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201901/when-your-child-gets-angry-the-cheat-sheet",
-      "https://www.psychologytoday.com/us/blog/creative-development/201901/how-raise-emotionally-healthy-child",
-      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201704/when-your-child-gets-angry-heres-your-gameplan"
+      {
+        "title": "The Foolproof Way to Keep Your Child From Hitting Other Kids",
+        "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201911/the-foolproof-way-keep-your-child-hitting-other-kids"
+      },
+      {
+        "title": "When Your Child Hits Your Other Child",
+        "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201306/when-your-child-hits-your-other-child"
+      },
+      {
+        "title": "Why Kids Hit Siblings and How to Help Them Stop",
+        "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201505/why-kids-hit-siblings-and-how-help-them-stop"
+      },
+      {
+        "title": "Helping Children with Aggression",
+        "link": "https://www.handinhandparenting.org/article/children-hitting-biting-pushing-helping-children-with-aggression-2/"
+      },
+      {
+        "title": "7 Year Old Hitting Parents",
+        "link": "https://www.ahaparenting.com/ask-the-doctor-1/7-year-old-hitting-parents-tantrumming"
+      },
+      {
+        "title": "When Your Child Hits You: A Script",
+        "link": "https://www.ahaparenting.com/blog/child_hits_parent"
+      },
+      {
+        "title": "Aggression, Ages 6 to 12",
+        "link": "https://consumer.healthday.com/encyclopedia/children-s-health-10/child-development-news-124/aggression-ages-6-to-12-645908.html"
+      },
+      {
+        "title": "Stop Aggressive Behavior in Kids and Tweens",
+        "link": "https://www.empoweringparents.com/article/stop-aggressive-behavior-in-kids-and-tweens-is-your-child-screaming-pushing-and-hitting/"
+      },
+      {
+        "title": "Helping Your Child with Anger",
+        "link": "https://www.psychologytoday.com/us/blog/creative-development/201808/helping-your-child-anger"
+      },
+      {
+        "title": "Children’s Anger Management Strategies That Work",
+        "link": "https://www.psychologytoday.com/us/blog/growing-friendships/201806/children-s-anger-management-strategies-work"
+      },
+      {
+        "title": "What to Do When Kids Turn Their Anger on Parents",
+        "link": "https://www.psychologytoday.com/us/blog/passive-aggressive-diaries/201905/what-do-when-kids-turn-their-anger-parents"
+      },
+      {
+        "title": "How to Help Kids Manage Anger",
+        "link": "https://www.psychologytoday.com/us/blog/passive-aggressive-diaries/201708/how-help-kids-manage-anger"
+      },
+      {
+        "title": "When Your Child Gets Angry: The Cheat Sheet",
+        "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201901/when-your-child-gets-angry-the-cheat-sheet"
+      },
+      {
+        "title": "How to Raise an Emotionally Healthy Child",
+        "link": "https://www.psychologytoday.com/us/blog/creative-development/201901/how-raise-emotionally-healthy-child"
+      },
+      {
+        "title": "When Your Child Gets Angry: Here's Your Gameplan",
+        "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201704/when-your-child-gets-angry-heres-your-gameplan"
+      }    
     ],
     "importantInformation": [
       "Kids hurting each other sometimes is normal.  Kids often learn to stop hurting others on their own.",
@@ -64,15 +109,42 @@
     "order": "2",
     "title": "Critical Thinking",
     "references": [
-      "https://www.psychologytoday.com/us/blog/memory-medic/201110/teaching-children-think",
-      "http://mabryonline.org/blogs/tyson/archive/2005/08/teaching_children_to_think.html",
-      "https://www.psychologytoday.com/us/blog/memory-medic/201710/how-learn-critical-thinking",
-      "https://www.psychologytoday.com/us/blog/thoughts-thinking/201807/15-things-we-have-learned-about-critical-thinking",
-      "https://www.psychologytoday.com/us/blog/thoughts-thinking/201711/5-tips-critical-thinking",
-      "https://www.psychologytoday.com/us/blog/thoughts-thinking/201901/5-barriers-critical-thinking",
-      "https://www.psychologytoday.com/us/blog/brain-waves/201708/how-children-s-brains-learn-reason",
-      "Steven Novella - \"Your Deceptive Mind: A Scientific Guide to Critical Thinking Skills\" ",
-      "Daniel T. Willingham - \"Why Don't Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom\" "
+      {
+        "title": "Teaching Children to Think",
+        "link": "https://www.psychologytoday.com/us/blog/memory-medic/201110/teaching-children-think"
+      },
+      {
+        "title": "How to Learn Critical Thinking",
+        "link": "https://www.psychologytoday.com/us/blog/memory-medic/201710/how-learn-critical-thinking"
+      },
+      {
+        "title": "15 Things We Have Learned About Critical Thinking",
+        "link": "https://www.psychologytoday.com/us/blog/thoughts-thinking/201807/15-things-we-have-learned-about-critical-thinking"
+      },
+      {
+        "title": "5 Tips for Critical Thinking",
+        "link": "https://www.psychologytoday.com/us/blog/thoughts-thinking/201711/5-tips-critical-thinking"
+      },
+      {
+        "title": "5 Barriers to Critical Thinking",
+        "link": "https://www.psychologytoday.com/us/blog/thoughts-thinking/201901/5-barriers-critical-thinking"
+      },
+      {
+        "title": "Teaching Children to Think",
+        "link": "http://mabryonline.org/blogs/tyson/archive/2005/08/teaching_children_to_think.html"
+      },
+      {
+        "title": "How Children’s Brains Learn to Reason",
+        "link": "https://www.psychologytoday.com/us/blog/brain-waves/201708/how-children-s-brains-learn-reason"
+      },
+      {
+        "title": "Your Deceptive Mind: A Scientific Guide to Critical Thinking Skills",
+        "link": "https://amzn.to/2U4Kjv2"
+      },
+      {
+        "title": "Why Don't Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom",
+        "link": "https://amzn.to/30Yrmf9"
+      }
     ],
     "importantInformation": [
       "We aren't born with thinking skills, but develop them through practice.  To develop these skills, kids need the space to think for themselves and come up with their own ideas.",
@@ -109,26 +181,86 @@
     "order": "3",
     "title": "Honesty",
     "references": [
-      "https://www.psychologytoday.com/us/blog/the-nature-deception/201906/why-is-my-child-lying",
-      "https://www.psychologytoday.com/us/blog/youve-had-baby-now-what/201905/why-children-lie-and-what-do-about-it",
-      "https://www.psychologytoday.com/us/blog/our-gender-ourselves/201303/why-kids-lie",
-      "https://www.psychologytoday.com/us/blog/keep-it-in-mind/201801/why-your-child-s-lies-may-be-sign-intelligence",
-      "https://www.psychologytoday.com/us/blog/good-thinking/201406/why-your-child-lies",
-      "https://www.psychologytoday.com/us/blog/school-and-family-matters/201801/does-your-child-lie",
-      "https://www.psychologytoday.com/us/blog/lets-talk-tween/201906/your-lying-tween",
-      "https://www.psychologytoday.com/us/blog/surviving-your-childs-adolescence/201810/confronting-adolescent-lying-and-what-parents-might",
-      "https://www.psychologytoday.com/us/blog/surviving-your-childs-adolescence/200903/adolescent-lying-what-it-costs-and-what-do",
-      "https://www.psychologytoday.com/us/blog/the-baby-scientist/201704/raising-honest-child",
-      "https://www.psychologytoday.com/us/blog/self-reg/201611/the-truth-about-lying",
-      "https://raisingchildren.net.au/preschoolers/behaviour/common-concerns/lies",
-      "https://www.huffpost.com/entry/what-to-do-when-my-child-_b_5355641",
-      "https://www.wired.com/2014/08/teaching-kids-to-tell-truth/",
-      "https://www.psychologytoday.com/us/blog/going-beyond-intelligence/201803/truth-lies-and-imagination",
-      "https://www.parents.com/kids/development/behavioral/the-truth-about-lying/",
-      "https://www.parents.com/kids/development/behavioral/age-by-age-guide-to-lying/",
-      "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201306/honesty-anger-and-parenting",
-      "https://www.psychologytoday.com/us/blog/liking-the-child-you-love/201404/four-steps-raising-honest-teen",
-      "https://www.psychologytoday.com/us/blog/parenting-is-contact-sport/201103/teaching-your-kids-be-honest"
+      {
+        "title": "Why Is My Child Lying?",
+        "link": "https://www.psychologytoday.com/us/blog/the-nature-deception/201906/why-is-my-child-lying"
+      },
+      {
+        "title": "Why Children Lie and What To Do About It",
+        "link": "https://www.psychologytoday.com/us/blog/youve-had-baby-now-what/201905/why-children-lie-and-what-do-about-it"
+      },
+      {
+        "title": "Why Kids Lie",
+        "link": "https://www.psychologytoday.com/us/blog/our-gender-ourselves/201303/why-kids-lie"
+      },
+      {
+        "title": "Why Your Child’s Lies May Be a Sign of Intelligence",
+        "link": "https://www.psychologytoday.com/us/blog/keep-it-in-mind/201801/why-your-child-s-lies-may-be-sign-intelligence"
+      },
+      {
+        "title": "Why Your Child Lies",
+        "link": "https://www.psychologytoday.com/us/blog/good-thinking/201406/why-your-child-lies"
+      },
+      {
+        "title": "Does Your Child Lie?",
+        "link": "https://www.psychologytoday.com/us/blog/school-and-family-matters/201801/does-your-child-lie"
+      },
+      {
+        "title": "Your Lying Tween",
+        "link": "https://www.psychologytoday.com/us/blog/lets-talk-tween/201906/your-lying-tween"
+      },
+      {
+        "title": "Confronting Adolescent Lying and What Parents Might Say",
+        "link": "https://www.psychologytoday.com/us/blog/surviving-your-childs-adolescence/201810/confronting-adolescent-lying-and-what-parents-might"
+      },
+      {
+        "title": "Adolescent Lying: What It Costs and What to Do",
+        "link": "https://www.psychologytoday.com/us/blog/surviving-your-childs-adolescence/200903/adolescent-lying-what-it-costs-and-what-do"
+      },
+      {
+        "title": "On Raising an Honest Child",
+        "link": "https://www.psychologytoday.com/us/blog/the-baby-scientist/201704/raising-honest-child"
+      },
+      {
+        "title": "The Truth About Lying",
+        "link": "https://www.psychologytoday.com/us/blog/self-reg/201611/the-truth-about-lying"
+      },
+      {
+        "title": "Lies: why children lie and what to do",
+        "link": "https://raisingchildren.net.au/preschoolers/behaviour/common-concerns/lies"
+      },
+      {
+        "title": "What to Do When My Child Lies?",
+        "link": "https://www.huffpost.com/entry/what-to-do-when-my-child-_b_5355641"
+      },
+      {
+        "title": "Some Types of Fables May Be Better at Teaching Kids Not to Lie",
+        "link": "https://www.wired.com/2014/08/teaching-kids-to-tell-truth/"
+      },
+      {
+        "title": "",
+        "link": "https://www.psychologytoday.com/us/blog/going-beyond-intelligence/201803/truth-lies-and-imagination"
+      },
+      {
+        "title": "Truth, Lies, and Imagination",
+        "link": "https://www.parents.com/kids/development/behavioral/the-truth-about-lying/"
+      },
+      {
+        "title": "Age-by-Age Guide to Lying",
+        "link": "https://www.parents.com/kids/development/behavioral/age-by-age-guide-to-lying/"
+      },
+      {
+        "title": "Honesty, Anger, and Parenting",
+        "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201306/honesty-anger-and-parenting"
+      },
+      {
+        "title": "Four Steps to Raising an Honest Teen",
+        "link": "https://www.psychologytoday.com/us/blog/liking-the-child-you-love/201404/four-steps-raising-honest-teen"
+      },
+      {
+        "title": "Teaching Your Kids to Be Honest",
+        "link": "https://www.psychologytoday.com/us/blog/parenting-is-contact-sport/201103/teaching-your-kids-be-honest"
+      }
     ],
     "importantInformation": [
       "Almost all kids start experimenting with lying around the age of 2 or 3.  Almost all adults lie as well.  Lying to spare the feelings of others or conceal private information is actually an important skill for adults to have.",

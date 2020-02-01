@@ -13,7 +13,6 @@ import colors from 'Colors';
 export default function UpdateSignUpPage() {
   let email;
   let firstName;
-  let lastName;
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -41,19 +40,12 @@ export default function UpdateSignUpPage() {
                 type="text"
                 placeholder="Optional"
               />
-              <Label>Last Name</Label>
-              <Input
-                ref={(node) => (lastName = node)}
-                type="text"
-                placeholder="Optional"
-              />
               <Button
                 type="submit"
                 onClick={() => {
                   subscribe({
                     EMAIL: email.value,
                     FNAME: firstName.value,
-                    LNAME: lastName.value,
                   });
                 }}
               >
@@ -155,12 +147,4 @@ const Button = styled.button`
   box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
   border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.35) rgba(0,0,0,0.55);
   border-bottom-width: 2px;
-
-  @media(max-width: 1000px) {
-
-  }
-
-  :hover{
-    background-color: ${colors.LITS.darkColor}
-  }
 `;

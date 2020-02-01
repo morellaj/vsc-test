@@ -26,7 +26,7 @@ export default function Home() {
       <Container>
         <IntroPictures />
         <Details />
-        <SectionLabel>CURRENT TOPICS</SectionLabel>
+        <SectionLabel>Current Topics</SectionLabel>
         <TopicsDisplay />
         <TryContainer>
           <TryButton />
@@ -43,18 +43,22 @@ const Container = styled.div`
   line-height: 1.5;
 `;
 
-const SectionLabel = styled.h1`
-  display: flex;
-  justify-content: center;
+const SectionLabel = styled.div`
+  text-align: center;
   margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 2vw;
-  font-weight: 700;
-  color: dimgray;
-  text-decoration: underline;
+  font-size: 33px;
+  padding: 0 3px;
 
-  @media(max-width: 1000px){
-    font-size: 20px;
+  @media(max-width: 1050px){
+    font-size: 28px;
+  }
+
+  @media(max-width: 900px){
+    font-size: 24px;
+  }
+
+  @media(max-width: 500px){
+    font-size: 16px;
   }
 `;
 

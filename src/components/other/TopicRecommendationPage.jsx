@@ -34,6 +34,7 @@ const Container = styled.div`
   padding-top:20px;
   display: flex;
   justify-content: center;
+  min-height: 900px;
 `;
 
 const Survey = styled.iframe`

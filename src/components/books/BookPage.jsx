@@ -33,11 +33,10 @@ export default function BookPage() {
         <InnerContainer>
           <Header>
             <HeaderTitle>Book Recommendations</HeaderTitle>
-            <HeaderSubTitle>{`${section}: ${character[section].title}`}</HeaderSubTitle>
+            <HeaderSubTitle>{`${character[section].title}`}</HeaderSubTitle>
           </Header>
           <Disclaimer>
-          *Click a book to see it on Amazon.
-          Your purchases help us remain independent and ad-free.
+          *Your purchases through Amazon help us remain independent and ad-free.
           </Disclaimer>
           <Section
             section="Our Favorites"

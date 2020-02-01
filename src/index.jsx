@@ -23,7 +23,7 @@ const ContactPage = loadable(() => import('./components/other/ContactPage'));
 ReactDOM.render((
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/" component={CharacterPage} />
       <Route path="/units" component={CharacterPage} />
       <Route path="/book" component={PDFPage} />
       <Route path="/about" component={AboutPage} />
