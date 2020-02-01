@@ -10,11 +10,12 @@ import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const BackButton = loadable(() => import('./BackButton'));
 const Progress = loadable(() => import('./Progress'));
-const Input = loadable(() => import('Input'));
+const ContinueReading = loadable(() => import('./ContinueReading'));
 
 // Component for displaying a pdf page
 export default function PDFPage(props) {
   const [page, setPage] = useState(1);
+  const [initialPage, setInitialPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
   const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
@@ -22,7 +23,8 @@ export default function PDFPage(props) {
   const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
-  const file = `/assets/${window.location.search.slice(1)}.pdf`;
+  const book = window.location.search.slice(1);
+  const file = `/assets/${book}.pdf`;
 
   function handleGoBack() {
     props.history.goBack();
@@ -74,6 +76,9 @@ export default function PDFPage(props) {
     }
     document.addEventListener('fullscreenchange', onFullScreenChange);
     return () => {
+      localStorage.setItem(book, page);
+
+
       window.removeEventListener('resize', handleResize);
       if (elem.requestFullscreen) {
         document.removeEventListener('fullscreenchange', onFullScreenChange);
@@ -89,11 +94,13 @@ export default function PDFPage(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
+    setInitialPage(initial);
   }, []);
 
   function onDocumentLoadSuccess() {
-    setPage(1);
-    setLastPage(1);
+    setPage(initialPage);
+    setLastPage(initialPage);
     setProgDisplay(false);
     handleResize();
   }
@@ -141,51 +148,54 @@ export default function PDFPage(props) {
 
 
   return (
-    <>
-      <Container id="fullscreen">
-        <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
-        <StyledDoc
-          file={file}
-          loading={null}
-          error="Book not found :("
-          onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
-          onLoadSuccess={onDocumentLoadSuccess}
-          onItemClick={onItemClick}
-          options={{ disableAutoFetch: false, disableStream: false }}
+    <Container id="fullscreen">
+      <ContinueReading
+        initialPage={initialPage}
+        setInitialPage={setInitialPage}
+        setPage={setPage}
+        setLastPage={setLastPage}
+      />
+      <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
+      <StyledDoc
+        file={file}
+        loading={null}
+        error="Book not found :("
+        onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
+        onLoadSuccess={onDocumentLoadSuccess}
+        onItemClick={onItemClick}
+        options={{ disableAutoFetch: false, disableStream: false }}
+      >
+        <MainPage
+          display={display}
+          pageNumber={page}
+          scale={scale}
+          renderTextLayer={false}
+          onRenderSuccess={pageRender}
         >
-          <MainPage
-            display={display}
-            pageNumber={page}
-            scale={scale}
-            renderTextLayer={false}
-            onRenderSuccess={pageRender}
-          >
-            <ScreenButton
-              fullCap={fullCap}
-              full={full}
-              fullscreenClick={fullscreenClick}
-            />
-            <BackButton full={full} goBack={handleGoBack} />
-          </MainPage>
-          <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
-            <Loading>Loading...</Loading>
-            <ScreenButton
-              fullCap={fullCap}
-              full={full}
-              fullscreenClick={fullscreenClick}
-            />
-            <BackButton full={full} goBack={handleGoBack} />
-          </LastPage>
-        </StyledDoc>
-      </Container>
-      <Input />
-    </>
+          <ScreenButton
+            fullCap={fullCap}
+            full={full}
+            fullscreenClick={fullscreenClick}
+          />
+          <BackButton full={full} goBack={handleGoBack} />
+        </MainPage>
+        <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
+          <Loading>Loading...</Loading>
+          <ScreenButton
+            fullCap={fullCap}
+            full={full}
+            fullscreenClick={fullscreenClick}
+          />
+          <BackButton full={full} goBack={handleGoBack} />
+        </LastPage>
+      </StyledDoc>
+    </Container>
   );
 }
 
 // Styling
 const Container = styled.div`
-  min-height: 700px;
+
 `;
 
 const StyledDoc = styled(Document)`
