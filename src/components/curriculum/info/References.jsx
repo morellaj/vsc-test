@@ -12,7 +12,15 @@ export default function References(props) {
   const { unit } = props;
   const { references } = character[unit];
 
-  const referencesDisplay = references.map((info) => <Text><a href={info.link} target="_blank" rel="noreferrer noopener">{info.title}</a></Text>);
+  let i = 0;
+  const referencesDisplay = references.map((info) => {
+    i += 1;
+    return (
+      <Text>
+        <a href={info.link} target="_blank" rel="noreferrer noopener" key={i}>{info.title}</a>
+      </Text>
+    );
+  });
   return (
     <>
       <Title>References</Title>

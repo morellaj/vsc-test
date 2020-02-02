@@ -38,7 +38,7 @@ export default function UnitList(props) {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.nav`
   width: 200px;
   margin: 0 20px;
 

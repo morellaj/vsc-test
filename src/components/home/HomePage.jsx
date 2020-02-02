@@ -44,7 +44,7 @@ export default function Home() {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.main`
   line-height: 1.5;
 `;
 

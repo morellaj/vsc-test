@@ -78,7 +78,7 @@ export default function CharacterPage() {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -32,14 +32,15 @@ const navbarList = [
 
 // Component for displaying the navbar on pages
 export default function Navbar() {
-  const items = navbarList.map((unit) => (
-    <Item key={unit.title}>
-      <StyledLink to={unit.link}>
-        <Icon icon={unit.icon} />
-        <ItemText>{unit.title}</ItemText>
+  const items = navbarList.map((unit) => {
+    const { title, link, icon } = unit;
+    return <Item key={title}>
+      <StyledLink to={link}>
+        <Icon icon={icon} alt={title} />
+        <ItemText>{title}</ItemText>
       </StyledLink>
-    </Item>
-  ));
+    </Item>;
+  });
 
   return (
     <Container>
@@ -62,7 +63,7 @@ export default function Navbar() {
 }
 
 // Styling
-const Container = styled.header`
+const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   background-color: ${colors.LITS.color};

@@ -39,7 +39,7 @@ export default function FeedbackPage() {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.main`
   justify-content: center;
   padding-top:20px;
   display: flex;

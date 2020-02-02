@@ -73,7 +73,7 @@ export default function UpdateSignUpPage() {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   justify-content: center;
 `;

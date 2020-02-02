@@ -209,7 +209,7 @@ export default function PDFPage() {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.main`
 
 `;
 
