@@ -9,6 +9,7 @@ import {
   Route, Switch, BrowserRouter, Router,
 } from 'react-router-dom';
 
+
 const history = createBrowserHistory();
 ReactGA.initialize('UA-157541239-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
