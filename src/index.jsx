@@ -1,22 +1,11 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React from 'react';
-import { createBrowserHistory } from 'history';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 import {
-  Route, Switch, BrowserRouter, Router,
+  Route, Switch, BrowserRouter,
 } from 'react-router-dom';
-
-
-const history = createBrowserHistory();
-history.listen((location) => {
-  window.gtag('event', 'pageview', {
-    event_category: 'access',
-    event_label: 'login',
-  });
-});
-
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
@@ -31,7 +20,7 @@ const ContactPage = loadable(() => import('./components/other/ContactPage'));
 // const SitemapBuilder = loadable(() => import('./components/other/SitemapBuilder'));
 
 ReactDOM.render((
-  <Router history={history}>
+  <BrowserRouter>
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/units" component={CharacterPage} />
@@ -43,4 +32,4 @@ ReactDOM.render((
       <Route path="/topic-recommendation" component={TopicRecommendationPage} />
       <Route path="/contact" component={ContactPage} />
     </Switch>
-  </Router>), document.getElementById('app'));
+  </BrowserRouter>), document.getElementById('app'));
