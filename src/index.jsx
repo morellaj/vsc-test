@@ -1,7 +1,6 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React from 'react';
-import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
@@ -9,13 +8,13 @@ import {
   Route, Switch, BrowserRouter, Router,
 } from 'react-router-dom';
 
+
 const history = createBrowserHistory();
-ReactGA.initialize('UA-157541239-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
 history.listen((location) => {
-  console.log('history');
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+  window.gtag('event', 'pageview', {
+    event_category: 'access',
+    event_label: 'login',
+  });
 });
 
 
