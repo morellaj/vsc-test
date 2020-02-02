@@ -106,7 +106,7 @@ export const booksUnitList = {
   honesty: 'S-1',
 };
 
-export const introPicCount = 5;
+export const introPicCount = 4;
 
 export const teamData = [
   {
