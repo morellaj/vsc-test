@@ -1,9 +1,10 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-
-// Component dependencies
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faQuestionCircle,
+} from '@fortawesome/free-solid-svg-icons';
 
 /** ************************************ */
 // Component for the description of activities
@@ -22,7 +23,11 @@ export default function ActivityGroup(props) {
       <GroupHeader>
         <div>{text}</div>
         <IconContainer onClick={handleClick}>
-          <Icon icon="question" onClick={handleClick} />
+          <FontAwesomeIcon
+            icon={faQuestionCircle}
+            onClick={handleClick}
+            style={{ marginLeft: '5px' }}
+          />
         </IconContainer>
       </GroupHeader>
       <Activities>{activities}</Activities>

@@ -1,22 +1,28 @@
-// Package dependencies
-import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-// Component dependencies
 import colors from 'Colors';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
-export default function TryButton() {
-  return (
-    <Container to="book?super-jet-3000">Read a book</Container>
-  );
-}
+export const Heading = styled.div`
+  text-align: center;
+  margin-top: 30px;
+  font-size: 33px;
+  padding: 0 3px;
 
-// Constants
-const Container = styled(Link)`
+  @media(max-width: 1050px){
+    font-size: 28px;
+  }
+
+  @media(max-width: 900px){
+    font-size: 24px;
+  }
+
+  @media(max-width: 500px){
+    font-size: 16px;
+  }
+`;
+
+export const test = 5;
+
+export const Button = styled.div`
   padding: 1vw 1.4vw;
   border-radius: 5px;
   background-color: ${colors.LITS.color};

@@ -1,8 +1,7 @@
 // Package dependencies
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
-// Component dependencies
+import { Button } from 'Styles';
 import colors from 'Colors';
 
 // Component for the controls on the pdf page
@@ -28,8 +27,8 @@ export default function ContinueReading(props) {
       <InnerContainer>
         <Label>{`Continue from page ${initialPage}?`}</Label>
         <ButtonContainer>
-          <Button onClick={handleContinue} style={{ marginRight: '20px' }}>Continue</Button>
-          <Button onClick={handleStartOver}>Start Over</Button>
+          <NewButton onClick={handleContinue} style={{ marginRight: '20px' }}>Continue</NewButton>
+          <NewButton onClick={handleStartOver}>Start Over</NewButton>
         </ButtonContainer>
       </InnerContainer>
     </Container>
@@ -78,25 +77,13 @@ const ButtonContainer = styled.div`
   display: flex;
 `;
 
-const Button = styled.div`
-  padding: 1vw 1.4vw;
+const NewButton = styled(Button)`
   width: 7vw;
-  border-radius: 5px;
-  background-color: ${colors.LITS.color};
-  font-size: 1.5vw;
-  color: white;
-  font-weight: 700;
-  border: 1px solid black;
-  box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
-  border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.35) rgba(0,0,0,0.55);
-  border-bottom-width: 2px;
   text-align: center;
   cursor: pointer;
   margin-top: 20px;
 
   @media(max-width: 1000px) {
-    font-size: 14px;
-    padding: 10px 15px;
     width: 70px;
   }
 

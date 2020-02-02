@@ -2,9 +2,48 @@
 import React from 'react';
 import styled from 'styled-components';
 import loadable from '@loadable/component';
+import { Heading } from 'Styles';
 
-// Component dependencies
-import { detailsText } from 'Constants';
+import {
+  faChild,
+  faSmileBeam,
+  faGraduationCap,
+  faMoneyBillWaveAlt,
+  faHandshake,
+} from '@fortawesome/free-solid-svg-icons';
+
+const detailsText = [
+  {
+    id: 1,
+    label: 'Engaging',
+    text: ' Characters and stories that kids love',
+    icon: faChild,
+  },
+  {
+    id: 2,
+    label: 'Easy',
+    text: ' Simple to access and no prep required',
+    icon: faSmileBeam,
+  },
+  {
+    id: 3,
+    label: 'Free',
+    text: 'All current content will remain openly available',
+    icon: faMoneyBillWaveAlt,
+  },
+  {
+    id: 4,
+    label: 'Research-Based',
+    text: ' Based on literature from child development experts',
+    icon: faGraduationCap,
+  },
+  {
+    id: 5,
+    label: 'Community-Driven',
+    text: ' Guided by feedback and requests from our users',
+    icon: faHandshake,
+  },
+];
 
 const DetailItem = loadable(() => import('./DetailItem'));
 const DetailsSlides = loadable(() => import('./DetailsSlides'));
@@ -35,32 +74,13 @@ export default function Details() {
 
 // Styling
 const Container = styled.section`
-  padding: 30px 0;
+  padding: 10px 0;
   background-color: rgb(1,145,218, .1);
-`;
-
-const Heading = styled.div`
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  font-size: 33px;
-  padding: 0 3px;
-
-  @media(max-width: 1050px){
-    font-size: 28px;
-  }
-
-  @media(max-width: 900px){
-    font-size: 24px;
-  }
-
-  @media(max-width: 500px){
-    font-size: 16px;
-  }
 `;
 
 const ContentContainer = styled.div`
   display: flex;
+  margin-top: 25px;
 
   @media (max-width: 1000px){
     flex-direction: column-reverse;

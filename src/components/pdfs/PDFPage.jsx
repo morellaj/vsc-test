@@ -3,7 +3,6 @@ import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import styled from 'styled-components';
-import { Helmet } from 'react-helmet';
 // eslint-disable-next-line no-unused-vars
 import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 
@@ -14,6 +13,7 @@ import bookInfo from 'Data/bookInfo.json';
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const Progress = loadable(() => import('./Progress'));
 const ContinueReading = loadable(() => import('./ContinueReading'));
+const Head = loadable(() => import('Head'));
 
 // Component for displaying a pdf page
 export default function PDFPage() {
@@ -162,11 +162,7 @@ export default function PDFPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{`${title}: ${subtitle}`}</title>
-        <meta name="description" content={description} />
-        <meta charset="utf-8" />
-      </Helmet>
+      <Head title={`${title}: ${subtitle}`} description={description} />
       <Navbar />
       <Container id="fullscreen">
         <ContinueReading

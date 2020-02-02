@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 // Data dependencies
 import colors from 'Colors';
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -36,7 +39,7 @@ export default function Topic(props) {
         <ImageCover done={done} hover={hover}>
           <CoverText>
             Click to see books
-            <Icon icon="arrow" />
+            <FontAwesomeIcon icon={faArrowRight} style={{ margin: '0 5px' }} />
           </CoverText>
         </ImageCover>
         <Picture>

@@ -1,7 +1,7 @@
 // Package dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { Helmet } from 'react-helmet';
+import Head from 'Head';
 
 
 // Component dependencies
@@ -31,11 +31,7 @@ export default function BookPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{bookTitle}</title>
-        <meta name="description" content={description} />
-        <meta charset="utf-8" />
-      </Helmet>
+      <Head title={bookTitle} description={description} />
       <Navbar />
       <Container>
         <InnerContainer>

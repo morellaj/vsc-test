@@ -1,21 +1,25 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import loadable from '@loadable/component';
+import { Button } from 'Styles';
+import { Link } from 'react-router-dom';
 
 // Component dependencies
-import IntroSlides from './IntroSlides';
-import TryButton from './TryButton';
+const IntroSlides = loadable(() => import('./IntroSlides'));
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function IntroParagraph() {
+export default function IntroPictures() {
   return (
     <Container>
       <SlidesContainer>
         <IntroSlides />
         <TryButtonContainer>
-          <TryButton />
+          <Link to="book?super-jet-3000" style={{ textDecoration: 'none' }}>
+            <Button>Read a book</Button>
+          </Link>
         </TryButtonContainer>
         <IntroTextContainer>
           <IntroText>
@@ -43,6 +47,7 @@ const Container = styled.div`
     height: 47vw;
   }
 `;
+
 
 const SlidesContainer = styled.div`
   width: 100%;

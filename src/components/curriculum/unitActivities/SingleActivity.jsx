@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 // Data dependencies
 import { Link } from 'react-router-dom';
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -39,7 +42,7 @@ export default function Topic(props) {
       <ImageCover hover={hover}>
         <CoverText>
             Click to read
-          <Icon icon="arrow" />
+          <FontAwesomeIcon icon={faArrowRight} style={{ margin: '0 5px' }} />
         </CoverText>
       </ImageCover>
       <ImageContainer>

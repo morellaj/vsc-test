@@ -2,12 +2,33 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBookReader,
+  faInfoCircle,
+  faCommentDots,
+} from '@fortawesome/free-solid-svg-icons';
 
 // Component dependencies and data files
 import colors from 'Colors';
-import { navbarList } from 'Constants';
-import Icon from 'Icon';
+
+const navbarList = [
+  {
+    title: 'Online Books',
+    icon: faBookReader,
+    link: '/units',
+  },
+  {
+    title: 'About',
+    icon: faInfoCircle,
+    link: '/about',
+  },
+  {
+    title: 'Give Feedback',
+    icon: faCommentDots,
+    link: '/feedback',
+  },
+];
 
 // Component for displaying the navbar on pages
 export default function Navbar() {
@@ -95,6 +116,10 @@ const Item = styled.li`
   @media(max-width: 500px) {
     margin: 5px;
   }
+`;
+
+const Icon = styled(FontAwesomeIcon)`
+  margin: 0 5px;
 `;
 
 const StyledLink = styled(Link)`
