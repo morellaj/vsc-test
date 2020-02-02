@@ -4,8 +4,42 @@ import styled from 'styled-components';
 
 // Component dependencies
 import { Link } from 'react-router-dom';
-import Icon from 'Icon';
-import { parentInformationList } from 'Constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faGraduationCap,
+  faBookReader,
+  faFileAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faListAlt,
+} from '@fortawesome/free-regular-svg-icons';
+
+const parentInformationList = [
+  {
+    id: 1,
+    link: 'book?parents-',
+    icon: faFileAlt,
+    text: 'Parent Informational',
+  },
+  {
+    id: 2,
+    link: 'book-recommendations?',
+    icon: faBookReader,
+    text: 'Book Recommendations',
+  },
+  {
+    id: 3,
+    tag: 'learning-goals',
+    icon: faGraduationCap,
+    text: 'Learning Goals',
+  },
+  {
+    id: 4,
+    tag: 'references',
+    icon: faListAlt,
+    text: 'References',
+  },
+];
 
 /** ************************************ */
 // Component for the description of activities
@@ -15,27 +49,31 @@ export default function ParentInformation(props) {
 
 
   function handleClick(e) {
-    // setInfo({ type: 'categoryInfo', text: 'parent' });
     setInfo({ type: e.target.getAttribute('value'), text: unit });
   }
+
+  const style = { margin: '0 5px' };
 
 
   const display = [];
   parentInformationList.forEach((item) => {
-    if (item.link) {
+    const {
+      link, icon, id, text, tag,
+    } = item;
+    if (link) {
       display.push(
-        <PlainLink to={`/${item.link}${unit}`} key={item.id}>
-          <Item>
-            <Icon icon={item.icon} />
+        <Item>
+          <PlainLink to={`/${link}${unit}`} key={id}>
+            <FontAwesomeIcon icon={icon} style={style} />
             <Text>{item.text}</Text>
-          </Item>
-        </PlainLink>,
+          </PlainLink>
+        </Item>,
       );
     } else {
       display.push(
-        <Item key={item.id} value={item.tag} onClick={handleClick}>
-          <Icon value={item.tag} icon={item.icon} />
-          <Text value={item.tag}>{item.text}</Text>
+        <Item key={id} value={tag} onClick={handleClick}>
+          <FontAwesomeIcon value={tag} icon={icon} style={style} />
+          <Text value={tag}>{text}</Text>
         </Item>,
       );
     }
@@ -69,6 +107,7 @@ const List = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
+  list-style: none;
 
   @media (max-width: 1200px) {
     margin: 5px;
@@ -77,6 +116,7 @@ const List = styled.ul`
 
 const PlainLink = styled(Link)`
   text-decoration: none;
+  display:inline-flex;
   color: black;
 `;
 

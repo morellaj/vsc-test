@@ -33,4 +33,4 @@ ReactDOM.render((
       <Route path="/topic-recommendation" component={TopicRecommendationPage} />
       <Route path="/contact" component={ContactPage} />
     </Switch>
-  </BrowserRouter>), document.getElementById('main'));
+  </BrowserRouter>), document.getElementById('app'));

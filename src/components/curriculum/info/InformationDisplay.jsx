@@ -3,7 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component dependencies
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 import CategoryInformation from './CategoryInformation';
 import LearningGoals from './LearningGoals';
 import References from './References';
@@ -32,7 +35,7 @@ export default function InformationDisplay(props) {
     <Container onClick={() => { setInfo(null); }}>
       <InfoContainer onClick={(e) => (e.stopPropagation())}>
         <IconContainer onClick={() => { setInfo(null); }}>
-          <Icon icon="exit" />
+          <FontAwesomeIcon icon={faTimes} />
         </IconContainer>
         {display}
       </InfoContainer>
@@ -60,7 +63,7 @@ const IconContainer = styled.div`
   font-size: 25px;
   top: 10px;
   position: absolute;
-  right: 10px;
+  right: 15px;
   color: #d3d3d3;
   cursor: pointer;
   border-radius: 5px;

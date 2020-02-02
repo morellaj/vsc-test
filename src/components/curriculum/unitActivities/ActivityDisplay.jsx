@@ -2,14 +2,11 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import loadable from '@loadable/component';
 
-
-// Component dependencies
-import activityCategoryText from 'Data/activityCategoryText.json';
-import ActivityGroup from './ActivityGroup';
-import SingleActivity from './SingleActivity';
-import ParentInformation from './ParentInformation';
-
+const ActivityGroup = loadable(() => import('./ActivityGroup'));
+const SingleActivity = loadable(() => import('./SingleActivity'));
+const ParentInformation = loadable(() => import('./ParentInformation'));
 
 /** ************************************ */
 // Component for the description of activities
@@ -30,21 +27,23 @@ export default function ActivityDisplay(props) {
     />,
   );
 
-  for (const cat in list) {
-    const item = list[cat];
+  const categories = Object.keys(list);
+  const catValues = Object.values(list);
+
+  for (let i = 0; i < categories.length; i += 1) {
     const activities = [];
-    for (const act in item.activities) {
-      activities.push(
-        <SingleActivity title={item.activities[act].title} key={act} />,
-      );
+    const activityList = Object.keys(catValues[i].activities);
+    const actValues = Object.values(catValues[i].activities);
+    for (let j = 0; j < activityList.length; j += 1) {
+      activities.push(<SingleActivity title={actValues[j].title} key={activityList[j]} />);
     }
     const display = (
       <ActivityGroup
-        text={list[cat].text}
+        text={catValues[i].text}
         setInfo={setInfo}
-        category={cat}
+        category={categories[i]}
         activities={activities}
-        key={cat}
+        key={categories[i]}
       />
     );
 

@@ -1,20 +1,17 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
 import loadable from '@loadable/component';
-
-
-// Component dependencies and data files
 import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
-import Footer from 'Footer';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
 
+const Footer = loadable(() => import('Footer'));
+const Head = loadable(() => import('Head'));
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
 const Input = loadable(() => import('Input'));
 
@@ -56,11 +53,7 @@ export default function CharacterPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{`${title}: ${subtitle}`}</title>
-        <meta name="description" content={description} />
-        <meta charset="utf-8" />
-      </Helmet>
+      <Head title={`${title}: ${subtitle}`} description={description} />
       <Navbar />
       <ThemeProvider theme={theme}>
         <Container>
@@ -85,7 +78,7 @@ export default function CharacterPage() {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   flex-direction: row;
   justify-content: center;

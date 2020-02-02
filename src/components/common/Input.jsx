@@ -47,11 +47,11 @@ const Line = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-    color: ${colors.LITS.color};
+    color: ${colors.LITS.darkColor};
     text-decoration: none;
     font-weight: 900;
 
     :hover {
-        color: ${colors.LITS.darkColor};
+        text-decoration: underline;
     }
 `;

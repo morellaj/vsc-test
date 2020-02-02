@@ -19,6 +19,11 @@
     "subtitle": "Stories that teach kids about hitting, hurting others, and anger",
     "description": "Collection of engaging short stories that help kids understand the benefits of controlling their anger and what they can do instead."
   },
+  "parents-hurting-others" : {
+    "title": "Why is my kid hitting and what do I do?",
+    "subtitle": "",
+    "description": "Are you shocked by the first time your child hit someone else?  Or maybe hurting others has been a frequent problem for your kid?  This article concisely conveys what to expect and what to do."
+  },
   "bad-luck": {
     "title": "Bad Luck",
     "subtitle": "Story that teaches kids about thinking for themselves",
@@ -33,6 +38,11 @@
     "title": "Yelling Magic",
     "subtitle": "Story that teaches kids to think critically",
     "description": "Worried that your child is too gullible?  This engaging story teaches kids about the importance of thinking critically and investigating their ideas."
+  },
+  "parents-critical-thinking" : {
+    "title": "How can I teach my child to think and develop critical thinking skills?",
+    "subtitle": "",
+    "description": "Is your child heavily influenced by others?  Are you concerned about their ability to think critically on their own?  This article concisely conveys what to expect and how you can help."
   },
   "super-jet-3000": {
     "title": "Super Jet 3000",
@@ -53,5 +63,10 @@
     "title": "Trust and Honesty",
     "subtitle": "Stories that teaches kids about lying",
     "description": "Worried about your child's lying?  This collection of engaging stories teaches kids about the benefits of honesty."
+  },
+  "parents-honesty" : {
+    "title": "How Can I Teach My Child to Be Honest and Not to Lie?",
+    "subtitle": "",
+    "description": "Shocked by your child's first lie?  Or maybe your child's lying has been a long-term problem.  This article concisely conveys what to expect and what you can do."
   }
 }

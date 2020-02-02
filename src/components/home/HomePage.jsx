@@ -1,17 +1,15 @@
-// Package dependencies
+// Dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
-
-
-// Component dependencies
+import { Heading, Button } from 'Styles';
 import Navbar from 'Navbar';
-import Footer from 'Footer';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
+import { Link } from 'react-router-dom';
 import IntroPictures from './IntroPictures';
-import TryButton from './TryButton';
 
+const Footer = loadable(() => import('Footer'));
+const Head = loadable(() => import('Head'));
 const TopicsDisplay = loadable(() => import('./TopicsDisplay'));
 const Details = loadable(() => import('./Details'));
 
@@ -26,19 +24,17 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta charset="utf-8" />
-      </Helmet>
+      <Head title={title} description={description} />
       <Navbar />
       <Container>
         <IntroPictures />
         <Details />
-        <SectionLabel>Current Topics</SectionLabel>
+        <Heading>Current Topics</Heading>
         <TopicsDisplay />
         <TryContainer>
-          <TryButton />
+          <Link to="book?super-jet-3000" style={{ textDecoration: 'none' }}>
+            <Button>Read a book</Button>
+          </Link>
         </TryContainer>
       </Container>
       <Footer />
@@ -48,28 +44,8 @@ export default function Home() {
 
 
 // Styling
-const Container = styled.div`
-  font-size: 16px;
+const Container = styled.main`
   line-height: 1.5;
-`;
-
-const SectionLabel = styled.div`
-  text-align: center;
-  margin-top: 30px;
-  font-size: 33px;
-  padding: 0 3px;
-
-  @media(max-width: 1050px){
-    font-size: 28px;
-  }
-
-  @media(max-width: 900px){
-    font-size: 24px;
-  }
-
-  @media(max-width: 500px){
-    font-size: 16px;
-  }
 `;
 
 const TryContainer = styled.div`

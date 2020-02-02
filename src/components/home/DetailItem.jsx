@@ -1,9 +1,7 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-
-// Component dependencies
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import colors from 'Colors';
 
 /** ********************************************* */
@@ -14,7 +12,7 @@ export default function DetailItem(props) {
   return (
     <Container>
       <IconContainer>
-        <Icon icon={icon} />
+        <FontAwesomeIcon icon={icon} />
       </IconContainer>
       <TextContainer>
         <Label>{label}</Label>

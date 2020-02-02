@@ -4,9 +4,8 @@ import React from 'react';
 import styled from 'styled-components';
 import loadable from '@loadable/component';
 import { Link } from 'react-router-dom';
-
-// Component dependencies
 import { topicList } from 'Constants';
+
 const Topic = loadable(() => import('./Topic'));
 
 /** ********************************************* */
@@ -14,13 +13,16 @@ const Topic = loadable(() => import('./Topic'));
 /** ********************************************* */
 export default function TopicsDisplay() {
   const list = topicList.map((item) => {
-    if (item.done) {
+    const {
+      done, text, id, imgStyle,
+    } = item;
+    if (done) {
       return (
         <StyledLink to={`/units?${item.text.replace(/\s+/g, '-').toLowerCase()}`} key={item.id}>
           <Topic
-            done={item.done}
-            text={item.text}
-            imgStyle={item.imgStyle}
+            done={done}
+            text={text}
+            imgStyle={imgStyle}
           />
         </StyledLink>
       );
@@ -28,10 +30,10 @@ export default function TopicsDisplay() {
 
     return (
       <Topic
-        done={item.done}
-        text={item.text}
-        imgStyle={item.imgStyle}
-        key={item.id}
+        done={done}
+        text={text}
+        imgStyle={imgStyle}
+        key={id}
       />
     );
   });

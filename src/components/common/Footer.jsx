@@ -18,9 +18,11 @@ export default function Footer() {
   ));
 
   return (
-    <List>
-      {items}
-    </List>
+    <footer>
+      <List>
+        {items}
+      </List>
+    </footer>
   );
 }
 
@@ -54,7 +56,8 @@ const FooterItem = styled.li`
 const StyledLink = styled(Link)`
   padding: 5px;
   border-radius: 5px;
-  color: darkgray;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
   text-decoration: none;
 
   :hover {

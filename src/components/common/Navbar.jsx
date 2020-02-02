@@ -2,23 +2,47 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBookReader,
+  faInfoCircle,
+  faCommentDots,
+} from '@fortawesome/free-solid-svg-icons';
 
 // Component dependencies and data files
 import colors from 'Colors';
-import { navbarList } from 'Constants';
-import Icon from 'Icon';
+
+const navbarList = [
+  {
+    title: 'Online Books',
+    icon: faBookReader,
+    link: '/units',
+  },
+  {
+    title: 'About',
+    icon: faInfoCircle,
+    link: '/about',
+  },
+  {
+    title: 'Give Feedback',
+    icon: faCommentDots,
+    link: '/feedback',
+  },
+];
 
 // Component for displaying the navbar on pages
 export default function Navbar() {
-  const items = navbarList.map((unit) => (
-    <Item key={unit.title}>
-      <StyledLink to={unit.link}>
-        <Icon icon={unit.icon} />
-        <ItemText>{unit.title}</ItemText>
-      </StyledLink>
-    </Item>
-  ));
+  const items = navbarList.map((unit) => {
+    const { title, link, icon } = unit;
+    return (
+      <Item key={title}>
+        <StyledLink to={link}>
+          <Icon icon={icon} alt={title} />
+          <ItemText>{title}</ItemText>
+        </StyledLink>
+      </Item>
+    );
+  });
 
   return (
     <Container>
@@ -41,7 +65,7 @@ export default function Navbar() {
 }
 
 // Styling
-const Container = styled.header`
+const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   background-color: ${colors.LITS.color};
@@ -56,7 +80,7 @@ const LogoContainer = styled(Link)`
     background-color: ${colors.LITS.darkColor};
   }
 
-  @media(max-width: 500px){
+  @media(max-width: 700px){
     margin: 5px;
   }
 `;
@@ -64,9 +88,14 @@ const LogoContainer = styled(Link)`
 const Logo = styled.img`
   height: 50px;
 
-  @media(max-width: 500px) {
+  @media(max-width: 700px) {
     height: 40px;
   }
+
+  @media(max-width: 600px) {
+    height: 30px;
+  }
+
 `;
 
 const List = styled.ul`
@@ -74,13 +103,18 @@ const List = styled.ul`
   justify-content: flex-end;
   align-items:center;
   margin: 0 20px 0 0;
+  padding: 0;
   font-size: 16px;
   font-weight: 500;
   color: white;
   list-style-type: none;
 
-  @media(max-width: 500px){
-    padding: 0;
+  @media(max-width: 700px){
+    font-size: 12px;
+  }
+
+  @media(max-width: 450px) {
+    margin-right: 5px;
   }
 `;
 
@@ -92,8 +126,16 @@ const Item = styled.li`
     background-color: ${colors.LITS.darkColor};
   }
 
-  @media(max-width: 500px) {
+  @media(max-width: 600px) {
     margin: 5px;
+  }
+`;
+
+const Icon = styled(FontAwesomeIcon)`
+  margin: 0 5px;
+  
+  @media(max-width: 450px) {
+    display: none;
   }
 `;
 
@@ -109,7 +151,5 @@ const StyledLink = styled(Link)`
 `;
 
 const ItemText = styled.div`
- @media(max-width: 783px) {
-   display: none;
- }
+  text-align: center;
 `;

@@ -16,7 +16,7 @@ export default function UnitList(props) {
   const { unitList, unitSelected, setUnitSelected } = props;
   const unitArr = unitList.map((unit, i) => (
     <Unit
-      unitSelected={unitSelected == i}
+      unitSelected={parseInt(unitSelected, 10) === i}
       num={i}
       title={unit.title}
       char={unit.unit.charAt(0)}
@@ -38,7 +38,7 @@ export default function UnitList(props) {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.nav`
   width: 200px;
   margin: 0 20px;
 

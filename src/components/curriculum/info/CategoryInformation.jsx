@@ -13,9 +13,13 @@ export default function CategoryInformation(props) {
   const { sections, title } = activityCategoryText[text];
 
   const display = sections.map((section) => {
-    const textDisplay = section.text.map((item) => <Text>{item}</Text>);
+    let i = 0;
+    const textDisplay = section.text.map((item) => {
+      i += 1;
+      return <Text key={i}>{item}</Text>;
+    });
     return (
-      <SectionContainer>
+      <SectionContainer key={section.label}>
         <Label>{section.label}</Label>
         <TextContainer>{textDisplay}</TextContainer>
       </SectionContainer>

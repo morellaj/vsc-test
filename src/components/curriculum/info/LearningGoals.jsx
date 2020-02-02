@@ -12,9 +12,18 @@ export default function LearningGoals(props) {
   const { unit } = props;
   const { learningGoals, importantInformation } = character[unit];
 
-  const learningGoalsDisplay = learningGoals.map((goal) => <Text>{goal}</Text>);
+  let i = 0;
+  const learningGoalsDisplay = learningGoals.map((goal) => {
+    i += 1;
+    return <Text key={i}>{goal}</Text>;
+  });
 
-  const importantInformationDisplay = importantInformation.map((info) => <Text>{info}</Text>);
+  let j = 0;
+  const importantInformationDisplay = importantInformation.map((info) => {
+    j += 1;
+    return <Text key={j}>{info}</Text>;
+  });
+
   return (
     <>
       <Title>Learning Goals</Title>

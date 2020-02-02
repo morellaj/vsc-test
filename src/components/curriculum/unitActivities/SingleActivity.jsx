@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 // Data dependencies
 import { Link } from 'react-router-dom';
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -39,7 +42,7 @@ export default function Topic(props) {
       <ImageCover hover={hover}>
         <CoverText>
             Click to read
-          <Icon icon="arrow" />
+          <FontAwesomeIcon icon={faArrowRight} style={{ margin: '0 5px' }} />
         </CoverText>
       </ImageCover>
       <ImageContainer>
@@ -47,7 +50,7 @@ export default function Topic(props) {
           <source srcSet={`Assets/${name}.webp`} type="image/webp" />
           <source srcSet={`Assets/${name}.jpg`} type="image/jpeg" />
           <Image
-            display={display}
+            show={display}
             alt={`book - ${name}`}
             onLoad={() => (setDisplay(true))}
             src={`Assets/${name}.jpg`}
@@ -116,7 +119,7 @@ const CoverText = styled.div`
 const Image = styled.img`
   width: 100%;
   position:absolute;
-  display: ${(props) => (props.display ? 'block' : 'none')}
+  display: ${(props) => (props.show ? 'block' : 'none')}
 `;
 
 const Picture = styled.picture`

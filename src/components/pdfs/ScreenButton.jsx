@@ -3,18 +3,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component dependencies
-import Icon from 'Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faExpandArrowsAlt,
+  faCompressArrowsAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {
   const { fullCap, full, fullscreenClick } = props;
 
-  const icon = full ? 'compress' : 'expand';
+  const icon = full ? faCompressArrowsAlt : faExpandArrowsAlt;
   const text = full ? 'Exit Full Screen' : 'Full Screen';
 
   return (
     <Container fullCap={fullCap} onClick={fullscreenClick}>
-      <Icon icon={icon} />
+      <FontAwesomeIcon icon={icon} style={{ margin: '0 5px' }} />
       {text}
     </Container>
   );
