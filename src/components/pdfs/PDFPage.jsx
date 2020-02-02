@@ -35,7 +35,7 @@ export default function PDFPage() {
     let navbarLoss;
     if (full) {
       navbarLoss = 0;
-    } else if (innerWidth > 500) {
+    } else if (innerWidth > 700) {
       navbarLoss = 74;
     } else {
       navbarLoss = 64;

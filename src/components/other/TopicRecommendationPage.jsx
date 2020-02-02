@@ -19,7 +19,6 @@ export default function FeedbackPage() {
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta charset="utf-8" />
       </Helmet>
       <Navbar />
       <Container>
