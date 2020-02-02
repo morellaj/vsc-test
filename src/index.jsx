@@ -1,12 +1,15 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React from 'react';
+import ReactGA from 'react-ga';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 import {
   Route, Switch, BrowserRouter,
 } from 'react-router-dom';
 
+ReactGA.initialize('UA-157541239-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
