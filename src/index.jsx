@@ -2,14 +2,22 @@
 import loadable from '@loadable/component';
 import React from 'react';
 import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 import {
-  Route, Switch, BrowserRouter,
+  Route, Switch, BrowserRouter, Router,
 } from 'react-router-dom';
 
+const history = createBrowserHistory();
 ReactGA.initialize('UA-157541239-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
+history.listen((location) => {
+  console.log('history');
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
+
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
@@ -24,7 +32,7 @@ const ContactPage = loadable(() => import('./components/other/ContactPage'));
 // const SitemapBuilder = loadable(() => import('./components/other/SitemapBuilder'));
 
 ReactDOM.render((
-  <BrowserRouter>
+  <Router history={history}>
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/units" component={CharacterPage} />
@@ -36,4 +44,4 @@ ReactDOM.render((
       <Route path="/topic-recommendation" component={TopicRecommendationPage} />
       <Route path="/contact" component={ContactPage} />
     </Switch>
-  </BrowserRouter>), document.getElementById('app'));
+  </Router>), document.getElementById('app'));
