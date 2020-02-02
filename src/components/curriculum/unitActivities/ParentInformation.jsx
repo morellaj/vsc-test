@@ -62,14 +62,12 @@ export default function ParentInformation(props) {
     } = item;
     if (link) {
       display.push(
-        <li>
+        <Item>
           <PlainLink to={`/${link}${unit}`} key={id}>
-            <Item>
-              <FontAwesomeIcon icon={icon} style={style} />
-              <Text>{item.text}</Text>
-            </Item>
+            <FontAwesomeIcon icon={icon} style={style} />
+            <Text>{item.text}</Text>
           </PlainLink>
-        </li>,
+        </Item>,
       );
     } else {
       display.push(
@@ -118,6 +116,7 @@ const List = styled.ul`
 
 const PlainLink = styled(Link)`
   text-decoration: none;
+  display:inline-flex;
   color: black;
 `;
 
