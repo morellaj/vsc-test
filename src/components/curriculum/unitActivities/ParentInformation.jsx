@@ -62,12 +62,14 @@ export default function ParentInformation(props) {
     } = item;
     if (link) {
       display.push(
-        <PlainLink to={`/${link}${unit}`} key={id}>
-          <Item>
-            <FontAwesomeIcon icon={icon} style={style} />
-            <Text>{item.text}</Text>
-          </Item>
-        </PlainLink>,
+        <li>
+          <PlainLink to={`/${link}${unit}`} key={id}>
+            <Item>
+              <FontAwesomeIcon icon={icon} style={style} />
+              <Text>{item.text}</Text>
+            </Item>
+          </PlainLink>
+        </li>,
       );
     } else {
       display.push(
@@ -107,6 +109,7 @@ const List = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
+  list-style: none;
 
   @media (max-width: 1200px) {
     margin: 5px;
