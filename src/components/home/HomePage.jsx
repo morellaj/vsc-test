@@ -29,7 +29,7 @@ export default function Home() {
       <Container>
         <IntroPictures />
         <Details />
-        <Heading>Current Topics</Heading>
+        <Heading>Current Topics: Ages 4 to 9</Heading>
         <TopicsDisplay />
         <TryContainer>
           <Link to="book?super-jet-3000" style={{ textDecoration: 'none' }}>
