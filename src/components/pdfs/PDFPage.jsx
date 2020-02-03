@@ -26,6 +26,7 @@ export default function PDFPage() {
   const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
+  const [browser, setBrowser] = useState(false);
   const book = window.location.search.slice(1);
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book];
@@ -109,6 +110,14 @@ export default function PDFPage() {
     window.scrollTo(0, 0);
     const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
     setInitialPage(initial);
+    const elem = document.getElementById('fullscreen');
+    if (
+      !elem.requestFullscreen
+      && !elem.mozRequestFullScreen
+      && !elem.webkitRequestFullScreen
+      && !elem.msRequestFullScreen) {
+      setBrowser(true);
+    }
   }, []);
 
   function onDocumentLoadSuccess() {
@@ -193,6 +202,9 @@ export default function PDFPage() {
               full={full}
               fullscreenClick={fullscreenClick}
             />
+            <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
+          Please note our stories may not run properly on this browser.  Use Chrome, Safari, Firefox, or Edge for the best experience.  Click to remove this message.
+            </BrowserWarning>
           </MainPage>
           <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
             <Loading>Loading...</Loading>
@@ -211,6 +223,20 @@ export default function PDFPage() {
 // Styling
 const Container = styled.main`
 
+`;
+
+const BrowserWarning = styled.main`
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 14px;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  width: 300px;
+  padding: 5px;
+  cursor: pointer;
+  display: ${(props) => (props.browser ? 'block' : 'none')};
 `;
 
 const StyledDoc = styled(Document)`
