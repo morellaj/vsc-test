@@ -53,7 +53,6 @@ export default function CharacterPage() {
 
   return (
     <>
-      <Head onClick={methodoesNotExist}>Break the world</Head>
       <Head title={`${title}: ${subtitle}`} description={description} />
       <Navbar />
       <ThemeProvider theme={theme}>
