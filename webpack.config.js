@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
-// eslint-disable-next-line no-unused-vars
+// const SentryCliPlugin = require('@sentry/webpack-plugin');
 //  const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
