@@ -6,7 +6,10 @@ import { Heading, Button } from 'Styles';
 import Navbar from 'Navbar';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import IntroPictures from './IntroPictures';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Footer = loadable(() => import('Footer'));
 const Head = loadable(() => import('Head'));
@@ -32,7 +35,11 @@ export default function Home() {
         <Heading>Current Topics: Ages 4 to 9</Heading>
         <TopicsDisplay />
         <TryContainer>
-          <Link to="book?super-jet-3000" style={{ textDecoration: 'none' }}>
+          <Link
+            to="book?super-jet-3000"
+            style={{ textDecoration: 'none' }}
+            onClick={() => ReactGA.event({ category: 'home', action: 'clicked lower read a book' })}
+          >
             <Button>Read a book</Button>
           </Link>
         </TryContainer>

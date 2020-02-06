@@ -1,5 +1,6 @@
 // Package dependencies
 import React from 'react';
+import ReactGA from 'react-ga';
 import styled from 'styled-components';
 
 // Component for displaying an individual book
@@ -14,7 +15,7 @@ export default function Book(props) {
     </Title>
   ) : <Title>{title}</Title>;
   return (
-    <Container href={link} target="_blank">
+    <Container href={link} onClick={() => ReactGA.event({ category: 'book-recommendations', action: `clicked${title}` })} target="_blank">
       <BookContainer>
         <Image alt={title} src={image} />
       </BookContainer>

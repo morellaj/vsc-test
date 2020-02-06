@@ -1,6 +1,7 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -35,7 +36,7 @@ export default function Navbar() {
   const items = navbarList.map((unit) => {
     const { title, link, icon } = unit;
     return (
-      <Item key={title}>
+      <Item key={title} onClick={() => ReactGA.event({ category: 'Navbar', action: `click ${title}` })}>
         <StyledLink to={link}>
           <Icon icon={icon} alt={title} />
           <ItemText>{title}</ItemText>

@@ -13,8 +13,11 @@ import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
 import { booksUnitList } from 'Constants';
+import ReactGA from 'react-ga';
 import { createBooksList } from './Functions';
 import Section from './Section';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 // Component for displaying book pages

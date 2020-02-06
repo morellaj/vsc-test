@@ -52,8 +52,14 @@ export default function CharacterPage() {
   }, []);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.modalview(window.location.pathname + window.location.search);
   }, [unitSelected]);
+
+  useEffect(() => {
+    if (info) {
+      ReactGA.event({ category: 'units', action: `clicked ${info.type}` });
+    }
+  }, [info]);
 
   return (
     <>

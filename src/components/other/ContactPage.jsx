@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
+import ReactGA from 'react-ga';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 /** ********************************************* */
 // Component for displaying the home page

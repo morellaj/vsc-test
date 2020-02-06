@@ -8,6 +8,9 @@ import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
 import colors from 'Colors';
+import ReactGA from 'react-ga';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 /** ********************************************* */

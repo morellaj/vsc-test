@@ -8,8 +8,11 @@ import Head from 'Head';
 
 // Component dependencies
 import { teamData } from 'Constants';
+import ReactGA from 'react-ga';
 import Intro from './Intro';
 import TeamMember from './TeamMember';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 /** ********************************************* */
