@@ -1,0 +1,15 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[context.production]
+  publish = "dist"
+  command = "npm run build"
+
+[context.preview]
+  publish = "dist"
+  command = "npm run build"
+
+[context.debug]
+  publish = "dist"
+  command = "npm run build"
