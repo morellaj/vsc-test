@@ -125,10 +125,6 @@ export default function PDFPage() {
     }
   }, []);
 
-  useEffect(() => {
-    ReactGA.event({ category: window.location.search, action: page });
-  }, [page]);
-
   function onDocumentLoadSuccess() {
     setPage(initialPage);
     setLastPage(initialPage);
