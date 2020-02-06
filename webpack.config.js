@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
+// const { GenerateSW } = require('workbox-webpack-plugin');
 // const SentryCliPlugin = require('@sentry/webpack-plugin');
 //  const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -69,7 +69,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new GenerateSW(),
+    // new GenerateSW(),
     new CopyPlugin([
       { from: 'assets', to: 'assets' },
       { from: '_redirects', to: '_redirects', toType: 'file' },
