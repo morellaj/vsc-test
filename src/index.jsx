@@ -1,14 +1,15 @@
 // Package dependencies
 import loadable from '@loadable/component';
 import React from 'react';
-// import * as Sentry from '@sentry/browser';
+import * as Sentry from '@sentry/browser';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 import {
   Route, Switch, BrowserRouter,
 } from 'react-router-dom';
+import Error from 'Error';
 
-// Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
+Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
@@ -23,16 +24,19 @@ const ContactPage = loadable(() => import('./components/other/ContactPage'));
 // const SitemapBuilder = loadable(() => import('./components/other/SitemapBuilder'));
 
 ReactDOM.render((
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/units" component={CharacterPage} />
-      <Route path="/book" component={PDFPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/book-recommendations" component={BookPage} />
-      <Route path="/feedback" component={FeedbackPage} />
-      <Route path="/update-sign-up" component={UpdateSignUpPage} />
-      <Route path="/topic-recommendation" component={TopicRecommendationPage} />
-      <Route path="/contact" component={ContactPage} />
-    </Switch>
-  </BrowserRouter>), document.getElementById('app'));
+  <Error>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/units" component={CharacterPage} />
+        <Route path="/book" component={PDFPage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/book-recommendations" component={BookPage} />
+        <Route path="/feedback" component={FeedbackPage} />
+        <Route path="/update-sign-up" component={UpdateSignUpPage} />
+        <Route path="/topic-recommendation" component={TopicRecommendationPage} />
+        <Route path="/contact" component={ContactPage} />
+      </Switch>
+    </BrowserRouter>
+  </Error>
+), document.getElementById('app'));

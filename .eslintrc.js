@@ -40,6 +40,7 @@ module.exports = {
           ['Icon', './src/components/common/Icon.jsx'],
           ['Input', './src/components/common/Input.jsx'],
           ['Navbar', './src/components/common/Navbar.jsx'],
+          ['Error', './src/components/common/Error.jsx'],
           ['Styles', './src/components/common/Styles.jsx'],
           ['Head', './src/components/common/Head.jsx'],
           ['Constants', './src/data/constants.js'],

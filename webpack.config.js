@@ -24,6 +24,7 @@ module.exports = {
       Head: path.join(__dirname, 'src/components/common/Head.jsx'),
       Navbar: path.join(__dirname, 'src/components/common/Navbar.jsx'),
       Styles: path.join(__dirname, 'src/components/common/Styles.jsx'),
+      Error: path.join(__dirname, 'src/components/common/Error.jsx'),
       Constants: path.join(__dirname, 'src/data/constants.js'),
       Assets: path.join(__dirname, 'assets/'),
     },
