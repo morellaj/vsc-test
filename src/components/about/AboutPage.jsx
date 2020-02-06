@@ -1,5 +1,5 @@
 // Package dependencies
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
@@ -11,9 +11,6 @@ import { teamData } from 'Constants';
 import ReactGA from 'react-ga';
 import Intro from './Intro';
 import TeamMember from './TeamMember';
-
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -28,6 +25,11 @@ export default function AboutPage() {
       key={item.name}
     />
   ));
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
       <Head title={title} description={description} />

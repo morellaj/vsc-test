@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import IntroPictures from './IntroPictures';
 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 const Footer = loadable(() => import('Footer'));
 const Head = loadable(() => import('Head'));
 const TopicsDisplay = loadable(() => import('./TopicsDisplay'));
@@ -24,6 +22,10 @@ export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>

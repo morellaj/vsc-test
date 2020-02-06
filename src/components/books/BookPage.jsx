@@ -17,9 +17,6 @@ import ReactGA from 'react-ga';
 import { createBooksList } from './Functions';
 import Section from './Section';
 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
-
 // Component for displaying book pages
 export default function BookPage() {
   const section = booksUnitList[window.location.search.slice(1)];
@@ -31,6 +28,10 @@ export default function BookPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>

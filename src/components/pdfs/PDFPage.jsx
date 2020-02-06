@@ -12,8 +12,6 @@ import Navbar from 'Navbar';
 import bookInfo from 'Data/bookInfo.json';
 import ReactGA from 'react-ga';
 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const Progress = loadable(() => import('./Progress'));
 const ContinueReading = loadable(() => import('./ContinueReading'));
@@ -112,6 +110,7 @@ export default function PDFPage() {
   }, [full]);
 
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     window.scrollTo(0, 0);
     const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
     setInitialPage(initial);
@@ -124,6 +123,10 @@ export default function PDFPage() {
       setBrowser(true);
     }
   }, []);
+
+  useEffect(() => {
+    ReactGA.event({ category: book, action: page.toString() });
+  }, [page]);
 
   function onDocumentLoadSuccess() {
     setPage(initialPage);

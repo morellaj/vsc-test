@@ -7,8 +7,6 @@ import Navbar from 'Navbar';
 import Footer from 'Footer';
 import ReactGA from 'react-ga';
 
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
@@ -17,6 +15,10 @@ export default function FeedbackPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <>
       <Helmet>
