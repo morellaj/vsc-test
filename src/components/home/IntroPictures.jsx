@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import loadable from '@loadable/component';
 import { Button } from 'Styles';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 // Component dependencies
 const IntroSlides = loadable(() => import('./IntroSlides'));
@@ -17,7 +18,11 @@ export default function IntroPictures() {
       <SlidesContainer>
         <IntroSlides />
         <TryButtonContainer>
-          <Link to="book?super-jet-3000" style={{ textDecoration: 'none' }}>
+          <Link
+            to="book?super-jet-3000"
+            style={{ textDecoration: 'none' }}
+            onClick={() => ReactGA.event({ category: 'home', action: 'clicked upper read a book' })}
+          >
             <Button>Read a book</Button>
           </Link>
         </TryButtonContainer>

@@ -8,6 +8,7 @@ import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
 import colors from 'Colors';
+import ReactGA from 'react-ga';
 
 
 /** ********************************************* */
@@ -20,6 +21,9 @@ export default function UpdateSignUpPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <>
       <Helmet>

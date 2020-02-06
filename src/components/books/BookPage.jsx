@@ -13,9 +13,9 @@ import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
 import { booksUnitList } from 'Constants';
+import ReactGA from 'react-ga';
 import { createBooksList } from './Functions';
 import Section from './Section';
-
 
 // Component for displaying book pages
 export default function BookPage() {
@@ -28,6 +28,10 @@ export default function BookPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>

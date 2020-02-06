@@ -1,6 +1,7 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import ReactGA from 'react-ga';
 import loadable from '@loadable/component';
 import colors from 'Colors';
 import character from 'Data/character.json';
@@ -14,7 +15,6 @@ const Footer = loadable(() => import('Footer'));
 const Head = loadable(() => import('Head'));
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
 const Input = loadable(() => import('Input'));
-
 /** ********************************************* */
 // Component for displaying the science page
 /** ********************************************* */
@@ -49,7 +49,18 @@ export default function CharacterPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
+  useEffect(() => {
+    ReactGA.modalview(window.location.pathname + window.location.search);
+  }, [unitSelected]);
+
+  useEffect(() => {
+    if (info) {
+      ReactGA.event({ category: 'units', action: `clicked ${info.type}` });
+    }
+  }, [info]);
 
   return (
     <>

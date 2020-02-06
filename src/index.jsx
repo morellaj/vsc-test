@@ -2,6 +2,7 @@
 import loadable from '@loadable/component';
 import React from 'react';
 import * as Sentry from '@sentry/browser';
+import ReactGA from 'react-ga';
 import 'typeface-roboto';
 import ReactDOM from 'react-dom';
 import {
@@ -10,6 +11,7 @@ import {
 import Error from 'Error';
 
 Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
+ReactGA.initialize('UA-157541239-1');
 
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));

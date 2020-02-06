@@ -1,6 +1,7 @@
 // Package dependencies
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 
 // Data dependencies
 import colors from 'Colors';
@@ -19,6 +20,7 @@ export default function TeamMember(props) {
 
   function handleMouseOver() {
     setHover(true);
+    ReactGA.event({ category: 'about', action: `looked at ${name}` });
   }
 
   function handleMouseOut() {

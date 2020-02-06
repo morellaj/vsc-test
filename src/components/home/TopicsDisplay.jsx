@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import loadable from '@loadable/component';
 import { Link } from 'react-router-dom';
 import { topicList } from 'Constants';
+import ReactGA from 'react-ga';
 
 const Topic = loadable(() => import('./Topic'));
 
@@ -18,7 +19,11 @@ export default function TopicsDisplay() {
     } = item;
     if (done) {
       return (
-        <StyledLink to={`/units?${item.text.replace(/\s+/g, '-').toLowerCase()}`} key={item.id}>
+        <StyledLink
+          to={`/units?${text.replace(/\s+/g, '-').toLowerCase()}`}
+          onClick={() => ReactGA.event({ category: 'home', action: `clicked ${text}` })}
+          key={id}
+        >
           <Topic
             done={done}
             text={text}
