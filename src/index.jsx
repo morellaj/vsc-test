@@ -11,7 +11,10 @@ import {
 import Error from 'Error';
 
 Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
-ReactGA.initialize('UA-157541239-1');
+ReactGA.initialize('UA-157541239-1', {
+  debug: true,
+  titleCase: false,
+});
 ReactGA.pageview('/fun');
 
 // Component dependencies
