@@ -27,7 +27,6 @@ export default function UnitList(props) {
 
   return (
     <Container>
-      <Container onClick={fun} />
       {unitArr}
       <RequestText>
         <span>{'Have a topic you want us to work on next?  '}</span>
