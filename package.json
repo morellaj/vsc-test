@@ -9,6 +9,7 @@
     "develop": "webpack --mode development",
     "preview": "git push -u origin preview",
     "debug": "git push -u origin debug",
+    "master": "git push -u origin master",
     "start": "npm run build && node server.js",
     "client": "webpack-dev-server --mode development --devtool cheap-eval-source-map",
     "server": "nodemon server.js"
