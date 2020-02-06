@@ -6,6 +6,7 @@ import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
+import Error from 'Error';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
@@ -57,11 +58,13 @@ export default function CharacterPage() {
       <Navbar />
       <ThemeProvider theme={theme}>
         <Container>
-          <UnitList
-            unitList={unitArr}
-            unitSelected={unitSelected}
-            setUnitSelected={setUnitSelected}
-          />
+          <Error>
+            <UnitList
+              unitList={unitArr}
+              unitSelected={unitSelected}
+              setUnitSelected={setUnitSelected}
+            />
+          </Error>
           <UnitActivities
             unit={character[unitName]}
             unitName={unitName}
