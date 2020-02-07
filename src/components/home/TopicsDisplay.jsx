@@ -2,12 +2,13 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
+//import loadable from '@loadable/component';
 import { Link } from 'react-router-dom';
 import { topicList } from 'Constants';
 import ReactGA from 'react-ga';
+import Topic from './Topic';
 
-const Topic = loadable(() => import('./Topic'));
+//const Topic = loadable(() => import('./Topic'));
 
 /** ********************************************* */
 // Component for displaying the home page

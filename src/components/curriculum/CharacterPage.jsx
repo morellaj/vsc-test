@@ -7,21 +7,21 @@ import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
-import Head from 'Head';
-import Footer from 'Footer';
-import Input from 'Input';
+//import Head from 'Head';
+//import Footer from 'Footer';
+//import Input from 'Input';
 import Error from 'Error';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
-import InformationDisplay from './info/InformationDisplay';
+//import InformationDisplay from './info/InformationDisplay';
 
-/*
+
 const Footer = loadable(() => import('Footer'));
 const Head = loadable(() => import('Head'));
 const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
 const Input = loadable(() => import('Input'));
-*/
+
 /** ********************************************* */
 // Component for displaying the science page
 /** ********************************************* */
