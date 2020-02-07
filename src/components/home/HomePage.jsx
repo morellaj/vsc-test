@@ -1,7 +1,6 @@
 // Dependencies
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
 import { Heading, Button } from 'Styles';
 import Navbar from 'Navbar';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
@@ -9,10 +8,11 @@ import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import IntroPictures from './IntroPictures';
 
-const Footer = loadable(() => import('Footer'));
-const Head = loadable(() => import('Head'));
-const TopicsDisplay = loadable(() => import('./TopicsDisplay'));
-const Details = loadable(() => import('./Details'));
+const Head = lazy(() => import('Head'));
+const Details = lazy(() => import('./Details'));
+const Footer = lazy(() => import('Footer'));
+const TopicsDisplay = lazy(() => import('./TopicsDisplay'));
+
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -29,13 +29,19 @@ export default function Home() {
 
   return (
     <>
-      <Head title={title} description={description} />
+      <Suspense fallback={<div />}>
+        <Head title={title} description={description} />
+      </Suspense>
       <Navbar />
       <Container>
         <IntroPictures />
-        <Details />
+        <Suspense fallback={<div />}>
+          <Details />
+        </Suspense>
         <Heading>Current Topics: Ages 4 to 9</Heading>
-        <TopicsDisplay />
+        <Suspense fallback={<div />}>
+          <TopicsDisplay />
+        </Suspense>
         <TryContainer>
           <Link
             to="book?super-jet-3000"
@@ -46,7 +52,9 @@ export default function Home() {
           </Link>
         </TryContainer>
       </Container>
-      <Footer />
+      <Suspense fallback={<div />}>
+        <Footer />
+      </Suspense>
     </>
   );
 }
