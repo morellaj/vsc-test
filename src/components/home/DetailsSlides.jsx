@@ -48,15 +48,19 @@ const SlideContainer = styled.div`
   opacity: ${(props) => (props.count === props.value ? 1 : 0)};
   transition: opacity 1s;
   position: absolute;
+  bottom: 0;
   box-shadow: 0 0 0 #000;
   transform: translate3d(0, 0, 0);
-  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const PicContainer = styled.picture`
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: flex-end;
 `;
 
 const Pic = styled.img`
