@@ -2,11 +2,11 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
+// import loadable from '@loadable/component';
 import Error from 'Error';
-import ActivityGroup from 'ActivityGroup';
-import SingleActivity from 'SingleActivity';
-import ParentInformation from 'ParentInformation';
+import ActivityGroup from './ActivityGroup';
+import SingleActivity from './SingleActivity';
+import ParentInformation from './ParentInformation';
 
 /*
 const ActivityGroup = loadable(() => import('./ActivityGroup'));
