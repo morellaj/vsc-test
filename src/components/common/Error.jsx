@@ -43,7 +43,10 @@ export default class Error extends React.Component {
               </Heading>
             </TextContainer>
             <TextContainer>
-                Don&#39;t fear!  We have the data from this error and will get to the bottom of it.  Refreshing will probably fix the issue for you.
+                Have no fear!  We have the data from this error and will get to the bottom of it.
+            </TextContainer>
+            <TextContainer>
+                If you would like to continue, try refreshing or come back later.
             </TextContainer>
             <TextContainer>
                 Use the button below to help us out by telling us what happened.
