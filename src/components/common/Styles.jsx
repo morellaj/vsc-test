@@ -5,7 +5,7 @@ export const Heading = styled.div`
   text-align: center;
   margin-top: 30px;
   font-size: 33px;
-  padding: 0 3px;
+  padding: 0 10px;
 
   @media(max-width: 1050px){
     font-size: 28px;

@@ -1,26 +1,23 @@
 // Package dependencies
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useEffect, lazy, Suspense,
+} from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
-import loadable from '@loadable/component';
 import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
-// import Head from 'Head';
-// import Footer from 'Footer';
-// import Input from 'Input';
 import Error from 'Error';
+import UnitArr from './UnitArr';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
-import UnitArr from './UnitArr';
-// import InformationDisplay from './info/InformationDisplay';
 
 
-const Footer = loadable(() => import('Footer'));
-const Head = loadable(() => import('Head'));
-const InformationDisplay = loadable(() => import('./info/InformationDisplay'));
-const Input = loadable(() => import('Input'));
+const Footer = lazy(() => import('Footer'));
+const Head = lazy(() => import('Head'));
+const InformationDisplay = lazy(() => import('./info/InformationDisplay'));
+const Input = lazy(() => import('Input'));
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -52,7 +49,7 @@ export default function CharacterPage() {
   const unitName = unitArr[unitSelected].unit;
 
   const infoDisplay = info
-    ? <Error><InformationDisplay info={info} setInfo={setInfo} unit={unitName} /></Error> : null;
+    ? <Suspense fallback={<div />}><InformationDisplay info={info} setInfo={setInfo} unit={unitName} /></Suspense> : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -71,8 +68,10 @@ export default function CharacterPage() {
 
   return (
     <>
-      <Error><Head title={`${title}: ${subtitle}`} description={description} /></Error>
-      <Error><Navbar /></Error>
+      <Suspense fallback={<div />}>
+        <Head title={`${title}: ${subtitle}`} description={description} />
+      </Suspense>
+      <Navbar />
       <ThemeProvider theme={theme}>
         <Error>
           <Container>
@@ -88,10 +87,15 @@ export default function CharacterPage() {
             />
           </Container>
         </Error>
-        <Input />
+        <Suspense fallback={<div />}>
+          <Input />
+        </Suspense>
         {infoDisplay}
       </ThemeProvider>
-      <Footer />
+      <Suspense fallback={<div />}>
+        <Footer />
+      </Suspense>
+
     </>
   );
 }

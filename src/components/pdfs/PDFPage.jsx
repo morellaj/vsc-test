@@ -1,6 +1,8 @@
 // Package dependencies
 // import loadable from '@loadable/component';
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useEffect, lazy, Suspense,
+} from 'react';
 
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import styled from 'styled-components';
@@ -11,17 +13,11 @@ import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 import Navbar from 'Navbar';
 import bookInfo from 'Data/bookInfo.json';
 import ReactGA from 'react-ga';
-import Head from 'Head';
-import ScreenButton from './ScreenButton';
-import Progress from './Progress';
-import ContinueReading from './ContinueReading';
 
-/*
-const ScreenButton = loadable(() => import('./ScreenButton'));
-const Progress = loadable(() => import('./Progress'));
-const ContinueReading = loadable(() => import('./ContinueReading'));
-const Head = loadable(() => import('Head'));
-*/
+const ScreenButton = lazy(() => import('./ScreenButton'));
+const Progress = lazy(() => import('./Progress'));
+const ContinueReading = lazy(() => import('./ContinueReading'));
+const Head = lazy(() => import('Head'));
 
 
 // Component for displaying a pdf page
@@ -41,14 +37,14 @@ export default function PDFPage() {
   const { title, subtitle, description } = bookInfo[book];
 
   function handleResize() {
-    const { innerWidth } = window;
+    const { innerWidth, innerHeight } = window;
     let navbarLoss;
     if (full) {
       navbarLoss = 0;
-    } else if (innerWidth > 700) {
-      navbarLoss = 74;
+    } else if (innerWidth > 600 && innerHeight > 500) {
+      navbarLoss = 54;
     } else {
-      navbarLoss = 64;
+      navbarLoss = 39;
     }
     if (window.innerWidth / (window.innerHeight - navbarLoss) <= 960 / (540)) {
       setScale(window.innerWidth / 960);
@@ -185,51 +181,53 @@ export default function PDFPage() {
 
   return (
     <>
-      <Head title={`${title}: ${subtitle}`} description={description} />
-      <Navbar />
-      <Container id="fullscreen">
-        <ContinueReading
-          initialPage={initialPage}
-          setInitialPage={setInitialPage}
-          setPage={setPage}
-          setLastPage={setLastPage}
-        />
-        <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
-        <StyledDoc
-          file={file}
-          loading={null}
-          error="Book not found :("
-          onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
-          onLoadSuccess={onDocumentLoadSuccess}
-          onItemClick={onItemClick}
-          options={{ disableAutoFetch: false, disableStream: false }}
-        >
-          <MainPage
-            display={display}
-            pageNumber={page}
-            scale={scale}
-            renderTextLayer={false}
-            onRenderSuccess={pageRender}
+      <Suspense fallback={<div />}>
+        <Head title={`${title}: ${subtitle}`} description={description} />
+        <Navbar />
+        <Container id="fullscreen">
+          <ContinueReading
+            initialPage={initialPage}
+            setInitialPage={setInitialPage}
+            setPage={setPage}
+            setLastPage={setLastPage}
+          />
+          <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
+          <StyledDoc
+            file={file}
+            loading={null}
+            error="Book not found :("
+            onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onItemClick={onItemClick}
+            options={{ disableAutoFetch: false, disableStream: false }}
           >
-            <ScreenButton
-              fullCap={fullCap}
-              full={full}
-              fullscreenClick={fullscreenClick}
-            />
-            <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
+            <MainPage
+              display={display}
+              pageNumber={page}
+              scale={scale}
+              renderTextLayer={false}
+              onRenderSuccess={pageRender}
+            >
+              <ScreenButton
+                fullCap={fullCap}
+                full={full}
+                fullscreenClick={fullscreenClick}
+              />
+              <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
           Please note our stories may not run properly on this browser.  Use Chrome, Safari, Firefox, or Edge for the best experience.  Click to remove this message.
-            </BrowserWarning>
-          </MainPage>
-          <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
-            <Loading>Loading...</Loading>
-            <ScreenButton
-              fullCap={fullCap}
-              full={full}
-              fullscreenClick={fullscreenClick}
-            />
-          </LastPage>
-        </StyledDoc>
-      </Container>
+              </BrowserWarning>
+            </MainPage>
+            <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
+              <Loading>Loading...</Loading>
+              <ScreenButton
+                fullCap={fullCap}
+                full={full}
+                fullscreenClick={fullscreenClick}
+              />
+            </LastPage>
+          </StyledDoc>
+        </Container>
+      </Suspense>
     </>
   );
 }

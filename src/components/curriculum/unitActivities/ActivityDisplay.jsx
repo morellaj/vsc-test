@@ -1,18 +1,14 @@
 
 // Package dependencies
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
-// import loadable from '@loadable/component';
 import Error from 'Error';
-import ActivityGroup from './ActivityGroup';
-import SingleActivity from './SingleActivity';
-import ParentInformation from './ParentInformation';
 
-/*
-const ActivityGroup = loadable(() => import('./ActivityGroup'));
-const SingleActivity = loadable(() => import('./SingleActivity'));
-const ParentInformation = loadable(() => import('./ParentInformation'));
-*/
+
+const ActivityGroup = lazy(() => import('./ActivityGroup'));
+const SingleActivity = lazy(() => import('./SingleActivity'));
+const ParentInformation = lazy(() => import('./ParentInformation'));
+
 
 /** ************************************ */
 // Component for the description of activities
@@ -61,10 +57,12 @@ export default function ActivityDisplay(props) {
   }
 
   return (
-    <Container>
-      <Error><MultipleContainer>{multipleDisplay}</MultipleContainer></Error>
-      <Error><SingleContainer>{singleDisplay}</SingleContainer></Error>
-    </Container>
+    <Suspense fallback={<div />}>
+      <Container>
+        <Error><MultipleContainer>{multipleDisplay}</MultipleContainer></Error>
+        <Error><SingleContainer>{singleDisplay}</SingleContainer></Error>
+      </Container>
+    </Suspense>
   );
 }
 

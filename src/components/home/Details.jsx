@@ -1,9 +1,7 @@
 // Package dependencies
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
 import { Heading } from 'Styles';
-
 import {
   faChild,
   faSmileBeam,
@@ -11,9 +9,10 @@ import {
   faMoneyBillWaveAlt,
   faHandshake,
 } from '@fortawesome/free-solid-svg-icons';
+import DetailItem from './DetailItem';
 
-const DetailItem = loadable(() => import('./DetailItem'));
-const DetailsSlides = loadable(() => import('./DetailsSlides'));
+
+const DetailsSlides = lazy(() => import('./DetailsSlides'));
 
 const detailsText = [
   {
@@ -64,7 +63,9 @@ export default function Details() {
         </TextContainer>
         <RightContainer>
           <SlideshowContainer>
-            <DetailsSlides />
+            <Suspense fallback={<div />}>
+              <DetailsSlides />
+            </Suspense>
           </SlideshowContainer>
         </RightContainer>
       </ContentContainer>
