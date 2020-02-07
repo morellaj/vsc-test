@@ -37,14 +37,14 @@ export default function PDFPage() {
   const { title, subtitle, description } = bookInfo[book];
 
   function handleResize() {
-    const { innerWidth } = window;
+    const { innerWidth, innerHeight } = window;
     let navbarLoss;
     if (full) {
       navbarLoss = 0;
-    } else if (innerWidth > 700) {
-      navbarLoss = 74;
+    } else if (innerWidth > 600 && innerHeight > 500) {
+      navbarLoss = 54;
     } else {
-      navbarLoss = 64;
+      navbarLoss = 39;
     }
     if (window.innerWidth / (window.innerHeight - navbarLoss) <= 960 / (540)) {
       setScale(window.innerWidth / 960);

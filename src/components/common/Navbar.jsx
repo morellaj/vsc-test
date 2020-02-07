@@ -120,6 +120,11 @@ const List = styled.ul`
     font-size: 12px;
     margin: 0;
   }
+
+  @media(max-height: 500px){
+    font-size: 12px;
+    margin: 0;
+  }
 `;
 
 const Item = styled.li`
@@ -131,6 +136,10 @@ const Item = styled.li`
   }
 
   @media(max-width: 600px) {
+    margin: 5px;
+  }
+
+  @media(max-height: 500px) {
     margin: 5px;
   }
 `;
