@@ -12,6 +12,9 @@ import {
   faHandshake,
 } from '@fortawesome/free-solid-svg-icons';
 
+const DetailItem = loadable(() => import('./DetailItem'));
+const DetailsSlides = loadable(() => import('./DetailsSlides'));
+
 const detailsText = [
   {
     id: 1,
@@ -44,9 +47,6 @@ const detailsText = [
     icon: faHandshake,
   },
 ];
-
-const DetailItem = loadable(() => import('./DetailItem'));
-const DetailsSlides = loadable(() => import('./DetailsSlides'));
 
 /** ********************************************* */
 // Component for displaying the home page

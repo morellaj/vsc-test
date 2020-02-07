@@ -1,13 +1,14 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
+// import loadable from '@loadable/component';
 import { Button } from 'Styles';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import IntroSlides from './IntroSlides';
 
 // Component dependencies
-const IntroSlides = loadable(() => import('./IntroSlides'));
+// const IntroSlides = loadable(() => import('./IntroSlides'));
 
 /** ********************************************* */
 // Component for displaying the home page

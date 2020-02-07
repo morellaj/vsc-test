@@ -1,5 +1,5 @@
 // Package dependencies
-import loadable from '@loadable/component';
+// import loadable from '@loadable/component';
 import React, { useState, useEffect } from 'react';
 
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
@@ -11,11 +11,17 @@ import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 import Navbar from 'Navbar';
 import bookInfo from 'Data/bookInfo.json';
 import ReactGA from 'react-ga';
+import Head from 'Head';
+import ScreenButton from './ScreenButton';
+import Progress from './Progress';
+import ContinueReading from './ContinueReading';
 
+/*
 const ScreenButton = loadable(() => import('./ScreenButton'));
 const Progress = loadable(() => import('./Progress'));
 const ContinueReading = loadable(() => import('./ContinueReading'));
 const Head = loadable(() => import('Head'));
+*/
 
 
 // Component for displaying a pdf page
