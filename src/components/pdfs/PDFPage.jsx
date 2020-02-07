@@ -1,7 +1,7 @@
 // Package dependencies
 // import loadable from '@loadable/component';
 import React, {
-  useState, useEffect, lazy, Suspense,
+  useState, useEffect,
 } from 'react';
 
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
@@ -13,11 +13,10 @@ import AnnotationLayer from 'react-pdf/dist/Page/AnnotationLayer.css';
 import Navbar from 'Navbar';
 import bookInfo from 'Data/bookInfo.json';
 import ReactGA from 'react-ga';
-
-const ScreenButton = lazy(() => import('./ScreenButton'));
-const Progress = lazy(() => import('./Progress'));
-const ContinueReading = lazy(() => import('./ContinueReading'));
-const Head = lazy(() => import('Head'));
+import Head from 'Head';
+import ScreenButton from './ScreenButton';
+import Progress from './Progress';
+import ContinueReading from './ContinueReading';
 
 
 // Component for displaying a pdf page
@@ -183,56 +182,54 @@ export default function PDFPage() {
 
   return (
     <>
-      <Suspense fallback={<div />}>
-        <Head title={`${title}: ${subtitle}`} description={description} />
-        <NavbarContainer height={height}>
-          <Navbar />
-        </NavbarContainer>
-        <Container id="fullscreen">
-          <ContinueReading
-            initialPage={initialPage}
-            setInitialPage={setInitialPage}
-            setPage={setPage}
-            setLastPage={setLastPage}
+      <Head title={`${title}: ${subtitle}`} description={description} />
+      <NavbarContainer height={height}>
+        <Navbar />
+      </NavbarContainer>
+      <Container id="fullscreen">
+        <ContinueReading
+          initialPage={initialPage}
+          setInitialPage={setInitialPage}
+          setPage={setPage}
+          setLastPage={setLastPage}
+          scale={scale}
+        />
+        <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
+        <StyledDoc
+          file={file}
+          loading={null}
+          error="Book not found :("
+          onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
+          onLoadSuccess={onDocumentLoadSuccess}
+          onItemClick={onItemClick}
+          options={{ disableAutoFetch: false, disableStream: false }}
+        >
+          <MainPage
+            display={display}
+            pageNumber={page}
             scale={scale}
-          />
-          <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
-          <StyledDoc
-            file={file}
-            loading={null}
-            error="Book not found :("
-            onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
-            onLoadSuccess={onDocumentLoadSuccess}
-            onItemClick={onItemClick}
-            options={{ disableAutoFetch: false, disableStream: false }}
+            renderTextLayer={false}
+            onRenderSuccess={pageRender}
           >
-            <MainPage
-              display={display}
-              pageNumber={page}
-              scale={scale}
-              renderTextLayer={false}
-              onRenderSuccess={pageRender}
-            >
-              <ScreenButton
-                fullCap={fullCap}
-                full={full}
-                fullscreenClick={fullscreenClick}
-              />
-              <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
+            <ScreenButton
+              fullCap={fullCap}
+              full={full}
+              fullscreenClick={fullscreenClick}
+            />
+            <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
           Please note our stories may not run properly on this browser.  Use Chrome, Safari, Firefox, or Edge for the best experience.  Click to remove this message.
-              </BrowserWarning>
-            </MainPage>
-            <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
-              <Loading>Loading...</Loading>
-              <ScreenButton
-                fullCap={fullCap}
-                full={full}
-                fullscreenClick={fullscreenClick}
-              />
-            </LastPage>
-          </StyledDoc>
-        </Container>
-      </Suspense>
+            </BrowserWarning>
+          </MainPage>
+          <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
+            <Loading>Loading...</Loading>
+            <ScreenButton
+              fullCap={fullCap}
+              full={full}
+              fullscreenClick={fullscreenClick}
+            />
+          </LastPage>
+        </StyledDoc>
+      </Container>
     </>
   );
 }
