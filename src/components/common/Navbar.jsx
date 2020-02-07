@@ -70,6 +70,7 @@ const Container = styled.nav`
   display: flex;
   justify-content: space-between;
   background-color: ${colors.LITS.color};
+  width: 100%;
 `;
 
 const LogoContainer = styled(Link)`

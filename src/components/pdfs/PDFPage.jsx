@@ -32,16 +32,18 @@ export default function PDFPage() {
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
   const [browser, setBrowser] = useState(false);
+  const [height, setHeight] = useState(1000);
   const book = window.location.search.slice(1);
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book];
 
   function handleResize() {
     const { innerWidth, innerHeight } = window;
+    setHeight(innerHeight);
     let navbarLoss;
-    if (full) {
+    if (full || innerHeight < 500) {
       navbarLoss = 0;
-    } else if (innerWidth > 600 && innerHeight > 500) {
+    } else if (innerWidth > 600) {
       navbarLoss = 54;
     } else {
       navbarLoss = 39;
@@ -183,7 +185,9 @@ export default function PDFPage() {
     <>
       <Suspense fallback={<div />}>
         <Head title={`${title}: ${subtitle}`} description={description} />
-        <Navbar />
+        <NavbarContainer height={height}>
+          <Navbar />
+        </NavbarContainer>
         <Container id="fullscreen">
           <ContinueReading
             initialPage={initialPage}
@@ -281,4 +285,8 @@ const Loading = styled.div`
   :hover{
     cursor: pointer;
   }
+`;
+
+const NavbarContainer = styled.div`
+  display: ${(props) => (props.height < 500 ? 'none' : 'flex')};
 `;
