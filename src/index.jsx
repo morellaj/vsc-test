@@ -12,7 +12,7 @@ import Error from 'Error';
 
 Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
 ReactGA.initialize('UA-157541239-1');
-
+// test
 // Component dependencies
 const HomePage = loadable(() => import('./components/home/HomePage'));
 const CharacterPage = loadable(() => import('./components/curriculum/CharacterPage'));
