@@ -75,26 +75,32 @@ const Container = styled.nav`
 const LogoContainer = styled(Link)`
   padding: 5px;
   border-radius: 5px;
-  margin: 5px 20px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
 
   :hover{
     background-color: ${colors.LITS.darkColor};
   }
 
   @media(max-width: 700px){
-    margin: 5px;
+    margin: 0 5px;
   }
 `;
 
 const Logo = styled.img`
-  height: 50px;
+  height: 40px;
 
   @media(max-width: 700px) {
-    height: 40px;
+    height: 30px;
   }
 
-  @media(max-width: 600px) {
-    height: 30px;
+  @media(max-width: 500px) {
+    height: 25px;
+  }
+
+  @media(max-height: 500px) {
+    height: 25px;
   }
 
 `;
@@ -112,10 +118,7 @@ const List = styled.ul`
 
   @media(max-width: 700px){
     font-size: 12px;
-  }
-
-  @media(max-width: 450px) {
-    margin-right: 5px;
+    margin: 0;
   }
 `;
 
