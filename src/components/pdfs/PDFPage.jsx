@@ -194,6 +194,7 @@ export default function PDFPage() {
             setInitialPage={setInitialPage}
             setPage={setPage}
             setLastPage={setLastPage}
+            scale={scale}
           />
           <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
           <StyledDoc

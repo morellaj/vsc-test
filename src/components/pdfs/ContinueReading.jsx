@@ -8,7 +8,7 @@ import colors from 'Colors';
 export default function ContinueReading(props) {
   const [show, setShow] = useState(true);
   const {
-    initialPage, setInitialPage, setPage, setLastPage,
+    initialPage, setInitialPage, setPage, setLastPage, scale,
   } = props;
 
   function handleContinue() {
@@ -22,8 +22,10 @@ export default function ContinueReading(props) {
     setShow(false);
   }
 
+  const style = { height: scale * 540, width: scale * 960 };
+
   return (
-    <Container initialPage={initialPage} show={show}>
+    <Container initialPage={initialPage} show={show} style={style}>
       <InnerContainer>
         <Label>{`Continue from page ${initialPage}?`}</Label>
         <ButtonContainer>
@@ -40,9 +42,7 @@ const Container = styled.div`
   position: absolute;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   display: ${(props) => ((props.show && props.initialPage !== 1) ? 'flex' : 'none')};
 `;
