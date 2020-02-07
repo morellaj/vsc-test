@@ -57,7 +57,7 @@ export default function ActivityDisplay(props) {
 
   return (
     <Container>
-      <Error></Error><MultipleContainer>{multipleDisplay}</MultipleContainer></Error>
+      <Error><MultipleContainer>{multipleDisplay}</MultipleContainer></Error>
       <Error><SingleContainer>{singleDisplay}</SingleContainer></Error>
     </Container>
   );
