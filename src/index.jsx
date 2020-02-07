@@ -1,5 +1,5 @@
 // Package dependencies
-import loadable from '@loadable/component';
+// import loadable from '@loadable/component';
 import React from 'react';
 import * as Sentry from '@sentry/browser';
 import ReactGA from 'react-ga';
