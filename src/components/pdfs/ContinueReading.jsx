@@ -22,7 +22,7 @@ export default function ContinueReading(props) {
     setShow(false);
   }
 
-  const style = { height: scale * 540, width: scale * 960 };
+  const style = { height: scale * 540 };
 
   return (
     <Container initialPage={initialPage} show={show} style={style}>
@@ -42,6 +42,7 @@ const Container = styled.div`
   position: absolute;
   align-items: center;
   justify-content: center;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   display: ${(props) => ((props.show && props.initialPage !== 1) ? 'flex' : 'none')};
