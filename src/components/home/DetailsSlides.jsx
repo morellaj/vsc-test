@@ -50,6 +50,7 @@ const SlideContainer = styled.div`
   position: absolute;
   box-shadow: 0 0 0 #000;
   transform: translate3d(0, 0, 0);
+  height: inherit;
 `;
 
 const PicContainer = styled.picture`
