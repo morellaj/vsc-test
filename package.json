@@ -6,6 +6,7 @@
   "homepage": "learningisthesolution.glitch.me",
   "scripts": {
     "build": "webpack --mode production",
+    "dev": "webpack --mode development",
     "push": "git push -u origin preview",
     "start": "npm run build && node server.js",
     "client": "webpack-dev-server --mode development --devtool cheap-eval-source-map",
