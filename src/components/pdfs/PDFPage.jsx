@@ -250,7 +250,7 @@ const BrowserWarning = styled.main`
   width: 300px;
   padding: 5px;
   cursor: pointer;
-  display: ${(props) => (props.browser ? 'block' : 'none')};
+  display: ${(props) => (props.browser ? 'none' : 'none')};
 `;
 
 const StyledDoc = styled(Document)`
