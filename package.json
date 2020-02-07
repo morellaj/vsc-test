@@ -20,6 +20,7 @@
     "@loadable/component": "^5.11.0",
     "@sentry/browser": "^5.12.1",
     "@sentry/webpack-plugin": "^1.10.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "copy-webpack-plugin": "5.1.1",
     "express": "^4.17.1",
     "history": "^4.10.1",
