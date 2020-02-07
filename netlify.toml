@@ -12,4 +12,4 @@
 
 [context.debug]
   publish = "dist"
-  command = "npm run dev"
+  command = "npm run build"
