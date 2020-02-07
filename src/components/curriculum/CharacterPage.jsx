@@ -2,19 +2,19 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
-// import loadable from '@loadable/component';
+import loadable from '@loadable/component';
 import colors from 'Colors';
 import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
-//import Head from 'Head';
-//import Footer from 'Footer';
-//import Input from 'Input';
+// import Head from 'Head';
+// import Footer from 'Footer';
+// import Input from 'Input';
 import Error from 'Error';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import UnitArr from './UnitArr';
-//import InformationDisplay from './info/InformationDisplay';
+// import InformationDisplay from './info/InformationDisplay';
 
 
 const Footer = loadable(() => import('Footer'));
