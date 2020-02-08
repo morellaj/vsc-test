@@ -1,6 +1,6 @@
 {
   "name": "learning-is-the-solution",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Learning is the Solution homeschool education website",
   "main": "server.js",
   "homepage": "learningisthesolution.glitch.me",
