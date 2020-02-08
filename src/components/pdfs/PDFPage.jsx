@@ -32,6 +32,7 @@ export default function PDFPage() {
   const [progDisplay, setProgDisplay] = useState(true);
   const [browser, setBrowser] = useState(false);
   const [height, setHeight] = useState(1000);
+  const [pageCount, setPageCount] = useState(0);
   const book = window.location.search.slice(1);
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book];
@@ -114,6 +115,7 @@ export default function PDFPage() {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.event({ category: book, action: 'Started' });
     window.scrollTo(0, 0);
     const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
     setInitialPage(initial);
@@ -128,7 +130,19 @@ export default function PDFPage() {
   }, []);
 
   useEffect(() => {
-    ReactGA.event({ category: book, action: page.toString() });
+    setPageCount(pageCount + 1);
+    if (pageCount === 1) {
+      ReactGA.event({ category: book, action: '1', label: { book } });
+    }
+    if (pageCount === 5) {
+      ReactGA.event({ category: book, action: '5', label: { book } });
+    }
+    if (pageCount === 40) {
+      ReactGA.event({ category: book, action: '40', label: { book } });
+    }
+    if (pageCount === 100) {
+      ReactGA.event({ category: book, action: '80', label: { book } });
+    }
   }, [page]);
 
   function onDocumentLoadSuccess() {
