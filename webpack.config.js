@@ -69,6 +69,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      hash: true,
     }),
     // new GenerateSW(),
     new CopyPlugin([
