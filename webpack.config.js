@@ -2,15 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 // const { GenerateSW } = require('workbox-webpack-plugin');
 // const SentryCliPlugin = require('@sentry/webpack-plugin');
-//  const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash:4].js',
     path: path.join(__dirname, 'dist'),
   },
   resolve: {
