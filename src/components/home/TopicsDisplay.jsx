@@ -18,7 +18,7 @@ export default function TopicsDisplay() {
     } = item;
     if (done) {
       return (
-        <Suspense fallback={<div />}>
+        <Suspense fallback={<div />} key={id}>
           <StyledLink
             to={`/units?${text.replace(/\s+/g, '-').toLowerCase()}`}
             onClick={() => ReactGA.event({ category: 'home', action: `clicked ${text}` })}
