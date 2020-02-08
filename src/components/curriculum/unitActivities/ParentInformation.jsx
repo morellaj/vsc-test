@@ -62,8 +62,8 @@ export default function ParentInformation(props) {
     } = item;
     if (link) {
       display.push(
-        <Item>
-          <PlainLink to={`/${link}${unit}`} key={id}>
+        <Item key={id}>
+          <PlainLink to={`/${link}${unit}`}>
             <FontAwesomeIcon icon={icon} style={style} />
             <Text>{item.text}</Text>
           </PlainLink>

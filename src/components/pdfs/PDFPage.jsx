@@ -115,7 +115,7 @@ export default function PDFPage() {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-    ReactGA.event({ category: book, action: 'Started' });
+    ReactGA.event({ category: 'book', action: '1', label: book });
     window.scrollTo(0, 0);
     const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
     setInitialPage(initial);
@@ -131,17 +131,12 @@ export default function PDFPage() {
 
   useEffect(() => {
     setPageCount(pageCount + 1);
-    if (pageCount === 1) {
-      ReactGA.event({ category: book, action: '1', label: { book } });
-    }
-    if (pageCount === 5) {
-      ReactGA.event({ category: book, action: '5', label: { book } });
-    }
-    if (pageCount === 40) {
-      ReactGA.event({ category: book, action: '40', label: { book } });
-    }
-    if (pageCount === 100) {
-      ReactGA.event({ category: book, action: '80', label: { book } });
+    if (page === 5) {
+      ReactGA.event({ category: 'book', action: '5', label: book });
+    } else if (page === 40) {
+      ReactGA.event({ category: 'book', action: '40', label: book });
+    } else if (page === 80) {
+      ReactGA.event({ category: 'book', action: '80', label: book });
     }
   }, [page]);
 
@@ -302,3 +297,18 @@ const Loading = styled.div`
 const NavbarContainer = styled.div`
   display: ${(props) => (props.height < 500 ? 'none' : 'flex')};
 `;
+
+/*    setPageCount(pageCount + 1);
+    if (pageCount === 1) {
+      ReactGA.event({ category: 'book', action: '1', label: { book } });
+    }
+    if (pageCount === 5) {
+      ReactGA.event({ category: 'book', action: '5', label: { book } });
+    }
+    if (pageCount === 40) {
+      ReactGA.event({ category: 'book', action: '40', label: { book } });
+    }
+    if (pageCount === 100) {
+      ReactGA.event({ category: 'book', action: '80', label: { book } });
+    }
+    */
