@@ -49,10 +49,10 @@ export default function Navbar() {
     <Container>
       <LogoContainer to="/">
         <picture>
-          <source srcSet="Assets/logo-white-small.webp" type="image/webp" />
-          <source srcSet="Assets/logo-white-small.png" type="image/png" />
+          <source srcSet="https://learningisthesolution.com/assets/logo-white-small.webp" type="image/webp" />
+          <source srcSet="https://learningisthesolution.com/assets/logo-white-small.png" type="image/png" />
           <Logo
-            src="Assets/logo-white-small.png"
+            src="https://learningisthesolution.com/assets/logo-white-small.png"
             alt="Learning is the Solution logo"
             type="image/png"
           />
