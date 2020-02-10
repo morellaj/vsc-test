@@ -15,6 +15,22 @@
     <div id="app">
     </div>
   </body>
+  <script>
+    // Hack to force styled components to render styles during prerender
+    // for googlebot
+    window.onload = () => {
+      if(typeof navigator != 'undefined' && /prerender/i.test(navigator.userAgent)) {
+      var el = document.createElement('style');
+      document.head.appendChild(el)     
+      var styles = document.querySelectorAll('style[data-styled]')
+      for (style of styles.values()) {
+          for (rule of style.sheet.rules) {
+            el.appendChild(document.createTextNode(rule.cssText))
+          }
+      }
+    }
+    };
+</script>
 </html>
 <!--
 <script>

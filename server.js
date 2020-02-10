@@ -3,9 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(require('prerender-node').set('prerenderToken', 'z71wqtiu7NqrJUxjpFFE'));
+// app.use(require('prerender-node').set('prerenderToken', 'z71wqtiu7NqrJUxjpFFE'));
 
-// app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3000/').set('prerenderToken', 'z71wqtiu7NqrJUxjpFFE'));
+app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3000/').set('prerenderToken', 'z71wqtiu7NqrJUxjpFFE'));
 
 app.use('/', express.static(path.join(__dirname, 'dist')));
 
