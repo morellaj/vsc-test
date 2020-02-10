@@ -43,9 +43,19 @@ export default function Home() {
           <TopicsDisplay />
         </Suspense>
         <TryContainer>
+          <BannerContainer>
+            <source srcSet="Assets/home-banner.webp" type="image/webp" />
+            <source srcSet="Assets/home-banner.jpg" type="image/jpeg" />
+            <img
+              alt="cartoon scene of Joey, Mia, and Tom"
+              src="Assets/home-banner.jpg"
+              type="image/jpeg"
+              style={{ width: '100%' }}
+            />
+          </BannerContainer>
           <Link
             to="book?super-jet-3000"
-            style={{ textDecoration: 'none' }}
+            style={{ textDecoration: 'none', zIndex: '100' }}
             onClick={() => ReactGA.event({ category: 'home', action: 'clicked lower read a book' })}
           >
             <Button>Read a book</Button>
@@ -68,6 +78,15 @@ const Container = styled.main`
 const TryContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
-  padding-bottom: 100px;
+  height: 232px;
+  overflow: hidden;
+`;
+
+const BannerContainer = styled.picture`
+  position: absolute;
+  width: 100%;
+  min-width: 820px;
+  overflow: hidden;
 `;
