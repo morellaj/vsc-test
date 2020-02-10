@@ -1,10 +1,14 @@
 // Package dependencies
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faPinterest, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 // Component dependencies
 import { footerList } from 'Constants';
+import colors from 'Colors';
 
 
 // Component for displaying the navbar on pages
@@ -17,28 +21,59 @@ export default function Footer() {
     </FooterItem>
   ));
 
+  const style = { color: 'white' };
+
   return (
-    <footer>
+    <Container>
       <List>
         {items}
       </List>
-    </footer>
+      <SocialMedia>
+        <Icon>
+          <a href="learingisthesolution.com" style={style}>
+            <FontAwesomeIcon icon={faPinterest} />
+          </a>
+        </Icon>
+        <Icon>
+          <a href="learingisthesolution.com" style={style}>
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+        </Icon>
+        <Icon>
+          <a href="learingisthesolution.com" style={style}>
+            <FontAwesomeIcon icon={faFacebookSquare} />
+          </a>
+        </Icon>
+        <Icon>
+          <Link to="/update-sign-up" style={style}>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </Link>
+        </Icon>
+      </SocialMedia>
+    </Container>
   );
 }
 
 
 // Styling
+const Container = styled.div`
+  background-color: ${colors.LITS.color};
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-top: 50px;
+`;
+
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px;
-  padding: 0;
   font-size: 16px;
   list-style-type: none;
-  position:absolute;
-  bottom: 0px;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 
   @media(max-width: 750px){
     font-size: 14px;
@@ -56,12 +91,28 @@ const FooterItem = styled.li`
 const StyledLink = styled(Link)`
   padding: 5px;
   border-radius: 5px;
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
   font-weight: 500;
   text-decoration: none;
 
   :hover {
-    background-color: gray;
-    color: white;
+    background-color: ${colors.LITS.darkColor};
+  }
+`;
+
+const SocialMedia = styled.div`
+  display: flex;
+  margin-right: 15px;
+`;
+
+const Icon = styled.div`
+  color: white;
+  margin: 5px;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+
+  :hover {
+    background-color: ${colors.LITS.darkColor};
   }
 `;

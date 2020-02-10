@@ -28,6 +28,7 @@ module.exports = {
     "strict":0,
     "react/prop-types":"off",
     'max-len': 'off',
+    'radix': 'off',
   },
   settings: {
     'import/resolver': {
@@ -40,6 +41,7 @@ module.exports = {
           ['Icon', './src/components/common/Icon.jsx'],
           ['Input', './src/components/common/Input.jsx'],
           ['Navbar', './src/components/common/Navbar.jsx'],
+          ['SocialIcon', './src/components/common/SocialIcon.jsx'],
           ['Error', './src/components/common/Error.jsx'],
           ['Styles', './src/components/common/Styles.jsx'],
           ['Head', './src/components/common/Head.jsx'],

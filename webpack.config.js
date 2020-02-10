@@ -11,7 +11,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: '[name].[chunkhash:4].js',
+    filename: '[name][chunkhash:4].js',
     path: path.join(__dirname, 'dist'),
   },
   resolve: {
@@ -24,6 +24,7 @@ module.exports = {
       Input: path.join(__dirname, 'src/components/common/Input.jsx'),
       Head: path.join(__dirname, 'src/components/common/Head.jsx'),
       Navbar: path.join(__dirname, 'src/components/common/Navbar.jsx'),
+      SocialIcon: path.join(__dirname, 'src/components/common/SocialIcon.jsx'),
       Styles: path.join(__dirname, 'src/components/common/Styles.jsx'),
       Error: path.join(__dirname, 'src/components/common/Error.jsx'),
       Constants: path.join(__dirname, 'src/data/constants.js'),

@@ -38,7 +38,7 @@ export default function ActivityGroup(props) {
 // Styling
 const Container = styled.div`
   display: inline-block;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 5px;
   background-color: white;
   border-bottom: 1px solid rgba(0,0,0,0.4);

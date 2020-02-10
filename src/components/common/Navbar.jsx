@@ -90,7 +90,7 @@ const LogoContainer = styled(Link)`
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  height: 50px;
 
   @media(max-width: 700px) {
     height: 30px;
