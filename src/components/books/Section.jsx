@@ -30,10 +30,6 @@ const Container = styled.div`
   background-color: white;
   border-radius: 5px;
   border-bottom: 1px solid rgba(0,0,0,0.4);
-
-  @media(max-width: 1200px) {
-    
-  }
 `;
 
 const InnerContainer = styled.div`

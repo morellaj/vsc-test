@@ -21,7 +21,6 @@ module.exports = {
       Common: path.join(__dirname, 'src/components/common/'),
       Footer: path.join(__dirname, 'src/components/common/Footer.jsx'),
       Icon: path.join(__dirname, 'src/components/common/Icon.jsx'),
-      Input: path.join(__dirname, 'src/components/common/Input.jsx'),
       Head: path.join(__dirname, 'src/components/common/Head.jsx'),
       Navbar: path.join(__dirname, 'src/components/common/Navbar.jsx'),
       SocialIcon: path.join(__dirname, 'src/components/common/SocialIcon.jsx'),

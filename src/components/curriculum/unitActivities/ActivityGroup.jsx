@@ -43,9 +43,6 @@ const Container = styled.div`
   background-color: white;
   border-bottom: 1px solid rgba(0,0,0,0.4);
 
-  @media(max-width: 1200px) {
-    margin: 10px;
-  }
 `;
 
 const GroupHeader = styled.div`
@@ -55,12 +52,18 @@ const GroupHeader = styled.div`
   font-weight: 500;
   border-bottom: 1px solid ${(props) => props.theme.color};
 
-  @media (max-width: 1200px) {
+  
+  @media (max-width: 1000px) {
     font-size: 20px;
   };
+  
 
-  @media (max-width: 540px) {
+  @media (max-width: 570px) {
     font-size: 16px;
+  };
+
+  @media (max-width: 380px) {
+    font-size: 14px;
   };
 `;
 
@@ -76,4 +79,8 @@ const IconContainer = styled.div`
   font-size: 16px;
   display:flex;
   align-items:center;
+
+  @media (max-width: 570px) {
+    font-size: 12px;
+  };
 `;

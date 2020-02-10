@@ -73,19 +73,19 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media(max-width: 1200px) {
-    margin: 0 10px;
-  }
-
-  @media(max-width: 1000px) {
-    display: none;
-  }
 `;
 
 const Title = styled.h1`
-  /*border-bottom: ${(props) => (props.description ? '1px solid white' : null)};*/
   white-space: nowrap;
   padding: ${(props) => (props.description ? '10px 0' : '10px 0 0 0')};
   margin: 0 10px;
   font-size: 40px;
+
+  @media(max-width: 800px){
+    font-size: 30px;
+  }
+
+  @media(max-width: 570px){
+    font-size: 20px;
+  }
 `;

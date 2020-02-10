@@ -13,16 +13,17 @@ import { HomePage } from 'Data/pageHeadInfo.json';
 /** ********************************************* */
 export default function SocialShare(props) {
   const {
-    unitName, title, subtitle, description,
+    unitName, description,
   } = props;
-  const style = { margin: '5px' };
+  const { title } = HomePage;
+  const style = { margin: '3px' };
   const url = `learningisthesolution.com/units?${unitName}`;
   return (
     <Container>
       <PinterestShareButton
         url={url}
         media={`https://learningisthesolution.com/assets/${unitName}.jpg`}
-        description={HomePage.title + description}
+        description={title + description}
         style={style}
       >
         <Button>
@@ -63,6 +64,10 @@ const Container = styled.div`
   margin-right: 10px;
   display: flex;
   align-items: center;
+
+  @media(max-width: 570px) {
+    margin-right: 5px;
+  }
 `;
 
 const Button = styled.div`
@@ -74,4 +79,9 @@ const Button = styled.div`
   outline: none;
   background-color: #fafafa;
   width: 20px;
+
+  @media(max-width: 570px) {
+    font-size: 14px;
+    padding: 0 2px;
+  }
 `;

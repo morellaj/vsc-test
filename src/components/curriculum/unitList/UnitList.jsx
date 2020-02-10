@@ -7,7 +7,6 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 
 // Component dependencies
-import colors from 'Colors';
 import Unit from './Unit';
 import NewUnit from './NewUnit';
 
@@ -40,10 +39,6 @@ export default function UnitList(props) {
       <TopicList open={open}>
         {unitArr}
       </TopicList>
-      <RequestText>
-        <span>{'Have a topic you want us to work on next?  '}</span>
-        <StyledLink to="/topic-recommendation">Click here!</StyledLink>
-      </RequestText>
     </Container>
   );
 }
@@ -53,25 +48,6 @@ export default function UnitList(props) {
 const Container = styled.nav`
   width: 100%;
   margin-bottom: 20px;
-`;
-
-const RequestText = styled.div`
-  margin-top: 10px;
-  display: none;
-
-  @media(max-width: 1000px) {
-    display: none;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  color: black;
-  font-weight: 900;
-  text-decoration: none;
-
-  :hover {
-    color: ${colors.LITS.darkColor};
-  }
 `;
 
 const Select = styled.div`

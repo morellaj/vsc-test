@@ -25,7 +25,7 @@ const parentInformationList = [
     id: 2,
     link: 'book-recommendations?',
     icon: faBookReader,
-    text: 'Book Recommendations',
+    text: 'Offline Books',
   },
   {
     id: 3,
@@ -93,11 +93,11 @@ export default function ParentInformation(props) {
 const Container = styled.div`
   font-size: 20px;
 
-  @media(max-width: 1200px){
+  @media(max-width: 1000px){
     font-size: 16px;
   };
 
-  @media(max-width: 540px) {
+  @media(max-width: 570px) {
     font-size: 12px;
   };
 `;
@@ -109,7 +109,7 @@ const List = styled.ul`
   flex-direction: column;
   list-style: none;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     margin: 5px;
   }
 `;
@@ -132,7 +132,7 @@ const Item = styled.li`
     background-color: lightgray;
   }
 
-  @media(max-width: 1200px) {
+  @media(max-width: 1000px) {
     padding: 5px;
     margin-bottom: 5px;
   }

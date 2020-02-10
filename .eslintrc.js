@@ -39,7 +39,6 @@ module.exports = {
           ['Common', './src/components/common/'],
           ['Footer', './src/components/common/Footer.jsx'],
           ['Icon', './src/components/common/Icon.jsx'],
-          ['Input', './src/components/common/Input.jsx'],
           ['Navbar', './src/components/common/Navbar.jsx'],
           ['SocialIcon', './src/components/common/SocialIcon.jsx'],
           ['Error', './src/components/common/Error.jsx'],

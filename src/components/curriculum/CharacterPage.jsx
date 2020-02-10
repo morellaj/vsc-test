@@ -106,14 +106,21 @@ export default function CharacterPage() {
 const Container = styled.main`
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin: 30px 10px;
   min-height: 800px;
 `;
 
 const UnitsContainer = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 900px;
+
+  @media(max-width: 800px) {
+    width: 600px;
+  }
+
+  @media(max-width: 570px){
+    width: 350px;
+  }
 `;
