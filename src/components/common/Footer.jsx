@@ -64,6 +64,12 @@ const Container = styled.div`
   align-items: center;
   height: 70px;
   margin-top: 50px;
+
+  @media(max-width: 470px){
+    flex-direction: column;
+    height: auto;
+    padding-top: 5px;
+  };
 `;
 
 const List = styled.ul`
@@ -78,10 +84,18 @@ const List = styled.ul`
   @media(max-width: 750px){
     font-size: 14px;
   }
+
+  @media(max-width: 570px){
+
+  }
 `;
 
 const FooterItem = styled.li`
   margin: 7px 15px;
+
+  @media(max-width: 570px){
+
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -110,5 +124,9 @@ const Icon = styled.div`
 
   :hover {
     background-color: ${colors.LITS.darkColor};
-  }
+  };
+
+  @media(max-width: 570px){
+
+  };
 `;

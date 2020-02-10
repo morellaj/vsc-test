@@ -77,10 +77,9 @@ const StyledLink = styled(Link)`
     width: 200px;
   };
 
-  @media (max-width: 570px) {
-    width: 125px;
+  @media(max-width: 460px){
+    width: 250px;
   };
-
 `;
 
 
@@ -93,8 +92,8 @@ const ImageContainer = styled.div`
     height: 200px;
   };
 
-  @media(max-width: 570px) {
-    height: 125px;
+  @media(max-width: 460px){
+    height: 250px;
   };
 `;
 

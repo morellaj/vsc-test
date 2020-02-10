@@ -121,6 +121,6 @@ const UnitsContainer = styled.main`
   }
 
   @media(max-width: 570px){
-    width: 350px;
+    width: 440px;
   }
 `;

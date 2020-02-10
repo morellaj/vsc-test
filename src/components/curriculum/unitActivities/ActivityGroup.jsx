@@ -57,14 +57,6 @@ const GroupHeader = styled.div`
     font-size: 20px;
   };
   
-
-  @media (max-width: 570px) {
-    font-size: 16px;
-  };
-
-  @media (max-width: 380px) {
-    font-size: 14px;
-  };
 `;
 
 const Activities = styled.div`
@@ -80,7 +72,4 @@ const IconContainer = styled.div`
   display:flex;
   align-items:center;
 
-  @media (max-width: 570px) {
-    font-size: 12px;
-  };
 `;

@@ -72,7 +72,10 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
 
-  
+  @media(max-width: 570px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const SingleContainer = styled.div`
@@ -85,12 +88,12 @@ const SingleContainer = styled.div`
     width: 260px;
   };
 
-  @media(max-width: 570px) {
-    width: 170px;
+  @media(max-width: 570px){
+    flex-direction: column-reverse;
   };
 
-  @media(max-width: 380px) {
-    width: 150px;
+  @media(max-width: 460px){
+    width: 300px;
   };
 `;
 
@@ -112,10 +115,7 @@ const MultipleContainer = styled.div`
   };
 
   @media(max-width: 570px) {
-    width: 170px;
-  };
-
-  @media(max-width: 380px) {
-    width: 150px;
+    width: 100%;
+    margin-right: 0;
   };
 `;

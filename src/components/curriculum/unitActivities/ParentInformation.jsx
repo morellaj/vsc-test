@@ -97,9 +97,6 @@ const Container = styled.div`
     font-size: 16px;
   };
 
-  @media(max-width: 570px) {
-    font-size: 12px;
-  };
 `;
 
 const List = styled.ul`

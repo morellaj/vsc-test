@@ -55,8 +55,5 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  @media(max-width: 1000px) {
-    width: 100%;
-    text-align: center;
-  }
+
 `;
