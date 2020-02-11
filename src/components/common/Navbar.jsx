@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBookReader,
   faInfoCircle,
-  faCommentDots,
+  faSignInAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Component dependencies and data files
@@ -26,7 +26,7 @@ const navbarList = [
   },
   {
     title: 'Sign-Up',
-    icon: faCommentDots,
+    icon: faSignInAlt,
     link: '/update-sign-up',
   },
 ];

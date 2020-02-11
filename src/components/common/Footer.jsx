@@ -23,8 +23,6 @@ export default function Footer() {
     </FooterItem>
   ));
 
-  const style = { color: 'white' };
-
   return (
     <Container>
       <List>
@@ -34,32 +32,21 @@ export default function Footer() {
         <Text>
         Follow Us:
         </Text>
-        <Icon>
-          <Link to="/update-sign-up" style={style}>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </Link>
+        <IconLink to="/update-sign-up">
+          <FontAwesomeIcon icon={faEnvelope} />
+        </IconLink>
+        <Icon href="https://facebook.com/learningisthesolution" target="_blank">
+          <FontAwesomeIcon icon={faFacebookSquare} />
         </Icon>
-        <Icon>
-          <a href="https://facebook.com/learningisthesolution" style={style}>
-            <FontAwesomeIcon icon={faFacebookSquare} />
-          </a>
+        <Icon href="https://www.instagram.com/learning_is_the_solution/" target="_blank">
+          <FontAwesomeIcon icon={faInstagram} />
         </Icon>
-        <Icon>
-          <a href="https://www.instagram.com/learning_is_the_solution/ " style={style}>
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
+        <Icon href="https://twitter.com/LearnistheSol" target="_blank">
+          <FontAwesomeIcon icon={faTwitter} />
         </Icon>
-        <Icon>
-          <a href="https://twitter.com/LearnistheSol" style={style}>
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
+        <Icon href="https://www.pinterest.com/learningisthesolution/" target="_blank">
+          <FontAwesomeIcon icon={faPinterest} />
         </Icon>
-        <Icon>
-          <a href="https://www.pinterest.com/learningisthesolution/" style={style}>
-            <FontAwesomeIcon icon={faPinterest} />
-          </a>
-        </Icon>
-
       </SocialMedia>
     </Container>
   );
@@ -102,7 +89,7 @@ const FooterItem = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   color: white;
   font-weight: 500;
@@ -119,19 +106,25 @@ const SocialMedia = styled.div`
   align-items: center;
 `;
 
-const Icon = styled.div`
+const Icon = styled.a`
   color: white;
-  margin: 5px;
   font-size: 25px;
-  padding: 5px;
   border-radius: 5px;
+  padding: 10px;
 
   :hover {
     background-color: ${colors.LITS.darkColor};
   };
+`;
 
-  @media(max-width: 570px){
+const IconLink = styled(Link)`
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 10px;
 
+  :hover {
+    background-color: ${colors.LITS.darkColor};
   };
 `;
 

@@ -79,6 +79,10 @@ export const defaultCutoff = 60;
 
 export const footerList = [
   {
+    title: 'Home',
+    link: '/',
+  },
+  {
     title: 'Give Feedback',
     link: '/feedback',
   },
