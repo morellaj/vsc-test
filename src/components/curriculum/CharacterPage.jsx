@@ -106,8 +106,8 @@ export default function CharacterPage() {
 const Container = styled.main`
   display: flex;
   justify-content: center;
-  margin: 30px 10px;
-  min-height: 800px;
+  margin: 30px 10px 0 10px;
+  padding-bottom: 90px;
 `;
 
 const UnitsContainer = styled.main`

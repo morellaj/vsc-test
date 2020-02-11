@@ -73,6 +73,7 @@ export default function Home() {
 // Styling
 const Container = styled.main`
   line-height: 1.5;
+  padding-bottom: 90px;
 `;
 
 const TryContainer = styled.div`

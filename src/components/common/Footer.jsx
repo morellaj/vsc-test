@@ -61,7 +61,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
 
   @media(max-width: 600px){
     flex-direction: column;
