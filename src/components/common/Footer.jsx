@@ -31,28 +31,31 @@ export default function Footer() {
         {items}
       </List>
       <SocialMedia>
+        <Text>
+        Follow Us:
+        </Text>
         <Icon>
           <Link to="/update-sign-up" style={style}>
             <FontAwesomeIcon icon={faEnvelope} />
           </Link>
         </Icon>
         <Icon>
-          <a href="learingisthesolution.com" style={style}>
+          <a href="https://facebook.com/learningisthesolution" style={style}>
             <FontAwesomeIcon icon={faFacebookSquare} />
           </a>
         </Icon>
         <Icon>
-          <a href="learingisthesolution.com" style={style}>
+          <a href="https://www.instagram.com/learning_is_the_solution/ " style={style}>
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </Icon>
         <Icon>
-          <a href="learingisthesolution.com" style={style}>
+          <a href="https://twitter.com/LearnistheSol" style={style}>
             <FontAwesomeIcon icon={faTwitter} />
           </a>
         </Icon>
         <Icon>
-          <a href="learingisthesolution.com" style={style}>
+          <a href="https://www.pinterest.com/learningisthesolution/" style={style}>
             <FontAwesomeIcon icon={faPinterest} />
           </a>
         </Icon>
@@ -73,7 +76,7 @@ const Container = styled.div`
   height: 70px;
   margin-top: 50px;
 
-  @media(max-width: 470px){
+  @media(max-width: 600px){
     flex-direction: column;
     height: auto;
     padding-top: 5px;
@@ -92,18 +95,10 @@ const List = styled.ul`
   @media(max-width: 750px){
     font-size: 14px;
   }
-
-  @media(max-width: 570px){
-
-  }
 `;
 
 const FooterItem = styled.li`
   margin: 7px 15px;
-
-  @media(max-width: 570px){
-
-  }
 `;
 
 const StyledLink = styled(Link)`
@@ -121,6 +116,7 @@ const StyledLink = styled(Link)`
 const SocialMedia = styled.div`
   display: flex;
   margin-right: 15px;
+  align-items: center;
 `;
 
 const Icon = styled.div`
@@ -137,4 +133,14 @@ const Icon = styled.div`
   @media(max-width: 570px){
 
   };
+`;
+
+const Text = styled.div`
+  font-weight: 500;
+  font-size: 16px;
+
+
+@media(max-width: 750px){
+    font-size: 14px;
+  }
 `;

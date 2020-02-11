@@ -54,11 +54,11 @@ export default function Home() {
             />
           </BannerContainer>
           <Link
-            to="book?super-jet-3000"
+            to="/update-sign-up"
             style={{ textDecoration: 'none', zIndex: '100' }}
             onClick={() => ReactGA.event({ category: 'home', action: 'clicked lower read a book' })}
           >
-            <Button>Read a book</Button>
+            <Button>Email Sign-Up</Button>
           </Link>
         </TryContainer>
       </Container>

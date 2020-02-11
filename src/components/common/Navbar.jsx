@@ -25,9 +25,9 @@ const navbarList = [
     link: '/about',
   },
   {
-    title: 'Give Feedback',
+    title: 'Sign-Up',
     icon: faCommentDots,
-    link: '/feedback',
+    link: '/update-sign-up',
   },
 ];
 
@@ -74,7 +74,7 @@ const Container = styled.nav`
 `;
 
 const LogoContainer = styled(Link)`
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 5px;
   margin: 0 20px;
   display: flex;
