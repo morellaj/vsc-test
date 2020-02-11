@@ -3,7 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faPinterest, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import {
+  faTwitter, faPinterest, faFacebookSquare, faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 // Component dependencies
@@ -30,8 +32,18 @@ export default function Footer() {
       </List>
       <SocialMedia>
         <Icon>
+          <Link to="/update-sign-up" style={style}>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </Link>
+        </Icon>
+        <Icon>
           <a href="learingisthesolution.com" style={style}>
-            <FontAwesomeIcon icon={faPinterest} />
+            <FontAwesomeIcon icon={faFacebookSquare} />
+          </a>
+        </Icon>
+        <Icon>
+          <a href="learingisthesolution.com" style={style}>
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </Icon>
         <Icon>
@@ -41,14 +53,10 @@ export default function Footer() {
         </Icon>
         <Icon>
           <a href="learingisthesolution.com" style={style}>
-            <FontAwesomeIcon icon={faFacebookSquare} />
+            <FontAwesomeIcon icon={faPinterest} />
           </a>
         </Icon>
-        <Icon>
-          <Link to="/update-sign-up" style={style}>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </Link>
-        </Icon>
+
       </SocialMedia>
     </Container>
   );
