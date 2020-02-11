@@ -22,7 +22,7 @@ export default function SocialShare(props) {
     <Container>
       <PinterestShareButton
         url={url}
-        media={`https://learningisthesolution.com/assets/${unitName}.jpg`}
+        media={`https://https://debug--xenodochial-hopper-aead1f.netlify.com//assets/${unitName}-social.png`}
         description={title + description}
         style={style}
       >
