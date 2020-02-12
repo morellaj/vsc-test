@@ -47,8 +47,8 @@ export default function PDFPage() {
     setTestInnerHeight(window.innerHeight);
     setTestScreenWidth(window.screen.width);
     setTestScreenHeight(window.screen.height);
-    const innerWidth = window.screen.width;
-    const innerHeight = window.screen.height;
+    const innerWidth = window.screen.height;
+    const innerHeight = window.screen.width;
 
     setHeight(window.innerHeight);
     let navbarLoss;
