@@ -207,7 +207,7 @@ export default function PDFPage() {
         <StyledDoc
           file={file}
           loading={null}
-          error="Book not found :("
+          error={`Hmm it doesn't look like we have a book called ${book}...  `}
           onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
           onLoadSuccess={onDocumentLoadSuccess}
           onItemClick={onItemClick}
