@@ -87,6 +87,10 @@ const LogoContainer = styled(Link)`
   @media(max-width: 700px){
     margin: 0 5px;
   }
+
+  @media(max-width: 340px){
+    padding: 5px;
+  }
 `;
 
 const Logo = styled.img`
@@ -142,6 +146,10 @@ const Item = styled.li`
 
   @media(max-height: 500px) {
     margin: 5px;
+  }
+
+  @media(max-width: 340px) {
+    margin: 3px;
   }
 `;
 

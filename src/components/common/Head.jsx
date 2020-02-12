@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 /** ********************************************* */
 export default function Head(props) {
   const {
-    title, description, image, height, width, type, url, author, tags, full,
+    title, description, image, height, width, type, url, author, tags,
   } = props;
 
   const image1 = image ? <meta property="og:image" content={image} /> : null;

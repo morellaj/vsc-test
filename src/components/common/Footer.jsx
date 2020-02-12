@@ -89,6 +89,10 @@ const List = styled.ul`
 
 const FooterItem = styled.li`
   margin: 7px 15px;
+
+  @media(max-width: 360px){
+    margin: 7px 5px;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -118,6 +122,10 @@ const Icon = styled.a`
   :hover {
     background-color: ${colors.LITS.darkColor};
   };
+
+  @media(max-width: 360px){
+    font-size: 20px;
+  }
 `;
 
 const IconLink = styled(Link)`
