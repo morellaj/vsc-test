@@ -43,7 +43,7 @@ export default function PDFPage() {
     const innerWidth = window.screen.width;
     const innerHeight = window.screen.height;
 
-    setHeight(innerHeight);
+    setHeight(window.innerHeight);
     let navbarLoss;
     if (full || innerHeight < 500) {
       navbarLoss = 0;
@@ -52,10 +52,10 @@ export default function PDFPage() {
     } else {
       navbarLoss = 39;
     }
-    if (window.innerWidth / (window.innerHeight - navbarLoss) <= 960 / (540)) {
-      setScale(window.innerWidth / 960);
+    if (innerWidth / (innerHeight - navbarLoss) <= 960 / (540)) {
+      setScale(innerWidth / 960);
     } else {
-      setScale((window.innerHeight - navbarLoss) / (540));
+      setScale((innerHeight - navbarLoss) / (540));
     }
   }
 
@@ -313,18 +313,3 @@ const Loading = styled.div`
 const NavbarContainer = styled.div`
   display: ${(props) => (props.height < 500 ? 'none' : 'flex')};
 `;
-
-/*    setPageCount(pageCount + 1);
-    if (pageCount === 1) {
-      ReactGA.event({ category: 'book', action: '1', label: { book } });
-    }
-    if (pageCount === 5) {
-      ReactGA.event({ category: 'book', action: '5', label: { book } });
-    }
-    if (pageCount === 40) {
-      ReactGA.event({ category: 'book', action: '40', label: { book } });
-    }
-    if (pageCount === 100) {
-      ReactGA.event({ category: 'book', action: '80', label: { book } });
-    }
-    */
