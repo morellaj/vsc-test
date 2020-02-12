@@ -201,6 +201,7 @@ export default function PDFPage() {
         image={`https://learningisthesolution.com/assets/${book}-social.jpg`}
         height="338px"
         width="600px"
+        full
       />
       <NavbarContainer height={height}>
         <Navbar />

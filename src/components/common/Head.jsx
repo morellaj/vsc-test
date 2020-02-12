@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 /** ********************************************* */
 export default function Head(props) {
   const {
-    title, description, image, height, width, type, url, author, tags,
+    title, description, image, height, width, type, url, author, tags, full,
   } = props;
 
   const image1 = image ? <meta property="og:image" content={image} /> : null;
@@ -21,6 +21,7 @@ export default function Head(props) {
   const ogAuthor = author ? <meta property="og:book:author" content={author} /> : null;
   const ogUrl = url ? <meta property="og:url" content={url} /> : null;
   const ogTags = tags ? <meta property="og:book:tag" content={tags} /> : null;
+  const fullscreen = full ? <meta name="apple-mobile-web-app-capable" content="yes" /> : null;
   return (
     <Helmet>
       <title>{title}</title>
@@ -35,6 +36,7 @@ export default function Head(props) {
       {ogAuthor}
       {ogUrl}
       {ogTags}
+      {fullscreen}
     </Helmet>
   );
 }
