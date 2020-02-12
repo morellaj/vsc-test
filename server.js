@@ -1,7 +1,9 @@
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 
 const app = express();
+app.use(helmet());
 
 app.use(require('prerender-node').set('prerenderToken', 'z71wqtiu7NqrJUxjpFFE'));
 
