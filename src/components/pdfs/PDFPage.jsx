@@ -32,25 +32,15 @@ export default function PDFPage() {
   const [progDisplay, setProgDisplay] = useState(true);
   const [browser, setBrowser] = useState(false);
   const [height, setHeight] = useState(1000);
-  const [testInnerWidth, setTestInnerWidth] = useState(0);
-  const [testInnerHeight, setTestInnerHeight] = useState(0);
-  const [testScreenWidth, setTestScreenWidth] = useState(0);
-  const [testScreenHeight, setTestScreenHeight] = useState(0);
   const [pageCount, setPageCount] = useState(0);
+  const [mobile, setMobile] = useState(true);
   const book = window.location.search.slice(1).split('&')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
 
   function handleResize() {
-    // const { innerWidth, innerHeight } = window;
-    setTestInnerWidth(window.innerWidth);
-    setTestInnerHeight(window.innerHeight);
-    setTestScreenWidth(window.screen.width);
-    setTestScreenHeight(window.screen.height);
-    const innerWidth = window.screen.height;
-    const innerHeight = window.screen.width;
-
-    setHeight(window.innerHeight);
+    const { innerWidth, innerHeight } = window;
+    setHeight(innerHeight);
     let navbarLoss;
     if (full || innerHeight < 500) {
       navbarLoss = 0;
@@ -59,10 +49,10 @@ export default function PDFPage() {
     } else {
       navbarLoss = 39;
     }
-    if (innerWidth / (innerHeight - navbarLoss) <= 960 / (540)) {
-      setScale(innerWidth / 960);
+    if (window.innerWidth / (window.innerHeight - navbarLoss) <= 960 / (540)) {
+      setScale(window.innerWidth / 960);
     } else {
-      setScale((innerHeight - navbarLoss) / (540));
+      setScale((window.innerHeight - navbarLoss) / (540));
     }
   }
 
@@ -127,6 +117,12 @@ export default function PDFPage() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
     ReactGA.event({ category: 'book', action: '1', label: book });
+
+    if (window.screen.width < 400) {
+      setMobile(true);
+    }
+
+
     window.scrollTo(0, 0);
     const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
     setInitialPage(initial);
@@ -212,7 +208,6 @@ export default function PDFPage() {
         image={`https://learningisthesolution.com/assets/${book}-social.jpg`}
         height="338px"
         width="600px"
-        full
       />
       <NavbarContainer height={height}>
         <Navbar />
@@ -242,19 +237,13 @@ export default function PDFPage() {
             renderTextLayer={false}
             onRenderSuccess={pageRender}
           >
-            <div style={{ zIndex: '100' }}>
-              {testInnerHeight}
-              {testInnerWidth}
-              {testScreenHeight}
-              {testScreenWidth}
-            </div>
             <ScreenButton
               fullCap={fullCap}
               full={full}
               fullscreenClick={fullscreenClick}
             />
-            <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
-          Please note our stories may not run properly on this browser.  Use Chrome, Safari, Firefox, or Edge for the best experience.  Click to remove this message.
+            <BrowserWarning mobile={mobile} onClick={() => (setMobile(false))}>
+              Best viewed on PC or tablet.  Tap to close.
             </BrowserWarning>
           </MainPage>
           <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
@@ -286,8 +275,7 @@ const BrowserWarning = styled.main`
   border-radius: 5px;
   width: 300px;
   padding: 5px;
-  cursor: pointer;
-  display: ${(props) => (props.browser ? 'none' : 'none')};
+  display: ${(props) => (props.mobile ? 'none' : 'none')};
 `;
 
 const StyledDoc = styled(Document)`
@@ -326,3 +314,18 @@ const Loading = styled.div`
 const NavbarContainer = styled.div`
   display: ${(props) => (props.height < 500 ? 'none' : 'flex')};
 `;
+
+/*    setPageCount(pageCount + 1);
+    if (pageCount === 1) {
+      ReactGA.event({ category: 'book', action: '1', label: { book } });
+    }
+    if (pageCount === 5) {
+      ReactGA.event({ category: 'book', action: '5', label: { book } });
+    }
+    if (pageCount === 40) {
+      ReactGA.event({ category: 'book', action: '40', label: { book } });
+    }
+    if (pageCount === 100) {
+      ReactGA.event({ category: 'book', action: '80', label: { book } });
+    }
+    */

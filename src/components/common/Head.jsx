@@ -21,7 +21,6 @@ export default function Head(props) {
   const ogAuthor = author ? <meta property="og:book:author" content={author} /> : null;
   const ogUrl = url ? <meta property="og:url" content={url} /> : null;
   const ogTags = tags ? <meta property="og:book:tag" content={tags} /> : null;
-  const fullscreen = full ? <meta name="apple-mobile-web-app-capable" content="yes" /> : null;
   return (
     <Helmet>
       <title>{title}</title>
@@ -36,7 +35,6 @@ export default function Head(props) {
       {ogAuthor}
       {ogUrl}
       {ogTags}
-      {fullscreen}
     </Helmet>
   );
 }
