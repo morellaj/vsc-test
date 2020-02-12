@@ -194,6 +194,10 @@ export default function PDFPage() {
       <Head
         title={`${title}: ${subtitle}`}
         description={description}
+        url={`https://learningisthesolution.com/book?${book}`}
+        type="book"
+        author="Alex Morelli and Emily Moeller"
+        tags={['kids', 'character development', 'character', 'early reader']}
         image={`https://learningisthesolution.com/assets/${book}-social.jpg`}
         height="338px"
         width="600px"

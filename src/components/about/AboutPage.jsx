@@ -32,7 +32,13 @@ export default function AboutPage() {
 
   return (
     <>
-      <Head title={title} description={description} />
+      <Head
+        title={title}
+        description={description}
+        url="https://learningisthesolution.com/about"
+        type="website"
+        image="logo-large.jpg"
+      />
       <Navbar />
       <Container>
         <Intro />

@@ -1,6 +1,6 @@
 // Package dependencies
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'Head';
 import styled from 'styled-components';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
@@ -21,10 +21,13 @@ export default function FeedbackPage() {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <Head
+        title={title}
+        description={description}
+        url="https://learningisthesolution.com/contact"
+        type="website"
+        image="logo-large.jpg"
+      />
       <Navbar />
       <Container>
         <Survey
