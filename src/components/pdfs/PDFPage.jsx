@@ -32,6 +32,10 @@ export default function PDFPage() {
   const [progDisplay, setProgDisplay] = useState(true);
   const [browser, setBrowser] = useState(false);
   const [height, setHeight] = useState(1000);
+  const [testInnerWidth, setTestInnerWidth] = useState(0);
+  const [testInnerHeight, setTestInnerHeight] = useState(0);
+  const [testScreenWidth, setTestScreenWidth] = useState(0);
+  const [testScreenHeight, setTestScreenHeight] = useState(0);
   const [pageCount, setPageCount] = useState(0);
   const book = window.location.search.slice(1).split('&')[0];
   const file = `/assets/${book}.pdf`;
@@ -39,7 +43,10 @@ export default function PDFPage() {
 
   function handleResize() {
     // const { innerWidth, innerHeight } = window;
-
+    setTestInnerWidth(window.innerWidth);
+    setTestInnerHeight(window.innerHeight);
+    setTestScreenWidth(window.screen.width);
+    setTestScreenHeight(window.screen.height);
     const innerWidth = window.screen.width;
     const innerHeight = window.screen.height;
 
@@ -235,6 +242,12 @@ export default function PDFPage() {
             renderTextLayer={false}
             onRenderSuccess={pageRender}
           >
+            <div style={{ zIndex: '100' }}>
+              {testInnerHeight}
+              {testInnerWidth}
+              {testScreenHeight}
+              {testScreenWidth}
+            </div>
             <ScreenButton
               fullCap={fullCap}
               full={full}
