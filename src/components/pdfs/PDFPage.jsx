@@ -39,9 +39,9 @@ export default function PDFPage() {
 
   function handleResize() {
     // const { innerWidth, innerHeight } = window;
-    const { screen: { width, height } } = window;
-    const innerWidth = width;
-    const innerHeight = height;
+
+    const innerWidth = window.screen.width;
+    const innerHeight = window.screen.height;
 
     setHeight(innerHeight);
     let navbarLoss;
