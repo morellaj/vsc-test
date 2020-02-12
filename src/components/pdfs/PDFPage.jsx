@@ -122,7 +122,7 @@ export default function PDFPage() {
     const browserWarn = localStorage.getItem('browserWarn') ? localStorage.getItem('browserWarn') : false;
     setInitialPage(initial);
 
-    if (window.screen.width < 400 && browserWarn !== 'true') {
+    if ((window.screen.width < 400 || window.screen.height < 400) && browserWarn !== 'true') {
       setMobile(true);
     }
   }, []);
@@ -217,9 +217,12 @@ export default function PDFPage() {
           scale={scale}
         />
         <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
-        <BrowserWarning mobile={mobile} onClick={handleBrowserClick}>
-              Best viewed on PC or tablet.  Tap to close.
-        </BrowserWarning>
+        <WarningContainer mobile={mobile} onClick={handleBrowserClick}>
+          <BrowserWarning>
+            <div>Best viewed on PC or tablet</div>
+            <div>(Tap to close)</div>
+          </BrowserWarning>
+        </WarningContainer>
         <StyledDoc
           file={file}
           loading={null}
@@ -261,17 +264,28 @@ const Container = styled.main`
 
 `;
 
-const BrowserWarning = styled.main`
+const WarningContainer = styled.main`
   position: absolute;
-  top: 5px;
-  left: 5px;
-  font-size: 14px;
-  color: red;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
-  width: 300px;
+  top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
-  display: ${(props) => (props.mobile ? 'block' : 'none')};
+  z-index: 100;
+  display: ${(props) => (props.mobile ? 'flex' : 'none')};
+`;
+
+const BrowserWarning = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px 30px;
+  box-shadow: 0 1px 2.5px rgba(0,0,0,0.5);
 `;
 
 const StyledDoc = styled(Document)`
