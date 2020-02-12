@@ -17,13 +17,13 @@ export default function SocialShare(props) {
   } = props;
   const { title } = HomePage;
   const style = { margin: '3px' };
-  const url = `learningisthesolution.com/units?${unitName}`;
+  const url = `https://learningisthesolution.com/units?${unitName}`;
   return (
     <Container>
       <PinterestShareButton
         url={url}
         media={`https://learningisthesolution.com/assets/${unitName}-social.png`}
-        description={title + description}
+        description={`${title}!  ${description}`}
         style={style}
       >
         <Button>
@@ -33,7 +33,7 @@ export default function SocialShare(props) {
       <TwitterShareButton
         url={url}
         title={`Check out these free online character development books for kids - ${url}`}
-        via="LearningistheSolution"
+        via="LearnistheSol"
         style={style}
       >
         <Button>
