@@ -30,10 +30,9 @@ export default function PDFPage() {
   const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
-  const [browser, setBrowser] = useState(false);
   const [height, setHeight] = useState(1000);
   const [pageCount, setPageCount] = useState(0);
-  const [mobile, setMobile] = useState(true);
+  const [mobile, setMobile] = useState(false);
   const book = window.location.search.slice(1).split('&')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
@@ -118,21 +117,13 @@ export default function PDFPage() {
     ReactGA.pageview(window.location.pathname + window.location.search);
     ReactGA.event({ category: 'book', action: '1', label: book });
 
-    if (window.screen.width < 400) {
-      setMobile(true);
-    }
-
-
     window.scrollTo(0, 0);
-    const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
+    const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book)) : 1;
+    const browserWarn = localStorage.getItem('browserWarn') ? localStorage.getItem('browserWarn') : false;
     setInitialPage(initial);
-    const elem = document.getElementById('fullscreen');
-    if (
-      !elem.requestFullscreen
-      && !elem.mozRequestFullScreen
-      && !elem.webkitRequestFullScreen
-      && !elem.msRequestFullScreen) {
-      setBrowser(true);
+
+    if (window.screen.width < 400 && browserWarn !== 'true') {
+      setMobile(true);
     }
   }, []);
 
@@ -195,6 +186,11 @@ export default function PDFPage() {
     }
   }
 
+  function handleBrowserClick() {
+    localStorage.setItem('browserWarn', true);
+    setMobile(false);
+  }
+
 
   return (
     <>
@@ -221,6 +217,9 @@ export default function PDFPage() {
           scale={scale}
         />
         <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
+        <BrowserWarning mobile={mobile} onClick={handleBrowserClick}>
+              Best viewed on PC or tablet.  Tap to close.
+        </BrowserWarning>
         <StyledDoc
           file={file}
           loading={null}
@@ -242,9 +241,6 @@ export default function PDFPage() {
               full={full}
               fullscreenClick={fullscreenClick}
             />
-            <BrowserWarning mobile={mobile} onClick={() => (setMobile(false))}>
-              Best viewed on PC or tablet.  Tap to close.
-            </BrowserWarning>
           </MainPage>
           <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
             <Loading>Loading...</Loading>
@@ -275,7 +271,7 @@ const BrowserWarning = styled.main`
   border-radius: 5px;
   width: 300px;
   padding: 5px;
-  display: ${(props) => (props.mobile ? 'none' : 'none')};
+  display: ${(props) => (props.mobile ? 'block' : 'none')};
 `;
 
 const StyledDoc = styled(Document)`
