@@ -30,7 +30,14 @@ export default function Home() {
   return (
     <>
       <Suspense fallback={<div />}>
-        <Head title={title} description={description} />
+        <Head
+          title={title}
+          description={description}
+          image="https://learningisthesolution.com/assets/$Home1.jpg"
+          height="1519px"
+          width="619px"
+
+        />
       </Suspense>
       <Navbar />
       <Container>
@@ -43,12 +50,22 @@ export default function Home() {
           <TopicsDisplay />
         </Suspense>
         <TryContainer>
+          <BannerContainer>
+            <source srcSet="Assets/home-banner.webp" type="image/webp" />
+            <source srcSet="Assets/home-banner.jpg" type="image/jpeg" />
+            <img
+              alt="cartoon scene of Joey, Mia, and Tom"
+              src="Assets/home-banner.jpg"
+              type="image/jpeg"
+              style={{ width: '100%' }}
+            />
+          </BannerContainer>
           <Link
-            to="book?super-jet-3000"
-            style={{ textDecoration: 'none' }}
+            to="/update-sign-up"
+            style={{ textDecoration: 'none', zIndex: '100' }}
             onClick={() => ReactGA.event({ category: 'home', action: 'clicked lower read a book' })}
           >
-            <Button>Read a book</Button>
+            <Button>Email Sign-Up</Button>
           </Link>
         </TryContainer>
       </Container>
@@ -63,11 +80,22 @@ export default function Home() {
 // Styling
 const Container = styled.main`
   line-height: 1.5;
+  padding-bottom: 90px;
 `;
 
 const TryContainer = styled.div`
   display: flex;
+  position: relative;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
-  padding-bottom: 100px;
+  height: 232px;
+  overflow: hidden;
+`;
+
+const BannerContainer = styled.picture`
+  position: absolute;
+  width: 100%;
+  min-width: 820px;
+  overflow: hidden;
 `;

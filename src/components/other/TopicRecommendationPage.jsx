@@ -46,6 +46,7 @@ export default function FeedbackPage() {
 const Container = styled.main`
   justify-content: center;
   padding-top:20px;
+  padding-bottom: 90px;
   display: flex;
   justify-content: center;
   min-height: 900px;

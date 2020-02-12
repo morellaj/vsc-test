@@ -24,7 +24,7 @@ export default function IntroPictures() {
             style={{ textDecoration: 'none' }}
             onClick={() => ReactGA.event({ category: 'home', action: 'clicked upper read a book' })}
           >
-            <Button>Read a book</Button>
+            <Button>Read a Book</Button>
           </Link>
         </TryButtonContainer>
         <IntroTextContainer>

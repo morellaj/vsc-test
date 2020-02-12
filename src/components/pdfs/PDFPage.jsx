@@ -33,9 +33,9 @@ export default function PDFPage() {
   const [browser, setBrowser] = useState(false);
   const [height, setHeight] = useState(1000);
   const [pageCount, setPageCount] = useState(0);
-  const book = window.location.search.slice(1);
+  const book = window.location.search.slice(1).split('&')[0];
   const file = `/assets/${book}.pdf`;
-  const { title, subtitle, description } = bookInfo[book];
+  const { title, subtitle, description } = bookInfo[book] || {};
 
   function handleResize() {
     const { innerWidth, innerHeight } = window;
@@ -191,7 +191,13 @@ export default function PDFPage() {
 
   return (
     <>
-      <Head title={`${title}: ${subtitle}`} description={description} />
+      <Head
+        title={`${title}: ${subtitle}`}
+        description={description}
+        image={`https://learningisthesolution.com/assets/${book}-social.jpg`}
+        height="338px"
+        width="600px"
+      />
       <NavbarContainer height={height}>
         <Navbar />
       </NavbarContainer>
@@ -207,7 +213,7 @@ export default function PDFPage() {
         <StyledDoc
           file={file}
           loading={null}
-          error="Book not found :("
+          error={`Hmm it doesn't look like we have a book called ${book}...  `}
           onLoadProgress={({ loaded }) => onDocumentLoadProgress({ loaded }, setPerLoaded)}
           onLoadSuccess={onDocumentLoadSuccess}
           onItemClick={onItemClick}

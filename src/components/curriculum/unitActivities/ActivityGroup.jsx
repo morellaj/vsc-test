@@ -38,14 +38,11 @@ export default function ActivityGroup(props) {
 // Styling
 const Container = styled.div`
   display: inline-block;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 5px;
   background-color: white;
   border-bottom: 1px solid rgba(0,0,0,0.4);
 
-  @media(max-width: 1200px) {
-    margin: 10px;
-  }
 `;
 
 const GroupHeader = styled.div`
@@ -55,13 +52,11 @@ const GroupHeader = styled.div`
   font-weight: 500;
   border-bottom: 1px solid ${(props) => props.theme.color};
 
-  @media (max-width: 1200px) {
+  
+  @media (max-width: 1000px) {
     font-size: 20px;
   };
-
-  @media (max-width: 540px) {
-    font-size: 16px;
-  };
+  
 `;
 
 const Activities = styled.div`
@@ -76,4 +71,5 @@ const IconContainer = styled.div`
   font-size: 16px;
   display:flex;
   align-items:center;
+
 `;

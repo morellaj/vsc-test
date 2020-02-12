@@ -1,37 +1,44 @@
 // Package dependencies
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 
 // Component dependencies
-import colors from 'Colors';
 import Unit from './Unit';
-
+import NewUnit from './NewUnit';
 
 /** ********************************************* */
 // Component for displaying the unit list on curriculum pages
 /** ********************************************* */
 export default function UnitList(props) {
+  const [open, setOpen] = useState(false);
   const { unitList, unitSelected, setUnitSelected } = props;
   const unitArr = unitList.map((unit, i) => (
     <Unit
-      unitSelected={parseInt(unitSelected, 10) === i}
+      unitSelected={parseInt(unitSelected) === i}
       num={i}
       title={unit.title}
       char={unit.unit.charAt(0)}
       setUnitSelected={setUnitSelected}
+      setOpen={setOpen}
       key={unit.unit}
     />
   ));
 
+  unitArr.push(<NewUnit key="new" />);
+
   return (
     <Container>
-      {unitArr}
-      <RequestText>
-        <span>{'Have a topic you want us to work on next?  '}</span>
-        <StyledLink to="/topic-recommendation">Click here!</StyledLink>
-      </RequestText>
+      <Select onClick={() => setOpen(!open)}>
+        Select a Topic
+        <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: '10px' }} />
+      </Select>
+      <TopicList open={open}>
+        {unitArr}
+      </TopicList>
     </Container>
   );
 }
@@ -39,41 +46,24 @@ export default function UnitList(props) {
 
 // Styling
 const Container = styled.nav`
-  width: 200px;
-  margin: 0 20px;
-
-  @media(max-width: 1200px){
-    margin: 0 10px;
-  }
-
-  @media(max-width: 1000px) {
-    display: flex;
-    width: 730px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
-  @media(max-width: 780px) {
-    width: 100%;
-    margin: 10px 20px;
-    justify-content: center;
-  }
+  width: 100%;
+  margin-bottom: 20px;
 `;
 
-const RequestText = styled.div`
-  margin-top: 10px;
-
-  @media(max-width: 1000px) {
-    display: none;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  color: black;
-  font-weight: 900;
-  text-decoration: none;
+const Select = styled.div`
+  background-color: white;
+  border-radius: 5px;
+  font-size: 19px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
 
   :hover {
-    color: ${colors.LITS.darkColor};
+    color: darkgray;
   }
+`;
+
+const TopicList = styled.div`
+  display: ${(props) => (props.open ? 'flex' : 'none')};
+  flex-direction: column;
 `;

@@ -12,13 +12,17 @@ import colors from 'Colors';
 /** ********************************************* */
 export default function Unit(props) {
   const {
-    char, title, num, setUnitSelected, unitSelected,
+    char, title, num, setUnitSelected, unitSelected, setOpen,
   } = props;
+
+  function handleClick(e) {
+    setOpen(false);
+    setUnitSelected(e.target.getAttribute('value'));
+  }
+
   return (
     <Container
-      onClick={(e) => {
-        setUnitSelected(e.target.getAttribute('value'));
-      }}
+      onClick={handleClick}
       value={num}
       color={colors[char].color}
       unitSelected={unitSelected}
@@ -35,11 +39,11 @@ const Container = styled.div`
   display: flex;
   align-items: center; 
   margin-top: 2px;
-  padding: 5px;
+  padding: 7px;
   border-left: 10px outset ${(props) => props.color};
   border-radius: 1px;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 19px;
+  font-weight: 700;
   color: ${(props) => (props.unitSelected ? 'white' : 'black')};
   background-color: ${(props) => (props.unitSelected ? props.color : 'white')};
   cursor: pointer;
@@ -48,29 +52,8 @@ const Container = styled.div`
   :hover {
     background-color: ${(props) => (props.unitSelected ? props.color : '#D9D9D9')};
   };
-
-  @media(max-width: 1000px) {
-    width: 200px;
-    border-left: none;
-    border-bottom: 7px solid ${(props) => props.color};
-    font-size: 20px;
-  };
-
-  @media(max-width: 780px) {
-    width: 150px;
-    font-size: 18px;
-    margin: 0 10px;
-  }
-
-  @media(max-width: 540px) {
-    width: 120px;
-    font-size: 14px;
-  }
 `;
 
 const Text = styled.div`
-  @media(max-width: 1000px) {
-    width: 100%;
-    text-align: center;
-  }
+
 `;

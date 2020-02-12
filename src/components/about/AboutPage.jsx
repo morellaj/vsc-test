@@ -51,6 +51,7 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 60px;
 `;
 
 const TeamContainer = styled.div`

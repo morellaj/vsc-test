@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBookReader,
   faInfoCircle,
-  faCommentDots,
+  faSignInAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Component dependencies and data files
@@ -25,9 +25,9 @@ const navbarList = [
     link: '/about',
   },
   {
-    title: 'Give Feedback',
-    icon: faCommentDots,
-    link: '/feedback',
+    title: 'Sign-Up',
+    icon: faSignInAlt,
+    link: '/update-sign-up',
   },
 ];
 
@@ -49,10 +49,10 @@ export default function Navbar() {
     <Container>
       <LogoContainer to="/">
         <picture>
-          <source srcSet="Assets/logo-white-small.webp" type="image/webp" />
-          <source srcSet="Assets/logo-white-small.png" type="image/png" />
+          <source srcSet="https://learningisthesolution.com/assets/logo-white-small.webp" type="image/webp" />
+          <source srcSet="https://learningisthesolution.com/assets/logo-white-small.png" type="image/png" />
           <Logo
-            src="Assets/logo-white-small.png"
+            src="https://learningisthesolution.com/assets/logo-white-small.png"
             alt="Learning is the Solution logo"
             type="image/png"
           />
@@ -74,7 +74,7 @@ const Container = styled.nav`
 `;
 
 const LogoContainer = styled(Link)`
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 5px;
   margin: 0 20px;
   display: flex;
@@ -90,7 +90,7 @@ const LogoContainer = styled(Link)`
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  height: 50px;
 
   @media(max-width: 700px) {
     height: 30px;

@@ -73,14 +73,13 @@ const StyledLink = styled(Link)`
   width: 250px;
   background-color:white;
 
-  @media (max-width: 1200px){
+  @media (max-width: 1000px){
     width: 200px;
   };
 
-  @media (max-width: 540px) {
-    width: 125px;
+  @media(max-width: 460px){
+    width: 250px;
   };
-
 `;
 
 
@@ -89,12 +88,12 @@ const ImageContainer = styled.div`
   overflow: hidden;
   position: relative;
 
-  @media(max-width: 1200px){
+  @media(max-width: 1000px){
     height: 200px;
   };
 
-  @media(max-width: 540px) {
-    height: 125px;
+  @media(max-width: 460px){
+    height: 250px;
   };
 `;
 

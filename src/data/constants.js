@@ -79,20 +79,12 @@ export const defaultCutoff = 60;
 
 export const footerList = [
   {
-    title: 'Online Books',
-    link: '/units',
-  },
-  {
-    title: 'About',
-    link: '/about',
+    title: 'Home',
+    link: '/',
   },
   {
     title: 'Give Feedback',
     link: '/feedback',
-  },
-  {
-    title: 'Email Sign-Up',
-    link: '/update-sign-up',
   },
   {
     title: 'Contact Us',

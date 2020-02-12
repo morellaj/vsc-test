@@ -17,7 +17,6 @@ import UnitActivities from './unitActivities/UnitActivities';
 const Footer = lazy(() => import('Footer'));
 const Head = lazy(() => import('Head'));
 const InformationDisplay = lazy(() => import('./info/InformationDisplay'));
-const Input = lazy(() => import('Input'));
 
 /** ********************************************* */
 // Component for displaying the science page
@@ -69,27 +68,35 @@ export default function CharacterPage() {
   return (
     <>
       <Suspense fallback={<div />}>
-        <Head title={`${title}: ${subtitle}`} description={description} />
+        <Head
+          title={`${title}: ${subtitle}`}
+          description={description}
+          image={`https://learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
+          height="500px"
+          width="500px"
+        />
       </Suspense>
       <Navbar />
       <ThemeProvider theme={theme}>
         <Error>
           <Container>
-            <UnitList
-              unitList={unitArr}
-              unitSelected={unitSelected}
-              setUnitSelected={setUnitSelected}
-            />
-            <UnitActivities
-              unit={character[unitName]}
-              unitName={unitName}
-              setInfo={setInfo}
-            />
+            <UnitsContainer>
+              <UnitList
+                unitList={unitArr}
+                unitSelected={unitSelected}
+                setUnitSelected={setUnitSelected}
+              />
+              <UnitActivities
+                unit={character[unitName]}
+                unitName={characterUnitNumbers[unitSelected]}
+                setInfo={setInfo}
+                title={title}
+                subtitle={subtitle}
+                description={description}
+              />
+            </UnitsContainer>
           </Container>
         </Error>
-        <Suspense fallback={<div />}>
-          <Input />
-        </Suspense>
         {infoDisplay}
       </ThemeProvider>
       <Suspense fallback={<div />}>
@@ -104,14 +111,22 @@ export default function CharacterPage() {
 // Styling
 const Container = styled.main`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin: 30px 0 0 0;
-  min-height: 800px;
+  margin: 30px 10px 0 10px;
+  padding-bottom: 90px;
+`;
 
-  @media(max-width: 1000px) {
-    flex-direction: column;
-    align-items: center;
-    min-height: 0;
+const UnitsContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+
+  @media(max-width: 800px) {
+    width: 600px;
+  }
+
+  @media(max-width: 570px){
+    width: 440px;
   }
 `;

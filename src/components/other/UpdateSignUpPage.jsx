@@ -30,46 +30,48 @@ export default function UpdateSignUpPage() {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Navbar />
-      <Container>
-        <MailchimpSubscribe
-          url="https://learningisthesolution.us4.list-manage.com/subscribe/post?u=157f2322dea2347f3be3e3c8e&amp;id=9e3e1185de"
-          render={({ subscribe, status, message }) => (
-            <InputContainer>
-              <TextContainer>
-                <Heading>Sign up to receive updates</Heading>
-                <Disclaimer>Your email address will never be shared or sold</Disclaimer>
-              </TextContainer>
-              <Label>Email address</Label>
-              <Input
-                ref={(node) => (email = node)}
-                type="email"
-                placeholder="Required"
-              />
-              <Label>First Name</Label>
-              <Input
-                ref={(node) => (firstName = node)}
-                type="text"
-                placeholder="Optional"
-              />
-              <Button
-                type="submit"
-                onClick={() => {
-                  subscribe({
-                    EMAIL: email.value,
-                    FNAME: firstName.value,
-                  });
-                }}
-              >
+      <FlexContainer>
+        <Navbar />
+        <Container>
+          <MailchimpSubscribe
+            url="https://learningisthesolution.us4.list-manage.com/subscribe/post?u=157f2322dea2347f3be3e3c8e&amp;id=9e3e1185de"
+            render={({ subscribe, status, message }) => (
+              <InputContainer>
+                <TextContainer>
+                  <Heading>Receive updates about new content</Heading>
+                  <Disclaimer>Your email address will never be shared or sold</Disclaimer>
+                </TextContainer>
+                <Label>Email address</Label>
+                <Input
+                  ref={(node) => (email = node)}
+                  type="email"
+                  placeholder="Required"
+                />
+                <Label>First Name</Label>
+                <Input
+                  ref={(node) => (firstName = node)}
+                  type="text"
+                  placeholder="Optional"
+                />
+                <Button
+                  type="submit"
+                  onClick={() => {
+                    subscribe({
+                      EMAIL: email.value,
+                      FNAME: firstName.value,
+                    });
+                  }}
+                >
                 Submit
-              </Button>
-              <Sending status={status}>sending...</Sending>
-              <Result status={status} dangerouslySetInnerHTML={{ __html: message }} />
-            </InputContainer>
-          )}
-        />
-      </Container>
-      <Footer />
+                </Button>
+                <Sending status={status}>sending...</Sending>
+                <Result status={status} dangerouslySetInnerHTML={{ __html: message }} />
+              </InputContainer>
+            )}
+          />
+        </Container>
+        <Footer />
+      </FlexContainer>
     </>
   );
 }
@@ -79,6 +81,12 @@ export default function UpdateSignUpPage() {
 const Container = styled.main`
   display: flex;
   justify-content: center;
+  padding-bottom: 90px;
+`;
+
+const FlexContainer = styled.main`
+  display: flex;
+  flex-direction: column;
 `;
 
 const InputContainer = styled.div`
@@ -104,12 +112,12 @@ const TextContainer = styled.div`
 `;
 
 const Heading = styled.div`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   color: ${colors.LITS.color};
 
   @media(max-width: 500px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 
