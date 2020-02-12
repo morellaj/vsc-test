@@ -115,7 +115,7 @@ const Container = styled.main`
   display: flex;
   justify-content: center;
   margin: 30px 10px 0 10px;
-  padding-bottom: 90px;
+  padding-bottom: 120px;
 `;
 
 const UnitsContainer = styled.main`
