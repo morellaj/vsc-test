@@ -30,7 +30,14 @@ export default function Home() {
   return (
     <>
       <Suspense fallback={<div />}>
-        <Head title={title} description={description} />
+        <Head
+          title={title}
+          description={description}
+          image="https://learningisthesolution.com/assets/$Home1.jpg"
+          height="1519px"
+          width="619px"
+
+        />
       </Suspense>
       <Navbar />
       <Container>

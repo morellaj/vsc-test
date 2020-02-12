@@ -194,7 +194,7 @@ export default function PDFPage() {
       <Head
         title={`${title}: ${subtitle}`}
         description={description}
-        image={`learningisthesolution.com/assets/${book}-social.jpg`}
+        image={`https://learningisthesolution.com/assets/${book}-social.jpg`}
         height="338px"
         width="600px"
       />

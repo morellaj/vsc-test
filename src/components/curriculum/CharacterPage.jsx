@@ -71,7 +71,7 @@ export default function CharacterPage() {
         <Head
           title={`${title}: ${subtitle}`}
           description={description}
-          image={`learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
+          image={`https://learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
           height="500px"
           width="500px"
         />
