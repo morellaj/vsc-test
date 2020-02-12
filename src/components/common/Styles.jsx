@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import colors from 'Colors';
 
-export const Heading = styled.div`
+export const Heading = styled.h2`
   text-align: center;
-  margin-top: 30px;
+  margin: 30px 0 0 0;
   font-size: 33px;
   padding: 0 10px;
+  font-weight: 400;
 
   @media(max-width: 1050px){
     font-size: 28px;

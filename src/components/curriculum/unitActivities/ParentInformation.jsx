@@ -25,7 +25,7 @@ const parentInformationList = [
     id: 2,
     link: 'book-recommendations?',
     icon: faBookReader,
-    text: 'Offline Books',
+    text: 'Recommended Books',
   },
   {
     id: 3,

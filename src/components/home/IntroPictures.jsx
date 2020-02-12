@@ -76,7 +76,7 @@ color: white;
 font-size: 30px;
 `;
 
-const IntroText = styled.p`
+const IntroText = styled.h1`
   text-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
   font-weight: 900;
   font-size: 4.5vw;

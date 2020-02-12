@@ -49,6 +49,7 @@ export default function SocialShare(props) {
         url={url}
         subject="Free online character development books for kids"
         body="Check out these free online character development books for kids!"
+        separator=" "
         style={style}
       >
         <Button>

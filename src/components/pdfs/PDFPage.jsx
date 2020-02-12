@@ -30,9 +30,9 @@ export default function PDFPage() {
   const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
   const [progDisplay, setProgDisplay] = useState(true);
-  const [browser, setBrowser] = useState(false);
   const [height, setHeight] = useState(1000);
   const [pageCount, setPageCount] = useState(0);
+  const [mobile, setMobile] = useState(false);
   const book = window.location.search.slice(1).split('&')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
@@ -116,16 +116,14 @@ export default function PDFPage() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
     ReactGA.event({ category: 'book', action: '1', label: book });
+
     window.scrollTo(0, 0);
-    const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book), 10) : 1;
+    const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book)) : 1;
+    const browserWarn = localStorage.getItem('browserWarn') ? localStorage.getItem('browserWarn') : false;
     setInitialPage(initial);
-    const elem = document.getElementById('fullscreen');
-    if (
-      !elem.requestFullscreen
-      && !elem.mozRequestFullScreen
-      && !elem.webkitRequestFullScreen
-      && !elem.msRequestFullScreen) {
-      setBrowser(true);
+
+    if ((window.screen.width < 400 || window.screen.height < 400) && browserWarn !== 'true') {
+      setMobile(true);
     }
   }, []);
 
@@ -188,6 +186,11 @@ export default function PDFPage() {
     }
   }
 
+  function handleBrowserClick() {
+    localStorage.setItem('browserWarn', true);
+    setMobile(false);
+  }
+
 
   return (
     <>
@@ -214,6 +217,12 @@ export default function PDFPage() {
           scale={scale}
         />
         <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
+        <WarningContainer mobile={mobile} onClick={handleBrowserClick}>
+          <BrowserWarning>
+            <div>Best viewed on PC or tablet</div>
+            <div>(Tap to close)</div>
+          </BrowserWarning>
+        </WarningContainer>
         <StyledDoc
           file={file}
           loading={null}
@@ -235,9 +244,6 @@ export default function PDFPage() {
               full={full}
               fullscreenClick={fullscreenClick}
             />
-            <BrowserWarning browser={browser} onClick={() => (setBrowser(false))}>
-          Please note our stories may not run properly on this browser.  Use Chrome, Safari, Firefox, or Edge for the best experience.  Click to remove this message.
-            </BrowserWarning>
           </MainPage>
           <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
             <Loading>Loading...</Loading>
@@ -258,18 +264,28 @@ const Container = styled.main`
 
 `;
 
-const BrowserWarning = styled.main`
+const WarningContainer = styled.main`
   position: absolute;
-  top: 5px;
-  left: 5px;
-  font-size: 14px;
-  color: red;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
-  width: 300px;
+  top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
-  cursor: pointer;
-  display: ${(props) => (props.browser ? 'none' : 'none')};
+  z-index: 100;
+  display: ${(props) => (props.mobile ? 'flex' : 'none')};
+`;
+
+const BrowserWarning = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px 30px;
+  box-shadow: 0 1px 2.5px rgba(0,0,0,0.5);
 `;
 
 const StyledDoc = styled(Document)`
