@@ -33,6 +33,7 @@ export default function Home() {
         <Head
           title={title}
           description={description}
+          type="website"
           image="https://learningisthesolution.com/assets/$Home1.jpg"
           height="1519px"
           width="619px"

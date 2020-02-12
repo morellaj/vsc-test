@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { Helmet } from 'react-helmet';
+import Head from 'Head';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
@@ -26,10 +26,13 @@ export default function UpdateSignUpPage() {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <Head
+        title={title}
+        description={description}
+        url="https://learningisthesolution.com/contact"
+        type="website"
+        image="logo-large.jpg"
+      />
       <FlexContainer>
         <Navbar />
         <Container>

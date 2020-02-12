@@ -35,7 +35,13 @@ export default function BookPage() {
 
   return (
     <>
-      <Head title={bookTitle} description={description} />
+      <Head
+        title={bookTitle}
+        description={description}
+        url={`https://learningisthesolution.com/book-recommendations${window.location.search.slice(1)}`}
+        type="website"
+        image="logo-large.jpg"
+      />
       <Navbar />
       <Container>
         <InnerContainer>
