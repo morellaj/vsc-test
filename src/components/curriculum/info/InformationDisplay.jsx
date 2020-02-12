@@ -47,6 +47,7 @@ export default function InformationDisplay(props) {
 // Styling
 const Container = styled.div`
   font-size: 25px;
+  padding-top: 20px;
   background-color: rgba(0, 0, 0, .5);
   color: black;
   position: fixed;
@@ -57,7 +58,23 @@ const Container = styled.div`
   left: 0;
   display:flex;
   justify-content:center;
-  align-items: center;
+  align-items: flex-start;
+  overflow: scroll;
+`;
+
+
+const InfoContainer = styled.div`
+  position:relative;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 8px 0 #000000;
+  padding: 20px;
+  font-size: 16px;
+  max-width: 90%;
+
+  @media(max-width: 700px){
+    padding: 0;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -75,14 +92,8 @@ const IconContainer = styled.div`
     background-color: #d3d3d3;
   }
 
-`;
+  @media(max-width: 700px){
+    top: 0;
+  }
 
-const InfoContainer = styled.div`
-  position:absolute;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 0 0 8px 0 #000000;
-  max-width: 80%;
-  padding: 20px;
-  font-size: 16px;
 `;
