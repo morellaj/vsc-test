@@ -85,6 +85,7 @@ const Container = styled.main`
 
 const TryContainer = styled.div`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
