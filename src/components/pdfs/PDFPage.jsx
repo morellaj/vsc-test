@@ -38,7 +38,11 @@ export default function PDFPage() {
   const { title, subtitle, description } = bookInfo[book] || {};
 
   function handleResize() {
-    const { innerWidth, innerHeight } = window;
+    // const { innerWidth, innerHeight } = window;
+    const { screen: { width, height } } = window;
+    const innerWidth = width;
+    const innerHeight = height;
+
     setHeight(innerHeight);
     let navbarLoss;
     if (full || innerHeight < 500) {
