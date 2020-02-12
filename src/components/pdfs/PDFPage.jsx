@@ -191,7 +191,13 @@ export default function PDFPage() {
 
   return (
     <>
-      <Head title={`${title}: ${subtitle}`} description={description} />
+      <Head
+        title={`${title}: ${subtitle}`}
+        description={description}
+        image={`learningisthesolution.com/assets/${book}-social.jpg`}
+        height="338px"
+        width="600px"
+      />
       <NavbarContainer height={height}>
         <Navbar />
       </NavbarContainer>

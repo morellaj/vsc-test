@@ -68,7 +68,13 @@ export default function CharacterPage() {
   return (
     <>
       <Suspense fallback={<div />}>
-        <Head title={`${title}: ${subtitle}`} description={description} image={`learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}.jpg`} />
+        <Head
+          title={`${title}: ${subtitle}`}
+          description={description}
+          image={`learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
+          height="500px"
+          width="500px"
+        />
       </Suspense>
       <Navbar />
       <ThemeProvider theme={theme}>
