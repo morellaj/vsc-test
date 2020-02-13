@@ -40,7 +40,9 @@ export default function BookPage() {
         description={description}
         url={`https://learningisthesolution.com/book-recommendations${window.location.search.slice(1)}`}
         type="website"
-        image="logo-large.jpg"
+        image="https://learningisthesolution.com/assets/logo-large.jpg"
+        height="720px"
+        width="1280px"
       />
       <Navbar />
       <Container>
