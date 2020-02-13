@@ -25,9 +25,10 @@ export default function CharacterPage() {
   const [unitSelected, setUnitSelected] = useState(0);
   const [done, setDone] = useState(false);
   const [info, setInfo] = useState();
-  const location = window.location.search.slice(1).split('&')[0].split('=')[0];
+  const fullLocation = window.location.search.slice(1);
+  const location = fullLocation.split('&')[0].split('=')[0];
   const url = window.location.href;
-  const newUrl = url.replace(`?${location}`, '');
+  const newUrl = url.replace(`?${fullLocation}`, '');
   const locationUnit = characterUnitNumbers.indexOf(location) !== -1
     ? characterUnitNumbers.indexOf(location) : unitSelected;
   window.history.replaceState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
