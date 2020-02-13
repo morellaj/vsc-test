@@ -18,7 +18,6 @@ import ScreenButton from './ScreenButton';
 import Progress from './Progress';
 import ContinueReading from './ContinueReading';
 
-
 // Component for displaying a pdf page
 export default function PDFPage() {
   const [page, setPage] = useState(1);
@@ -36,7 +35,6 @@ export default function PDFPage() {
   const book = window.location.search.slice(1).split('&')[0].split('=')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
-  window.preready = false;
 
   function handleResize() {
     const { innerWidth, innerHeight } = window;
@@ -140,7 +138,6 @@ export default function PDFPage() {
   }, [page]);
 
   function onDocumentLoadSuccess() {
-    window.preready = true;
     setPage(initialPage);
     setLastPage(initialPage);
     setProgDisplay(false);
