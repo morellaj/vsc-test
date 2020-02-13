@@ -33,7 +33,7 @@ export default function PDFPage() {
   const [height, setHeight] = useState(1000);
   const [pageCount, setPageCount] = useState(0);
   const [mobile, setMobile] = useState(false);
-  const book = window.location.search.slice(1).split('&')[0];
+  const book = window.location.search.slice(1).split('&')[0].split('=')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
   window.preready = false;
