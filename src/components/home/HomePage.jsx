@@ -34,10 +34,10 @@ export default function Home() {
           title={title}
           description={description}
           type="website"
-          image="https://learningisthesolution.com/assets/$Home1.jpg"
+          image="https://learningisthesolution.com/assets/Home1.jpg"
           height="1519px"
           width="619px"
-
+          url="https://learningisthesolution.com/"
         />
       </Suspense>
       <Navbar />
