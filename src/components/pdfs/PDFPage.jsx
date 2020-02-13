@@ -18,6 +18,8 @@ import ScreenButton from './ScreenButton';
 import Progress from './Progress';
 import ContinueReading from './ContinueReading';
 
+window.prerenderReady = false;
+
 // Component for displaying a pdf page
 export default function PDFPage() {
   const [page, setPage] = useState(1);
