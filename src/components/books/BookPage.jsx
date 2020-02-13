@@ -20,7 +20,7 @@ import Section from './Section';
 // Component for displaying book pages
 export default function BookPage() {
   const location = window.location.search.slice(1).split('&')[0].split('=')[0];
-  const section = booksUnitList[window.location.search.slice(1)];
+  const section = booksUnitList[location];
   const { bookTitle, description } = character[section];
   const bookList = booksByUnit[section];
   const primaryList = createBooksList(bookList.primary, books);
