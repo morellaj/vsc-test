@@ -29,7 +29,7 @@ export default function UpdateSignUpPage() {
       <Head
         title={title}
         description={description}
-        url="https://learningisthesolution.com/contact"
+        url="https://learningisthesolution.com/update-sign-up"
         type="website"
         image="https://learningisthesolution.com/assets/logo-large.jpg"
         height="720px"
