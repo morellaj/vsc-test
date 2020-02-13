@@ -25,7 +25,7 @@ export default function CharacterPage() {
   const [unitSelected, setUnitSelected] = useState(0);
   const [done, setDone] = useState(false);
   const [info, setInfo] = useState();
-  const location = window.location.search.slice(1);
+  const location = window.location.search.slice(1).split('&')[0].split('=')[0];
   const url = window.location.href;
   const newUrl = url.replace(`?${location}`, '');
   const locationUnit = characterUnitNumbers.indexOf(location) !== -1
