@@ -37,7 +37,9 @@ export default function AboutPage() {
         description={description}
         url="https://learningisthesolution.com/about"
         type="website"
-        image="logo-large.jpg"
+        image="https://learningisthesolution.com/assets/logo-large.jpg"
+        height="720px"
+        width="1280px"
       />
       <Navbar />
       <Container>
