@@ -32,7 +32,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
-    port: 3008,
+    port: 3009,
     open: true,
     proxy: {
       '/api': 'http://localhost:8080',
