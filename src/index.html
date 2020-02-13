@@ -16,6 +16,9 @@
     </div>
   </body>
   <script>
+    window.prerenderReady=false;
+  </script>
+  <script>
     // Hack to force styled components to render styles during prerender
     // for googlebot
     window.onload = () => {
