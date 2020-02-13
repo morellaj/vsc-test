@@ -24,7 +24,7 @@ export default function FeedbackPage() {
       <Head
         title={title}
         description={description}
-        url="https://learningisthesolution.com/contact"
+        url="https://learningisthesolution.com/topic-recommendation"
         type="website"
         image="https://learningisthesolution.com/assets/logo-large.jpg"
         height="720px"
