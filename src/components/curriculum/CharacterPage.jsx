@@ -31,11 +31,12 @@ export default function CharacterPage() {
   const newUrl = url.replace(`?${fullLocation}`, '');
   const locationUnit = characterUnitNumbers.indexOf(location) !== -1
     ? characterUnitNumbers.indexOf(location) : unitSelected;
-  window.history.replaceState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
   if (!done) {
     setUnitSelected(locationUnit);
     setDone(true);
   }
+  window.history.replaceState({ id: location }, 'Stuff', `${newUrl}?${location}`);
+
   const unitArr = UnitArr(character);
   const { title, subtitle, description } = character[unitArr[unitSelected].unit];
   const colorTheme = unitArr.length ? colors[unitArr[unitSelected].unit.charAt(0)] : null;
@@ -65,6 +66,10 @@ export default function CharacterPage() {
       ReactGA.event({ category: 'units', action: `clicked ${info.type}` });
     }
   }, [info]);
+
+  useEffect(() => {
+    window.history.replaceState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
+  }, [unitSelected]);
 
   return (
     <>
