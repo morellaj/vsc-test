@@ -19,6 +19,7 @@ import Section from './Section';
 
 // Component for displaying book pages
 export default function BookPage() {
+  const location = window.location.search.slice(1).split('&')[0].split('=')[0];
   const section = booksUnitList[window.location.search.slice(1)];
   const { bookTitle, description } = character[section];
   const bookList = booksByUnit[section];
@@ -38,11 +39,11 @@ export default function BookPage() {
       <Head
         title={bookTitle}
         description={description}
-        url={`https://learningisthesolution.com/book-recommendations${window.location.search.slice(1)}`}
+        url={`https://learningisthesolution.com/book-recommendations?${location}`}
         type="website"
-        image="https://learningisthesolution.com/assets/logo-large.jpg"
-        height="720px"
-        width="1280px"
+        image={`https://learningisthesolution.com/assets/${location}-social.jpg`}
+        height="500px"
+        width="500px"
       />
       <Navbar />
       <Container>
