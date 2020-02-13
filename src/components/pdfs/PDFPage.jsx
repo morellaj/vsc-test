@@ -32,6 +32,7 @@ export default function PDFPage() {
   const [height, setHeight] = useState(1000);
   const [pageCount, setPageCount] = useState(0);
   const [mobile, setMobile] = useState(false);
+  window.prerenderReady = false;
   const book = window.location.search.slice(1).split('&')[0].split('=')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
@@ -156,7 +157,7 @@ export default function PDFPage() {
   }
 
   function pageRender() {
-    window.preready = true;
+    window.prerenderReady = true;
     setLastPage(page);
     if (!display) {
       setDisplay(1);
