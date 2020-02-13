@@ -25,6 +25,7 @@ export default function Head(props) {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta property="fb:app_id" content="2863168573746483" />
       {image1}
       {image2}
       {imgHeight}
