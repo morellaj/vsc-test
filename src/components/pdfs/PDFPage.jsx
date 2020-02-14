@@ -290,7 +290,6 @@ const BrowserWarning = styled.main`
 const StyledDoc = styled(Document)`
   display: flex;
   justify-content: center;
-  height: 70%;
   overflow:hidden;
 `;
 
