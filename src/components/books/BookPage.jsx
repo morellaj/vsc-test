@@ -21,7 +21,7 @@ import Section from './Section';
 export default function BookPage() {
   const location = window.location.search.slice(1).split('&')[0].split('=')[0];
   const section = booksUnitList[location];
-  const { bookTitle, description } = character[section];
+  const { bookTitle, bookDescription } = character[section];
   const bookList = booksByUnit[section];
   const primaryList = createBooksList(bookList.primary, books);
   const secondaryList = createBooksList(bookList.secondary, books);
@@ -38,7 +38,7 @@ export default function BookPage() {
     <>
       <Head
         title={bookTitle}
-        description={description}
+        description={bookDescription}
         url={`https://learningisthesolution.com/book-recommendations?${location}`}
         type="website"
         image={`https://learningisthesolution.com/assets/${location}-social.jpg`}

@@ -55,7 +55,7 @@ export default function Home() {
             <source srcSet="Assets/home-banner.webp" type="image/webp" />
             <source srcSet="Assets/home-banner.jpg" type="image/jpeg" />
             <img
-              alt="cartoon scene of Joey, Mia, and Tom"
+              alt="cartoon scene from an online book"
               src="Assets/home-banner.jpg"
               type="image/jpeg"
               style={{ width: '100%' }}

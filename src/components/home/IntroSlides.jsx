@@ -21,7 +21,7 @@ function IntroSlides() {
           <source srcSet={`Assets/Home${i + 1}.webp`} type="image/webp" />
           <source srcSet={`Assets/Home${i + 1}.jpg`} type="image/jpeg" />
           <Pic
-            alt="pages from online books"
+            alt="pages from online short stories"
             src={`Assets/Home${i + 1}.jpg`}
             type="image/jpeg"
           />

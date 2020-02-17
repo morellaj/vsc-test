@@ -18,7 +18,7 @@ const detailsText = [
   {
     id: 1,
     label: 'Engaging',
-    text: ' Characters and stories that kids love',
+    text: ' Kids love choosing what happens in the story',
     icon: faChild,
   },
   {
@@ -54,7 +54,7 @@ export default function Details() {
   const itemList = detailsText.map((item) => <DetailItem item={item} key={item.id} />);
   return (
     <Container>
-      <Heading>Improving your kid&#39;s behavior has never been this easy, or this fun!</Heading>
+      <Heading>Free online stories for kids that teach social and emotional skills!</Heading>
       <ContentContainer>
         <TextContainer>
           <List>

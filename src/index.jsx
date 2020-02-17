@@ -19,9 +19,10 @@ const FeedbackPage = lazy(() => import('./components/other/FeedbackPage'));
 const UpdateSignUpPage = lazy(() => import('./components/other/UpdateSignUpPage'));
 const TopicRecommendationPage = lazy(() => import('./components/other/TopicRecommendationPage'));
 const ContactPage = lazy(() => import('./components/other/ContactPage'));
+
 // const SitemapBuilder from './components/other/SitemapBuilder'));
 
-Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
+// Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
 ReactGA.initialize('UA-157541239-1');
 
 ReactDOM.render((
@@ -29,7 +30,7 @@ ReactDOM.render((
     <Suspense fallback={<div />}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={CharacterPage} />
           <Route path="/units" component={CharacterPage} />
           <Route path="/book" component={PDFPage} />
           <Route path="/about" component={AboutPage} />

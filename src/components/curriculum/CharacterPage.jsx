@@ -38,7 +38,9 @@ export default function CharacterPage() {
   window.history.replaceState({ id: location }, 'Stuff', `${newUrl}?${location}`);
 
   const unitArr = UnitArr(character);
-  const { title, subtitle, description } = character[unitArr[unitSelected].unit];
+  const {
+    title, subtitle, description, searchTitle, searchDescription,
+  } = character[unitArr[unitSelected].unit];
   const colorTheme = unitArr.length ? colors[unitArr[unitSelected].unit.charAt(0)] : null;
   const theme = colorTheme ? {
     color: colorTheme.color,
@@ -71,12 +73,21 @@ export default function CharacterPage() {
     window.history.replaceState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
   }, [unitSelected]);
 
+  let headTitle = searchTitle;
+  let headDescription = searchDescription;
+
+  if (!done) {
+    headTitle = '';
+    headDescription = '';
+  }
+
+
   return (
     <>
       <Suspense fallback={<div />}>
         <Head
-          title={`${title}: ${subtitle}`}
-          description={description}
+          title={headTitle}
+          description={headDescription}
           url={`https://learningisthesolution.com/units?${location}`}
           type="website"
           image={`https://learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
