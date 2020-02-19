@@ -2,8 +2,11 @@ User-Agent: *
 disallow: https://debug--xenodochial-hopper-aead1f.netlify.com/
 disallow: /
 disallow: /units$
+noindex: /units$
 disallow: /book-recommendations$
+noindex: /book-recommendations$
 disallow: /book$
+no index: /book$
 allow: /$
 allow: /units
 allow: /book-recommendations
