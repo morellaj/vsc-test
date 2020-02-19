@@ -17,5 +17,7 @@ allow: /update-sign-up
 allow: /topic-recommendation
 allow: /contact
 allow: /disclosure
+allow: /robots.txt
+allow: /sitemap.xml
 
 Sitemap: https://learningisthesolution.com/sitemap.xml

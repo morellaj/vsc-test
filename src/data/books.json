@@ -3,6 +3,8 @@
         "title": "When Sophie Gets Angry--Really, Really Angry...",
         "link": "https://www.amazon.com/Sophie-Angry-Really-Really-Scholastic-Bookshelf/dp/0439598451/ref=as_li_ss_tl?keywords=when+sophie+gets+angry&qid=1579629885&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=cb310617b0f123eaa89fa4091ad63ad5&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0439598451&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
+        "rating": "",
+        "enable": true,
         "tags": ["anger"],
         "primary": [],
         "secondary": ["I-1"]
@@ -207,5 +209,15 @@
         "tags": ["anger"],
         "primary": [],
         "secondary": ["I-1"]
-    }
+    },
+    "template": {
+        "title": "",
+        "link": "",
+        "image": "",
+        "rating": "",
+        "enable": false,
+        "tags": [],
+        "primary": [],
+        "secondary": []
+    },
 }
