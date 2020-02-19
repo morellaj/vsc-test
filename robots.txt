@@ -5,9 +5,14 @@ disallow: /units$
 disallow: /book-recommendations$
 disallow: /book$
 allow: /$
-allow: /units*
-allow: /book-recommendations*
-allow: /book*
+allow: /units
+allow: /book-recommendations
+allow: /book
 allow: /about
+allow: /feedback
+allow: /update-sign-up
+allow: /topic-recommendation
+allow: /contact
+allow: /disclosure
 
-https://learningisthesolution.com/sitemap.xml
+Sitemap: https://learningisthesolution.com/sitemap.xml
