@@ -1,10 +1,10 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable quotes */
 /* eslint-disable quote-props */
 // Package dependencies
 import React from 'react';
 import { Helmet } from 'react-helmet';
-// testing change
-/*
+
 const baseSchema = [
   {
     "@type": "Organization",
@@ -19,11 +19,11 @@ const baseSchema = [
       "url": "https://learningisthesolution.com/assets/logo-white-small.png",
       "width": "170",
       "height": "50",
-      "caption": "Learning is the Solution",
+      "caption": "Learning is the Solution"
     },
     "image": {
-      "@id": "https://learningisthesolution.com/#logo",
-    },
+      "@id": "https://learningisthesolution.com/#logo"
+    }
   }, {
     "@type": "WebSite",
     "@id": "https://learningisthesolution.com/#website",
@@ -32,24 +32,23 @@ const baseSchema = [
     "inLanguage": "en-US",
     "description": "Free Online Kids' Books That Teach Important Lessons",
     "publisher": {
-      "@id": "https://learningisthesolution.com/#organization",
-    },
+      "@id": "https://learningisthesolution.com/#organization"
+    }
   }, {
     "@type": ["WebPage"],
     "@id": "https://learningisthesolution.com/#webpage",
     "url": "https://learningisthesolution.com/",
     "name": "Free Online Kids' Books That Teach Important Lessons",
     "isPartOf": {
-      "@id": "https://learningisthesolution.com/#website",
+      "@id": "https://learningisthesolution.com/#website"
     },
     "inLanguage": "en-US",
     "about": {
-      "@id": "https://learningisthesolution.com/#organization",
+      "@id": "https://learningisthesolution.com/#organization"
     },
-    "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!",
-  },
+    "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!"
+  }
 ];
-*/
 
 
 /** ********************************************* */
@@ -96,50 +95,7 @@ export default function Head(props) {
       <script className="structured-data-list" type="application/ld+json">
         {`{
       "@context": "http://schema.org/",
-      "@graph": [
-        {
-    "@type": "Organization",
-    "@id": "https://learningisthesolution.com/#organization",
-    "name": "Learning is the Solution",
-    "url": "https://learningisthesolution.com/",
-    "sameAs": ["https://www.facebook.com/learningisthesolution", "https://www.instagram.com/learning_is_the_solution/", "https://www.pinterest.com/learningisthesolution/", "https://twitter.com/LearnistheSol"],
-    "logo": {
-      "@type": "ImageObject",
-      "@id": "https://learningisthesolution.com/#logo",
-      "inLanguage": "en-US",
-      "url": "https://learningisthesolution.com/assets/logo-white-small.png",
-      "width": "170",
-      "height": "50",
-      "caption": "Learning is the Solution"
-    },
-    "image": {
-      "@id": "https://learningisthesolution.com/#logo"
-    }
-  }, {
-    "@type": "WebSite",
-    "@id": "https://learningisthesolution.com/#website",
-    "url": "https://learningisthesolution.com/",
-    "name": "Learning is the Solution",
-    "inLanguage": "en-US",
-    "description": "Free Online Kids' Books That Teach Important Lessons",
-    "publisher": {
-      "@id": "https://learningisthesolution.com/#organization"
-    }
-  }, {
-    "@type": ["WebPage"],
-    "@id": "https://learningisthesolution.com/#webpage",
-    "url": "https://learningisthesolution.com/",
-    "name": "Free Online Kids' Books That Teach Important Lessons",
-    "isPartOf": {
-      "@id": "https://learningisthesolution.com/#website"
-    },
-    "inLanguage": "en-US",
-    "about": {
-      "@id": "https://learningisthesolution.com/#organization"
-    },
-    "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!"
-  }
-      ]
+      "@graph": ${JSON.stringify(baseSchema)}
         }`}
 
       </script>
