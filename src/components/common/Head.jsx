@@ -43,7 +43,7 @@ export default function Head(props) {
         "caption": "Learning is the Solution"
       },
       "image": {
-        "@id": `${baseUrl}/#logo`
+        "@id": `${baseUrl}#logo`
       }
     }, {
       "@type": "WebSite",
