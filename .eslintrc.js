@@ -31,13 +31,15 @@ module.exports = {
     'radix': 'off',
     'comma-dangle': 'off',
     'quote-props' : 'off',
-    'quotes' : 'off'
+    'quotes' : 'off',
+    'object-curly-newline': 'off'
   },
   settings: {
     'import/resolver': {
       alias: {
         map: [
           ['Colors', './src/data/colors.json'],
+          ['Character', './src/data/character.json'],
           ['Data', './src/data/'],
           ['Common', './src/components/common/'],
           ['Footer', './src/components/common/Footer.jsx'],

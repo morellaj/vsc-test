@@ -1,6 +1,3 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable quote-props */
-/* eslint-disable quotes */
 // Dependencies
 import React, { useEffect, lazy, Suspense } from 'react';
 import styled from 'styled-components';

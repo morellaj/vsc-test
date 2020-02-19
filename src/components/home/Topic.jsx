@@ -5,42 +5,31 @@ import styled from 'styled-components';
 // Data dependencies
 import colors from 'Colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
 export default function Topic(props) {
   const [hover, setHover] = useState(false);
-  const { done, text, imgStyle } = props;
-  const unit = text.replace(/\s+/g, '-').toLowerCase();
-
-  function handleMouseOver() {
-    setHover(true);
-  }
-
-  function handleMouseOut() {
-    setHover(false);
-  }
+  const { enabled, title, imgStyle, unit } = props;
 
   return (
     <Container
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      onFocus={handleMouseOver}
-      onBlur={handleMouseOut}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
+      onFocus={() => setHover(true)}
+      onBlur={() => setHover(false)}
     >
-      <NotFinished done={done}>
+      <NotFinished enabled={enabled}>
         <NotAvailable>Not Available Yet</NotAvailable>
       </NotFinished>
       <ImageContainer>
-        <ImageCover done={done} hover={hover}>
-          <CoverText>
+        <ImageCover enabled={enabled} hover={hover}>
+          <CoverTitle>
             Click to see books
             <FontAwesomeIcon icon={faArrowRight} style={{ margin: '0 5px' }} />
-          </CoverText>
+          </CoverTitle>
         </ImageCover>
         <Picture>
           <source srcSet={`./assets/${unit}.webp`} type="image/webp" />
@@ -48,7 +37,7 @@ export default function Topic(props) {
           <Image alt={`Free online books about ${unit}`} src={`./assets/${unit}.jpg`} type="image/jpeg" style={imgStyle} />
         </Picture>
       </ImageContainer>
-      <Title>{text}</Title>
+      <Title>{title}</Title>
     </Container>
   );
 }
@@ -84,7 +73,7 @@ const NotFinished = styled.div`
   z-index: 5;
   width: 100%;
   background-color: rgba(0, 0, 0, .5);
-  display: ${(props) => (props.done ? 'none' : 'flex')};
+  display: ${(props) => (props.enabled ? 'none' : 'flex')};
   justify-content: center;
   align-items: center;
 `;
@@ -135,10 +124,10 @@ const ImageCover = styled.div`
   z-index: 5;
   transition: background-color 1s;
   background-color: rgba(0, 94, 167, .7);
-  display: ${(props) => (props.done && props.hover ? 'flex' : 'none')};
+  display: ${(props) => (props.enabled && props.hover ? 'flex' : 'none')};
 `;
 
-const CoverText = styled.div`
+const CoverTitle = styled.div`
   
 `;
 const Image = styled.img`

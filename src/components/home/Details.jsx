@@ -11,7 +11,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import DetailItem from './DetailItem';
 
-
 const DetailsSlides = lazy(() => import('./DetailsSlides'));
 
 const detailsText = [

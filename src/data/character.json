@@ -1,13 +1,17 @@
 {
   "I-1": {
-    "order": "1",
     "title": "Hurting Others",
+    "enabled": true,
+    "parentInfoEnabled": true,
+    "recommendedBooksEnabled": true,
+    "learningGoalsEnabled": true,
+    "referencesEnabled": true,
+    "order": "1",
+    "imgStyled": {},
     "searchTitle": "Free Kids' Short Stories | Managing Anger",
     "searchDescription": "Online books that teach kids from 4 to 9 years old how to deal with anger and big emotions.  Kids love the 'choose your own story' format!",
     "bookTitle": "Best Kids' Books for Dealing With Anger",
     "bookDescription": "These top rated children's stories help kids learn to manage their anger, control their emotions, and not hurt others.",
-    "subtitle": "Stories that teach kids about hitting, hurting others, and anger",
-    "description": "Worried about a child who is hitting others?  Or want to teach kids not to hit before it even starts?  These engaging resources teach kids about the consequences of hurting others, and also give parents a concise article on what they can do to stop it.",
     "references": [
       {
         "title": "The Foolproof Way to Keep Your Child From Hitting Other Kids",
@@ -68,7 +72,7 @@
       {
         "title": "When Your Child Gets Angry: Here's Your Gameplan",
         "link": "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201704/when-your-child-gets-angry-heres-your-gameplan"
-      }    
+      }
     ],
     "importantInformation": [
       "Kids hurting each other sometimes is normal.  Kids often learn to stop hurting others on their own.",
@@ -77,50 +81,45 @@
     ],
     "learningGoals": [
       "Getting mad is okay - we all get mad sometimes!  But sometimes when we are mad, we feel like hurting someone else.  Hurting others is never okay.",
-      "There is always a better choice than hurting someone else.  We can get away from what is making us mad or find a way for everyone to be happy.  If we hurt others, we won't get what we want and other kids won't want to play with us."
-      ,
+      "There is always a better choice than hurting someone else.  We can get away from what is making us mad or find a way for everyone to be happy.  If we hurt others, we won't get what we want and other kids won't want to play with us.",
       "Being mad doesn't feel good.  We can have more fun when we aren't mad.  We get mad when something doesn't go our way.  But that happens to everyone!  Things go wrong all the time.  If we remember that things go wrong sometimes, we won't feel so mad when they do."
     ],
     "activities": {
       "1": {
         "order": "1",
         "title": "Day on the Beach",
-        "subtitle": "Story that teaches kids about pushing and hitting",
-        "description": "Child who is hitting?  This engaging story can help them understand the consequences of hurting others and the benefits of playing nice.",
         "category": "book"
       },
       "2": {
         "order": "2",
         "title": "Soccer Fun",
-        "subtitle": "Story that teaches children about hurting others",
-        "description": "Kid is hurting others?  This engaging story can help them understand the consequences of hurting others and the benefits of playing nice.",
         "category": "book"
       },
       "3": {
         "order": "3",
         "title": "Snow Time?",
-        "subtitle": "Story that teaches kids about anger",
-        "description": "Child who has trouble controlling their anger?  This engaging story can help them understand the benefits of controlling their anger and how to do it.",
         "category": "book"
       },
       "4": {
         "order": "4",
         "title": "Angry Choices",
-        "subtitle": "Stories that teach kids about hitting, hurting others, and anger",
-        "description": "Collection of engaging short stories that help kids understand the benefits of controlling their anger and what they can do instead.",
         "category": "short"
       }
     }
   },
   "C-1": {
+    "title": "Critical Thinking",
+    "enabled": true,
+    "parentInfoEnabled": true,
+    "recommendedBooksEnabled": true,
+    "learningGoalsEnabled": true,
+    "referencesEnabled": true,
     "order": "2",
+    "imgStyled": {},
     "searchTitle": "Free Kids' Books to Read Online | Critical Thinking",
-    "searchDescription":"Online books that teach kids from 4 to 9 years old the importance of critcal thinking.  Kids love the 'chose your own story' format!",
+    "searchDescription": "Online books that teach kids from 4 to 9 years old the importance of critical thinking.  Kids love the 'chose your own story' format!",
     "bookTitle": "Best Kids' Books for Teaching Critical Thinking",
     "bookDescription": "These top rated children's stories help kids learn to think critically, be open-minded, and think for themselves.",
-    "title": "Critical Thinking",
-    "subtitle": "Stories that teach kids about thinking for themselves, being open-minded, and critical thinking",
-    "description": "Worried that your child is too gullible?  Or want to raise your child who investigates things for themselves?  These engaging resources teach kids about the importance of critical thinking, and also give parents a concise article on how to raise a critical thinker.",
     "references": [
       {
         "title": "Teaching Children to Think",
@@ -172,35 +171,35 @@
       "1": {
         "order": "1",
         "title": "Bad Luck?",
-        "subtitle": "Story that teaches kids about thinking for themselves",
-        "description": "Want to teach your child to be less gullible?  This engaging story teaches kids about the benefits of checking ideas out for yourself and not believing everything you hear.",
         "category": "book"
       },
       "2": {
         "order": "2",
         "title": "The Furbots",
-        "subtitle": "Story that teaches kids to question advertising",
-        "description": "Is your child heavily influenced by advertising?  This engaging story teaches kids about the motivation behind advertising and the risks of believing everything they hear.",
         "category": "book"
       },
       "3": {
         "order": "3",
         "title": "Yelling Magic",
-        "subtitle": "Story that teaches kids to think critically",
-        "description": "Worried that your child is too gullible?  This engaging story teaches kids about the importance of thinking critically and investigating their ideas.",
         "category": "book"
       }
     }
   },
   "S-1": {
+    "title": "Honesty",
+    "enabled": true,
+    "parentInfoEnabled": true,
+    "recommendedBooksEnabled": true,
+    "learningGoalsEnabled": true,
+    "referencesEnabled": true,
     "order": "3",
+    "imgStyled": {
+      "bottom": "0"
+    },
     "searchTitle": "Free Children's Stories Online | Honesty",
     "searchDescription": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and learn the importance of honesty along the way!",
     "bookTitle": "Best Kids' Books for Teaching Honesty",
     "bookDescription": "These top rated children's stories help kids understand the benefits of honesty and the consequences of lying.",
-    "title": "Honesty",
-    "subtitle": "Stories that teach kids about lying, telling the truth, and the benefits of honesty",
-    "description": "Concerned about your child lying to you?  Or want to ingrain the value of honesty before the lying even starts?  These engaging resources teach kids about the importance of honesty, and also give parents a concise article on how to handle lying.",
     "references": [
       {
         "title": "Why Is My Child Lying?",
@@ -296,31 +295,242 @@
       "1": {
         "order": "1",
         "title": "Super Jet 3000",
-        "subtitle": "Story that teaches kids about honesty",
-        "description": "Want your child to be more honest?  This engaging story teaches kids about the benefits of honesty and the risk of lying to get the things we want.",
         "category": "book"
       },
       "2": {
         "order": "2",
         "title": "The Broken Toy",
-        "subtitle": "Story that teaches kids not to lie",
-        "description": "Catch your child lying to you?  This engaging story teaches kids about the benefits of honesty and the consequences of lying to avoid getting in trouble.",
         "category": "book"
       },
       "3": {
         "order": "3",
         "title": "Basketball Contest",
-        "subtitle": "Story that teaches about telling the truth",
-        "description": "Worried about your child's lying?  This engaging story teaches kids about the benefits of honesty and the consequences of lying to make others like them.",
         "category": "book"
       },
       "4": {
         "order": "4",
         "title": "Trust and Honesty",
-        "subtitle": "Stories that teaches kids about lying",
-        "description": "Worried about your child's lying?  This collection of engaging stories teaches kids about the benefits of honesty.",
         "category": "short"
       }
+    }
+  },
+  "C-2": {
+    "title": "Thinking for Yourself",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "4",
+    "imgStyled": {
+      "top": "0"
+    },
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+      "title": "",
+      "link": ""
+    }],
+    "importantInformation": [
+      ""
+    ],
+    "learningGoals": [
+      ""
+    ],
+    "activities": {
+      "1": {
+        "order": "",
+        "title": "",
+        "category": ""
+      }
+    }
+  },
+  "I-2": {
+    "title": "Anger",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "5",
+    "imgStyled": { "top": "20px"},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
+    }
+  },
+  "S-2": {
+    "title": "Sharing",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "6",
+    "imgStyled": {},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
+    }
+  },
+  "S-3": {
+    "title": "Gratitude",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "7",
+    "imgStyled": { "top": "0"},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
+    }
+  },
+  "S-4": {
+    "title": "Caring",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "8",
+    "imgStyled": {},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
+    }
+  },
+  "I-3": {
+    "title": "Making the World Better",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "5",
+    "imgStyled": {},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
+    }
+  },
+  "S-5": {
+    "title": "Diversity",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "5",
+    "imgStyled": {},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
     }
   }
 }

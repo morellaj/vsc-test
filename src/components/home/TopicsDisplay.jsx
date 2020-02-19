@@ -3,7 +3,7 @@
 import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { topicList } from 'Constants';
+import character from 'Character';
 import ReactGA from 'react-ga';
 
 const Topic = lazy(() => import('./Topic'));
@@ -12,34 +12,36 @@ const Topic = lazy(() => import('./Topic'));
 // Component for displaying the home page
 /** ********************************************* */
 export default function TopicsDisplay() {
-  const list = topicList.map((item) => {
+  const list = Object.keys(character).map((key) => {
     const {
-      done, text, id, imgStyle,
-    } = item;
-    if (done) {
+      enabled, title, order, imgStyle,
+    } = character[key];
+    const unit = title.replace(/\s+/g, '-').toLowerCase();
+    if (enabled) {
       return (
-        <Suspense fallback={<div />} key={id}>
+        <Suspense fallback={<div />} key={title}>
           <StyledLink
-            to={`/units?${text.replace(/\s+/g, '-').toLowerCase()}`}
-            onClick={() => ReactGA.event({ category: 'home', action: `clicked ${text}` })}
-            key={id}
+            to={`/units?${unit}`}
+            onClick={() => ReactGA.event({ category: 'home', action: `clicked ${title}` })}
+            key={order}
           >
             <Topic
-              done={done}
-              text={text}
+              enabled={enabled}
+              title={title}
               imgStyle={imgStyle}
+              unit={unit}
             />
           </StyledLink>
         </Suspense>
       );
     }
-
     return (
       <Topic
-        done={done}
-        text={text}
+        enabled={enabled}
+        title={title}
         imgStyle={imgStyle}
-        key={id}
+        key={title}
+        unit={unit}
       />
     );
   });

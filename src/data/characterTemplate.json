@@ -1,0 +1,31 @@
+{
+    "title": "",
+    "enabled": false,
+    "parentInfoEnabled": false,
+    "recommendedBooksEnabled": false,
+    "learningGoalsEnabled": false,
+    "referencesEnabled": false,
+    "order": "",
+    "imgStyled": {},
+    "searchTitle": "",
+    "searchDescription": "",
+    "bookTitle": "",
+    "bookDescription": "",
+    "references": [{
+        "title": "",
+        "link": ""
+    }],
+    "importantInformation": [
+        ""
+    ],
+    "learningGoals": [
+        ""
+    ],
+    "activities": {
+        "1": {
+            "order": "",
+            "title": "",
+            "category": ""
+        }
+    }
+}

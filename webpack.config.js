@@ -17,6 +17,7 @@ module.exports = {
   resolve: {
     alias: {
       Colors: path.join(__dirname, 'src/data/colors.json'),
+      Character: path.join(__dirname, 'src/data/character.json'),
       Data: path.join(__dirname, 'src/data/'),
       Common: path.join(__dirname, 'src/components/common/'),
       Footer: path.join(__dirname, 'src/components/common/Footer.jsx'),
