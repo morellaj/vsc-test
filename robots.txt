@@ -1,2 +1,13 @@
 User-Agent: *
-Disallow: /units
+disallow: https://debug--xenodochial-hopper-aead1f.netlify.com/
+disallow: /
+disallow: /units$
+disallow: /book-recommendations$
+disallow: /book$
+allow: /$
+allow: /units*
+allow: /book-recommendations*
+allow: /book*
+allow: /about
+
+https://learningisthesolution.com/sitemap.xml
