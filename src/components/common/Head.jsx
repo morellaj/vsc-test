@@ -110,11 +110,11 @@ export default function Head(props) {
       "url": "https://learningisthesolution.com/assets/logo-white-small.png",
       "width": "170",
       "height": "50",
-      "caption": "Learning is the Solution",
+      "caption": "Learning is the Solution"
     },
     "image": {
-      "@id": "https://learningisthesolution.com/#logo",
-    },
+      "@id": "https://learningisthesolution.com/#logo"
+    }
   }, {
     "@type": "WebSite",
     "@id": "https://learningisthesolution.com/#website",
@@ -123,21 +123,21 @@ export default function Head(props) {
     "inLanguage": "en-US",
     "description": "Free Online Kids' Books That Teach Important Lessons",
     "publisher": {
-      "@id": "https://learningisthesolution.com/#organization",
-    },
+      "@id": "https://learningisthesolution.com/#organization"
+    }
   }, {
     "@type": ["WebPage"],
     "@id": "https://learningisthesolution.com/#webpage",
     "url": "https://learningisthesolution.com/",
     "name": "Free Online Kids' Books That Teach Important Lessons",
     "isPartOf": {
-      "@id": "https://learningisthesolution.com/#website",
+      "@id": "https://learningisthesolution.com/#website"
     },
     "inLanguage": "en-US",
     "about": {
-      "@id": "https://learningisthesolution.com/#organization",
+      "@id": "https://learningisthesolution.com/#organization"
     },
-    "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!",
+    "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!"
   }
       ]
         }`}
