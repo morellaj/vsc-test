@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Head from 'Head';
+import { Link } from 'react-router-dom';
 
 
 // Component dependencies
@@ -21,7 +22,7 @@ import Section from './Section';
 export default function BookPage() {
   const location = window.location.search.slice(1).split('&')[0].split('=')[0];
   const section = booksUnitList[location];
-  const { bookTitle, description } = character[section];
+  const { bookTitle, bookDescription } = character[section];
   const bookList = booksByUnit[section];
   const primaryList = createBooksList(bookList.primary, books);
   const secondaryList = createBooksList(bookList.secondary, books);
@@ -38,7 +39,7 @@ export default function BookPage() {
     <>
       <Head
         title={bookTitle}
-        description={description}
+        description={bookDescription}
         url={`https://learningisthesolution.com/book-recommendations?${location}`}
         type="website"
         image={`https://learningisthesolution.com/assets/${location}-social.jpg`}
@@ -53,7 +54,7 @@ export default function BookPage() {
             <HeaderSubTitle>{`${character[section].title}`}</HeaderSubTitle>
           </Header>
           <Disclaimer>
-          *Your purchases through Amazon help us remain independent and ad-free.
+          Click a book to see it on Amazon.  Your purchases through Amazon help us remain independent and ad-free.
           </Disclaimer>
           <Section
             section="Our Favorites"
@@ -63,6 +64,11 @@ export default function BookPage() {
             section="Other Recommendations"
             bookList={secondaryList}
           />
+          <Disclaimer>
+            <Link to="/disclosure">
+              Our FCC/affiliate disclosure
+            </Link>
+          </Disclaimer>
         </InnerContainer>
       </Container>
       <Footer />
@@ -92,8 +98,8 @@ const Header = styled.div`
 `;
 
 const Disclaimer = styled.div`
-  display: none;
   width: 100%;
+  font-size: 14px;
 
   @media (max-width: 500px) {
     font-size: 12px;

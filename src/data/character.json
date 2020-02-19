@@ -2,9 +2,12 @@
   "I-1": {
     "order": "1",
     "title": "Hurting Others",
+    "searchTitle": "Free Short Stories | Anger Management",
+    "searchDescription": "Online books teach kids from 4 to 9 years old how to deal with anger and big emotions.  Kids love the 'choose your own story' format!",
+    "bookTitle": "Best Kid's Books for Teaching Anger Management",
+    "bookDescription": "These top rated children's stories help kids learn to manage their anger, control their emotions, and not act in anger.",
     "subtitle": "Stories that teach kids about hitting, hurting others, and anger",
     "description": "Worried about a child who is hitting others?  Or want to teach kids not to hit before it even starts?  These engaging resources teach kids about the consequences of hurting others, and also give parents a concise article on what they can do to stop it.",
-    "bookTitle": "Kids Book About Hitting, Hurting Others, and Handling Anger",
     "references": [
       {
         "title": "The Foolproof Way to Keep Your Child From Hitting Other Kids",
@@ -111,10 +114,13 @@
   },
   "C-1": {
     "order": "2",
+    "searchTitle": "Free Kid's Books to Read Online | Critical Thinking",
+    "searchDescription":"Online books teach kids from 4 to 9 years old the importance of critcal thinking.  Kids love the 'chose your own story' format!",
+    "bookTitle": "Best Kid's Books for Teaching Critical Thinking",
+    "bookDescription": "These top rated children's stories help kids learn to think critically, be open-minded, and think for themselves.",
     "title": "Critical Thinking",
     "subtitle": "Stories that teach kids about thinking for themselves, being open-minded, and critical thinking",
     "description": "Worried that your child is too gullible?  Or want to raise your child who investigates things for themselves?  These engaging resources teach kids about the importance of critical thinking, and also give parents a concise article on how to raise a critical thinker.",
-    "bookTitle": "Kids Book About Critical Thinking and Being Open-Minded",
     "references": [
       {
         "title": "Teaching Children to Think",
@@ -188,10 +194,13 @@
   },
   "S-1": {
     "order": "3",
+    "searchTitle": "Free Children's Stories Online | Honesty",
+    "searchDescription": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and learn the importance of honesty along the way!",
+    "bookTitle": "Best Kid's Books for Teaching Honesty",
+    "bookDescription": "These top rated children's stories help kids understand the benefits of honesty and the consequences of lying.",
     "title": "Honesty",
     "subtitle": "Stories that teach kids about lying, telling the truth, and the benefits of honesty",
     "description": "Concerned about your child lying to you?  Or want to ingrain the value of honesty before the lying even starts?  These engaging resources teach kids about the importance of honesty, and also give parents a concise article on how to handle lying.",
-    "bookTitle": "Kids Book About Lying, Honesty, and Trust",
     "references": [
       {
         "title": "Why Is My Child Lying?",

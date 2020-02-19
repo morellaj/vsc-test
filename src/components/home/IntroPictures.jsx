@@ -29,7 +29,7 @@ export default function IntroPictures() {
         </TryButtonContainer>
         <IntroTextContainer>
           <IntroText>
-            Online books that inspire
+            Online books that empower
             {' '}
             <br />
             {' '}

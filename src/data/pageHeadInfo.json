@@ -1,7 +1,15 @@
 {
   "HomePage":{
-    "title": "Free online stories that inspire kids to make good choices",
-    "description": "Learning is the Solution offers online books that are free, engaging, and easy-to-use.  Kids enjoy the stories while learning and developing character."
+    "title-1": "Free online stories that inspire kids to make good choices",
+    "description-1": "Learning is the Solution offers online books that are free, engaging, and easy-to-use.  Kids enjoy the stories while learning and developing character.",
+    "title": "Free Online Kid's Books That Teach Important Lessons",
+    "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!"
+  },
+  "CharacterPage":{
+    "title-1": "Free online stories that inspire kids to make good choices",
+    "description-1": "Learning is the Solution offers online books that are free, engaging, and easy-to-use.  Kids enjoy the stories while learning and developing character.",
+    "title": "Topics List | Learning is the Solution",
+    "description": "Different books and resources available for each topic."
   },
   "ContactPage":{
     "title": "Learning is the Solution: Contacts Page",

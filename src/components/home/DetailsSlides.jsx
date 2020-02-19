@@ -16,7 +16,7 @@ export default function DetailsSlides() {
           <source srcSet={`Assets/Detail${i + 1}.webp`} type="image/webp" />
           <source srcSet={`Assets/Detail${i + 1}.jpg`} type="image/jpeg" />
           <Pic
-            alt="pages from online books"
+            alt="pages from online short stories"
             src={`Assets/Detail${i + 1}.jpg`}
             type="image/jpeg"
           />

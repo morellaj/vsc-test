@@ -19,6 +19,8 @@ const FeedbackPage = lazy(() => import('./components/other/FeedbackPage'));
 const UpdateSignUpPage = lazy(() => import('./components/other/UpdateSignUpPage'));
 const TopicRecommendationPage = lazy(() => import('./components/other/TopicRecommendationPage'));
 const ContactPage = lazy(() => import('./components/other/ContactPage'));
+const Disclosure = lazy(() => import('./components/other/Disclosure'));
+
 // const SitemapBuilder from './components/other/SitemapBuilder'));
 
 Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
@@ -38,6 +40,7 @@ ReactDOM.render((
           <Route path="/update-sign-up" component={UpdateSignUpPage} />
           <Route path="/topic-recommendation" component={TopicRecommendationPage} />
           <Route path="/contact" component={ContactPage} />
+          <Route path="/disclosure" component={Disclosure} />
         </Switch>
       </BrowserRouter>
     </Suspense>
