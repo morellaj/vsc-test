@@ -94,7 +94,7 @@ export default function Head(props) {
       {ogUrl}
       {ogTags}
       <script className="structured-data-list" type="application/ld+json">
-        {`
+        {`{
       "@context": "http://schema.org/",
       "@graph": [
         {
@@ -140,7 +140,7 @@ export default function Head(props) {
     "description": "Read short stories online for kids from 4 to 9 years old.  Kids get to choose what happens in the story, and develop social and emotional skills along the way!",
   }
       ]
-        `}
+        }`}
 
       </script>
     </Helmet>
