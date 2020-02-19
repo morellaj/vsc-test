@@ -35,8 +35,8 @@ export default function Home() {
           description={description}
           type="website"
           image="https://learningisthesolution.com/assets/Home1.jpg"
-          height="1519"
-          width="619"
+          height="1280"
+          width="521"
           url="https://learningisthesolution.com/"
         />
       </Suspense>
