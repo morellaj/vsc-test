@@ -9,6 +9,7 @@ import character from 'Data/character.json';
 import { characterUnitNumbers } from 'Constants';
 import Navbar from 'Navbar';
 import Error from 'Error';
+import { baseUrl } from 'constants';
 import UnitArr from './UnitArr';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
@@ -81,6 +82,24 @@ export default function CharacterPage() {
     headDescription = '';
   }
 
+  const headUrl = `${baseUrl}units?${location}`;
+
+  const schema = [
+    {
+      "@type": ["CollectionPage"],
+      "@id": `${headUrl}/#webpage`,
+      "url": headUrl,
+      "name": headTitle,
+      "isPartOf": {
+        "@id": `${baseUrl}#website`
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@id": `${baseUrl}#organization`
+      },
+      "description": headDescription
+    }
+  ];
 
   return (
     <>
@@ -88,11 +107,12 @@ export default function CharacterPage() {
         <Head
           title={headTitle}
           description={headDescription}
-          url={`https://learningisthesolution.com/units?${location}`}
+          url={headUrl}
           type="website"
-          image={`https://learningisthesolution.com/assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
-          height="500px"
-          width="500px"
+          image={`${baseUrl}assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
+          height="500"
+          width="500"
+          schema={schema}
         />
       </Suspense>
       <Navbar />

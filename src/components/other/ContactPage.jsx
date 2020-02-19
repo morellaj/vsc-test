@@ -1,12 +1,12 @@
 // Package dependencies
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import Head from 'Head';
 import styled from 'styled-components';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
 import ReactGA from 'react-ga';
+import { baseUrl } from 'Constants';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -20,20 +20,36 @@ export default function FeedbackPage() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
+  const url = `${baseUrl}contact`;
+
+  const schema = [
+    {
+      "@type": ["ContactPage"],
+      "@id": `${url}/#webpage`,
+      "url": url,
+      "name": title,
+      "isPartOf": {
+        "@id": `${baseUrl}#website`
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@id": `${baseUrl}#organization`
+      },
+      "description": description
+    }
+  ];
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
       <Head
         title={title}
         description={description}
-        url="https://learningisthesolution.com/contact"
+        url={url}
         type="website"
-        image="https://learningisthesolution.com/assets/logo-large.jpg"
-        height="720px"
-        width="1280px"
+        image={`${baseUrl}assets/logo-large.jpg`}
+        height="720"
+        width="1280"
+        schema={schema}
       />
       <Navbar />
       <Container>

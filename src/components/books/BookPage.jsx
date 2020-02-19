@@ -13,7 +13,7 @@ import Footer from 'Footer';
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
 import character from 'Data/character.json';
-import { booksUnitList } from 'Constants';
+import { booksUnitList, baseUrl } from 'Constants';
 import ReactGA from 'react-ga';
 import { createBooksList } from './Functions';
 import Section from './Section';
@@ -35,16 +35,36 @@ export default function BookPage() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
+  const bookUrl = `${baseUrl}book-recommendations?${location}`;
+
+  const schema = [
+    {
+      "@type": ["CollectionPage"],
+      "@id": `${bookUrl}/#webpage`,
+      "url": bookUrl,
+      "name": bookTitle,
+      "isPartOf": {
+        "@id": `${baseUrl}#website`
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@id": `${baseUrl}#organization`
+      },
+      "description": bookDescription
+    }
+  ];
+
   return (
     <>
       <Head
         title={bookTitle}
         description={bookDescription}
-        url={`https://learningisthesolution.com/book-recommendations?${location}`}
+        url={bookUrl}
         type="website"
-        image={`https://learningisthesolution.com/assets/${location}-social.jpg`}
-        height="500px"
-        width="500px"
+        image={`${baseUrl}assets/${location}-social.jpg`}
+        height="500"
+        width="500"
+        schema={schema}
       />
       <Navbar />
       <Container>

@@ -3,6 +3,7 @@
 import React, {
   useState, useEffect,
 } from 'react';
+import { baseUrl } from 'Constants';
 
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import styled from 'styled-components';
@@ -190,19 +191,38 @@ export default function PDFPage() {
     setMobile(false);
   }
 
+  const url = `${baseUrl}book?${book}`;
+
+  const schema = [
+    {
+      "@type": ["Webpage", "ItemPage"],
+      "@id": `${url}/#webpage`,
+      "url": url,
+      "name": `${title}: ${subtitle}`,
+      "isPartOf": {
+        "@id": "https://learningisthesolution.com/#website"
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://learningisthesolution.com/#organization"
+      },
+      "description": description
+    }
+  ];
 
   return (
     <>
       <Head
         title={`${title}: ${subtitle}`}
         description={description}
-        url={`https://learningisthesolution.com/book?${book}`}
+        url={url}
         type="book"
-        author="Alex Morelli and Emily Moeller"
+        author="Alex Morelli and Emily Morelli"
         tags={['kids', 'character development', 'character', 'early reader']}
-        image={`https://learningisthesolution.com/assets/${book}-social.jpg`}
-        height="338px"
-        width="600px"
+        image={`${baseUrl}assets/${book}-social.jpg`}
+        height="338"
+        width="600"
+        schema={schema}
       />
       <NavbarContainer height={height}>
         <Navbar />
