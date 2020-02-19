@@ -66,7 +66,7 @@ const Container = styled.div`
   width: 100%;
 
 
-  @media(max-width: 600px){
+  @media(max-width: 700px){
     flex-direction: column;
     height: auto;
     padding-top: 5px;
@@ -81,6 +81,10 @@ const List = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media(max-width: 700px) {
+    margin: 8px;
+  }
 
   @media(max-width: 750px){
     font-size: 14px;
@@ -111,6 +115,10 @@ const SocialMedia = styled.div`
   display: flex;
   margin-right: 15px;
   align-items: center;
+
+  @media(max-width: 700px) {
+    margin: 8px;
+  }
 `;
 
 const Icon = styled.a`
@@ -118,6 +126,7 @@ const Icon = styled.a`
   font-size: 25px;
   border-radius: 5px;
   padding: 10px;
+  margin: 4px;
 
   :hover {
     background-color: ${colors.LITS.darkColor};
@@ -133,6 +142,7 @@ const IconLink = styled(Link)`
   font-size: 25px;
   border-radius: 5px;
   padding: 10px;
+  margin: 4px;
 
   :hover {
     background-color: ${colors.LITS.darkColor};
