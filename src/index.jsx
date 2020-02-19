@@ -19,6 +19,7 @@ const FeedbackPage = lazy(() => import('./components/other/FeedbackPage'));
 const UpdateSignUpPage = lazy(() => import('./components/other/UpdateSignUpPage'));
 const TopicRecommendationPage = lazy(() => import('./components/other/TopicRecommendationPage'));
 const ContactPage = lazy(() => import('./components/other/ContactPage'));
+const Disclosure = lazy(() => import('./components/other/Disclosure'));
 
 // const SitemapBuilder from './components/other/SitemapBuilder'));
 
@@ -30,7 +31,7 @@ ReactDOM.render((
     <Suspense fallback={<div />}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={CharacterPage} />
+          <Route exact path="/" component={Disclosure} />
           <Route path="/units" component={CharacterPage} />
           <Route path="/book" component={PDFPage} />
           <Route path="/about" component={AboutPage} />
@@ -39,6 +40,7 @@ ReactDOM.render((
           <Route path="/update-sign-up" component={UpdateSignUpPage} />
           <Route path="/topic-recommendation" component={TopicRecommendationPage} />
           <Route path="/contact" component={ContactPage} />
+          <Route path="/disclosure" component={Disclosure} />
         </Switch>
       </BrowserRouter>
     </Suspense>
