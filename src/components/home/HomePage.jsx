@@ -1,3 +1,6 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quote-props */
+/* eslint-disable quotes */
 // Dependencies
 import React, { useEffect, lazy, Suspense } from 'react';
 import styled from 'styled-components';
@@ -27,6 +30,23 @@ export default function Home() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
+  const schema = [
+    {
+      "@type": ["WebPage"],
+      "@id": "https://learningisthesolution.com/#webpage",
+      "url": "https://learningisthesolution.com/",
+      "name": title,
+      "isPartOf": {
+        "@id": "https://learningisthesolution.com/#website"
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@id": "https://learningisthesolution.com/#organization"
+      },
+      "description": description
+    }
+  ];
+
   return (
     <>
       <Suspense fallback={<div />}>
@@ -38,6 +58,7 @@ export default function Home() {
           height="1519"
           width="619"
           url="https://learningisthesolution.com/"
+          schema={schema}
         />
       </Suspense>
       <Navbar />
