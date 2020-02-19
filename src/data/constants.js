@@ -134,4 +134,4 @@ export const teamData = [
   },
 ];
 
-export const baseUrl = "https://learningisthesolution.com";
+export const baseUrl = "https://learningisthesolution.com/";
