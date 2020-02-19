@@ -73,7 +73,7 @@ export default function Head(props) {
   const ogAuthor = author ? <meta property="og:book:author" content={author} /> : null;
   const ogUrl = url ? <meta property="og:url" content={url} /> : null;
   const ogTags = tags ? <meta property="og:book:tag" content={tags} /> : null;
-  const headSchema = schema ? <script className="structured-data-list" type="application/ld+json">{JSON.stringifyschema}</script> : null;
+  // const headSchema = schema ? <script className="structured-data-list" type="application/ld+json">{JSON.stringifyschema}</script> : null;
 
   return (
     <Helmet>
@@ -93,11 +93,6 @@ export default function Head(props) {
       {ogAuthor}
       {ogUrl}
       {ogTags}
-      <script className="structured-data-list" type="application/ld+json">
-        {`{
-          "@context": "http://schema.org/"
-        }`}
-      </script>
     </Helmet>
   );
 }
