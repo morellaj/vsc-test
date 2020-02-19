@@ -93,6 +93,12 @@ export default function Head(props) {
       {ogAuthor}
       {ogUrl}
       {ogTags}
+      <script className="structured-data-list" type="application/ld+json">
+        {`
+      "@context": "http://schema.org/"
+        `}
+
+      </script>
     </Helmet>
   );
 }
