@@ -9,6 +9,7 @@ import Navbar from 'Navbar';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import { baseUrl } from 'Constants';
 import IntroPictures from './IntroPictures';
 
 const Head = lazy(() => import('Head'));
@@ -33,15 +34,15 @@ export default function Home() {
   const schema = [
     {
       "@type": ["WebPage"],
-      "@id": "https://learningisthesolution.com/#webpage",
-      "url": "https://learningisthesolution.com/",
+      "@id": `${baseUrl}#webpage`,
+      "url": baseUrl,
       "name": title,
       "isPartOf": {
-        "@id": "https://learningisthesolution.com/#website"
+        "@id": `${baseUrl}#website`
       },
       "inLanguage": "en-US",
       "about": {
-        "@id": "https://learningisthesolution.com/#organization"
+        "@id": `${baseUrl}#organization`
       },
       "description": description
     }
@@ -54,10 +55,10 @@ export default function Home() {
           title={title}
           description={description}
           type="website"
-          image="https://learningisthesolution.com/assets/Home1.jpg"
+          image={`${baseUrl}assets/Home1.jpg`}
           height="1519"
           width="619"
-          url="https://learningisthesolution.com/"
+          url={baseUrl}
           schema={schema}
         />
       </Suspense>

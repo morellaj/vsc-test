@@ -133,3 +133,5 @@ export const teamData = [
     description: "Claire is our junior tester.  She ensures that our books are funny and have words that are appropriate for early readers.  Claire also monitors for anyone that might be working too hard - we can't have that!  She loves wearing animal costumes, listening to music from Frozen 2, and getting back scratches.",
   },
 ];
+
+export const baseUrl = "https://learningisthesolution.com";

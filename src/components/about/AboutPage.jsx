@@ -7,7 +7,7 @@ import Footer from 'Footer';
 import Head from 'Head';
 
 // Component dependencies
-import { teamData } from 'Constants';
+import { teamData, baseUrl } from 'Constants';
 import ReactGA from 'react-ga';
 import Intro from './Intro';
 import TeamMember from './TeamMember';
@@ -30,16 +30,36 @@ export default function AboutPage() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
+  const url = `${baseUrl}about`;
+
+  const schema = [
+    {
+      "@type": ["AboutPage"],
+      "@id": `${url}/#webpage`,
+      "url": url,
+      "name": title,
+      "isPartOf": {
+        "@id": `${baseUrl}#website`
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@id": `${baseUrl}#organization`
+      },
+      "description": description
+    }
+  ];
+
   return (
     <>
       <Head
         title={title}
         description={description}
-        url="https://learningisthesolution.com/about"
+        url={url}
         type="website"
-        image="https://learningisthesolution.com/assets/logo-large.jpg"
-        height="720px"
-        width="1280px"
+        image={`${baseUrl}assets/logo-large.jpg`}
+        height="720"
+        width="1280"
+        schema={schema}
       />
       <Navbar />
       <Container>

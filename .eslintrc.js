@@ -29,6 +29,9 @@ module.exports = {
     "react/prop-types":"off",
     'max-len': 'off',
     'radix': 'off',
+    'comma-dangle': 'off',
+    'quote-props' : 'off',
+    'quotes' : 'off'
   },
   settings: {
     'import/resolver': {

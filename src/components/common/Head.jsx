@@ -1,10 +1,8 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable quotes */
-/* eslint-disable quote-props */
 // Package dependencies
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { HomePage } from 'Data/pageHeadInfo.json';
+import { baseUrl } from 'Constants';
 
 /** ********************************************* */
 // Component for displaying icons
@@ -31,31 +29,31 @@ export default function Head(props) {
   const baseSchema = [
     {
       "@type": "Organization",
-      "@id": "https://learningisthesolution.com/#organization",
+      "@id": `${baseUrl}#organization`,
       "name": "Learning is the Solution",
-      "url": "https://learningisthesolution.com/",
+      "url": baseUrl,
       "sameAs": ["https://www.facebook.com/learningisthesolution", "https://www.instagram.com/learning_is_the_solution/", "https://www.pinterest.com/learningisthesolution/", "https://twitter.com/LearnistheSol"],
       "logo": {
         "@type": "ImageObject",
-        "@id": "https://learningisthesolution.com/#logo",
+        "@id": `${baseUrl}#logo`,
         "inLanguage": "en-US",
-        "url": "https://learningisthesolution.com/assets/logo-white-small.png",
+        "url": `${baseUrl}assets/logo-white-small.png`,
         "width": "170",
         "height": "50",
         "caption": "Learning is the Solution"
       },
       "image": {
-        "@id": "https://learningisthesolution.com/#logo"
+        "@id": `${baseUrl}/#logo`
       }
     }, {
       "@type": "WebSite",
-      "@id": "https://learningisthesolution.com/#website",
-      "url": "https://learningisthesolution.com/",
+      "@id": `${baseUrl}#website`,
+      "url": baseUrl,
       "name": "Learning is the Solution",
       "inLanguage": "en-US",
       "description": HomePage.title,
       "publisher": {
-        "@id": "https://learningisthesolution.com/#organization"
+        "@id": `${baseUrl}#organization`
       }
     }
   ];
