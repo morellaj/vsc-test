@@ -6,7 +6,7 @@ noindex: /units$
 disallow: /book-recommendations$
 noindex: /book-recommendations$
 disallow: /book$
-no index: /book$
+noindex: /book$
 allow: /$
 allow: /units
 allow: /book-recommendations
