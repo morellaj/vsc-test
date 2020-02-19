@@ -3,121 +3,33 @@
         "title": "When Sophie Gets Angry--Really, Really Angry...",
         "link": "https://www.amazon.com/Sophie-Angry-Really-Really-Scholastic-Bookshelf/dp/0439598451/ref=as_li_ss_tl?keywords=when+sophie+gets+angry&qid=1579629885&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=cb310617b0f123eaa89fa4091ad63ad5&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0439598451&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Molly Bang"
-        ],
-        "description": "\"Oh is Sophie ever angry now!\" Everybody gets angry sometimes. For children, anger can be very upsetting. Parents, teachers, and children can talk about it. People do lots of different things when they get angry. In this Caldecott-honor book, kids will see what Sophie does when she gets angry. What do you do?",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781338088441"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1338088440"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=Z4RzCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=Z4RzCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=Z4RzCwAAQBAJ&printsec=frontcover&dq=when+sophie+gets+angry,+really,+really+angry&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=Z4RzCwAAQBAJ&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": [
-
-        ],
+        "rating": "",
+        "enable": true,
+        "tags": ["anger"],
+        "primary": [],
         "secondary": ["I-1"]
     },
     "3": {
         "title": "When I Feel Angry",
         "link": "https://www.amazon.com/When-Feel-Angry-Way-Books/dp/0807588970/ref=as_li_ss_tl?keywords=when+i+feel+angry&qid=1579630071&sr=8-3&linkCode=ll1&tag=learningist05-20&linkId=ee654316ed2dc3afee97a97dfef2bded&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0807588970&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Cornelia Maude Spelman"
-        ],
-        "description": "A little rabbit describes what makes her angry and the different ways she can control her anger.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "0807588970"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9780807588970"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=tE31J75ZfmcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=tE31J75ZfmcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=tE31J75ZfmcC&printsec=frontcover&dq=when+I+feel+angry&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=tE31J75ZfmcC&dq=when+I+feel+angry&hl=&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": [
-            "I-1"
-        ],
+        "tags": ["anger"],
+        "primary": ["I-1"],
         "secondary": []
     },
     "4": {
         "title": "I'm Furious",
         "link": "https://www.amazon.com/Furious-Dealing-Feelings-Elizabeth-Crary/dp/0943990939/ref=as_li_ss_tl?keywords=I'm+furious&qid=1579630148&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=91fc80db75159b2a6fb5ede00e052a11&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0943990939&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Elizabeth Crary"
-        ],
-        "description": "A young boy discusses his feelings with his mother when his little brother ruins his possessions, and she suggests ways he can control his anger",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "0943990939"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9780943990934"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=tebwCNfTFlIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=tebwCNfTFlIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=tebwCNfTFlIC&printsec=frontcover&dq=I%27m+furious&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=tebwCNfTFlIC&dq=I%27m+furious&hl=&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": [
-
-        ],
+        "tags": ["anger"],
+        "primary": [],
         "secondary": ["I-1"]
     },
     "5": {
         "title": "I Hate Everything",
         "link": "https://www.amazon.com/Hate-Everything-feeling-Emotions-Behavior/dp/1575424436/ref=as_li_ss_tl?keywords=i+hate+everything&qid=1579630226&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=376eb16a2dd1c51be81f5e4a1c830e18&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1575424436&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Matthew DiBenedetti"
-        ],
-        "description": "I hate that I'm going bald. I hate that I still make fun of bald people. I hate karma. Amateur haters, step aside. Time to learn what it really means to be miserable. Because this guy hates everything. From hating the little irks that happen now and then (like the water that squirts out of the mustard bottle) to hating the unfortunate realities of today's world (like that superheroes don't exist...but villains do), Matthew DiBenedetti tells readers how he really feels. With such a variety of miserable musings, you'll find something to laugh at—and someone to loathe with—in this book.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781440509582"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1440509581"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=CxjrDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=CxjrDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=CxjrDQAAQBAJ&printsec=frontcover&dq=I+hate+everything!&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=CxjrDQAAQBAJ&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
+        "tags": [            "anger"        ],
         "primary": [],
         "secondary": ["I-1"]
     },
@@ -125,543 +37,119 @@
         "title": "Cool Down and Work Through Anger",
         "link": "https://www.amazon.com/Cool-Through-Anger-Learning-Along%C2%AE/dp/1575423464/ref=as_li_ss_tl?keywords=cool+down+and+work+through+anger&qid=1579630354&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=fc0b0502272ac0d4e38ce1ab1e806f46&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1575423464&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Cheri J. Meiners"
-        ],
-        "description": "Everyone gets angry, so it’s never too early for children to learn to recognize feelings of anger, express them, and build skills for coping with anger in helpful, appropriate ways. Children learn that it is okay to feel angry—but not okay to hurt anyone with actions or words. They discover concrete skills for working through anger: self-calming, thinking, getting help from a trusted person, talking and listening, apologizing, being patient, and viewing others positively. Reassuring and supportive, the book helps preschool and primary-age children see that when they cool down and work through anger, they can feel peaceful again.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781575427607"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1575427605"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=CtyylDWkJxQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=CtyylDWkJxQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=CtyylDWkJxQC&printsec=frontcover&dq=cool+down+and+work+through+anger&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=CtyylDWkJxQC&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": [
-            "I-1"
-        ],
+        "tags": ["anger"],
+        "primary": ["I-1"],
         "secondary": []
     },
     "7": {
         "title": "How to Take the Grrrr Out of Anger",
         "link": "https://www.amazon.com/Take-Grrrr-Anger-Laugh-Learn%C2%AE/dp/1575424940/ref=as_li_ss_tl?keywords=how+to+take+the+grrrr+out+of+anger&qid=1579630466&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=42a28fbaacb458187589391bbdfdd487&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1575424940&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Elizabeth Verdick",
-            "Marjorie Lisovskis"
-        ],
-        "description": "Kids need help learning how to manage their anger. Blending solid information and sound advice with humor and lively illustrations, these anger-management tips guide kids to understand that anger is normal and to learn they can express it in healthy ways. The book teaches them how to recognize anger in themselves and others, how to handle situations and emotions (loneliness, guilt, frustration, fear) that lead to or mask anger, and how to deal with the anger they feel. This revised edition addresses children’s exposure to increased societal violence and includes discussion and examples of anger related to texting and social media. Young readers learn that cruelty and violence are not acceptable and there are safer, more positive ways to resolve conflicts. They also discover what to do when people around them are angry, how to get help, and how to locate other resources when they need more support.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781575425160"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1575425165"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=msTQCAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=msTQCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=msTQCAAAQBAJ&printsec=frontcover&dq=how+to+take+the+grrr+out+of+anger&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=msTQCAAAQBAJ&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
+        "tags": ["anger"],
         "primary": ["I-1"],
-        "secondary": [
-
-        ]
+        "secondary": []
     },
     "8": {
         "title": "When Miles Got Mad",
         "link": "https://www.amazon.com/When-Miles-Got-Mad-Kurtzman-Counter/dp/0615699650/ref=as_li_ss_tl?keywords=when+miles+got+mad&qid=1579630533&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=9e40a080ed0ba20f78a610d5cbab228b&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0615699650&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Samantha Kurtzman-Counter",
-            "Abbie Schiller"
-        ],
-        "description": "When his little brother breaks his toy, Miles gets mad, but when he looks at himself in the mirror he sees a big, red, furry monster named Mad.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "0615699650"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9780615699653"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=UeOwMQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=UeOwMQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=UeOwMQEACAAJ&dq=when+miles+got+mad&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=UeOwMQEACAAJ&dq=when+miles+got+mad&hl=&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": [
-            "I-1"
-        ],
+        "tags": ["anger"],
+        "primary": ["I-1"],
         "secondary": []
     },
     "9": {
         "title": "Llama Llama Mad at Mama",
         "link": "https://www.amazon.com/Llama-Mad-at-Mama/dp/0670062405/ref=as_li_ss_tl?keywords=llama+llama+mad+at+mama&qid=1579630621&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=dffc2c5e3e9e24cdb84b16f72643cc25&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0670062405&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Anna Dewdney"
-        ],
-        "description": "A young llama wants to play but must go shopping with his mother instead, and so he gets angry and makes a mess at the store.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9780670062409"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "0670062405"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=Y-CXDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=Y-CXDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=Y-CXDgAAQBAJ&printsec=frontcover&dq=llama+llama+mad+at+mama&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=Y-CXDgAAQBAJ&dq=llama+llama+mad+at+mama&hl=&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
+        "tags": ["anger"],
         "primary": [],
-        "secondary": [
-            "I-1"
-        ]
+        "secondary": ["I-1"]
     },
     "10": {
         "title": "The Way I Act",
         "link": "https://www.amazon.com/Way-I-Act-Steve-Metzger/dp/1884734995/ref=as_li_ss_tl?keywords=the+way+i+act&qid=1579630691&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=f8260415ad5c4fd5981188709f9b4b5e&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1884734995&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Steve Metzger"
-        ],
-        "description": "A discussion of what it may be like to behave in certain ways and the possible consequences of one's actions.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "1884734995"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9781884734991"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=vZFISAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=vZFISAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=vZFISAAACAAJ&dq=the+way+I+act&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=vZFISAAACAAJ&dq=the+way+I+act&hl=&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
+        "tags": ["anger"],
         "primary": ["I-1"],
-        "secondary": [
-
-        ]
+        "secondary": []
     },
     "11": {
         "title": "What Were You Thinking?",
         "link": "https://www.amazon.com/What-Were-You-Thinking-Executive/dp/1934490962/ref=as_li_ss_tl?keywords=what+were+you+thinking&qid=1579630811&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=c05d42b559bcf6c00052d298b799dc87&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1934490962&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Bryan Smith"
-        ],
-        "description": "Third-grader Braden loves to be the center of attention. His comic genius, as he sees it, causes his friends to look at him in awe. But some poor decisions, like ill-timed jokes, forces the adults in Braden's life to teach him about impulse control.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781545721735"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1545721734"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=gn9IDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=gn9IDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=gn9IDwAAQBAJ&printsec=frontcover&dq=what+were+you+thinking%3F++Learning+to+control+your+impulses&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=gn9IDwAAQBAJ&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
+        "tags": ["anger"],
         "primary": [],
-        "secondary": [
-            "I-1"
-        ]
+        "secondary": ["I-1"]
     },
     "12": {
         "title": "The Empty Pot",
         "link": "https://www.amazon.com/Empty-Pot-Demi/dp/0805049002/ref=as_li_ss_tl?keywords=the+empty+pot&qid=1579630890&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=dbb61cbb9755416afb5bce761bd46b4b&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0805049002&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Demi"
-        ],
-        "description": "The Empty Pot is Demi's beloved picture book about an honest schoolboy A long time ago in China there was a boy named Ping who loved flowers. Anything he planted burst into bloom. The Emperor loved flowers too. When it was time to choose an heir, he gave a flower seed to each child in the kingdom. \"Whoever can show me their best in a year's time,\" he proclaimed, \"shall succeed me to the throne!\" Ping plants his seed and tends it every day. But month after month passes, and nothing grows. When spring comes, Ping must go to the Emperor with nothing but an empty pot. Demi's exquisite art and beautifully simple text show how Ping's embarrassing failure is turned triumphant in this satisfying tale of honesty rewarded. An IRA-CBC Children's Choice. An American Bookseller \"Pick of the Lists.\"",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781466811577"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1466811579"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=lx41Tnkqbv0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=lx41Tnkqbv0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=lx41Tnkqbv0C&printsec=frontcover&dq=the+empty+pot&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=lx41Tnkqbv0C&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [
-            "S-1"
-        ],
+        "tags": ["honesty"],
+        "primary": ["S-1"],
         "secondary": []
     },
     "13": {
         "title": "Ruthie and the (Not So) Teeny Tiny Lie",
         "link": "https://www.amazon.com/Ruthie-Not-Teeny-Tiny-Lie/dp/1599900106/ref=as_li_ss_tl?crid=3V7BNKPUV1516&keywords=ruthie+and+the+not+so+teeny+tiny+lie&qid=1579630949&sprefix=ruthie+and+the+,aps,163&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=d2b1c606785a11ecf3753f0caa73bd46&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1599900106&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Laura Rankin"
-        ],
-        "description": "Ruthie loves tiny things and when she finds a tiny camera on the playground she is very happy, but after she lies and says the camera belongs to her, nothing seems to go right. 25,000 first printing.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781599900100"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1599900106"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=HzBp3todsfoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=HzBp3todsfoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=HzBp3todsfoC&printsec=frontcover&dq=ruthie+and+the+(not+so)+tiny+lie&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=HzBp3todsfoC&dq=ruthie+and+the+(not+so)+tiny+lie&hl=&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [
-            "S-1"
-        ],
+        "tags": ["honesty"],
+        "primary": ["S-1"],
         "secondary": []
     },
     "14": {
         "title": "Sam Tells Stories",
         "link": "https://www.amazon.com/Sam-Tells-Stories-Thierry-Robberecht/dp/0618732802/ref=as_li_ss_tl?keywords=sam+tells+stories+thierry&qid=1579631012&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=b180bf95ccb092fa3c26813dbee6d62a&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0618732802&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Thierry Robberecht"
-        ],
-        "description": "Eager to make friends, Sam decides to tell a story that isn't true in order to win his new classmates over, but when he is confronted with the truth, Sam has to set the record straight and learns an important lesson in the process.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "0618732802"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9780618732807"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=DPemXWGHmXAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=DPemXWGHmXAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=DPemXWGHmXAC&printsec=frontcover&dq=sam+tells+stories&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=DPemXWGHmXAC&dq=sam+tells+stories&hl=&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [
-            "S-1"
-        ],
+        "tags": ["honesty"],
+        "primary": ["S-1"],
         "secondary": []
     },
     "15": {
         "title": "The Boy Who Cried Wolf",
         "link": "https://www.amazon.com/Boy-Who-Cried-Wolf/dp/0689874332/ref=as_li_ss_tl?keywords=the+boy+who+cried+wolf&qid=1579631077&sr=8-3&linkCode=ll1&tag=learningist05-20&linkId=5be04c9d01b1827045158e0a426b7006&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0689874332&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Aesop"
-        ],
-        "description": "George the shepherd is tired of watching his peaceful sheep play. Wouldn't it be more interesting to stir up some trouble with rumors of a wolf? In this retelling of this classic cautionary tale, readers will learn the importance of honesty, and the consequences of lying! Readers will love the charming illustrations of George, his adorable sheep, and the sneaky beast lurking in the shadows. They�ll also relate to this timeless narrative, which is as relevant as ever, even in the twenty-first century. A poignant retelling of one of Aesop�s most famous fables, this book will be at home in any library.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781499483727"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1499483724"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=g81hDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=g81hDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=g81hDwAAQBAJ&printsec=frontcover&dq=boy+who+cried+wolf&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=g81hDwAAQBAJ&dq=boy+who+cried+wolf&hl=&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
+        "tags": ["honesty"],
         "primary": [],
-        "secondary": [
-            "S-1"
-        ]
-    },
-    "16": {
-        "title": "Liar, Liar, Pants on Fire",
-        "authors": [
-            "Gordon Korman"
-        ],
-        "description": "Not wanting to lie but fearing she will have nothing to say if she fails to add color to her stories, Zoe Bent finally discovers a unique talent that helps her break her bad habit. Reprint.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "1442043911"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9781442043916"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=WW7cPgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=WW7cPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=WW7cPgAACAAJ&dq=liar,+liar,+pants+on+fire&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=WW7cPgAACAAJ&dq=liar,+liar,+pants+on+fire&hl=&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [],
-        "secondary": []
+        "secondary": ["S-1"]
     },
     "17": {
         "title": "The Wolf Who Cried Boy",
         "link": "https://www.amazon.com/Wolf-Who-Cried-Boy/dp/0142401595/ref=as_li_ss_tl?keywords=the+wolf+who+cried+boy&qid=1579631224&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=9c0dad2d1652bf07b627ae13ee86dd4b&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0142401595&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Bob Hartman"
-        ],
-        "description": "Little Wolf is tired of eating lamburgers and sloppy does, but when he tricks his parents into thinking there is a boy in the woods, they could all miss a chance for a real feast.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "1442069740"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9781442069749"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=OoM6QwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=OoM6QwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=OoM6QwAACAAJ&dq=the+wolf+who+cried+boy&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=OoM6QwAACAAJ&dq=the+wolf+who+cried+boy&hl=&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
+        "tags": ["honesty"],
         "primary": [],
-        "secondary": [
-            "S-1"
-        ]
+        "secondary": ["S-1"]
     },
     "18": {
         "title": "A Day's Work",
         "link": "https://www.amazon.com/Days-Work-Eve-Bunting/dp/0395845181/ref=as_li_ss_tl?keywords=a+day's+work+eve&qid=1579631296&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=1e56c6350d2ca9137e5f987e2b3606aa&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0395845181&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Eve Bunting"
-        ],
-        "description": "Francisco, a young Mexican-American boy, helps his grandfather find work as a gardener, even though the old man cannot speak English and knows nothing about gardening.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "0547346166"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9780547346168"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=YxoCsFGduGoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=YxoCsFGduGoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=YxoCsFGduGoC&printsec=frontcover&dq=a+day%27s+work&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=YxoCsFGduGoC&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [
-            "S-1"
-        ],
-        "secondary": []
-    },
-    "19": {
-        "title": "Scapegoat",
-        "subtitle": "A History of Blaming Other People",
-        "authors": [
-            "Charlie Campbell"
-        ],
-        "description": "A “brief and vital account” of humanity’s long history of playing the blame game, from Adam and Eve to modern politics—“a relevant and timely subject” (The Daily Telegraph). We may have come a long way from the days when a goat was symbolically saddled with all the iniquities of the children of Israel and driven into the wilderness, but has our desperate need to absolve ourselves by pinning the blame on someone else really changed all that much? Charlie Campbell highlights the plight of all those others who have found themselves in the wrong place at the wrong time, illustrating how God needs the Devil as Sherlock Holmes needs Professor Moriarty or James Bond needs “Goldfinger.” Scapegoat is a tale of human foolishness that exposes the anger and irrationality of blame-mongering while reminding readers of their own capacity for it. From medieval witch burning to reality TV, this is a brilliantly relevant and timely social history that looks at the obsession, mania, persecution, and injustice of scapegoating. “A wry, entertaining study of the history of blame . . . Trenchantly sardonic.” —Kirkus Reviews",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781468300154"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1468300156"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=ucuXDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=ucuXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=ucuXDwAAQBAJ&printsec=frontcover&dq=scapegoat&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=ucuXDwAAQBAJ&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [],
-        "secondary": []
-    },
-    "20": {
-        "title": "The Big Lie",
-        "subtitle": "Exposing the Nazi Roots of the American Left",
-        "authors": [
-            "Dinesh D'Souza"
-        ],
-        "description": "\"Of course, everything [D'Souza] says here is accurate... But it's not going to sit well with people on the American left who, of course, are portraying themselves as the exact opposite of all of this.\" —RUSH LIMBAUGH The explosive new book from Dinesh D'Souza, author of the #1 New York Times bestsellers Hillary's America, America, and Obama's America. What is \"the big lie\" of the Democratic Party? That conservatives—and President Donald Trump in particular—are fascists. Nazis, even. In a typical comment, MSNBC host Rachel Maddow says the Trump era is reminiscent of \"what it was like when Hitler first became chancellor.\" But in fact, this audacious lie is a complete inversion of the truth. Yes, there is a fascist threat in America—but that threat is from the Left and the Democratic Party. The Democratic left has an ideology virtually identical with fascism and routinely borrows tactics of intimidation and political terror from the Nazi Brownshirts. To cover up their insidious fascist agenda, Democrats loudly accuse President Trump and other Republicans of being Nazis—an obvious lie, considering the GOP has been fighting the Democrats over slavery, genocide, racism and fascism from the beginning. Now, finally, Dinesh D'Souza explodes the Left's big lie. He expertly exonerates President Trump and his supporters, then uncovers the Democratic Left's long, cozy relationship with Nazism: how the racist and genocidal acts of early Democrats inspired Adolf Hitler's campaign of death; how fascist philosophers influenced the great 20th century lions of the American Left; and how today's anti-free speech, anti-capitalist, anti-religious liberty, pro-violence Democratic Party is a frightening simulacrum of the Nazi Party. Hitler coined the term \"the big lie\" to describe a lie that \"the great masses of the people\" will fall for precisely because of how bold and monstrous the lie is. In The Big Lie, D'Souza shows that the Democratic Left's orchestrated campaign to paint President Trump and conservatives as Nazis to cover up its own fascism is, in fact, the biggest lie of all.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781621575368"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1621575365"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=bpG1DgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=bpG1DgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=bpG1DgAAQBAJ&printsec=frontcover&dq=the+big+lie&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=bpG1DgAAQBAJ&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
-        "primary": [],
+        "tags": ["honesty"],
+        "primary": ["S-1"],
         "secondary": []
     },
     "21": {
         "title": "The Lying King",
         "link": "https://www.amazon.com/Lying-King-Alex-Beard/dp/1626345287/ref=as_li_ss_tl?keywords=the+lying+king&qid=1579631405&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=531b2714c26bb2c76481e6ee09ea0c92&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1626345287&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Alex Beard"
-        ],
-        "description": "Can warthogs fly? Do tigers eat broccoli? For answers, follow along as Warthog lies his way to the throne in this timeless, yet most timely, Tale from the Watering Hole. Will the Truth catch up with the king? ​Find out as Alex Beard’s whimsical animals come to life to illuminate real world truths for children of all ages. With a nod to Aesop and Kipling, this funny and pointed parable has lessons for everyone, from the playground to the boardroom and beyond!",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781626345416"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1626345414"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=8xFpDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=8xFpDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=8xFpDwAAQBAJ&printsec=frontcover&dq=the+lying+king&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=8xFpDwAAQBAJ&source=gbs_api",
-        "tags": [
-            "honesty"
-        ],
+        "tags": ["honesty"],
         "primary": [],
-        "secondary": [
-            "S-1"
-        ]
+        "secondary": ["S-1"]
     },
     "22": {
         "title": "What Do You Do with a Problem?",
         "link": "https://www.amazon.com/What-Do-You-Problem/dp/1943200009/ref=as_li_ss_tl?keywords=what+do+you+do+with+a+problem&qid=1579631467&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=97f9328d06ff8097b2b9d67b19024e2d&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1943200009&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Kobi Yamada"
-        ],
-        "description": "\"What do you do with a problem? Especially one that follows you around and doesn't seem to be going away? Do you worry about it? Ignore it? Do you run and hide from it? This is the story of a persistent problem and the child who isn't so sure what to make of it. The longer the problem is avoided, the bigger it seems to get. But when the child finally musters up the courage to face it, the problem turns out to be something quite different than it appeared. This is a story for anyone, at any age, who has ever had a problem that they wished would go away. It's a story to inspire you to look closely at that problem and to find out why it's here. Because you might discover something amazing about your problem and yourself. What are problems for? They challenge us, shape us, push us, and help us to discover just how strong and brave and capable we really are. Even though we don't always want them, problems have a way of bringing unexpected gifts. So, what will you do with your problem?\"--Provided by publisher.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "1943200009"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9781943200009"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=1N9PjwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=1N9PjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=1N9PjwEACAAJ&dq=what+do+you+do+with+a+problem%3F&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=1N9PjwEACAAJ&dq=what+do+you+do+with+a+problem%3F&hl=&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
-        "primary": [
-            "C-1"
-        ],
+        "tags": ["critical thinking"],
+        "primary": ["C-1"],
         "secondary": []
     },
     "23": {
         "title": "What Do You Do With an Idea?",
         "link": "https://www.amazon.com/What-Do-You-Idea/dp/1938298071/ref=as_li_ss_tl?keywords=what+do+you+do+with+an+idea&qid=1579631517&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=14f671c880877f54938a59228e14fe4a&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1938298071&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "1946873624"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9781946873620"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=4dxmwwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=4dxmwwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=4dxmwwEACAAJ&dq=what+do+you+do+with+an+idea&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=4dxmwwEACAAJ&dq=what+do+you+do+with+an+idea&hl=&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
+        "tags": ["critical thinking"],
         "primary": ["C-1"],
         "secondary": []
     },
@@ -669,93 +157,24 @@
         "title": "The Most Magnificent Thing",
         "link": "https://www.amazon.com/Most-Magnificent-Thing-Ashley-Spires/dp/1554537045/ref=as_li_ss_tl?keywords=the+most+magnificent+thing&qid=1579631581&sr=8-2&linkCode=ll1&tag=learningist05-20&linkId=0a764fee378e81d94b4ad112c1a20635&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1554537045&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Ashley Spires"
-        ],
-        "description": "A little girl and her canine assistant set out to make the most magnificent thing. But after much hard work, the end result is not what the girl had in mind. Frustrated, she quits. Her assistant suggests a long walk, and as they walk, it slowly becomes clear what the girl needs to do to succeed. A charming story that will give kids the most magnificent thing: perspective!",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781771381741"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1771381744"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=6YPCDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=6YPCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=6YPCDwAAQBAJ&printsec=frontcover&dq=the+most+magnificent+thing&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=6YPCDwAAQBAJ&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
-        "primary": [
-            "C-1"
-        ],
+        "tags": ["critical thinking"],
+        "primary": ["C-1"],
         "secondary": []
     },
     "25": {
         "title": "Sarabella's Thinking Cap",
         "link": "https://www.amazon.com/Sarabellas-Thinking-Cap-Judy-Schachner/dp/0525429182/ref=as_li_ss_tl?keywords=sarabella's+thinking+cap&qid=1579631633&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=c8984e8023077f15ec2dd549dc80c71b&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0525429182&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Judy Schachner"
-        ],
-        "description": "From the bestselling creator of Skippyjon Jones, a heartwarming story about the importance of imagination and creativity. Sarabella is always thinking—conjuring, daydreaming, and creating new worlds from her imagination. There is so much going on in her head that it can barely be contained. But there are times when daydreaming is decidedly not a good thing—like when you're supposed to be doing multiplication tables. Luckily, Sarabella has an understanding teacher and with his encouragement She comes up with her own idea to show everyone who she is.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9780735230286"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "0735230285"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=Y4zCDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=Y4zCDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=Y4zCDQAAQBAJ&printsec=frontcover&dq=sarabella%27s+thinking+cap&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=Y4zCDQAAQBAJ&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
+        "tags": ["critical thinking"],
         "primary": ["C-1"],
-        "secondary": [
-
-        ]
+        "secondary": []
     },
     "26": {
         "title": "More-Igami",
         "link": "https://www.amazon.com/More-igami-Dori-Kleber/dp/1536209716/ref=as_li_ss_tl?keywords=more-igami&qid=1579631731&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=74f64e755c2f938bcc238f7eed1197a3&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1536209716&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Dori Kleber"
-        ],
-        "description": "A creative young boy with a passion for practicing origami finds a surprising source of encouragement on his diverse city block. Joey loves things that fold: maps, beds, accordions, you name it. When a visiting mother of a classmate turns a plain piece of paper into a beautiful origami crane, his eyes pop. Maybe he can learn origami, too. It's going to take practice -- on his homework, the newspaper, the thirty-eight dollars in his mother's purse . . . Enough! No more folding! But how can Joey become an origami master if he's not allowed to practice? Is there anywhere that he can hone the skill that makes him happy -- and maybe even make a new friend while he's at it?",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781536209716"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1536209716"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=so6RDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=so6RDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=so6RDwAAQBAJ&printsec=frontcover&dq=more-igami&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=so6RDwAAQBAJ&dq=more-igami&hl=&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
-        "primary": [
-
-        ],
+        "tags": ["critical thinking"],
+        "primary": [],
         "secondary": ["C-1"]
     },
     "27": {
@@ -763,180 +182,42 @@
         "subtitle": "Stretch It, Shape it",
         "link": "https://www.amazon.com/Your-Fantastic-Elastic-Brain-Stretch/dp/0982993803/ref=as_li_ss_tl?keywords=your+fantastic+elastic+brain&qid=1579631782&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=a47db7550ccc2f098e7357c89411bd0b&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0982993803&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "JoAnn M. Deak"
-        ],
-        "description": "Introduces the anatomy and functions of the brain; describes how the the brain is able to stretch and grow; and explains how mistakes are an essential part of learning.",
-        "industryIdentifiers": [{
-                "type": "ISBN_10",
-                "identifier": "0982993803"
-            },
-            {
-                "type": "ISBN_13",
-                "identifier": "9780982993804"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=dzMOtwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=dzMOtwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=dzMOtwAACAAJ&dq=your+fantastic,+elastic+brain&hl=&cd=1&source=gbs_api",
-        "infoLink": "http://books.google.com/books?id=dzMOtwAACAAJ&dq=your+fantastic,+elastic+brain&hl=&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
+        "tags": ["critical thinking"],
         "primary": ["C-1"],
-        "secondary": [
-
-        ]
+        "secondary": []
     },
     "28": {
         "title": "Rosie Revere, Engineer",
         "link": "https://www.amazon.com/Rosie-Revere-Engineer-Andrea-Beaty/dp/1419708457/ref=as_li_ss_tl?keywords=rosie+revere,+engineer&qid=1579631832&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=386d9e8da3ca9b108937f96b883cd6ef&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1419708457&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Andrea Beaty"
-        ],
-        "description": "New York Times Bestseller Rosie may seem quiet during the day, but at night she’s a brilliant inventor of gizmos and gadgets who dreams of becoming a great engineer. When her great-great-aunt Rose (Rosie the Riveter) comes for a visit and mentions her one unfinished goal—to fly—Rosie sets to work building a contraption to make her aunt’s dream come true. But when her contraption doesn’t fly but rather hovers for a moment and then crashes, Rosie deems the invention a failure. On the contrary, Aunt Rose insists that Rosie’s contraption was a raging success: you can only truly fail, she explains, if you quit. From the powerhouse author-illustrator team of Iggy Peck, Architect comes Rosie Revere, Engineer, another charming, witty picture book about believing in yourself and pursuing your passion. Ada Twist, Scientist, the companion picture book featuring the next kid from Iggy Peck's class, is available in September 2016.!--?xml:namespace prefix = o ns = \"urn:schemas-microsoft-com:office:office\" /-- Praise for Rosie Revere, Engineer\"Comically detailed mixed-media illustrations that keep the mood light and emphasize Rosie’s creativity at every turn.\"—Publishers Weekly \"The detritus of Rosie’s collections is fascinating, from broken dolls and stuffed animals to nails, tools, pencils, old lamps and possibly an erector set. And cheddar-cheese spray.\" —Kirkus Reviews \"This celebration of creativity and perseverance is told through rhyming text, which gives momentum and steady pacing to a story, consistent with the celebration of its heroine, Rosie. She’s an imaginative thinker who hides her light under a bushel (well, really, the bed) after being laughed at for one of her inventions.\" —Booklist Award 2013 Parents' Choice Award - GOLD 2014 Amelia Bloomer Project List ReadBoston's Best Read Aloud Book",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781613125304"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1613125305"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=cRDwBwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=cRDwBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=cRDwBwAAQBAJ&printsec=frontcover&dq=rosie+revere,+engineer&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=cRDwBwAAQBAJ&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
+        "tags": ["critical thinking"],
         "primary": ["C-1"],
-        "secondary": [
-
-        ]
-    },
-    "29": {
-        "title": "Learning to Fly",
-        "subtitle": "An Uncommon Memoir of Human Flight, Unexpected Love, and One Amazing Dog",
-        "authors": [
-            "Steph Davis"
-        ],
-        "description": "WITH A NEW EPILOGUE BY THE AUTHOR World-class free climber Steph Davis delivers a “thrilling and infectiously interesting” (San Francisco Book Review) memoir about rediscovering herself through love, loss, and the joy of letting go. The paperback includes a new epilogue in which Davis shares how her husband Mario’s tragic accident has affected her relationship to climbing and flying. Steph Davis is a superstar in the climbing community and has ascended some of the world’s most challenging and awe-inspiring peaks. But after her first husband makes a controversial climb in a national park, the media fallout escalates rapidly and in one fell swoop leaves her without a partner, a career, a source of income...or a purpose. In the company of only her beloved dog, Fletch, Davis sets off on a search for a new identity and discovers skydiving. Falling out of an airplane is completely antithetical to the climber’s control she’d practiced for so long, but she perseveres, turning each daring jump into an opportunity to fly, first as a skydiver, then as a base jumper. As she opens herself to falling, she also finds the strength to open herself to love again, even in the wake of heartbreak. And before too long, she meets someone who shares her passion for living life to the limit. With gorgeous black-and-white photos throughout, Learning to Fly is Davis’s fascinating account of her transformation. From her early tentative skydives, to zipping into her first wingsuit, to surviving devastating accidents against the background of breathtaking cliffs, to soaring beyond her past limits, she discovers new hope and joy in letting go.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781451652079"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1451652070"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=M74rO2qq8l0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=M74rO2qq8l0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=M74rO2qq8l0C&printsec=frontcover&dq=learning+to+fly&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=M74rO2qq8l0C&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
-        "primary": [],
-        "secondary": []
-    },
-    "30": {
-        "title": "Learning to Fly",
-        "subtitle": "An Uncommon Memoir of Human Flight, Unexpected Love, and One Amazing Dog",
-        "authors": [
-            "Steph Davis"
-        ],
-        "description": "WITH A NEW EPILOGUE BY THE AUTHOR World-class free climber Steph Davis delivers a “thrilling and infectiously interesting” (San Francisco Book Review) memoir about rediscovering herself through love, loss, and the joy of letting go. The paperback includes a new epilogue in which Davis shares how her husband Mario’s tragic accident has affected her relationship to climbing and flying. Steph Davis is a superstar in the climbing community and has ascended some of the world’s most challenging and awe-inspiring peaks. But after her first husband makes a controversial climb in a national park, the media fallout escalates rapidly and in one fell swoop leaves her without a partner, a career, a source of income...or a purpose. In the company of only her beloved dog, Fletch, Davis sets off on a search for a new identity and discovers skydiving. Falling out of an airplane is completely antithetical to the climber’s control she’d practiced for so long, but she perseveres, turning each daring jump into an opportunity to fly, first as a skydiver, then as a base jumper. As she opens herself to falling, she also finds the strength to open herself to love again, even in the wake of heartbreak. And before too long, she meets someone who shares her passion for living life to the limit. With gorgeous black-and-white photos throughout, Learning to Fly is Davis’s fascinating account of her transformation. From her early tentative skydives, to zipping into her first wingsuit, to surviving devastating accidents against the background of breathtaking cliffs, to soaring beyond her past limits, she discovers new hope and joy in letting go.",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781451652079"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1451652070"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=M74rO2qq8l0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=M74rO2qq8l0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=M74rO2qq8l0C&printsec=frontcover&dq=learning+to+fly&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=M74rO2qq8l0C&source=gbs_api",
-        "tags": [
-            "critical thinking"
-        ],
-        "primary": [],
         "secondary": []
     },
     "31": {
         "title": "The Berenstain Bears and the Truth",
         "link": "https://www.amazon.com/Berenstain-Bears-Truth-Stan/dp/0394856406/ref=as_li_ss_tl?keywords=berenstain+bears+lying&qid=1582055088&sr=8-1&linkCode=ll1&tag=learningist05-20&linkId=2222bb364a1cc3869001f8a97bf7fa68&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0394856406&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Molly Bang"
-        ],
-        "description": "\"Oh is Sophie ever angry now!\" Everybody gets angry sometimes. For children, anger can be very upsetting. Parents, teachers, and children can talk about it. People do lots of different things when they get angry. In this Caldecott-honor book, kids will see what Sophie does when she gets angry. What do you do?",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781338088441"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1338088440"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=Z4RzCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=Z4RzCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=Z4RzCwAAQBAJ&printsec=frontcover&dq=when+sophie+gets+angry,+really,+really+angry&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=Z4RzCwAAQBAJ&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": ["I-1"
-
-        ],
+        "tags": ["anger"],
+        "primary": ["I-1"],
         "secondary": []
     },
     "32": {
         "title": "The Berenstain Bears: Kindness Counts",
         "link": "https://www.amazon.com/Berenstain-Bears-Kindness-Counts-Living/dp/0310712572/ref=as_li_ss_tl?keywords=berenstain+bears+hitting&qid=1582055528&sr=8-1-fkmr1&linkCode=ll1&tag=learningist05-20&linkId=711319032d7d488575b2905916068d42&language=en_US",
         "image": "//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0310712572&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=learningist05-20&language=en_US",
-        "authors": [
-            "Molly Bang"
-        ],
-        "description": "\"Oh is Sophie ever angry now!\" Everybody gets angry sometimes. For children, anger can be very upsetting. Parents, teachers, and children can talk about it. People do lots of different things when they get angry. In this Caldecott-honor book, kids will see what Sophie does when she gets angry. What do you do?",
-        "industryIdentifiers": [{
-                "type": "ISBN_13",
-                "identifier": "9781338088441"
-            },
-            {
-                "type": "ISBN_10",
-                "identifier": "1338088440"
-            }
-        ],
-        "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=Z4RzCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-            "thumbnail": "http://books.google.com/books/content?id=Z4RzCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "previewLink": "http://books.google.com/books?id=Z4RzCwAAQBAJ&printsec=frontcover&dq=when+sophie+gets+angry,+really,+really+angry&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=Z4RzCwAAQBAJ&source=gbs_api",
-        "tags": [
-            "anger"
-        ],
-        "primary": [
-
-        ],
+        "tags": ["anger"],
+        "primary": [],
         "secondary": ["I-1"]
-    }
+    },
+    "template": {
+        "title": "",
+        "link": "",
+        "image": "",
+        "rating": "",
+        "enable": false,
+        "tags": [],
+        "primary": [],
+        "secondary": []
+    },
 }
