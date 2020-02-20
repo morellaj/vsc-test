@@ -3,17 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faTwitter, faPinterest, faFacebookSquare, faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faPinterest, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-// Component dependencies
+// Data dependencies
 import { footerList } from 'Constants';
 import colors from 'Colors';
 
-
-// Component for displaying the navbar on pages
+// Component
 export default function Footer() {
   const items = footerList.map((unit) => (
     <FooterItem key={unit.title}>

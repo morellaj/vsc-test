@@ -1,24 +1,23 @@
 // Package dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Head from 'Head';
 import { Link } from 'react-router-dom';
 
-
-// Component dependencies
-
-// Data files
+// File dependencies
+import Head from 'Head';
 import Navbar from 'Navbar';
 import Footer from 'Footer';
-import books from 'Data/books.json';
-import booksByUnit from 'Data/booksByUnit.json';
-import character from 'Data/character.json';
-import { booksUnitList, baseUrl } from 'Constants';
 import ReactGA from 'react-ga';
-import { createBooksList } from './Functions';
 import Section from './Section';
 
-// Component for displaying book pages
+// Data dependencies
+import books from 'Data/books.json';
+import booksByUnit from 'Data/booksByUnit.json';
+import character from 'Character';
+import { booksUnitList, baseUrl } from 'Constants';
+import createBooksList from './Functions';
+
+// Component
 export default function BookPage() {
   const location = window.location.search.slice(1).split('&')[0].split('=')[0];
   const section = booksUnitList[location];
@@ -26,14 +25,6 @@ export default function BookPage() {
   const bookList = booksByUnit[section];
   const primaryList = createBooksList(bookList.primary, books);
   const secondaryList = createBooksList(bookList.secondary, books);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   const bookUrl = `${baseUrl}book-recommendations?${location}`;
 
@@ -53,6 +44,14 @@ export default function BookPage() {
       "description": bookDescription
     }
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>

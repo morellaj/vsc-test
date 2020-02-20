@@ -1,20 +1,20 @@
 // Package dependencies
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import PageHeadInfo from 'Data/pageHeadInfo.json';
+import ReactGA from 'react-ga';
+
+// File dependencies
 import Navbar from 'Navbar';
 import Footer from 'Footer';
 import Head from 'Head';
-
-// Component dependencies
-import { teamData, baseUrl } from 'Constants';
-import ReactGA from 'react-ga';
 import Intro from './Intro';
 import TeamMember from './TeamMember';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Data dependencies
+import PageHeadInfo from 'Data/pageHeadInfo.json';
+import { teamData, baseUrl } from 'Constants';
+
+// Components
 export default function AboutPage() {
   const { title, description } = PageHeadInfo.AboutPage;
   const team = teamData.map((item) => (
@@ -25,10 +25,6 @@ export default function AboutPage() {
       key={item.name}
     />
   ));
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   const url = `${baseUrl}about`;
 
@@ -48,6 +44,10 @@ export default function AboutPage() {
       "description": description
     }
   ];
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
@@ -72,7 +72,6 @@ export default function AboutPage() {
     </>
   );
 }
-
 
 // Styling
 const Container = styled.main`

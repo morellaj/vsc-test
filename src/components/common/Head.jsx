@@ -1,12 +1,12 @@
 // Package dependencies
 import React from 'react';
 import { Helmet } from 'react-helmet';
+
+// Data dependencies
 import { HomePage } from 'Data/pageHeadInfo.json';
 import { baseUrl } from 'Constants';
 
-/** ********************************************* */
-// Component for displaying icons
-/** ********************************************* */
+// Component
 export default function Head(props) {
   const {
     title, description, image, height, width, type, url, author, tags, schema,

@@ -3,15 +3,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as Sentry from '@sentry/browser';
-import colors from 'Colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFlushed,
-} from '@fortawesome/free-solid-svg-icons';
+import { faFlushed } from '@fortawesome/free-solid-svg-icons';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Data dependencies
+import colors from 'Colors';
+
+// Component
 export default class Error extends React.Component {
   constructor(props) {
     super(props);

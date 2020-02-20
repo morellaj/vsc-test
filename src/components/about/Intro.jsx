@@ -3,9 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function Intro() {
   return (
     <Container>
@@ -22,7 +20,6 @@ export default function Intro() {
     </Container>
   );
 }
-
 
 // Styling
 const Container = styled.div`

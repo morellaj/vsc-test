@@ -3,7 +3,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import styled from 'styled-components';
 
-// Component for displaying an individual book
+// Component
 export default function Book(props) {
   const {
     link, subtitle, title, image,

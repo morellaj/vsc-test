@@ -4,15 +4,10 @@ import styled from 'styled-components';
 import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBookReader,
-  faInfoCircle,
-  faSignInAlt,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBookReader, faInfoCircle, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
-// Component dependencies and data files
+// Data dependencies
 import colors from 'Colors';
-
 const navbarList = [
   {
     title: 'Online Books',
@@ -31,7 +26,7 @@ const navbarList = [
   },
 ];
 
-// Component for displaying the navbar on pages
+// Component
 export default function Navbar() {
   const items = navbarList.map((unit) => {
     const { title, link, icon } = unit;

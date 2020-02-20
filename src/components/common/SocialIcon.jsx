@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
+// Data dependencies
 const iconList = {
   facebook: { icon: faFacebookF, color: '#3b5998' },
   twitter: { icon: faTwitter, color: '#00aced' },
@@ -11,9 +12,8 @@ const iconList = {
   email: { icon: faEnvelope, color: 'black' },
 };
 
-/** ********************************************* */
-// Component for displaying the activities section
-/** ********************************************* */
+
+// Component
 export default function UnitActivities(props) {
   const { tag } = props;
   const { icon, color } = iconList[tag];

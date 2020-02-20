@@ -1,6 +1,10 @@
+// Package dependencies
 import styled from 'styled-components';
+
+// Data dependencies
 import colors from 'Colors';
 
+// Components
 export const Heading = styled.h2`
   text-align: center;
   margin: 30px 0 0 0;

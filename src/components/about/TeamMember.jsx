@@ -6,10 +6,7 @@ import ReactGA from 'react-ga';
 // Data dependencies
 import colors from 'Colors';
 
-
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function TeamMember(props) {
   const [hover, setHover] = useState(false);
   const { name, responsibilities, description } = props;

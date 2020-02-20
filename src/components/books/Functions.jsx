@@ -1,12 +1,11 @@
 // Package dependencies
 import React from 'react';
-import styled from 'styled-components';
 
 // Component Dependencies
 import Book from './Book';
 
-
-export function createBooksList(list, books) {
+// Function
+export default function createBooksList(list, books) {
   const arr = list.map((book) => {
     const {
       title, subtitle, image, link,
@@ -24,8 +23,3 @@ export function createBooksList(list, books) {
 
   return arr;
 }
-
-// Styling
-const Hidden = styled.div`
-  flex: 1 0 200px;
-`;

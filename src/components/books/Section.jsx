@@ -5,8 +5,7 @@ import styled from 'styled-components';
 // Data files
 import colors from 'Colors';
 
-
-// Component for displaying a section of the book page
+// Component
 export default function Section(props) {
   const { section, bookList } = props;
   return (
