@@ -2,20 +2,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faQuestionCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch } from 'react-redux';
+import { setInfo } from 'Actions';
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
+// Component
 export default function ActivityGroup(props) {
-  const {
-    text, category, setInfo, activities,
-  } = props;
+  const { text, category, activities } = props;
+  const dispatch = useDispatch();
 
   function handleClick() {
-    setInfo({ type: 'categoryInfo', text: category });
+    dispatch(setInfo({ type: 'categoryInfo', text: category }));
   }
 
   return (

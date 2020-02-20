@@ -1,21 +1,16 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
-// Data dependencies
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function Topic(props) {
   const [display, setDisplay] = useState(false);
   const [hover, setHover] = useState(false);
   const { title } = props;
+  const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
 
   useEffect(() => {
     setDisplay(false);
@@ -28,8 +23,6 @@ export default function Topic(props) {
   function handleMouseOut() {
     setHover(false);
   }
-
-  const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
 
   return (
     <StyledLink

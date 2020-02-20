@@ -1,24 +1,21 @@
-/* eslint-disable react/destructuring-assignment */
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
-
-// Component dependencies and data files
+// File dependencies
 import { unitActivitiesConstants } from 'Constants';
 import ActivityDisplay from './ActivityDisplay';
 import SocialShare from './SocialShare';
 
+// Data dependencies
+import character from 'Character';
 const { iconList } = unitActivitiesConstants;
 
-/** ********************************************* */
-// Component for displaying the activities section
-/** ********************************************* */
-export default function UnitActivities(props) {
-  const {
-    unit, unitName, setInfo, unit: { activities, description, title },
-  } = props;
-
+// Component
+export default function UnitActivities() {
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { activities, description, title } = character[unitSelected];
   const list = {};
   const activityKeys = Object.keys(activities);
   const actValues = Object.values(activities);
@@ -50,9 +47,9 @@ export default function UnitActivities(props) {
     <Container>
       <HeaderContainer>
         <Title description={description}>{title}</Title>
-        <SocialShare unitName={unitName} title={props.title} subtitle={props.subtitle} description={props.description} />
+        <SocialShare />
       </HeaderContainer>
-      <ActivityDisplay list={list} unit={unit} setInfo={setInfo} />
+      <ActivityDisplay list={list} />
     </Container>
   );
 }

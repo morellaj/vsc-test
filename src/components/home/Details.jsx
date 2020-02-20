@@ -1,18 +1,14 @@
 // Package dependencies
 import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import { Heading } from 'Styles';
-import {
-  faChild,
-  faSmileBeam,
-  faGraduationCap,
-  faMoneyBillWaveAlt,
-  faHandshake,
-} from '@fortawesome/free-solid-svg-icons';
-import DetailItem from './DetailItem';
+import { faChild, faSmileBeam, faGraduationCap, faMoneyBillWaveAlt, faHandshake } from '@fortawesome/free-solid-svg-icons';
 
+// File dependencies
+import DetailItem from './DetailItem';
+import { Heading } from 'Styles';
 const DetailsSlides = lazy(() => import('./DetailsSlides'));
 
+// Data dependencies
 const detailsText = [
   {
     id: 1,
@@ -46,9 +42,7 @@ const detailsText = [
   },
 ];
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function Details() {
   const itemList = detailsText.map((item) => <DetailItem item={item} key={item.id} />);
   return (

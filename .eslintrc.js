@@ -32,7 +32,10 @@ module.exports = {
     'comma-dangle': 'off',
     'quote-props' : 'off',
     'quotes' : 'off',
-    'object-curly-newline': 'off'
+    'object-curly-newline': 'off',
+    'import/order': 'off',
+    'import/first': 'off',
+    'import/newline-after-import': 'off'
   },
   settings: {
     'import/resolver': {
@@ -50,6 +53,7 @@ module.exports = {
           ['Styles', './src/components/common/Styles.jsx'],
           ['Head', './src/components/common/Head.jsx'],
           ['Constants', './src/data/constants.js'],
+          ['Actions', './src/redux/actions.js'],
           ['Assets', './assets/'],
         ]
       }

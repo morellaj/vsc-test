@@ -1,30 +1,24 @@
 // Package dependencies
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-
-// Component dependencies
+// File dependencies
 import Unit from './Unit';
 import NewUnit from './NewUnit';
 
-/** ********************************************* */
-// Component for displaying the unit list on curriculum pages
-/** ********************************************* */
-export default function UnitList(props) {
+// Data dependencies
+import character from 'Character';
+
+// Component
+export default function UnitList() {
   const [open, setOpen] = useState(false);
-  const { unitList, unitSelected, setUnitSelected } = props;
-  const unitArr = unitList.map((unit, i) => (
+  const unitArr = Object.keys(character).map((key) => (
     <Unit
-      unitSelected={parseInt(unitSelected) === i}
-      num={i}
-      title={unit.title}
-      char={unit.unit.charAt(0)}
-      setUnitSelected={setUnitSelected}
+      unit={key}
       setOpen={setOpen}
-      key={unit.unit}
+      key={key}
     />
   ));
 

@@ -1,28 +1,29 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { EmailShareButton, PinterestShareButton, TwitterShareButton, FacebookShareButton } from 'react-share';
+import { useSelector } from 'react-redux';
+
+// File dependencies
 import SocialIcon from 'SocialIcon';
-import {
-  EmailShareButton, PinterestShareButton, TwitterShareButton, FacebookShareButton,
-} from 'react-share';
 
+// Data dependencies
 import { HomePage } from 'Data/pageHeadInfo.json';
+import character from 'Character';
 
-/** ********************************************* */
-// Component for displaying the activities section
-/** ********************************************* */
-export default function SocialShare(props) {
-  const {
-    unitName, description,
-  } = props;
+// Component
+export default function SocialShare() {
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { description } = character[unitSelected];
+  const urlTitle = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
   const { title } = HomePage;
   const style = { margin: '3px' };
-  const url = `https://learningisthesolution.com/units?${unitName}`;
+  const url = `https://learningisthesolution.com/units?${urlTitle}`;
   return (
     <Container>
       <PinterestShareButton
         url={url}
-        media={`https://learningisthesolution.com/assets/${unitName}-social.png`}
+        media={`https://learningisthesolution.com/assets/${urlTitle}-social.png`}
         description={`${title}!  ${description}`}
         style={style}
       >

@@ -1,87 +1,54 @@
 // Package dependencies
-import React, {
-  useState, useEffect, lazy, Suspense,
-} from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
-import colors from 'Colors';
-import character from 'Data/character.json';
-import { characterUnitNumbers, baseUrl } from 'Constants';
+import { useSelector, useDispatch } from 'react-redux';
+
+// File dependencies
 import Navbar from 'Navbar';
 import Error from 'Error';
-import UnitArr from './UnitArr';
+import { setUnit } from 'Actions';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
-
-
 const Footer = lazy(() => import('Footer'));
 const Head = lazy(() => import('Head'));
 const InformationDisplay = lazy(() => import('./info/InformationDisplay'));
 
-/** ********************************************* */
-// Component for displaying the science page
-/** ********************************************* */
+// Data dependencies
+import colors from 'Colors';
+import character from 'Data/character.json';
+import { baseUrl } from 'Constants';
+
+// Component
 export default function CharacterPage() {
-  const [unitSelected, setUnitSelected] = useState(0);
   const [done, setDone] = useState(false);
-  const [info, setInfo] = useState();
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const dispatch = useDispatch();
+
+  const { title, searchTitle, searchDescription } = character[unitSelected];
+  const urlTitle = title.replace(/\s+/g, '-').toLowerCase();
   const fullLocation = window.location.search.slice(1);
   const location = fullLocation.split('&')[0].split('=')[0];
   const url = window.location.href;
   const newUrl = url.replace(`?${fullLocation}`, '');
-  const locationUnit = characterUnitNumbers.indexOf(location) !== -1
-    ? characterUnitNumbers.indexOf(location) : unitSelected;
-  if (!done) {
-    setUnitSelected(locationUnit);
-    setDone(true);
-  }
-  window.history.replaceState({ id: location }, 'Stuff', `${newUrl}?${location}`);
-
-  const unitArr = UnitArr(character);
-  const {
-    title, subtitle, description, searchTitle, searchDescription,
-  } = character[unitArr[unitSelected].unit];
-  const colorTheme = unitArr.length ? colors[unitArr[unitSelected].unit.charAt(0)] : null;
-  const theme = colorTheme ? {
-    color: colorTheme.color,
-    darkColor: colorTheme.darkColor,
-    lightColor: colorTheme.lightColor,
-    litsColor: colors.LITS.color,
-  } : {};
-
-  const unitName = unitArr[unitSelected].unit;
-
-  const infoDisplay = info
-    ? <Suspense fallback={<div />}><InformationDisplay info={info} setInfo={setInfo} unit={unitName} /></Suspense> : null;
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
-  useEffect(() => {
-    ReactGA.modalview(window.location.pathname + window.location.search);
-  }, [unitSelected]);
-
-  useEffect(() => {
-    if (info) {
-      ReactGA.event({ category: 'units', action: `clicked ${info.type}` });
-    }
-  }, [info]);
-
-  useEffect(() => {
-    window.history.replaceState({ id: characterUnitNumbers[unitSelected] }, 'Stuff', `${newUrl}?${characterUnitNumbers[unitSelected]}`);
-  }, [unitSelected]);
-
   let headTitle = searchTitle;
   let headDescription = searchDescription;
+  const headUrl = `${baseUrl}units?${location}`;
 
   if (!done) {
     headTitle = '';
     headDescription = '';
+    if (location !== '') {
+      const keys = Object.keys(character);
+      for (let i = 0; i < keys.length; i += 1) {
+        if (location === character[keys[i]].title.replace(/\s+/g, '-').toLowerCase()) {
+          dispatch(setUnit(keys[i]));
+          break;
+        }
+      }
+    }
+    setDone(true);
   }
-
-  const headUrl = `${baseUrl}units?${location}`;
 
   const schema = [
     {
@@ -100,6 +67,27 @@ export default function CharacterPage() {
     }
   ];
 
+  const colorTheme = colors[unitSelected.charAt(0)];
+  const theme = colorTheme ? {
+    color: colorTheme.color,
+    darkColor: colorTheme.darkColor,
+    lightColor: colorTheme.lightColor,
+    litsColor: colors.LITS.color,
+  } : {};
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
+  useEffect(() => {
+    ReactGA.modalview(window.location.pathname + window.location.search);
+  }, [unitSelected]);
+
+  useEffect(() => {
+    window.history.replaceState({ id: urlTitle }, 'Stuff', `${newUrl}?${urlTitle}`);
+  }, [unitSelected]);
+
   return (
     <>
       <Suspense fallback={<div />}>
@@ -108,7 +96,7 @@ export default function CharacterPage() {
           description={headDescription}
           url={headUrl}
           type="website"
-          image={`${baseUrl}assets/${characterUnitNumbers[unitSelected]}-social.jpg`}
+          image={`${baseUrl}assets/${urlTitle}-social.jpg`}
           height="500"
           width="500"
           schema={schema}
@@ -119,23 +107,14 @@ export default function CharacterPage() {
         <Error>
           <Container>
             <UnitsContainer>
-              <UnitList
-                unitList={unitArr}
-                unitSelected={unitSelected}
-                setUnitSelected={setUnitSelected}
-              />
-              <UnitActivities
-                unit={character[unitName]}
-                unitName={characterUnitNumbers[unitSelected]}
-                setInfo={setInfo}
-                title={title}
-                subtitle={subtitle}
-                description={description}
-              />
+              <UnitList />
+              <UnitActivities />
             </UnitsContainer>
           </Container>
         </Error>
-        {infoDisplay}
+        <Suspense fallback={<div />}>
+          <InformationDisplay />
+        </Suspense>
       </ThemeProvider>
       <Suspense fallback={<div />}>
         <Footer />

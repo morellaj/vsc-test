@@ -1,5 +1,3 @@
-export const characterUnitNumbers = ['hurting-others', 'critical-thinking', 'honesty'];
-
 export const unitActivitiesConstants = {
   iconList: {
     pretend: { text: 'Guided Pretend', singleEnd: '', multipleEnd: '' },

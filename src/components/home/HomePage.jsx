@@ -1,32 +1,26 @@
-// Dependencies
+// Package dependencies
 import React, { useEffect, lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import { Heading, Button } from 'Styles';
-import Navbar from 'Navbar';
-import PageHeadInfo from 'Data/pageHeadInfo.json';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
-import { baseUrl } from 'Constants';
-import IntroPictures from './IntroPictures';
 
+
+// File dependencies
+import { Heading, Button } from 'Styles';
+import Navbar from 'Navbar';
+import IntroPictures from './IntroPictures';
 const Head = lazy(() => import('Head'));
 const Details = lazy(() => import('./Details'));
 const Footer = lazy(() => import('Footer'));
 const TopicsDisplay = lazy(() => import('./TopicsDisplay'));
 
+// Data dependencies
+import PageHeadInfo from 'Data/pageHeadInfo.json';
+import { baseUrl } from 'Constants';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function Home() {
   const { title, description } = PageHeadInfo.HomePage;
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   const schema = [
     {
@@ -44,6 +38,14 @@ export default function Home() {
       "description": description
     }
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
@@ -95,7 +97,6 @@ export default function Home() {
     </>
   );
 }
-
 
 // Styling
 const Container = styled.main`

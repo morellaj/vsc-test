@@ -1,16 +1,15 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
-// Component dependencies
+// Data dependencies
 import character from 'Data/character.json';
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
-export default function References(props) {
-  const { unit } = props;
-  const { references } = character[unit];
+// Component
+export default function References() {
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { references } = character[unitSelected];
 
   let i = 0;
   const referencesDisplay = references.map((info) => {

@@ -2,11 +2,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Data dependencies
 import colors from 'Colors';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function DetailItem(props) {
   const { item: { icon, label, text } } = props;
   return (

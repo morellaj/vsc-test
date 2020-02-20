@@ -7,9 +7,7 @@ import ReactTimeout from 'react-timeout';
 // Data dependencies
 import { introPicCount } from 'Constants';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 function IntroSlides() {
   const [count, setCount] = useState(0);
   const [mode, setMode] = useState(0);
@@ -53,7 +51,6 @@ function IntroSlides() {
   }, []);
 
   useInterval(counter, 10000);
-
 
   return (
     <>

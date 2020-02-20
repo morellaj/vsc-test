@@ -1,40 +1,39 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-
-// Component dependencies
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faTimes,
-} from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useSelector, useDispatch } from 'react-redux';
+import { setInfo } from 'Actions';
+
+// File dependencies
 import CategoryInformation from './CategoryInformation';
 import LearningGoals from './LearningGoals';
 import References from './References';
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
-export default function InformationDisplay(props) {
-  const { setInfo, unit, info: { type, text } } = props;
+// Component
+export default function InformationDisplay() {
+  const { type, text } = useSelector((state) => state.infoReducer);
+  const dispatch = useDispatch();
   let display;
   switch (type) {
     case 'categoryInfo':
       display = <CategoryInformation text={text} />;
       break;
     case 'learning-goals':
-      display = <LearningGoals unit={unit} />;
+      display = <LearningGoals />;
       break;
     case 'references':
-      display = <References unit={unit} />;
+      display = <References />;
       break;
     default:
       break;
   }
 
   return (
-    <Container onClick={() => { setInfo(null); }}>
+    <Container onClick={() => dispatch(setInfo({}))} type={type}>
       <InfoContainer onClick={(e) => (e.stopPropagation())}>
-        <IconContainer onClick={() => { setInfo(null); }}>
+        <IconContainer onClick={() => dispatch(setInfo({}))}>
           <FontAwesomeIcon icon={faTimes} />
         </IconContainer>
         {display}
@@ -42,7 +41,6 @@ export default function InformationDisplay(props) {
     </Container>
   );
 }
-
 
 // Styling
 const Container = styled.div`
@@ -56,10 +54,11 @@ const Container = styled.div`
   z-index: 100;
   top: 0;
   left: 0;
-  display:flex;
   justify-content:center;
   align-items: flex-start;
   overflow: scroll;
+
+  display: ${(props) => (props.type ? 'flex' : 'none')};
 `;
 
 

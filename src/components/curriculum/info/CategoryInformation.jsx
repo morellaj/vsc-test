@@ -2,12 +2,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Component dependencies
+// Data dependencies
 import activityCategoryText from 'Data/activityCategoryText.json';
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
+// Component
 export default function CategoryInformation(props) {
   const { text } = props;
   const { sections, title } = activityCategoryText[text];

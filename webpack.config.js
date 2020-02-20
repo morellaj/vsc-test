@@ -28,6 +28,7 @@ module.exports = {
       Styles: path.join(__dirname, 'src/components/common/Styles.jsx'),
       Error: path.join(__dirname, 'src/components/common/Error.jsx'),
       Constants: path.join(__dirname, 'src/data/constants.js'),
+      Actions: path.join(__dirname, 'src/redux/actions.js'),
       Assets: path.join(__dirname, 'assets/'),
     },
     extensions: ['.js', '.jsx'],

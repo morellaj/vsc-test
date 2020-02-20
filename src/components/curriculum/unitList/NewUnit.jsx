@@ -3,12 +3,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import colors from 'Colors';
 import { Link } from 'react-router-dom';
 
-/** ********************************************* */
-// Component for displaying an individual unit on the unit list
-/** ********************************************* */
+// Data dependencies
+import colors from 'Colors';
+
+// Component
 export default function Unit() {
   return (
     <Container to="/topic-recommendation">

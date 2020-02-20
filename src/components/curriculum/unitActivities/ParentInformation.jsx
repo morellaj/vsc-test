@@ -1,19 +1,15 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-
-// Component dependencies
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faGraduationCap,
-  faBookReader,
-  faFileAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faListAlt,
-} from '@fortawesome/free-regular-svg-icons';
+import { faGraduationCap, faBookReader, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faListAlt } from '@fortawesome/free-regular-svg-icons';
+import { useSelector, useDispatch } from 'react-redux';
+import { setInfo } from 'Actions';
 
+// Data dependencies
+import character from 'Character';
 const parentInformationList = [
   {
     id: 1,
@@ -41,19 +37,17 @@ const parentInformationList = [
   },
 ];
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
-export default function ParentInformation(props) {
-  const { unit, setInfo } = props;
-
+// Component
+export default function ParentInformation() {
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const dispatch = useDispatch();
+  const urlTitle = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
 
   function handleClick(e) {
-    setInfo({ type: e.target.getAttribute('value'), text: unit });
+    dispatch(setInfo({ type: e.target.getAttribute('value'), text: urlTitle }));
   }
 
   const style = { margin: '0 5px' };
-
 
   const display = [];
   parentInformationList.forEach((item) => {
@@ -63,7 +57,7 @@ export default function ParentInformation(props) {
     if (link) {
       display.push(
         <Item key={id}>
-          <PlainLink to={`/${link}${unit}`}>
+          <PlainLink to={`/${link}${urlTitle}`}>
             <FontAwesomeIcon icon={icon} style={style} />
             <Text>{item.text}</Text>
           </PlainLink>

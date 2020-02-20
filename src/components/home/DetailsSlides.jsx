@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import useInterval from 'react-useinterval';
 import styled from 'styled-components';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function DetailsSlides() {
   const [count, setCount] = useState(0);
   const picList = [];

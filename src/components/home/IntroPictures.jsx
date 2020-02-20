@@ -1,16 +1,14 @@
 // Package dependencies
 import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import { Button } from 'Styles';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 // Component dependencies
+import { Button } from 'Styles';
 const IntroSlides = lazy(() => import('./IntroSlides'));
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Component
 export default function IntroPictures() {
   return (
     <Container>

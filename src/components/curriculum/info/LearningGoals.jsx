@@ -1,16 +1,15 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
-// Component dependencies
+// Data dependencies
 import character from 'Data/character.json';
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
-export default function LearningGoals(props) {
-  const { unit } = props;
-  const { learningGoals, importantInformation } = character[unit];
+// Component
+export default function LearningGoals() {
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { learningGoals, importantInformation } = character[unitSelected];
 
   let i = 0;
   const learningGoalsDisplay = learningGoals.map((goal) => {
@@ -42,9 +41,6 @@ export default function LearningGoals(props) {
     </>
   );
 }
-
-// Props validation
-
 
 // Styling
 const Title = styled.div`

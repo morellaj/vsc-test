@@ -1,33 +1,34 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
 
+// File dependencies
+import { setUnit } from 'Actions';
+import character from 'Character';
 
-// Data files
+// Data dependencies
 import colors from 'Colors';
 
-
-/** ********************************************* */
-// Component for displaying an individual unit on the unit list
-/** ********************************************* */
+// Component
 export default function Unit(props) {
-  const {
-    char, title, num, setUnitSelected, unitSelected, setOpen,
-  } = props;
-
+  const { unit, setOpen } = props;
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { title } = character[unit];
+  const dispatch = useDispatch();
   function handleClick(e) {
     setOpen(false);
-    setUnitSelected(e.target.getAttribute('value'));
+    dispatch(setUnit(e.target.getAttribute('value')));
   }
 
   return (
     <Container
       onClick={handleClick}
-      value={num}
-      color={colors[char].color}
-      unitSelected={unitSelected}
+      value={unit}
+      color={colors[unit.charAt(0)].color}
+      selected={unitSelected === unit}
     >
-      <Text value={num}>
+      <Text value={unit}>
         {title}
       </Text>
     </Container>
@@ -44,13 +45,13 @@ const Container = styled.div`
   border-radius: 1px;
   font-size: 19px;
   font-weight: 700;
-  color: ${(props) => (props.unitSelected ? 'white' : 'black')};
-  background-color: ${(props) => (props.unitSelected ? props.color : 'white')};
+  color: ${(props) => (props.selected ? 'white' : 'black')};
+  background-color: ${(props) => (props.selected ? props.color : 'white')};
   cursor: pointer;
   border-radius: 3px;
 
   :hover {
-    background-color: ${(props) => (props.unitSelected ? props.color : '#D9D9D9')};
+    background-color: ${(props) => (props.selected ? props.color : '#D9D9D9')};
   };
 `;
 

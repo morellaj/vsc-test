@@ -2,26 +2,30 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+
+// File dependencies
 import Error from 'Error';
 import ActivityGroup from './ActivityGroup';
 import SingleActivity from './SingleActivity';
 import ParentInformation from './ParentInformation';
 
-/** ************************************ */
-// Component for the description of activities
-/** ******************************** */
+// Data dependencies
+import character from 'Character';
+
+// Component
 export default function ActivityDisplay(props) {
-  const { list, setInfo, unit: { title } } = props;
-  const unit = title.replace(/\s+/g, '-').toLowerCase();
+  const { list } = props;
+  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const unit = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
   const singleDisplay = [];
   const multipleDisplay = [];
 
   singleDisplay.push(
     <ActivityGroup
       text="Parent Info"
-      setInfo={setInfo}
       category="parent"
-      activities={<ParentInformation unit={unit} setInfo={setInfo} />}
+      activities={<ParentInformation unit={unit} />}
       key="parent"
     />,
   );
@@ -39,7 +43,6 @@ export default function ActivityDisplay(props) {
     const display = (
       <ActivityGroup
         text={catValues[i].text}
-        setInfo={setInfo}
         category={categories[i]}
         activities={activities}
         key={categories[i]}
@@ -60,12 +63,6 @@ export default function ActivityDisplay(props) {
     </Container>
   );
 }
-
-
-ActivityDisplay.defaultValues = {
-  title: 'Loading...',
-};
-
 
 // Styling
 const Container = styled.div`

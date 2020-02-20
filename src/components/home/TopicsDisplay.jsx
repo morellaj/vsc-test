@@ -1,21 +1,19 @@
-
 // Package dependencies
 import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import character from 'Character';
 import ReactGA from 'react-ga';
 
+// File dependencies
 const Topic = lazy(() => import('./Topic'));
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
+// Data dependencies
+import character from 'Character';
+
+// Component
 export default function TopicsDisplay() {
   const list = Object.keys(character).map((key) => {
-    const {
-      enabled, title, order, imgStyle,
-    } = character[key];
+    const { enabled, title, order, imgStyle } = character[key];
     const unit = title.replace(/\s+/g, '-').toLowerCase();
     if (enabled) {
       return (
