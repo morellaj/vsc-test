@@ -1,8 +1,7 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FaTimes } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { setInfo } from 'Actions';
 
@@ -34,7 +33,7 @@ export default function InformationDisplay() {
     <Container onClick={() => dispatch(setInfo({}))} type={type}>
       <InfoContainer onClick={(e) => (e.stopPropagation())}>
         <IconContainer onClick={() => dispatch(setInfo({}))}>
-          <FontAwesomeIcon icon={faTimes} />
+          <FaTimes />
         </IconContainer>
         {display}
       </InfoContainer>
@@ -85,6 +84,7 @@ const IconContainer = styled.div`
   cursor: pointer;
   border-radius: 5px;
   padding: 3px;
+  display: flex;
 
   :hover {
     color: white;

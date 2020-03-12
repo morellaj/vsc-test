@@ -2,9 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faPinterest, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FaTwitter, FaPinterest, FaFacebookSquare, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 // Data dependencies
 import { footerList } from 'Constants';
@@ -30,19 +28,19 @@ export default function Footer() {
         Follow Us:
         </Text>
         <IconLink to="/update-sign-up">
-          <FontAwesomeIcon icon={faEnvelope} />
+          <FaEnvelope />
         </IconLink>
         <Icon href="https://facebook.com/learningisthesolution" target="_blank">
-          <FontAwesomeIcon icon={faFacebookSquare} />
+          <FaFacebookSquare />
         </Icon>
         <Icon href="https://www.instagram.com/learning_is_the_solution/" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} />
+          <FaInstagram />
         </Icon>
         <Icon href="https://twitter.com/LearnistheSol" target="_blank">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FaTwitter />
         </Icon>
         <Icon href="https://www.pinterest.com/learningisthesolution/" target="_blank">
-          <FontAwesomeIcon icon={faPinterest} />
+          <FaPinterest />
         </Icon>
       </SocialMedia>
     </Container>
@@ -124,6 +122,7 @@ const Icon = styled.a`
   border-radius: 5px;
   padding: 10px;
   margin: 4px;
+  display: flex;
 
   :hover {
     background-color: ${colors.LITS.darkColor};
@@ -140,6 +139,7 @@ const IconLink = styled(Link)`
   border-radius: 5px;
   padding: 10px;
   margin: 4px;
+  display: flex;
 
   :hover {
     background-color: ${colors.LITS.darkColor};

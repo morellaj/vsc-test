@@ -4,10 +4,7 @@ import ReactGA from 'react-ga';
 import styled from 'styled-components';
 
 // Component
-export default function Book(props) {
-  const {
-    link, subtitle, title, image,
-  } = props;
+export default function Book({ link, subtitle, title, image }) {
   const titleDisplay = subtitle ? (
     <Title>
       {`${title}: `}

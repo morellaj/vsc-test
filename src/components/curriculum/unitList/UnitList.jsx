@@ -1,8 +1,7 @@
 // Package dependencies
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { FaCaretDown } from 'react-icons/fa';
 
 // File dependencies
 import Unit from './Unit';
@@ -28,7 +27,7 @@ export default function UnitList() {
     <Container>
       <Select onClick={() => setOpen(!open)}>
         Select a Topic
-        <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: '10px' }} />
+        <FaCaretDown style={{ marginLeft: '10px' }} />
       </Select>
       <TopicList open={open}>
         {unitArr}
@@ -48,7 +47,9 @@ const Select = styled.div`
   background-color: white;
   border-radius: 5px;
   font-size: 19px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   cursor: pointer;
 

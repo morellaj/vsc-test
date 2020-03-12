@@ -7,11 +7,9 @@ import { HomePage } from 'Data/pageHeadInfo.json';
 import { baseUrl } from 'Constants';
 
 // Component
-export default function Head(props) {
-  const {
-    title, description, image, height, width, type, url, author, tags, schema,
-  } = props;
-
+export default function Head({
+  title, description, image, height, width, type, url, author, tags, schema,
+}) {
   const image1 = image ? <meta property="og:image" content={image} /> : null;
   const image2 = image ? <meta property="og:image:secure_url" content={image} /> : null;
   const twImage = image ? <meta property="twitter:image" content={image} /> : null;

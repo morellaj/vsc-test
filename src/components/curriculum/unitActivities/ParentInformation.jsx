@@ -2,9 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faBookReader, faFileAlt } from '@fortawesome/free-solid-svg-icons';
-import { faListAlt } from '@fortawesome/free-regular-svg-icons';
+import { FaGraduationCap, FaBookReader, FaFileAlt, FaListAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { setInfo } from 'Actions';
 
@@ -14,25 +12,25 @@ const parentInformationList = [
   {
     id: 1,
     link: 'book?parents-',
-    icon: faFileAlt,
+    Icon: FaFileAlt,
     text: 'Parent Informational',
   },
   {
     id: 2,
     link: 'book-recommendations?',
-    icon: faBookReader,
+    Icon: FaBookReader,
     text: 'Recommended Books',
   },
   {
     id: 3,
     tag: 'learning-goals',
-    icon: faGraduationCap,
+    Icon: FaGraduationCap,
     text: 'Learning Goals',
   },
   {
     id: 4,
     tag: 'references',
-    icon: faListAlt,
+    Icon: FaListAlt,
     text: 'References',
   },
 ];
@@ -51,14 +49,12 @@ export default function ParentInformation() {
 
   const display = [];
   parentInformationList.forEach((item) => {
-    const {
-      link, icon, id, text, tag,
-    } = item;
+    const { link, Icon, id, text, tag } = item;
     if (link) {
       display.push(
         <Item key={id}>
           <PlainLink to={`/${link}${urlTitle}`}>
-            <FontAwesomeIcon icon={icon} style={style} />
+            <Icon style={style} />
             <Text>{item.text}</Text>
           </PlainLink>
         </Item>,
@@ -66,7 +62,7 @@ export default function ParentInformation() {
     } else {
       display.push(
         <Item key={id} value={tag} onClick={handleClick}>
-          <FontAwesomeIcon value={tag} icon={icon} style={style} />
+          <Icon value={tag} style={style} />
           <Text value={tag}>{text}</Text>
         </Item>,
       );

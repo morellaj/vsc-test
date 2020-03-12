@@ -1,18 +1,16 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Data dependencies
 import colors from 'Colors';
 
 // Component
-export default function DetailItem(props) {
-  const { item: { icon, label, text } } = props;
+export default function DetailItem({ item: { Icon, label, text } }) {
   return (
     <Container>
       <IconContainer>
-        <FontAwesomeIcon icon={icon} />
+        <Icon />
       </IconContainer>
       <TextContainer>
         <Label>{label}</Label>

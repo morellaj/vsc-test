@@ -14,8 +14,7 @@ import ParentInformation from './ParentInformation';
 import character from 'Character';
 
 // Component
-export default function ActivityDisplay(props) {
-  const { list } = props;
+export default function ActivityDisplay({ list }) {
   const { unitSelected } = useSelector((state) => state.unitReducer);
   const unit = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
   const singleDisplay = [];

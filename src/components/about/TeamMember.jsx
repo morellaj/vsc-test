@@ -7,9 +7,8 @@ import ReactGA from 'react-ga';
 import colors from 'Colors';
 
 // Component
-export default function TeamMember(props) {
+export default function TeamMember({ name, responsibilities, description }) {
   const [hover, setHover] = useState(false);
-  const { name, responsibilities, description } = props;
   const image = name.toLowerCase();
   const resp = responsibilities.map((item) => (
     <Responsibility key={item}>{item}</Responsibility>

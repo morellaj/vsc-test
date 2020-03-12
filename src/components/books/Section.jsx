@@ -6,8 +6,7 @@ import styled from 'styled-components';
 import colors from 'Colors';
 
 // Component
-export default function Section(props) {
-  const { section, bookList } = props;
+export default function Section({ section, bookList }) {
   return (
     <Container>
       <InnerContainer>

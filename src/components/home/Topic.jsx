@@ -1,18 +1,16 @@
 // Package dependencies
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { FaArrowRight } from 'react-icons/fa';
 
 // Data dependencies
 import colors from 'Colors';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 /** ********************************************* */
 // Component for displaying the home page
 /** ********************************************* */
-export default function Topic(props) {
+export default function Topic({ enabled, title, imgStyle, unit }) {
   const [hover, setHover] = useState(false);
-  const { enabled, title, imgStyle, unit } = props;
 
   return (
     <Container
@@ -28,7 +26,7 @@ export default function Topic(props) {
         <ImageCover enabled={enabled} hover={hover}>
           <CoverTitle>
             Click to see books
-            <FontAwesomeIcon icon={faArrowRight} style={{ margin: '0 5px' }} />
+            <FaArrowRight style={{ margin: '0 5px' }} />
           </CoverTitle>
         </ImageCover>
         <Picture>
@@ -128,8 +126,10 @@ const ImageCover = styled.div`
 `;
 
 const CoverTitle = styled.div`
-  
+  display: flex;
+  align-items: center;
 `;
+
 const Image = styled.img`
   width: 100%;
   position:absolute;

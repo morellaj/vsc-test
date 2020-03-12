@@ -73,7 +73,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.div`
-  padding: 0 6px;
+  padding: 3px 6px;
   border-radius: 4px;
   border-width: 1px 1px 2px;
   border-style: solid;
@@ -81,9 +81,10 @@ const Button = styled.div`
   outline: none;
   background-color: #fafafa;
   width: 20px;
+  display: flex;
+  justify-content: center;
 
   @media(max-width: 570px) {
     font-size: 14px;
-    padding: 0 2px;
   }
 `;

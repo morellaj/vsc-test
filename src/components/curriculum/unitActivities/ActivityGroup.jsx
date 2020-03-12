@@ -1,14 +1,12 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { FaQuestionCircle } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { setInfo } from 'Actions';
 
 // Component
-export default function ActivityGroup(props) {
-  const { text, category, activities } = props;
+export default function ActivityGroup({ text, category, activities }) {
   const dispatch = useDispatch();
 
   function handleClick() {
@@ -20,8 +18,7 @@ export default function ActivityGroup(props) {
       <GroupHeader>
         <div>{text}</div>
         <IconContainer onClick={handleClick}>
-          <FontAwesomeIcon
-            icon={faQuestionCircle}
+          <FaQuestionCircle
             onClick={handleClick}
             style={{ marginLeft: '5px' }}
           />
@@ -68,5 +65,5 @@ const IconContainer = styled.div`
   font-size: 16px;
   display:flex;
   align-items:center;
-
+  display: flex;
 `;

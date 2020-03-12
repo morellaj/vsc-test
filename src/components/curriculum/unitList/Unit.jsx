@@ -11,8 +11,7 @@ import character from 'Character';
 import colors from 'Colors';
 
 // Component
-export default function Unit(props) {
-  const { unit, setOpen } = props;
+export default function Unit({ unit, setOpen }) {
   const { unitSelected } = useSelector((state) => state.unitReducer);
   const { title } = character[unit];
   const dispatch = useDispatch();

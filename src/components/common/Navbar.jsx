@@ -1,44 +1,35 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookReader, faInfoCircle, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FaBookReader, FaInfoCircle, FaSignInAlt } from 'react-icons/fa';
+
+// Component dependencies
+import NavbarItem from './NavbarItem';
 
 // Data dependencies
 import colors from 'Colors';
 const navbarList = [
   {
     title: 'Online Books',
-    icon: faBookReader,
+    Icon: FaBookReader,
     link: '/units',
   },
   {
     title: 'About',
-    icon: faInfoCircle,
+    Icon: FaInfoCircle,
     link: '/about',
   },
   {
     title: 'Sign-Up',
-    icon: faSignInAlt,
+    Icon: FaSignInAlt,
     link: '/update-sign-up',
   },
 ];
 
 // Component
 export default function Navbar() {
-  const items = navbarList.map((unit) => {
-    const { title, link, icon } = unit;
-    return (
-      <Item key={title} onClick={() => ReactGA.event({ category: 'Navbar', action: `click ${title}` })}>
-        <StyledLink to={link}>
-          <Icon icon={icon} alt={title} />
-          <ItemText>{title}</ItemText>
-        </StyledLink>
-      </Item>
-    );
-  });
+  const items = navbarList.map((unit) => <NavbarItem unit={unit} />);
 
   return (
     <Container>
@@ -125,48 +116,4 @@ const List = styled.ul`
     font-size: 12px;
     margin: 0;
   }
-`;
-
-const Item = styled.li`
-  border-radius: 5px;
-  margin: 10px;
-
-  :hover{
-    background-color: ${colors.LITS.darkColor};
-  }
-
-  @media(max-width: 600px) {
-    margin: 5px;
-  }
-
-  @media(max-height: 500px) {
-    margin: 5px;
-  }
-
-  @media(max-width: 340px) {
-    margin: 3px;
-  }
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  margin: 0 5px;
-  
-  @media(max-width: 450px) {
-    display: none;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  display: flex;
-  color: inherit;
-  text-decoration: none;
-  padding: 7px;
-
-  @media(max-width: 500px) {
-    padding: 5px;
-  }
-`;
-
-const ItemText = styled.div`
-  text-align: center;
 `;

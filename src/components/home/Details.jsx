@@ -1,7 +1,7 @@
 // Package dependencies
 import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
-import { faChild, faSmileBeam, faGraduationCap, faMoneyBillWaveAlt, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { FaChild, FaSmileBeam, FaGraduationCap, FaMoneyBillWaveAlt, FaHandshake } from 'react-icons/fa';
 
 // File dependencies
 import DetailItem from './DetailItem';
@@ -14,31 +14,31 @@ const detailsText = [
     id: 1,
     label: 'Engaging',
     text: ' Kids love choosing what happens in the story',
-    icon: faChild,
+    Icon: FaChild,
   },
   {
     id: 2,
     label: 'Easy',
     text: ' Simple to access and no prep required',
-    icon: faSmileBeam,
+    Icon: FaSmileBeam,
   },
   {
     id: 3,
     label: 'Free',
     text: 'All current content will remain openly available',
-    icon: faMoneyBillWaveAlt,
+    Icon: FaMoneyBillWaveAlt,
   },
   {
     id: 4,
     label: 'Research-Based',
     text: ' Based on literature from child development experts',
-    icon: faGraduationCap,
+    Icon: FaGraduationCap,
   },
   {
     id: 5,
     label: 'Community-Driven',
     text: ' Guided by feedback and requests from our users',
-    icon: faHandshake,
+    Icon: FaHandshake,
   },
 ];
 

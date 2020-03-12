@@ -1,18 +1,17 @@
 // Package dependencies
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FaPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 // Data dependencies
 import colors from 'Colors';
 
 // Component
-export default function Unit() {
+export default function NewUnit() {
   return (
     <Container to="/topic-recommendation">
-      <FontAwesomeIcon icon={faPlus} style={{ marginRight: '10px' }} />
+      <FaPlus style={{ marginRight: '10px' }} />
       Help us decide our next unit!
     </Container>
   );
@@ -29,7 +28,9 @@ const Container = styled(Link)`
   cursor: pointer;
   border-radius: 3px;
   background-color: white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: ${colors.LITS.color};
   position: relative;
 

@@ -74,7 +74,7 @@ const HeaderContainer = styled.div`
 
 const Title = styled.h1`
   white-space: nowrap;
-  padding: ${(props) => (props.description ? '10px 0' : '10px 0 0 0')};
+  padding: ${(props) => (props.description ? '10px 0' : '10px 0')};
   margin: 0 10px;
   font-size: 40px;
 

@@ -2,14 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FaArrowRight } from 'react-icons/fa';
 
 // Component
-export default function Topic(props) {
+export default function Topic({ title }) {
   const [display, setDisplay] = useState(false);
   const [hover, setHover] = useState(false);
-  const { title } = props;
   const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export default function Topic(props) {
       <ImageCover hover={hover}>
         <CoverText>
             Click to read
-          <FontAwesomeIcon icon={faArrowRight} style={{ margin: '0 5px' }} />
+          <FaArrowRight style={{ margin: '0 5px' }} />
         </CoverText>
       </ImageCover>
       <ImageContainer>
@@ -106,8 +104,11 @@ const ImageCover = styled.div`
 `;
 
 const CoverText = styled.div`
-  
+  display: flex;
+  align-items: center;
 `;
+
+
 const Image = styled.img`
   width: 100%;
   position:absolute;

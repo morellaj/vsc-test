@@ -6,8 +6,7 @@ import styled from 'styled-components';
 import activityCategoryText from 'Data/activityCategoryText.json';
 
 // Component
-export default function CategoryInformation(props) {
-  const { text } = props;
+export default function CategoryInformation({ text }) {
   const { sections, title } = activityCategoryText[text];
 
   const display = sections.map((section) => {
