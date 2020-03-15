@@ -1,16 +1,27 @@
 // Package dependencies
-import React, { useState, useEffect } from 'react';
-import useInterval from 'react-useinterval';
+import React, { useReducer, useEffect } from 'react';
 import styled from 'styled-components';
-import ReactTimeout from 'react-timeout';
 
 // Data dependencies
 import { introPicCount } from 'Constants';
 
+function reducer(state, action) {
+  let update;
+  if (action === 'start') {
+    update = { ...state, mode: 1 };
+  } else if (action === 'interval') {
+    const { count, mode } = state;
+    const newMode = mode < 3 ? mode + 1 : 0;
+    const newCount = count < introPicCount - 1 ? count + 1 : 0;
+    update = { count: newCount, mode: newMode };
+  }
+  return update;
+}
+
 // Component
-function IntroSlides() {
-  const [count, setCount] = useState(0);
-  const [mode, setMode] = useState(0);
+export default function IntroSlides() {
+  const [state, dispatch] = useReducer(reducer, { count: 0, mode: 0 });
+  const { count, mode } = state;
   const picList = [];
   for (let i = 0; i < introPicCount; i += 1) {
     picList.push(
@@ -28,29 +39,15 @@ function IntroSlides() {
     );
   }
 
-
-  function start() {
-    setMode(1);
-  }
-
-  function counter() {
-    if (mode < 3) {
-      setMode(mode + 1);
-    } else {
-      setMode(0);
-    }
-    if (count < picList.length - 1) {
-      setCount(count + 1);
-    } else {
-      setCount(0);
-    }
-  }
-
   useEffect(() => {
-    setTimeout(start, 1);
-  }, []);
+    const timerId = setTimeout(() => dispatch('start'), 1);
+    const intervalId = setInterval(() => dispatch('interval'), 10000);
 
-  useInterval(counter, 10000);
+    return () => {
+      clearTimeout(timerId);
+      clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <>
@@ -58,8 +55,6 @@ function IntroSlides() {
     </>
   );
 }
-
-export default ReactTimeout(IntroSlides);
 
 // Styling
 const SlideContainer = styled.div`

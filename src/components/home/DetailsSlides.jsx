@@ -1,6 +1,5 @@
 // Package dependencies
-import React, { useState } from 'react';
-import useInterval from 'react-useinterval';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // Component
@@ -23,15 +22,21 @@ export default function DetailsSlides() {
     );
   }
 
-  function counter() {
-    if (count < picList.length - 1) {
-      setCount(count + 1);
-    } else {
-      setCount(0);
+  useEffect(() => {
+    function counter() {
+      if (count < picList.length - 1) {
+        setCount((c) => c + 1);
+      } else {
+        setCount(0);
+      }
     }
-  }
 
-  useInterval(counter, 5000);
+    const id = setInterval(counter, 5000);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, []);
 
   return (
     <>

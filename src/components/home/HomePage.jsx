@@ -16,6 +16,7 @@ Update notes:
 - create books search section
 - check rerendering of the home page
 - fix problem with robots.txt
+- profiling (probably not necessary)
 */
 
 // Package dependencies
@@ -35,35 +36,31 @@ const Footer = lazy(() => import('Footer'));
 const TopicsDisplay = lazy(() => import('./TopicsDisplay'));
 
 // Data dependencies
-import PageHeadInfo from 'Data/pageHeadInfo.json';
+import { HomePage } from 'Data/pageHeadInfo.json';
+const { title, description } = HomePage;
 import { baseUrl } from 'Constants';
+
+const schema = [
+  {
+    "@type": ["WebPage"],
+    "@id": `${baseUrl}#webpage`,
+    "url": baseUrl,
+    "name": title,
+    "isPartOf": {
+      "@id": `${baseUrl}#website`
+    },
+    "inLanguage": "en-US",
+    "about": {
+      "@id": `${baseUrl}#organization`
+    },
+    "description": description
+  }
+];
 
 // Component
 export default function Home() {
-  const { title, description } = PageHeadInfo.HomePage;
-
-  const schema = [
-    {
-      "@type": ["WebPage"],
-      "@id": `${baseUrl}#webpage`,
-      "url": baseUrl,
-      "name": title,
-      "isPartOf": {
-        "@id": `${baseUrl}#website`
-      },
-      "inLanguage": "en-US",
-      "about": {
-        "@id": `${baseUrl}#organization`
-      },
-      "description": description
-    }
-  ];
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
-
-  useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
