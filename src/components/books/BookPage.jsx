@@ -113,7 +113,7 @@ const Header = styled.div`
   margin: 20px;
 `;
 
-const Disclaimer = styled.div`
+const Disclaimer = styled.p`
   width: 100%;
   font-size: 14px;
 
@@ -122,7 +122,7 @@ const Disclaimer = styled.div`
   }
 `;
 
-const HeaderTitle = styled.div`
+const HeaderTitle = styled.h1`
   font-size: 35px;
   font-weight: 600;
   text-align: center;

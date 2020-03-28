@@ -21,7 +21,7 @@ export default function Section({ section, bookList }) {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.section`
   margin-bottom: 20px;
   border-radius: 20px;
   width: 100%;
@@ -50,7 +50,7 @@ const BooksContainer = styled.div`
   }
 `;
 
-const SectionHeader = styled.div`
+const SectionHeader = styled.h1`
   margin: 0;
   border-bottom: 1px solid ${colors.LITS.color};
   font-size: 25px;

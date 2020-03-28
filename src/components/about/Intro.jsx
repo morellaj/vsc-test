@@ -22,7 +22,7 @@ export default function Intro() {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.section`
   width: 700px;
   margin-top: 100px;
 
@@ -35,7 +35,7 @@ const Container = styled.div`
   }
 `;
 
-const Heading = styled.div`
+const Heading = styled.p`
   font-weight: 900;
   font-size: 65px;
   line-height: 1;
@@ -49,7 +49,7 @@ const Heading = styled.div`
   }
 `;
 
-const Paragraph = styled.div`
+const Paragraph = styled.p`
   font-size: 14px;
   padding: 20px 100px 0 0;
   line-height: 1.5;

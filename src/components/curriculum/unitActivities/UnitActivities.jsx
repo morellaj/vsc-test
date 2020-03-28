@@ -55,7 +55,7 @@ export default function UnitActivities() {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.section`
   width: 100%;
 `;
 

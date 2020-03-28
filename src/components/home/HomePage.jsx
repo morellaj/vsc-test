@@ -85,10 +85,12 @@ export default function Home() {
         <Suspense fallback={<div />}>
           <Details />
         </Suspense>
-        <Heading>Current Topics: Ages 4 to 9</Heading>
-        <Suspense fallback={<div />}>
-          <TopicsDisplay />
-        </Suspense>
+        <section>
+          <Heading>Current Topics: Ages 4 to 9</Heading>
+          <Suspense fallback={<div />}>
+            <TopicsDisplay />
+          </Suspense>
+        </section>
         <TryContainer>
           <BannerContainer>
             <source srcSet="Assets/home-banner.webp" type="image/webp" />

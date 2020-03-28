@@ -126,7 +126,7 @@ const UpperContainer = styled.div`
   }
 `;
 
-const Name = styled.div`
+const Name = styled.h1`
   color: black;
   font-weight: 500;
   font-size: 15px;
@@ -147,7 +147,7 @@ const Responsibility = styled.div`
   color: gray;
 `;
 
-const LowerContainer = styled.div`
+const LowerContainer = styled.p`
   padding-top: 16px;
   line-height: 1.5;
   font-size: 14px;

@@ -37,7 +37,7 @@ export default function References() {
 
 
 // Styling
-const Title = styled.div`
+const Title = styled.h1`
   margin: 10px;
   font-size: 25px;
   border-bottom: 1px solid ${(props) => props.theme.color};
@@ -66,6 +66,6 @@ const TextContainer = styled.div`
   };
 `;
 
-const Section = styled.div`
+const Section = styled.section`
   margin: 0 10px 20px 10px;
 `;

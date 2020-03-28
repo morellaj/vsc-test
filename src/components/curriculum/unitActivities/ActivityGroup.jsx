@@ -16,7 +16,7 @@ export default function ActivityGroup({ text, category, activities }) {
   return (
     <Container>
       <GroupHeader>
-        <div>{text}</div>
+        <h1>{text}</h1>
         <IconContainer onClick={handleClick}>
           <FaQuestionCircle
             onClick={handleClick}
@@ -30,7 +30,7 @@ export default function ActivityGroup({ text, category, activities }) {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.section`
   display: inline-block;
   margin: 20px 0;
   border-radius: 5px;

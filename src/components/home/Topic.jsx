@@ -125,7 +125,7 @@ const ImageCover = styled.div`
   display: ${(props) => (props.enabled && props.hover ? 'flex' : 'none')};
 `;
 
-const CoverTitle = styled.div`
+const CoverTitle = styled.p`
   display: flex;
   align-items: center;
 `;
@@ -135,7 +135,7 @@ const Image = styled.img`
   position:absolute;
 `;
 
-const Title = styled.div`
+const Title = styled.h2`
   font-size: 20px;
   color: white;
   font-weight: 500;

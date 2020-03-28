@@ -13,6 +13,7 @@ module.exports = {
   output: {
     filename: '[name][chunkhash:4].js',
     path: path.join(__dirname, 'dist'),
+    publicPath: '/'
   },
   resolve: {
     alias: {
@@ -36,6 +37,7 @@ module.exports = {
   devServer: {
     port: 3000,
     open: true,
+    historyApiFallback: true,
     proxy: {
       '/api': 'http://localhost:8080',
     },

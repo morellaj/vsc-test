@@ -43,7 +43,7 @@ export default function LearningGoals() {
 }
 
 // Styling
-const Title = styled.div`
+const Title = styled.h1`
   margin: 10px;
   font-size: 25px;
   border-bottom: 1px solid ${(props) => props.theme.color};
@@ -53,7 +53,7 @@ const Title = styled.div`
   };
 `;
 
-const Label = styled.div`
+const Label = styled.h1`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -68,7 +68,7 @@ const Text = styled.li`
   color: black;
 `;
 
-const Section = styled.div`
+const Section = styled.section`
   margin: 0 10px 20px 10px;
 `;
 

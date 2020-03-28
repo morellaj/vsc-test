@@ -81,7 +81,7 @@ const Container = styled.main`
   padding-bottom: 60px;
 `;
 
-const TeamContainer = styled.div`
+const TeamContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;

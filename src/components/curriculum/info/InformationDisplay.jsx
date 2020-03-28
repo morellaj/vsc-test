@@ -42,7 +42,7 @@ export default function InformationDisplay() {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.section`
   font-size: 25px;
   padding-top: 20px;
   background-color: rgba(0, 0, 0, .5);

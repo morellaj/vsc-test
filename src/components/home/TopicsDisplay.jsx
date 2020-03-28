@@ -60,7 +60,7 @@ const Container = styled.section`
   justify-content: center;
 `;
 
-const DisplayContainer = styled.div`
+const DisplayContainer = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
