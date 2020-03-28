@@ -49,7 +49,7 @@ export default function Footer() {
 
 
 // Styling
-const Container = styled.div`
+const Container = styled.footer`
   background-color: ${colors.LITS.color};
   color: white;
   display: flex;

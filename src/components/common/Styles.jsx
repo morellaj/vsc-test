@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import colors from 'Colors';
 
 // Components
-export const Heading = styled.h2`
+export const Heading = styled.h1`
   text-align: center;
   margin: 30px 0 0 0;
   font-size: 33px;

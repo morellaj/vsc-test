@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { Normalize } from 'styled-normalize';
 
 // File dependencies
 import Error from 'Error';
@@ -30,10 +31,11 @@ ReactGA.initialize('UA-157541239-1');
 ReactDOM.render((
   <Error>
     <Suspense fallback={<div />}>
+      <Normalize />
       <Provider store={store}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={CharacterPage} />
+            <Route exact path="/" component={HomePage} />
             <Route path="/units" component={CharacterPage} />
             <Route path="/book" component={PDFPage} />
             <Route path="/about" component={AboutPage} />

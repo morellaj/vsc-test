@@ -49,6 +49,7 @@
     "serialize-javascript": "^2.1.2",
     "set-value": "^3.0.1",
     "styled-components": "^4.4.1",
+    "styled-normalize": "^8.0.7",
     "typeface-roboto": "0.0.75",
     "webpack-dev-server": "^3.10.1",
     "workbox-webpack-plugin": "4.3.1",

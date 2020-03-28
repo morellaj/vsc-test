@@ -13,7 +13,7 @@ export default function DetailItem({ item: { Icon, label, text } }) {
         <Icon />
       </IconContainer>
       <TextContainer>
-        <Label>{label}</Label>
+        <strong>{label}</strong>
         {' '}
 &mdash;
         {text}
@@ -37,10 +37,6 @@ const IconContainer = styled.div`
   padding-top: 3px;
 `;
 
-const TextContainer = styled.div`
+const TextContainer = styled.p`
   margin-left: 10px;
-`;
-
-const Label = styled.span`
-  font-weight: 700;
 `;

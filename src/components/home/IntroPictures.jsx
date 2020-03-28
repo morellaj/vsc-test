@@ -40,7 +40,7 @@ export default function IntroPictures() {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.section`
   background-color: rgba(0, 0, 0, .2);
   display: flex;
   justify-content: center;
