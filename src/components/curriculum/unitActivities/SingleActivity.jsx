@@ -6,12 +6,12 @@ import { FaArrowRight } from 'react-icons/fa';
 
 // Component
 export default function Topic({ title }) {
-  const [display, setDisplay] = useState(false);
+  const [show, setShow] = useState(false);
   const [hover, setHover] = useState(false);
   const name = title.toLowerCase().replace(/[?]/g, '').replace(/\s+/g, '-');
 
   useEffect(() => {
-    setDisplay(false);
+    setShow(false);
   }, [title]);
 
   function handleMouseOver() {
@@ -41,9 +41,9 @@ export default function Topic({ title }) {
           <source srcSet={`Assets/${name}.webp`} type="image/webp" />
           <source srcSet={`Assets/${name}.jpg`} type="image/jpeg" />
           <Image
-            show={display}
+            show={show}
             alt={`book - ${name}`}
-            onLoad={() => (setDisplay(true))}
+            onLoad={() => (setShow(true))}
             src={`Assets/${name}.jpg`}
             type="image/jpeg"
           />

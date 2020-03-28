@@ -47,9 +47,6 @@ export default function BookPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
-
-  useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 

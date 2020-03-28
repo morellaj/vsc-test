@@ -1,5 +1,7 @@
 // Package dependencies
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+  useState, useEffect,
+} from 'react';
 import { baseUrl } from 'Constants';
 
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
@@ -16,54 +18,27 @@ import ScreenButton from './ScreenButton';
 import Progress from './Progress';
 import ContinueReading from './ContinueReading';
 
-const browserList = {
-  'chrome': {
-    request: 'requestFullscreen',
-    event: 'fullscreenchange',
-    exit: 'exitFullscreen',
-    full: 'fullscreenElement'
-  },
-  'moz': {
-    request: 'mozRequestFullScreen',
-    event: 'mozfullscreenchange',
-    exit: 'mozCancelFullScreen',
-    full: 'mozFullScreenElement'
-  },
-  'webkit': {
-    request: 'webkitRequestFullScreen',
-    event: 'webkitfullscreenchange',
-    exit: 'webkitExitFullscreen',
-    full: 'webkitFullscreenElement'
-  },
-  'msRequestFullScreen': {
-    request: 'msRequestFullScreen',
-    event: 'msfullscreenchange',
-    exit: 'msExitFullscreen',
-    full: 'msFullscreenElement'
-  }
-};
-
 // Component for displaying a pdf page
 export default function PDFPage() {
   const [page, setPage] = useState(1);
   const [initialPage, setInitialPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
-  const [show, setShow] = useState(true);
+  const [display, setDisplay] = useState(true);
   const [scale, setScale] = useState(1);
   const [full, setFull] = useState(false);
+  const [fullCap, setFullCap] = useState(false);
   const [perLoaded, setPerLoaded] = useState(0.00);
+  const [progDisplay, setProgDisplay] = useState(true);
+  const [height, setHeight] = useState(1000);
+  const [pageCount, setPageCount] = useState(0);
   const [mobile, setMobile] = useState(false);
-  const browserRef = useRef(null);
-  const fullscreenRef = useRef(null);
-  const progressRef = useRef(null);
-  const navbarRef = useRef(null);
   const book = window.location.search.slice(1).split('&')[0].split('=')[0];
   const file = `/assets/${book}.pdf`;
   const { title, subtitle, description } = bookInfo[book] || {};
 
   function handleResize() {
     const { innerWidth, innerHeight } = window;
-    navbarRef.current.style.display = innerHeight < 500 ? 'none' : 'flex';
+    setHeight(innerHeight);
     let navbarLoss;
     if (full || innerHeight < 500) {
       navbarLoss = 0;
@@ -79,29 +54,69 @@ export default function PDFPage() {
     }
   }
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
 
+  function onFullScreenChange() {
+    if (
+      !document.isFullScreen
+      && !document.fullscreenElement
+      && !document.webkitFullscreenElement
+      && !document.mozFullScreenElement
+      && !document.msFullscreenElement
+    ) {
+      setFull(false);
+    } else {
+      setFull(true);
+    }
+  }
+
+  useEffect(() => {
+    const elem = document.getElementById('fullscreen');
+    if (
+      elem.requestFullscreen
+      || elem.mozRequestFullScreen
+      || elem.webkitRequestFullScreen
+      || elem.msRequestFullScreen
+    ) {
+      setFullCap(true);
+    }
+
+    window.addEventListener('resize', handleResize);
+    if (elem.requestFullscreen) {
+      document.addEventListener('fullscreenchange', onFullScreenChange);
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      document.addEventListener('mozfullscreenchange', onFullScreenChange);
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      document.addEventListener('webkitfullscreenchange', onFullScreenChange);
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      document.addEventListener('msfullscreenchange', onFullScreenChange);
+    }
+    document.addEventListener('fullscreenchange', onFullScreenChange);
+    return () => {
+      localStorage.setItem(book, page);
+
+
+      window.removeEventListener('resize', handleResize);
+      if (elem.requestFullscreen) {
+        document.removeEventListener('fullscreenchange', onFullScreenChange);
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        document.removeEventListener('mozfullscreenchange', onFullScreenChange);
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        document.removeEventListener('webkitfullscreenchange', onFullScreenChange);
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        document.removeEventListener('msfullscreenchange', onFullScreenChange);
+      }
+    };
+  });
+
+  useEffect(() => {
+    handleResize();
+  }, [full]);
+
+  useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
     ReactGA.event({ category: 'book', action: '1', label: book });
 
-    progressRef.current = document.getElementById('progress');
-
-    const keys = Object.keys(browserList);
-    for (let i = 0; i < keys.length; i += 1) {
-      if (fullscreenRef.current[browserList[keys[i]].request]) {
-        browserRef.current = keys[i];
-      }
-    }
-
-    function onFullScreenChange() {
-      if (!document[browserList[browserRef.current].full]) {
-        setFull(false);
-      } else {
-        setFull(true);
-      }
-    }
-
+    window.scrollTo(0, 0);
     const initial = localStorage.getItem(book) ? parseInt(localStorage.getItem(book)) : 1;
     const browserWarn = localStorage.getItem('browserWarn') ? localStorage.getItem('browserWarn') : false;
     setInitialPage(initial);
@@ -109,22 +124,10 @@ export default function PDFPage() {
     if ((window.screen.width < 400 || window.screen.height < 400) && browserWarn !== 'true') {
       setMobile(true);
     }
-
-    window.addEventListener('resize', handleResize);
-    document.addEventListener(browserList[browserRef.current].event, onFullScreenChange);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      document.removeEventListener(browserList[browserRef.current].event, onFullScreenChange);
-    };
   }, []);
 
   useEffect(() => {
-    handleResize();
-  }, [full]);
-
-  useEffect(() => {
-    localStorage.setItem(book, page);
+    setPageCount(pageCount + 1);
     if (page === 5) {
       ReactGA.event({ category: 'book', action: '5', label: book });
     } else if (page === 40) {
@@ -137,7 +140,7 @@ export default function PDFPage() {
   function onDocumentLoadSuccess() {
     setPage(initialPage);
     setLastPage(initialPage);
-    progressRef.current.style.display = true;
+    setProgDisplay(false);
     handleResize();
   }
 
@@ -148,22 +151,37 @@ export default function PDFPage() {
   }
 
   function onItemClick(e) {
-    setShow(false);
+    setDisplay(false);
     setPage(e.pageNumber);
   }
 
   function pageRender() {
     setLastPage(page);
-    if (!show) {
-      setShow(true);
+    if (!display) {
+      setDisplay(1);
     }
   }
 
   function fullscreenClick() {
+    const elem = document.getElementById('fullscreen');
     if (!full) {
-      fullscreenRef.current[browserList[browserRef.current].request]();
-    } else {
-      document[browserList[browserRef.current].exit]();
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { /* Firefox */
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE/Edge */
+      document.msExitFullscreen();
     }
   }
 
@@ -205,10 +223,10 @@ export default function PDFPage() {
         width="600"
         schema={schema}
       />
-      <NavbarContainer ref={navbarRef}>
+      <NavbarContainer height={height}>
         <Navbar />
       </NavbarContainer>
-      <Container id="fullscreen" ref={fullscreenRef}>
+      <Container id="fullscreen">
         <ContinueReading
           initialPage={initialPage}
           setInitialPage={setInitialPage}
@@ -216,7 +234,7 @@ export default function PDFPage() {
           setLastPage={setLastPage}
           scale={scale}
         />
-        <Progress perLoaded={perLoaded} />
+        <Progress perLoaded={perLoaded} progDisplay={progDisplay} />
         <WarningContainer mobile={mobile} onClick={handleBrowserClick}>
           <BrowserWarning>
             <div>Best viewed on PC or tablet</div>
@@ -233,26 +251,22 @@ export default function PDFPage() {
           options={{ disableAutoFetch: false, disableStream: false }}
         >
           <MainPage
-            show={show}
+            display={display}
             pageNumber={page}
             scale={scale}
             renderTextLayer={false}
             onRenderSuccess={pageRender}
           >
             <ScreenButton
-              browserRef={browserRef}
+              fullCap={fullCap}
               full={full}
               fullscreenClick={fullscreenClick}
             />
           </MainPage>
-          <LastPage
-            show={show}
-            pageNumber={lastPage}
-            scale={scale}
-            renderTextLayer={false}
-          >
+          <LastPage display={display} pageNumber={lastPage} scale={scale} renderTextLayer={false}>
+            <Loading>Loading...</Loading>
             <ScreenButton
-              browserRef={browserRef}
+              fullCap={fullCap}
               full={full}
               fullscreenClick={fullscreenClick}
             />
@@ -268,7 +282,7 @@ const Container = styled.main`
 
 `;
 
-const WarningContainer = styled.div`
+const WarningContainer = styled.main`
   position: absolute;
   top: 150px;
   width: 100%;
@@ -280,7 +294,7 @@ const WarningContainer = styled.div`
   display: ${(props) => (props.mobile ? 'flex' : 'none')};
 `;
 
-const BrowserWarning = styled.div`
+const BrowserWarning = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,13 +313,46 @@ const StyledDoc = styled(Document)`
 `;
 
 const MainPage = styled(Page)`
-  display: ${(props) => (props.show ? 'block' : 'none')};
+  display: ${(props) => (props.display ? 'block' : 'none')};
 `;
 
 const LastPage = styled(Page)`
-  display: ${(props) => (props.show ? 'none' : 'block')};
+  display: ${(props) => (props.display ? 'none' : 'block')};
+`;
+
+const Loading = styled.div`
+  font-size: 25px;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding: 5px;
+  display: none;
+
+  :hover{
+    cursor: pointer;
+  }
 `;
 
 const NavbarContainer = styled.div`
-  display: flex;
+  display: ${(props) => (props.height < 500 ? 'none' : 'flex')};
 `;
+
+/*    setPageCount(pageCount + 1);
+    if (pageCount === 1) {
+      ReactGA.event({ category: 'book', action: '1', label: { book } });
+    }
+    if (pageCount === 5) {
+      ReactGA.event({ category: 'book', action: '5', label: { book } });
+    }
+    if (pageCount === 40) {
+      ReactGA.event({ category: 'book', action: '40', label: { book } });
+    }
+    if (pageCount === 100) {
+      ReactGA.event({ category: 'book', action: '80', label: { book } });
+    }
+    */

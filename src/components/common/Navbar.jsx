@@ -26,11 +26,10 @@ const navbarList = [
     link: '/update-sign-up',
   },
 ];
+const items = navbarList.map((unit) => <NavbarItem unit={unit} key={unit.title} />);
 
 // Component
 export default function Navbar() {
-  const items = navbarList.map((unit) => <NavbarItem unit={unit} />);
-
   return (
     <Container>
       <LogoContainer to="/">

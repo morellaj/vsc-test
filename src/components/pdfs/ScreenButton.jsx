@@ -7,13 +7,13 @@ import { FaExpandArrowsAlt, FaCompressArrowsAlt } from 'react-icons/fa';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {
-  const { fullCap, full, fullscreenClick } = props;
+  const { browserRef, full, fullscreenClick } = props;
 
   const Icon = full ? FaCompressArrowsAlt : FaExpandArrowsAlt;
   const text = full ? 'Exit Full Screen' : 'Full Screen';
 
   return (
-    <Container fullCap={fullCap} onClick={fullscreenClick}>
+    <Container browserRef={browserRef} onClick={fullscreenClick}>
       <Icon style={{ margin: '0 5px' }} />
       {text}
     </Container>
@@ -34,7 +34,7 @@ const Container = styled.div`
   padding: 5px;
   color: white;
   cursor: pointer;
-  display: ${(props) => (props.fullCap ? 'flex' : 'none')};
+  display: ${(props) => (props.browserRef.current ? 'flex' : 'none')};
 
   @media( max-width: 1000px) {
     font-size: 2.4vw;

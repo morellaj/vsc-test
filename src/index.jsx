@@ -33,7 +33,7 @@ ReactDOM.render((
       <Provider store={store}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={CharacterPage} />
             <Route path="/units" component={CharacterPage} />
             <Route path="/book" component={PDFPage} />
             <Route path="/about" component={AboutPage} />

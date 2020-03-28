@@ -17,6 +17,7 @@ Update notes:
 - check rerendering of the home page
 - fix problem with robots.txt
 - profiling (probably not necessary)
+- work on error handling and pdf page
 */
 
 // Package dependencies

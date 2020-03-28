@@ -1,5 +1,5 @@
 // Package dependencies
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
 import { useSelector, useDispatch } from 'react-redux';
@@ -21,7 +21,6 @@ import { baseUrl } from 'Constants';
 
 // Component
 export default function CharacterPage() {
-  const [done, setDone] = useState(false);
   const { unitSelected } = useSelector((state) => state.unitReducer);
   const dispatch = useDispatch();
 
@@ -34,21 +33,6 @@ export default function CharacterPage() {
   let headTitle = searchTitle;
   let headDescription = searchDescription;
   const headUrl = `${baseUrl}units?${location}`;
-
-  if (!done) {
-    headTitle = '';
-    headDescription = '';
-    if (location !== '') {
-      const keys = Object.keys(character);
-      for (let i = 0; i < keys.length; i += 1) {
-        if (location === character[keys[i]].title.replace(/\s+/g, '-').toLowerCase()) {
-          dispatch(setUnit(keys[i]));
-          break;
-        }
-      }
-    }
-    setDone(true);
-  }
 
   const schema = [
     {
@@ -78,13 +62,21 @@ export default function CharacterPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     ReactGA.pageview(window.location.pathname + window.location.search);
+    headTitle = '';
+    headDescription = '';
+    if (location !== '') {
+      const keys = Object.keys(character);
+      for (let i = 0; i < keys.length; i += 1) {
+        if (location === character[keys[i]].title.replace(/\s+/g, '-').toLowerCase()) {
+          dispatch(setUnit(keys[i]));
+          break;
+        }
+      }
+    }
   }, []);
 
   useEffect(() => {
     ReactGA.modalview(window.location.pathname + window.location.search);
-  }, [unitSelected]);
-
-  useEffect(() => {
     window.history.replaceState({ id: urlTitle }, 'Stuff', `${newUrl}?${urlTitle}`);
   }, [unitSelected]);
 

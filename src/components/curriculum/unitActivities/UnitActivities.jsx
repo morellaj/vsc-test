@@ -54,10 +54,6 @@ export default function UnitActivities() {
   );
 }
 
-
-// Prop validation
-
-
 // Styling
 const Container = styled.div`
   width: 100%;

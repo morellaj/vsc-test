@@ -67,7 +67,6 @@ export default function Head({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-
       {image1}
       {image2}
       {twImage}

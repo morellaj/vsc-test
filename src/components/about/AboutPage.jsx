@@ -14,37 +14,37 @@ import TeamMember from './TeamMember';
 import PageHeadInfo from 'Data/pageHeadInfo.json';
 import { teamData, baseUrl } from 'Constants';
 
+const { title, description } = PageHeadInfo.AboutPage;
+const team = teamData.map((item) => (
+  <TeamMember
+    name={item.name}
+    description={item.description}
+    responsibilities={item.responsibilities}
+    key={item.name}
+  />
+));
+
+const url = `${baseUrl}about`;
+
+const schema = [
+  {
+    "@type": ["AboutPage"],
+    "@id": `${url}/#webpage`,
+    "url": url,
+    "name": title,
+    "isPartOf": {
+      "@id": `${baseUrl}#website`
+    },
+    "inLanguage": "en-US",
+    "about": {
+      "@id": `${baseUrl}#organization`
+    },
+    "description": description
+  }
+];
+
 // Components
 export default function AboutPage() {
-  const { title, description } = PageHeadInfo.AboutPage;
-  const team = teamData.map((item) => (
-    <TeamMember
-      name={item.name}
-      description={item.description}
-      responsibilities={item.responsibilities}
-      key={item.name}
-    />
-  ));
-
-  const url = `${baseUrl}about`;
-
-  const schema = [
-    {
-      "@type": ["AboutPage"],
-      "@id": `${url}/#webpage`,
-      "url": url,
-      "name": title,
-      "isPartOf": {
-        "@id": `${baseUrl}#website`
-      },
-      "inLanguage": "en-US",
-      "about": {
-        "@id": `${baseUrl}#organization`
-      },
-      "description": description
-    }
-  ];
-
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);

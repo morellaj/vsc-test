@@ -7,11 +7,11 @@ import colors from 'Colors';
 
 // Component for the controls on the pdf page
 export default function ScreenButton(props) {
-  const { perLoaded, progDisplay } = props;
+  const { perLoaded } = props;
 
 
   return (
-    <Container progDisplay={progDisplay}>
+    <Container id="progress">
       <Text>
         {`${perLoaded}% Loaded...`}
       </Text>
@@ -21,7 +21,7 @@ export default function ScreenButton(props) {
 
 // Styling
 const Container = styled.div`
-  display: ${(props) => (props.progDisplay ? 'flex' : 'none')};
+  display: flex;
   position: absolute;
   width: 100%;
   height: 70%;
