@@ -1,6 +1,7 @@
 // Package dependencies
 import React, { useReducer, useEffect } from 'react';
 import styled from 'styled-components';
+import { flexCenter } from 'Styles';
 
 // Data dependencies
 import { introPicCount } from 'Constants';
@@ -26,15 +27,13 @@ export default function IntroSlides() {
   for (let i = 0; i < introPicCount; i += 1) {
     picList.push(
       <SlideContainer value={i} count={count} mode={mode} key={i}>
-        <PicContainer>
-          <source srcSet={`Assets/Home${i + 1}.webp`} type="image/webp" />
-          <source srcSet={`Assets/Home${i + 1}.jpg`} type="image/jpeg" />
-          <Pic
-            alt="pages from online short stories"
-            src={`Assets/Home${i + 1}.jpg`}
-            type="image/jpeg"
-          />
-        </PicContainer>
+        <source srcSet={`Assets/Home${i + 1}.webp`} type="image/webp" />
+        <source srcSet={`Assets/Home${i + 1}.jpg`} type="image/jpeg" />
+        <Pic
+          alt="pages from online short stories"
+          src={`Assets/Home${i + 1}.jpg`}
+          type="image/jpeg"
+        />
       </SlideContainer>,
     );
   }
@@ -57,10 +56,8 @@ export default function IntroSlides() {
 }
 
 // Styling
-const SlideContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const SlideContainer = styled.picture`
+  ${flexCenter};
   overflow: hidden;
   opacity: ${(props) => (props.count === props.value ? 1 : 0)};
   transition: opacity 1s, width 10s, transform 10s;
@@ -83,13 +80,6 @@ const SlideContainer = styled.div`
   @media (min-width: 1532px){
     width: ${(props) => (
     props.mode === 1 || props.mode === 2 ? `${105 * 1}%` : `${105 * 1.1}%`)}};
-`;
-
-const PicContainer = styled.picture`
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  justify-content: center;
 `;
 
 const Pic = styled.img`

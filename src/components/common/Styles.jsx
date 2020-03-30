@@ -113,12 +113,9 @@ export const test = 5;
 export const Button = styled.div`
   ${shadow1};
   ${themeLITS};
+  ${darkBGHover};
   padding: .66em .9em;
   border-radius: 5px;
   font-size: 1em;
   font-weight: 700;
-
-  :hover{
-    background-color: ${colors.LITS.darkColor}
-  }
 `;
