@@ -64,6 +64,10 @@ export const shadow2 = `
 box-shadow: 0 1px 2.5px rgba(0,0,0,0.5)
 `;
 
+export const shadow3 = `
+box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
+`;
+
 export const darkBGHover = `
   transition: background-color .5s;
   :hover{

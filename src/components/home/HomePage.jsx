@@ -102,13 +102,14 @@ export default function Home() {
               style={{ width: '100%' }}
             />
           </BannerContainer>
-          <Link
+          <Button
+            as={Link}
             to="/update-sign-up"
             style={{ textDecoration: 'none', zIndex: '100' }}
             onClick={() => ReactGA.event({ category: 'home', action: 'clicked lower read a book' })}
           >
-            <Button>Email Sign-Up</Button>
-          </Link>
+            Email Sign-Up
+          </Button>
         </TryContainer>
       </Container>
       <Suspense fallback={<div />}>
@@ -129,6 +130,11 @@ const TryContainer = styled.div`
   margin-top: 50px;
   height: 232px;
   overflow: hidden;
+  font-size: 20px;
+
+  @media(max-width: 1000px){
+    font-size: 14px;
+  }
 `;
 
 const BannerContainer = styled.picture`

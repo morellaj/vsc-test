@@ -55,10 +55,14 @@ const GlobalStyle = createGlobalStyle`
  }
 
  h1 {
+   font-size: inherit;
    margin: 0;
+   font-weight: inherit;
  }
 
  h2 {
+   font-size: inherit;
+   font-weight: inherit;
    margin: 0;
  }
 

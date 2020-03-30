@@ -1,8 +1,6 @@
 // Package dependencies
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import ReactGA from 'react-ga';
 import { flexCenter } from 'Styles';
 
 // File dependencies
@@ -14,28 +12,11 @@ import character from 'Character';
 // Component
 export default function TopicsDisplay() {
   const list = Object.keys(character).map((key) => {
-    const { enabled, title, order, imgStyle } = character[key];
+    const { enabled, title, imgStyle } = character[key];
     const unit = title.replace(/\s+/g, '-').toLowerCase();
-    if (enabled) {
-      return (
-        <Suspense fallback={<div />} key={title}>
-          <Link
-            to={`/units?${unit}`}
-            onClick={() => ReactGA.event({ category: 'home', action: `clicked ${title}` })}
-            key={order}
-          >
-            <Topic
-              enabled={enabled}
-              title={title}
-              imgStyle={imgStyle}
-              unit={unit}
-            />
-          </Link>
-        </Suspense>
-      );
-    }
     return (
       <Topic
+        to={`/units?${unit}`}
         enabled={enabled}
         title={title}
         imgStyle={imgStyle}
@@ -57,13 +38,15 @@ export default function TopicsDisplay() {
 const DisplayContainer = styled.section`
   ${flexCenter};
   flex-wrap: wrap;
-  padding: 0 50px;
+  padding: 0 2.5em;
+  font-size: 20px;
 
   @media(max-width: 1000px){
-    padding: 0 30px;
+    font-size: 16px;
+    padding: 1em;
   }
 
-  @media(max-width: 500px){
-    padding: 0 10px;
+  @media(max-width: 600px){
+    font-size: 12px;
   }
 `;

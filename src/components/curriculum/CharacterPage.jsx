@@ -3,6 +3,7 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
 import { useSelector, useDispatch } from 'react-redux';
+import queryString from 'query-string';
 
 // File dependencies
 import Navbar from 'Navbar';
@@ -20,14 +21,15 @@ import character from 'Data/character.json';
 import { baseUrl } from 'Constants';
 
 // Component
-export default function CharacterPage() {
+export default function CharacterPage({ match, location }) {
   const { unitSelected } = useSelector((state) => state.unitReducer);
   const dispatch = useDispatch();
-
+  console.log(match, location);
+  console.log(queryString.parse(location.search));
   const { title, searchTitle, searchDescription } = character[unitSelected];
   const urlTitle = title.replace(/\s+/g, '-').toLowerCase();
   const fullLocation = window.location.search.slice(1);
-  const location = fullLocation.split('&')[0].split('=')[0];
+  // const location = fullLocation.split('&')[0].split('=')[0];
   const url = window.location.href;
   const newUrl = url.replace(`?${fullLocation}`, '');
   let headTitle = searchTitle;
