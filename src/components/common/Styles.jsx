@@ -112,24 +112,11 @@ export const test = 5;
 
 export const Button = styled.div`
   ${shadow1};
-  padding: 1vw 1.4vw;
-  ;
-  background-color: ${colors.LITS.color};
-  font-size: 1.5vw;
-  color: white;
+  ${themeLITS};
+  padding: .66em .9em;
+  border-radius: 5px;
+  font-size: 1em;
   font-weight: 700;
-  text-decoration:none;
-
-
-  @media(max-width: 1000px) {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
-
-  @media(max-width: 500px) {
-    font-size: 3.5vw;
-    padding: 2vw 3vw;
-  }
 
   :hover{
     background-color: ${colors.LITS.darkColor}

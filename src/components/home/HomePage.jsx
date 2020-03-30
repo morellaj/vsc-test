@@ -28,7 +28,7 @@ import ReactGA from 'react-ga';
 
 
 // File dependencies
-import { Heading, Button } from 'Styles';
+import { Heading, Button, flexCenter } from 'Styles';
 import Navbar from 'Navbar';
 import IntroPictures from './IntroPictures';
 const Head = lazy(() => import('Head'));
@@ -121,14 +121,11 @@ export default function Home() {
 // Styling
 const Container = styled.main`
   line-height: 1.5;
-  padding-bottom: 90px;
 `;
 
 const TryContainer = styled.div`
-  display: flex;
+  ${flexCenter};
   position: relative;
-  justify-content: center;
-  align-items: center;
   margin-top: 50px;
   height: 232px;
   overflow: hidden;
