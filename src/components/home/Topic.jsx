@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FaArrowRight } from 'react-icons/fa';
 
 // Data dependencies
-import colors from 'Colors';
+import { colors, flexCenter } from 'Styles';
 
 /** ********************************************* */
 // Component for displaying the home page
@@ -44,7 +44,7 @@ export default function Topic({ enabled, title, imgStyle, unit }) {
 // Styling
 const Container = styled.div`
   margin: 30px 20px;
-  ;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
   width: 250px;
@@ -66,14 +66,13 @@ const Container = styled.div`
 `;
 
 const NotFinished = styled.div`
+  ${flexCenter};
+  display: ${(props) => (props.enabled ? 'none' : 'flex')};
   position: absolute;
   height: 100%;
   z-index: 5;
   width: 100%;
   background-color: rgba(0, 0, 0, .5);
-  display: ${(props) => (props.enabled ? 'none' : 'flex')};
-  justify-content: center;
-  align-items: center;
 `;
 
 const NotAvailable = styled.div`
@@ -114,20 +113,18 @@ const ImageContainer = styled.div`
 `;
 
 const ImageCover = styled.div`
+  ${flexCenter};
+  display: ${(props) => (props.enabled && props.hover ? 'flex' : 'none')};
   position: absolute;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   width: 100%;
   z-index: 5;
   transition: background-color 1s;
   background-color: rgba(0, 94, 167, .7);
-  display: ${(props) => (props.enabled && props.hover ? 'flex' : 'none')};
 `;
 
 const CoverTitle = styled.p`
-  display: flex;
-  align-items: center;
+  ${flexCenter};
 `;
 
 const Image = styled.img`
@@ -153,8 +150,7 @@ const Title = styled.h2`
 `;
 
 const Picture = styled.picture`
-  display: flex;
+  ${flexCenter};
   height: 100%;
-  align-items: center;
   position: relative;
 `;

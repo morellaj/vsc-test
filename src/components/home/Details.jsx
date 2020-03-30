@@ -5,7 +5,8 @@ import { FaChild, FaSmileBeam, FaGraduationCap, FaMoneyBillWaveAlt, FaHandshake 
 
 // File dependencies
 import DetailItem from './DetailItem';
-import { Heading } from 'Styles';
+import { colors, Heading } from 'Styles';
+
 const DetailsSlides = lazy(() => import('./DetailsSlides'));
 
 // Data dependencies
@@ -50,18 +51,14 @@ export default function Details() {
     <Container>
       <Heading>Free online stories for kids that teach social and emotional skills!</Heading>
       <ContentContainer>
-        <TextContainer>
-          <List>
-            {itemList}
-          </List>
-        </TextContainer>
-        <RightContainer>
-          <SlideshowContainer>
-            <Suspense fallback={<div />}>
-              <DetailsSlides />
-            </Suspense>
-          </SlideshowContainer>
-        </RightContainer>
+        <List>
+          {itemList}
+        </List>
+        <SlideshowContainer>
+          <Suspense fallback={<div />}>
+            <DetailsSlides />
+          </Suspense>
+        </SlideshowContainer>
       </ContentContainer>
     </Container>
   );
@@ -70,46 +67,26 @@ export default function Details() {
 // Styling
 const Container = styled.article`
   padding: 10px 0;
-  background-color: rgb(1,145,218, .1);
+  background-color: ${colors.LITS.lighterColor};
+  font-size: 18px;
 `;
 
 const ContentContainer = styled.div`
-  display: flex;
-  margin-top: 25px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.4em;
 
   @media (max-width: 1000px){
+    display: flex;
     flex-direction: column-reverse;
     align-items: center;
   }
 `;
 
-const TextContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 50%;
-
-  @media(max-width: 1000px){
-    width: 100%;
-  }
-`;
-
 const List = styled.ul`
-  font-size: 18px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  font-size: 1em;
   max-width: 450px;
-  padding: 0 3px;
-`;
-
-const RightContainer = styled.div`
-  width: 50%;
-  display: flex;
-  justify-content: center;
-
-  @media(max-width: 1000px){
-    width: 100%;
-  }
 `;
 
 const SlideshowContainer = styled.div`

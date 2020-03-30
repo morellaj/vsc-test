@@ -13,7 +13,7 @@ export default function DetailItem({ item: { Icon, label, text } }) {
         <Icon />
       </IconContainer>
       <TextContainer>
-        <Label>{label}</Label>
+        <strong>{label}</strong>
         {' '}
 &mdash;
         {text}
@@ -25,22 +25,18 @@ export default function DetailItem({ item: { Icon, label, text } }) {
 
 // Styling
 const Container = styled.li`
-  margin-bottom: 15px;
+  margin-bottom: .8em;
   display: flex;
+  align-items: top;
 `;
 
 const IconContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 31.25px;
+  font-size: 1.2em;
   color: ${colors.LITS.color};
-  padding-top: 3px;
+  position: relative;
+  bottom: 5px;
 `;
 
 const TextContainer = styled.p`
   margin-left: 10px;
-`;
-
-const Label = styled.h2`
-
 `;

@@ -30,7 +30,8 @@ export const colors = {
     color: "rgb(1, 145, 218)",
     title: "Learning is the Solution",
     darkColor: "rgb(0, 125, 188)",
-    lightColor: "rgb(52, 196, 255)"
+    lightColor: "rgb(52, 196, 255)",
+    lighterColor: "rgb(214, 227, 237)"
   },
   I: {
     color: "rebeccapurple",

@@ -3,6 +3,7 @@ import React, { lazy, Suspense } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import { flexCenter } from 'Styles';
 
 // File dependencies
 const Topic = lazy(() => import('./Topic'));
@@ -18,7 +19,7 @@ export default function TopicsDisplay() {
     if (enabled) {
       return (
         <Suspense fallback={<div />} key={title}>
-          <StyledLink
+          <Link
             to={`/units?${unit}`}
             onClick={() => ReactGA.event({ category: 'home', action: `clicked ${title}` })}
             key={order}
@@ -29,7 +30,7 @@ export default function TopicsDisplay() {
               imgStyle={imgStyle}
               unit={unit}
             />
-          </StyledLink>
+          </Link>
         </Suspense>
       );
     }
@@ -45,24 +46,16 @@ export default function TopicsDisplay() {
   });
 
   return (
-    <Container>
-      <DisplayContainer>
-        {list}
-      </DisplayContainer>
-    </Container>
+    <DisplayContainer>
+      {list}
+    </DisplayContainer>
   );
 }
 
 // Styling
 
-const Container = styled.section`
-  display: flex;
-  justify-content: center;
-`;
-
 const DisplayContainer = styled.section`
-  display: flex;
-  justify-content: center;
+  ${flexCenter};
   flex-wrap: wrap;
   padding: 0 50px;
 
@@ -73,8 +66,4 @@ const DisplayContainer = styled.section`
   @media(max-width: 500px){
     padding: 0 10px;
   }
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
 `;

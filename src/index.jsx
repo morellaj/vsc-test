@@ -69,6 +69,12 @@ const GlobalStyle = createGlobalStyle`
  svg {
   margin: 0 3px;
  }
+
+ ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+ }
 `;
 
 ReactDOM.render((
