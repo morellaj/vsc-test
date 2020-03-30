@@ -31,7 +31,7 @@ export default function Navbar({ unit: { title, link, Icon } }) {
 }
 
 // Styling
-const Item = styled.li`
+const Item = styled.div`
   border-radius: 5px;
   margin: 10px;
 

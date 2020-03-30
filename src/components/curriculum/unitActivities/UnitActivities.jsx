@@ -55,11 +55,11 @@ export default function UnitActivities() {
 }
 
 // Styling
-const Container = styled.section`
+const Container = styled.div`
   width: 100%;
 `;
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   border-radius: 3px;
   color: white;
   background-color: ${(props) => props.theme.color};

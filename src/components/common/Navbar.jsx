@@ -51,7 +51,7 @@ export default function Navbar() {
 }
 
 // Styling
-const Container = styled.nav`
+const Container = styled.header`
   display: flex;
   justify-content: space-between;
   background-color: ${colors.LITS.color};
@@ -95,7 +95,7 @@ const Logo = styled.img`
 
 `;
 
-const List = styled.ul`
+const List = styled.nav`
   display: flex;
   justify-content: flex-end;
   align-items:center;

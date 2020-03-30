@@ -62,7 +62,7 @@ export default function SocialShare() {
 }
 
 // Styling
-const Container = styled.div`
+const Container = styled.nav`
   margin-right: 10px;
   display: flex;
   align-items: center;

@@ -68,7 +68,7 @@ export default function Details() {
 }
 
 // Styling
-const Container = styled.section`
+const Container = styled.article`
   padding: 10px 0;
   background-color: rgb(1,145,218, .1);
 `;

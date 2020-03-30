@@ -125,7 +125,7 @@ const Container = styled.main`
   padding-bottom: 120px;
 `;
 
-const UnitsContainer = styled.div`
+const UnitsContainer = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;

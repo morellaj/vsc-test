@@ -7,7 +7,9 @@ import ReactDOM from 'react-dom';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { Normalize } from 'styled-normalize';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { normalize } from 'styled-normalize';
+import theme from './theme';
 
 // File dependencies
 import Error from 'Error';
@@ -28,26 +30,54 @@ const store = createStore(rootReducer);
 // Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
 ReactGA.initialize('UA-157541239-1');
 
+const GlobalStyle = createGlobalStyle`
+ ${normalize}
+ html {
+  background-color: #EEECEF;
+ }
+
+ body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 110vh;
+  position: relative;
+ }
+
+ h1 {
+   margin: 0;
+ }
+
+ h2 {
+   margin: 0;
+ }
+
+ p {
+   margin: 0;
+ }
+`;
+
 ReactDOM.render((
   <Error>
-    <Suspense fallback={<div />}>
-      <Normalize />
-      <Provider store={store}>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/units" component={CharacterPage} />
-            <Route path="/book" component={PDFPage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/book-recommendations" component={BookPage} />
-            <Route path="/feedback" component={FeedbackPage} />
-            <Route path="/update-sign-up" component={UpdateSignUpPage} />
-            <Route path="/topic-recommendation" component={TopicRecommendationPage} />
-            <Route path="/contact" component={ContactPage} />
-            <Route path="/disclosure" component={Disclosure} />
-          </Switch>
-        </BrowserRouter>
-      </Provider>
-    </Suspense>
+    <ThemeProvider theme={theme}>
+      <Suspense fallback={<div />}>
+        <Provider store={store}>
+          <BrowserRouter>
+            <GlobalStyle />
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/units" component={CharacterPage} />
+              <Route path="/book" component={PDFPage} />
+              <Route path="/about" component={AboutPage} />
+              <Route path="/book-recommendations" component={BookPage} />
+              <Route path="/feedback" component={FeedbackPage} />
+              <Route path="/update-sign-up" component={UpdateSignUpPage} />
+              <Route path="/topic-recommendation" component={TopicRecommendationPage} />
+              <Route path="/contact" component={ContactPage} />
+              <Route path="/disclosure" component={Disclosure} />
+            </Switch>
+          </BrowserRouter>
+        </Provider>
+      </Suspense>
+    </ThemeProvider>
   </Error>
 ), document.getElementById('app'));

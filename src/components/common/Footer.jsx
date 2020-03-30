@@ -68,7 +68,7 @@ const Container = styled.footer`
   };
 `;
 
-const List = styled.ul`
+const List = styled.nav`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -86,7 +86,7 @@ const List = styled.ul`
   }
 `;
 
-const FooterItem = styled.li`
+const FooterItem = styled.div`
   margin: 7px 15px;
 
   @media(max-width: 360px){
@@ -106,7 +106,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const SocialMedia = styled.div`
+const SocialMedia = styled.nav`
   display: flex;
   margin-right: 15px;
   align-items: center;
