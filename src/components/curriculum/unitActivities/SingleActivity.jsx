@@ -58,7 +58,7 @@ export default function Topic({ title }) {
 const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 10px;
-  border-radius: 5px;
+  ;
   position: relative;
   overflow: hidden;
   width: 250px;

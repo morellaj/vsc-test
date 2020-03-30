@@ -44,7 +44,7 @@ export default function Topic({ enabled, title, imgStyle, unit }) {
 // Styling
 const Container = styled.div`
   margin: 30px 20px;
-  border-radius: 5px;
+  ;
   position: relative;
   overflow: hidden;
   width: 250px;
@@ -82,7 +82,7 @@ const NotAvailable = styled.div`
   font-weight: 900;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2px 10px;
-  border-radius: 5px;
+  ;
 
   @media(max-width: 1000px){
     font-size: 12px;

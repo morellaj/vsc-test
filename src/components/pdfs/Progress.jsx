@@ -36,7 +36,7 @@ const Text = styled.div`
   font-size: 40px;
   font-weight: 900;
   padding: 20px;
-  border-radius: 5px;
+  ;
   box-shadow: 0 1px 1px black, 0 2px 5px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.2);
   border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.35) rgba(0,0,0,0.55);
 

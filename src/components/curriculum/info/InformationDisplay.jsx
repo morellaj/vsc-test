@@ -63,7 +63,7 @@ const Container = styled.aside`
 
 const InfoContainer = styled.div`
   position:relative;
-  border-radius: 5px;
+  ;
   background-color: white;
   box-shadow: 0 0 8px 0 #000000;
   padding: 20px;
@@ -82,7 +82,7 @@ const IconContainer = styled.div`
   right: 15px;
   color: #d3d3d3;
   cursor: pointer;
-  border-radius: 5px;
+  ;
   padding: 3px;
   display: flex;
 

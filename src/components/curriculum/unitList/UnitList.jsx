@@ -45,7 +45,7 @@ const Container = styled.nav`
 
 const Select = styled.div`
   background-color: white;
-  border-radius: 5px;
+  ;
   font-size: 19px;
   display: flex;
   align-items: center;

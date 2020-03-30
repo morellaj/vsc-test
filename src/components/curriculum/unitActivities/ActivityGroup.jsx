@@ -33,7 +33,7 @@ export default function ActivityGroup({ text, category, activities }) {
 const Container = styled.section`
   display: inline-block;
   margin: 20px 0;
-  border-radius: 5px;
+  ;
   background-color: white;
   border-bottom: 1px solid rgba(0,0,0,0.4);
 

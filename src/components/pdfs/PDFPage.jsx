@@ -286,7 +286,7 @@ const BrowserWarning = styled.div`
   align-items: center;
   width: 200px;
   font-size: 14px;
-  border-radius: 5px;
+  ;
   background-color: white;
   padding: 20px 30px;
   box-shadow: 0 1px 2.5px rgba(0,0,0,0.5);

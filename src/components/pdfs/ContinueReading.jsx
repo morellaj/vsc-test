@@ -50,7 +50,7 @@ const Container = styled.div`
 
 const InnerContainer = styled.div`
   background-color: white;
-  border-radius: 5px;
+  ;
   padding: 20px 30px;
   box-shadow: 0 1px 2.5px rgba(0,0,0,0.5);
   display: flex;

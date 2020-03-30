@@ -3,19 +3,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaTwitter, FaPinterest, FaFacebookSquare, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { darkBGHover, themeLITS, flexSpaceBetween } from 'Styles';
 
 // Data dependencies
 import { footerList } from 'Constants';
-import colors from 'Colors';
 
 // Component
 export default function Footer() {
   const items = footerList.map((unit) => (
-    <FooterItem key={unit.title}>
-      <StyledLink to={unit.link}>
-        {unit.title}
-      </StyledLink>
-    </FooterItem>
+    <StyledLink to={unit.link} key={unit.title}>
+      {unit.title}
+    </StyledLink>
   ));
 
   return (
@@ -23,13 +21,13 @@ export default function Footer() {
       <List>
         {items}
       </List>
-      <SocialMedia>
+      <SocialList>
         <Text>
         Follow Us:
         </Text>
-        <IconLink to="/update-sign-up">
+        <Icon as={Link} to="/update-sign-up">
           <FaEnvelope />
-        </IconLink>
+        </Icon>
         <Icon href="https://facebook.com/learningisthesolution" target="_blank">
           <FaFacebookSquare />
         </Icon>
@@ -42,7 +40,7 @@ export default function Footer() {
         <Icon href="https://www.pinterest.com/learningisthesolution/" target="_blank">
           <FaPinterest />
         </Icon>
-      </SocialMedia>
+      </SocialList>
     </Container>
   );
 }
@@ -50,108 +48,48 @@ export default function Footer() {
 
 // Styling
 const Container = styled.footer`
-  background-color: ${colors.LITS.color};
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  position: absolute;
-  bottom: 0;
+  ${themeLITS};
+  ${flexSpaceBetween};
+  float: bottom;
+  margin-top: 10px;
   width: 100%;
-
-
-  @media(max-width: 700px){
-    flex-direction: column;
-    height: auto;
-    padding-top: 5px;
-  };
-`;
-
-const List = styled.nav`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   font-size: 16px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding: 1em;
+  box-sizing: border-box;
 
-  @media(max-width: 700px) {
-    margin: 8px;
-  }
+  @media(max-width: 850px){
+    flex-direction: column;
+    height: 110px;
+  };
 
-  @media(max-width: 750px){
+  @media(max-width: 400px) {
     font-size: 14px;
   }
 `;
 
-const FooterItem = styled.div`
-  margin: 7px 15px;
-
-  @media(max-width: 360px){
-    margin: 7px 5px;
-  }
+const List = styled.nav`
+  ${flexSpaceBetween};
+  width: 100%;
+  max-width: 350px;
 `;
 
 const StyledLink = styled(Link)`
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
+  ${darkBGHover};
   font-weight: 500;
-  text-decoration: none;
-
-  :hover {
-    background-color: ${colors.LITS.darkColor};
-  }
 `;
 
-const SocialMedia = styled.nav`
-  display: flex;
-  margin-right: 15px;
-  align-items: center;
-
-  @media(max-width: 700px) {
-    margin: 8px;
-  }
+const SocialList = styled.nav`
+  ${flexSpaceBetween};
+  width: 100%;
+  max-width: 350px;
 `;
 
 const Icon = styled.a`
-  color: white;
-  font-size: 25px;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 4px;
-  display: flex;
-
-  :hover {
-    background-color: ${colors.LITS.darkColor};
-  };
-
-  @media(max-width: 360px){
-    font-size: 20px;
-  }
-`;
-
-const IconLink = styled(Link)`
-  color: white;
-  font-size: 25px;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 4px;
-  display: flex;
-
-  :hover {
-    background-color: ${colors.LITS.darkColor};
-  };
+  ${darkBGHover};
+  font-size: 1.5em;
 `;
 
 const Text = styled.div`
   font-weight: 500;
-  font-size: 16px;
-
-
-@media(max-width: 750px){
-    font-size: 14px;
-  }
+  font-size: 1em;
 `;

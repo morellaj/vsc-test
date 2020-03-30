@@ -74,7 +74,7 @@ const Container = styled.div`
 
 const MessageContainer = styled.div`
   background-color: white;
-  border-radius: 5px;
+  ;
   padding: 20px 30px;
   margin-top: 50px;
   box-shadow: 0 1px 2.5px rgba(0,0,0,0.5);
@@ -107,7 +107,7 @@ const Heading = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 15px 21px;
-  border-radius: 5px;
+  ;
   background-color: ${colors.LITS.color};
   font-size:16px;
   color: white;

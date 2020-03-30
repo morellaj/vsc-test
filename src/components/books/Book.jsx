@@ -23,7 +23,7 @@ export default function Book({ link, subtitle, title, image }) {
 
 // Styling
 const Container = styled.a`
-  border-radius: 5px;
+  ;
   text-decoration: none;
   color: #357bf0;
   font-weight: 500;
@@ -50,7 +50,7 @@ const SubTitle = styled.span`
 `;
 
 const BookContainer = styled.div`
-  border-radius: 5px;
+  ;
   border: 1px solid lightgray;
   height: 200px;
 

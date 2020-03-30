@@ -26,7 +26,7 @@ const Container = styled.section`
   border-radius: 20px;
   width: 100%;
   background-color: white;
-  border-radius: 5px;
+  ;
   border-bottom: 1px solid rgba(0,0,0,0.4);
 `;
 

@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import { IconContext } from 'react-icons';
 import theme from './theme';
 
 // File dependencies
@@ -32,6 +33,7 @@ ReactGA.initialize('UA-157541239-1');
 
 const GlobalStyle = createGlobalStyle`
  ${normalize}
+
  html {
   background-color: #EEECEF;
  }
@@ -39,8 +41,17 @@ const GlobalStyle = createGlobalStyle`
  body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  min-height: 110vh;
+  min-height: 100vh;
   position: relative;
+  font-size: 20px;
+ }
+
+ a {
+   border-radius: 5px;
+   color: inherit;
+   text-decoration: none;
+   padding: 5px;
+   cursor: pointer;
  }
 
  h1 {
@@ -54,6 +65,10 @@ const GlobalStyle = createGlobalStyle`
  p {
    margin: 0;
  }
+
+ svg {
+  margin: 0 3px;
+ }
 `;
 
 ReactDOM.render((
@@ -63,18 +78,20 @@ ReactDOM.render((
         <Provider store={store}>
           <BrowserRouter>
             <GlobalStyle />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/units" component={CharacterPage} />
-              <Route path="/book" component={PDFPage} />
-              <Route path="/about" component={AboutPage} />
-              <Route path="/book-recommendations" component={BookPage} />
-              <Route path="/feedback" component={FeedbackPage} />
-              <Route path="/update-sign-up" component={UpdateSignUpPage} />
-              <Route path="/topic-recommendation" component={TopicRecommendationPage} />
-              <Route path="/contact" component={ContactPage} />
-              <Route path="/disclosure" component={Disclosure} />
-            </Switch>
+            <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/units" component={CharacterPage} />
+                <Route path="/book" component={PDFPage} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/book-recommendations" component={BookPage} />
+                <Route path="/feedback" component={FeedbackPage} />
+                <Route path="/update-sign-up" component={UpdateSignUpPage} />
+                <Route path="/topic-recommendation" component={TopicRecommendationPage} />
+                <Route path="/contact" component={ContactPage} />
+                <Route path="/disclosure" component={Disclosure} />
+              </Switch>
+            </IconContext.Provider>
           </BrowserRouter>
         </Provider>
       </Suspense>

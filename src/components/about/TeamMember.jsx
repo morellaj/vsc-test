@@ -67,7 +67,7 @@ export default function TeamMember({ name, responsibilities, description }) {
 // Styling
 const Container = styled.div`
   display: flex;
-  border-radius: 5px;
+  ;
   background-color: white;
   padding: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
@@ -81,7 +81,7 @@ const Container = styled.div`
 const ImageContainer = styled.div`
   width: 140px;
   height: 220px;
-  border-radius: 5px;
+  ;
   margin-right: 30px;
   display: flex;
   justify-content: center;
