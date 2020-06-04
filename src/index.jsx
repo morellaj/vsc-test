@@ -7,14 +7,14 @@ import ReactDOM from 'react-dom';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import { ThemeProvider } from 'styled-components';
 import { IconContext } from 'react-icons';
 import theme from './theme';
 
 // File dependencies
 import Error from 'Error';
 import rootReducer from './redux/reducers';
+import GlobalStyle from './components/common/GlobalStyle';
 const HomePage = lazy(() => import('./components/home/HomePage'));
 const CharacterPage = lazy(() => import('./components/curriculum/CharacterPage'));
 const PDFPage = lazy(() => import('./components/pdfs/PDFPage'));
@@ -28,58 +28,11 @@ const Disclosure = lazy(() => import('./components/other/Disclosure'));
 // const SitemapBuilder from './components/other/SitemapBuilder'));
 
 const store = createStore(rootReducer);
-// Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
+if (process.env.NODE_ENV === 'production') {
+  Sentry.init({ dsn: 'https://a247611c1b654f69aa4fed33d5789e5c@sentry.io/2274414' });
+}
 ReactGA.initialize('UA-157541239-1');
 
-const GlobalStyle = createGlobalStyle`
- ${normalize}
-
- html {
-  background-color: #EEECEF;
- }
-
- body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
-  position: relative;
-  font-size: 20px;
- }
-
- a {
-   border-radius: 5px;
-   color: inherit;
-   text-decoration: none;
-   padding: 5px;
-   cursor: pointer;
- }
-
- h1 {
-   font-size: inherit;
-   margin: 0;
-   font-weight: inherit;
- }
-
- h2 {
-   font-size: inherit;
-   font-weight: inherit;
-   margin: 0;
- }
-
- p {
-   margin: 0;
- }
-
- svg {
-  margin: 0 3px;
- }
-
- ul {
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
- }
-`;
 
 ReactDOM.render((
   <Error>

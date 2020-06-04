@@ -1,25 +1,3 @@
-/*
-Update notes:
-- test for rendering when it shouldn't be
-- find way to consolidate repeated CSS
-- use default props where needed
-- use higher order components
-- use props spread operator where needed
-- remove navbar and footer from components
-- combine contact, feedback, etc. and make small format fixes
-- fix error message to just ask for refresh or different browser
-- get books to pull info without booksbyunit
-- work on pdf page section
-- enables fully working
-- automate the SEO stuff
-- create blog section
-- create books search section
-- check rerendering of the home page
-- fix problem with robots.txt
-- profiling (probably not necessary)
-- work on error handling and pdf page
-*/
-
 // Package dependencies
 import React, { useEffect, lazy, Suspense } from 'react';
 import styled from 'styled-components';
