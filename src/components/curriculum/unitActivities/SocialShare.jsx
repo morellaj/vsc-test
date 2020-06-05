@@ -9,13 +9,13 @@ import CharacterContext from '../CharacterContext';
 
 // Data dependencies
 import { homePage } from 'Data/pageHeadInfo.json';
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 
 // Component
 export default function SocialShare() {
   const { unitSelected } = useContext(CharacterContext);
-  const { description } = character[unitSelected];
-  const urlTitle = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
+  const { description } = unitDetails[unitSelected];
+  const urlTitle = unitDetails[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
   const { title } = homePage;
   const style = { margin: '3px' };
   const url = `https://learningisthesolution.com/units?${urlTitle}`;

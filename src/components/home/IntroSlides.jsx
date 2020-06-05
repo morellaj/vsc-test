@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import { flexCenter } from 'Styles';
 
 // Data dependencies
-import { introPicCount } from 'Constants';
+import { introPicCount } from 'Data/constants';
+
+// File dependencies
+import Picture from 'Common/Picture';
 
 function reducer(state, action) {
   let update;
@@ -27,12 +30,10 @@ export default function IntroSlides() {
   for (let i = 0; i < introPicCount; i += 1) {
     picList.push(
       <SlideContainer value={i} count={count} mode={mode} key={i}>
-        <source srcSet={`Assets/Home${i + 1}.webp`} type="image/webp" />
-        <source srcSet={`Assets/Home${i + 1}.jpg`} type="image/jpeg" />
-        <Pic
+        <Picture
+          src={`Assets/Home${i + 1}`}
           alt="pages from online short stories"
-          src={`Assets/Home${i + 1}.jpg`}
-          type="image/jpeg"
+          style={{ width: '100%' }}
         />
       </SlideContainer>,
     );
@@ -56,10 +57,11 @@ export default function IntroSlides() {
 }
 
 // Styling
+
 const SlideContainer = styled.picture`
   ${flexCenter};
   overflow: hidden;
-  opacity: ${(props) => (props.count === props.value ? 1 : 0)};
+  opacity: ${({ count, value }) => (count === value ? 1 : 0)};
   transition: opacity 1s, width 10s, transform 10s;
   transition-timing-function: linear;
   position: absolute;
@@ -67,21 +69,17 @@ const SlideContainer = styled.picture`
   box-shadow: 0 0 0 #000;
   transform: translate3d(0, 0, 0);
 
-  transform: ${(props) => (
-    props.mode === 0 || props.mode === 1 ? 'translateX(-20px)' : 'translateX(20px)')};
+  transform: ${({ mode }) => (
+    mode === 0 || mode === 1 ? 'translateX(-20px)' : 'translateX(20px)')};
 
-  width: ${(props) => (
-    props.mode === 1 || props.mode === 2 ? `${118.6 * 1}%` : `${118.6 * 1.1}%`)};
+  width: ${({ mode }) => (
+    mode === 1 || mode === 2 ? `${118.6 * 1}%` : `${118.6 * 1.1}%`)};
 
   @media (min-width: 1280px){
-    width: ${(props) => (
-    props.mode === 1 || props.mode === 2 ? `${1519 * 1}px` : `${1519 * 1.1}px`)}};
+    width: ${({ mode }) => (
+    mode === 1 || mode === 2 ? `${1519 * 1}px` : `${1519 * 1.1}px`)}};
 
   @media (min-width: 1532px){
-    width: ${(props) => (
-    props.mode === 1 || props.mode === 2 ? `${105 * 1}%` : `${105 * 1.1}%`)}};
-`;
-
-const Pic = styled.img`
-  width: 100%;
+    width: ${({ mode }) => (
+    mode === 1 || mode === 2 ? `${105 * 1}%` : `${105 * 1.1}%`)}};
 `;

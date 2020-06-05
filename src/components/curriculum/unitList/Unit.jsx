@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import CharacterContext from '../CharacterContext';
 
 // File dependencies
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 
 // Data dependencies
 import colors from 'Colors';
@@ -12,7 +12,7 @@ import colors from 'Colors';
 // Component
 export default function Unit({ unit, setOpen }) {
   const { unitSelected, setUnitSelected } = useContext(CharacterContext);
-  const { title } = character[unit];
+  const { title } = unitDetails[unit];
   function handleClick(e) {
     setOpen(false);
     setUnitSelected(e.target.getAttribute('value'));

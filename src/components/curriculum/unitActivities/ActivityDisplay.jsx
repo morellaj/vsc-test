@@ -11,12 +11,12 @@ import ParentInformation from './ParentInformation';
 import CharacterContext from '../CharacterContext';
 
 // Data dependencies
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 
 // Component
 export default function ActivityDisplay({ list }) {
   const { unitSelected } = useContext(CharacterContext);
-  const unit = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
+  const unit = unitDetails[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
   const singleDisplay = [];
   const multipleDisplay = [];
 

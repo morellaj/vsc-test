@@ -56,7 +56,8 @@ module.exports = {
           ['Constants', './src/data/constants.js'],
           ['Actions', './src/redux/actions.js'],
           ['Assets', './assets/'],
-        ]
+        ],
+        extensions: ['.js', '.jsx', '.json']
       }
     }
   },

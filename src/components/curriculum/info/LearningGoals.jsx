@@ -6,12 +6,12 @@ import styled from 'styled-components';
 import CharacterContext from '../CharacterContext';
 
 // Data dependencies
-import character from 'Data/character.json';
+import unitDetails from 'Data/unitDetails.json';
 
 // Component
 export default function LearningGoals() {
   const { unitSelected } = useContext(CharacterContext);
-  const { learningGoals, importantInformation } = character[unitSelected];
+  const { learningGoals, importantInformation } = unitDetails[unitSelected];
 
   let i = 0;
   const learningGoalsDisplay = learningGoals.map((goal) => {

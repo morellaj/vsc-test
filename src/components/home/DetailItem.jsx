@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Data dependencies
-import colors from 'Colors';
+import colors from 'Data/colors.json';
 
 // Component
 export default function DetailItem({ item: { Icon, label, text } }) {

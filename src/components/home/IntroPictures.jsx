@@ -1,26 +1,20 @@
 // Package dependencies
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import ReactGA from 'react-ga';
 
 // Component dependencies
 import { Button, flexCenter } from 'Styles';
-const IntroSlides = lazy(() => import('./IntroSlides'));
+import IntroSlides from './IntroSlides';
+import gaEvent from 'Common/gaEvent';
 
 // Component
 export default function IntroPictures() {
   return (
     <Container>
-      <Suspense fallback={<div />}>
-        <IntroSlides />
-      </Suspense>
+      <IntroSlides />
       <TryButtonContainer>
-        <Button
-          as={Link}
-          to="book?super-jet-3000"
-          onClick={() => ReactGA.event({ category: 'home', action: 'clicked upper read a book' })}
-        >
+        <Button as={Link} to="book?super-jet-3000" onClick={gaEvent('home', 'clicked upper book')}>
            Read Book
         </Button>
       </TryButtonContainer>
@@ -77,7 +71,6 @@ const IntroText = styled.h1`
   @media(max-width: 650px){
     font-size: 4.5vw;
   }
-
 `;
 
 const TryButtonContainer = styled.div`

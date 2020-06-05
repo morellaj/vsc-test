@@ -9,13 +9,13 @@ import SocialShare from './SocialShare';
 import CharacterContext from '../CharacterContext';
 
 // Data dependencies
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 const { iconList } = unitActivitiesConstants;
 
 // Component
 export default function UnitActivities() {
   const { unitSelected } = useContext(CharacterContext);
-  const { activities, description, title } = character[unitSelected];
+  const { activities, description, title } = unitDetails[unitSelected];
   const list = {};
   const activityKeys = Object.keys(activities);
   const actValues = Object.values(activities);

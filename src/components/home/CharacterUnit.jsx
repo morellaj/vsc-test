@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-// Data dependencies
+// File dependencies
 import { flexCenter, shadow3, themeLITS } from 'Styles';
+import Picture from 'Common/Picture';
 
-/** ********************************************* */
-// Component for displaying the home page
-/** ********************************************* */
-export default function Topic({ to, enabled, title, imgStyle, unit }) {
+// Component
+export default function CharacterUnit({ to, enabled, title, imgStyle, unit }) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -32,11 +31,13 @@ export default function Topic({ to, enabled, title, imgStyle, unit }) {
             <FaArrowRight style={{ margin: '0 5px' }} />
           </CoverTitle>
         </ImageCover>
-        <Picture>
-          <source srcSet={`./assets/${unit}.webp`} type="image/webp" />
-          <source srcSet={`./assets/${unit}.jpg`} type="image/jpeg" />
-          <Image alt={`Free online books about ${unit}`} src={`./assets/${unit}.jpg`} type="image/jpeg" style={imgStyle} />
-        </Picture>
+        <UnitPictureContainer>
+          <Picture
+            src={`Assets/${unit}`}
+            alt={`Free online books about ${unit}`}
+            style={{ width: '100%', position: 'absolute', ...imgStyle }}
+          />
+        </UnitPictureContainer>
       </ImageContainer>
       <Title>{title}</Title>
     </Container>
@@ -102,11 +103,6 @@ const CoverTitle = styled.p`
   ${flexCenter};
 `;
 
-const Image = styled.img`
-  width: 100%;
-  position:absolute;
-`;
-
 const Title = styled.h2`
   ${themeLITS};
   font-size: 1em;
@@ -115,7 +111,7 @@ const Title = styled.h2`
   height: 1.5em;
 `;
 
-const Picture = styled.picture`
+const UnitPictureContainer = styled.picture`
   ${flexCenter};
   height: 100%;
   position: relative;

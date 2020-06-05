@@ -1,31 +1,33 @@
 // Package dependencies
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
 import queryString from 'query-string';
 
 // File dependencies
-import Navbar from 'Navbar';
 import Error from 'Error';
 import { setUnit } from 'Actions';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
 import CharacterContext from './CharacterContext';
-const Footer = lazy(() => import('Footer'));
-const Head = lazy(() => import('Head'));
-const InformationDisplay = lazy(() => import('./info/InformationDisplay'));
+import Head from 'Common/Head';
+import InformationDisplay from './info/InformationDisplay';
+import urlifyTitle from 'Common/urlifyTitle';
+
 
 // Data dependencies
 import colors from 'Colors';
-import character from 'Data/character.json';
+import unitDetails from 'Data/unitDetails.json';
 import { baseUrl } from 'Constants';
 
 // Component
 export default function CharacterPage() {
   const [unitSelected, setUnitSelected] = useState('I-1');
   const [info, setInfo] = useState({});
-  const { title, searchTitle, searchDescription } = character[unitSelected];
-  const urlTitle = title.replace(/\s+/g, '-').toLowerCase();
+  const { title, searchTitle, searchDescription } = unitDetails[unitSelected];
+  const urlTitle = urlifyTitle(title);
+
+  const 
   const fullLocation = window.location.search.slice(1);
   const location = fullLocation.split('&')[0].split('=')[0];
   const url = window.location.href;
@@ -48,9 +50,9 @@ export default function CharacterPage() {
     headTitle = '';
     headDescription = '';
     if (location !== '') {
-      const keys = Object.keys(character);
+      const keys = Object.keys(unitDetails);
       for (let i = 0; i < keys.length; i += 1) {
-        if (location === character[keys[i]].title.replace(/\s+/g, '-').toLowerCase()) {
+        if (location === unitDetails[keys[i]].title.replace(/\s+/g, '-').toLowerCase()) {
           setUnit(keys[i]);
           break;
         }
@@ -65,8 +67,8 @@ export default function CharacterPage() {
 
 
   return (
-    <>
-      <Suspense fallback={<div />}>
+    <ThemeProvider theme={theme}>
+      <CharacterContext.Provider value={{ unitSelected, setUnitSelected, info, setInfo }}>
         <Head
           title={headTitle}
           description={headDescription}
@@ -76,28 +78,17 @@ export default function CharacterPage() {
           height="500"
           width="500"
         />
-      </Suspense>
-      <Navbar />
-      <ThemeProvider theme={theme}>
-        <CharacterContext.Provider value={{ unitSelected, setUnitSelected, info, setInfo }}>
-          <Error>
-            <Container>
-              <UnitsContainer>
-                <UnitList />
-                <UnitActivities />
-              </UnitsContainer>
-            </Container>
-          </Error>
-          <Suspense fallback={<div />}>
-            <InformationDisplay />
-          </Suspense>
-        </CharacterContext.Provider>
-      </ThemeProvider>
-      <Suspense fallback={<div />}>
-        <Footer />
-      </Suspense>
-
-    </>
+        <Error>
+          <Container>
+            <UnitsContainer>
+              <UnitList />
+              <UnitActivities />
+            </UnitsContainer>
+          </Container>
+        </Error>
+        <InformationDisplay />
+      </CharacterContext.Provider>
+    </ThemeProvider>
   );
 }
 

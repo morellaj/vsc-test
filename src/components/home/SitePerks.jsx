@@ -46,7 +46,7 @@ const detailsText = [
 const itemList = detailsText.map((item) => <DetailItem item={item} key={item.id} />);
 
 // Component
-export default function Details() {
+export default function SitePerks() {
   return (
     <Container>
       <Heading>Free online stories for kids that teach social and emotional skills!</Heading>

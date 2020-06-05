@@ -6,7 +6,7 @@ import { FaGraduationCap, FaBookReader, FaFileAlt, FaListAlt } from 'react-icons
 import CharacterContext from '../CharacterContext';
 
 // Data dependencies
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 const parentInformationList = [
   {
     id: 1,
@@ -38,7 +38,7 @@ const parentInformationList = [
 export default function ParentInformation() {
   const { unitSelected } = useContext(CharacterContext);
   const { setInfo } = useContext(CharacterContext);
-  const urlTitle = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
+  const urlTitle = unitDetails[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
 
   function handleClick() {
     setInfo(urlTitle);

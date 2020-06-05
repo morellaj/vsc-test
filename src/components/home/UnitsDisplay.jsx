@@ -1,21 +1,21 @@
 // Package dependencies
-import React, { lazy } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { flexCenter } from 'Styles';
 
 // File dependencies
-const Topic = lazy(() => import('./Topic'));
+import CharacterUnit from './CharacterUnit';
 
 // Data dependencies
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 
 // Component
-export default function TopicsDisplay() {
-  const list = Object.keys(character).map((key) => {
-    const { enabled, title, imgStyle } = character[key];
+export default function UnitsDisplay() {
+  const list = Object.keys(unitDetails).map((key) => {
+    const { enabled, title, imgStyle } = unitDetails[key];
     const unit = title.replace(/\s+/g, '-').toLowerCase();
     return (
-      <Topic
+      <CharacterUnit
         to={`/units?${unit}`}
         enabled={enabled}
         title={title}
@@ -27,15 +27,15 @@ export default function TopicsDisplay() {
   });
 
   return (
-    <DisplayContainer>
+    <Container>
       {list}
-    </DisplayContainer>
+    </Container>
   );
 }
 
 // Styling
 
-const DisplayContainer = styled.section`
+const Container = styled.section`
   ${flexCenter};
   flex-wrap: wrap;
   padding: 0 2.5em;

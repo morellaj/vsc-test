@@ -6,18 +6,17 @@ import ReactGA from 'react-ga';
 
 // File dependencies
 import IntroPictures from './IntroPictures';
-import Details from './Details';
-import TopicsDisplay from './TopicsDisplay';
+import SitePerks from './SitePerks';
+import UnitsDisplay from './UnitsDisplay';
 import { Heading, Button, flexCenter } from 'Common/Styles';
 import Head from 'Common/Head';
 import Picture from 'Common/Picture';
+import gaEvent from 'Common/gaEvent';
 
 // Data dependencies
 import { homePage } from 'Data/pageHeadInfo.json';
 const { title, description } = homePage;
-import { baseUrl } from 'Constants';
-
-const handleClick = () => ReactGA.event({ category: 'home', action: 'clicked lower read a book' });
+import { baseUrl } from 'Data/constants';
 
 // Component
 export default function HomePage() {
@@ -39,22 +38,23 @@ export default function HomePage() {
       />
       <Container>
         <IntroPictures />
-        <Details />
+        <SitePerks />
         <section>
           <Heading>Current Topics: Ages 4 to 9</Heading>
-          <TopicsDisplay />
+          <UnitsDisplay />
         </section>
-        <TryContainer>
-          <Picture
-            src="Assets/home-banner"
-            alt="cartoon scene from an online book"
-            containerStyle={bannerContainerStyle}
-            imgStyle={bannerImgStyle}
-          />
-          <Button as={Link} to="/update-sign-up" onClick={handleClick}>
+        <SignUpContainer>
+          <BannerContainer>
+            <Picture
+              src="Assets/home-banner"
+              alt="cartoon scene from an online book"
+              style={{ width: '100%' }}
+            />
+          </BannerContainer>
+          <Button as={Link} to="/update-sign-up" onClick={gaEvent('home', 'clicked low book')}>
             Email Sign-Up
           </Button>
-        </TryContainer>
+        </SignUpContainer>
       </Container>
     </>
   );
@@ -65,7 +65,7 @@ const Container = styled.main`
   line-height: 1.5;
 `;
 
-const TryContainer = styled.div`
+const SignUpContainer = styled.div`
   ${flexCenter};
   position: relative;
   margin-top: 50px;
@@ -78,13 +78,9 @@ const TryContainer = styled.div`
   }
 `;
 
-const bannerContainerStyle = {
-  position: 'absolute',
-  width: '100%',
-  minWidth: '820px',
-  overflow: 'hidden'
-};
-
-const bannerImgStyle = {
-  width: '100%'
-};
+const BannerContainer = styled.picture`
+  position: absolute;
+  width: 100%;
+  min-width: 820px;
+  overflow: hidden;
+`;

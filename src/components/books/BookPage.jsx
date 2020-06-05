@@ -13,7 +13,7 @@ import Section from './Section';
 // Data dependencies
 import books from 'Data/books.json';
 import booksByUnit from 'Data/booksByUnit.json';
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 import { booksUnitList, baseUrl } from 'Constants';
 import createBooksList from './Functions';
 
@@ -21,7 +21,7 @@ import createBooksList from './Functions';
 export default function BookPage() {
   const location = window.location.search.slice(1).split('&')[0].split('=')[0];
   const section = booksUnitList[location];
-  const { bookTitle, bookDescription } = character[section];
+  const { bookTitle, bookDescription } = unitDetails[section];
   const bookList = booksByUnit[section];
   const primaryList = createBooksList(bookList.primary, books);
   const secondaryList = createBooksList(bookList.secondary, books);
@@ -67,7 +67,7 @@ export default function BookPage() {
         <InnerContainer>
           <Header>
             <HeaderTitle>Book Recommendations</HeaderTitle>
-            <HeaderSubTitle>{`${character[section].title}`}</HeaderSubTitle>
+            <HeaderSubTitle>{`${unitDetails[section].title}`}</HeaderSubTitle>
           </Header>
           <Disclaimer>
           Click a book to see it on Amazon.  Your purchases through Amazon help us remain independent and ad-free.

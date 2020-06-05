@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 // Data dependencies
 import CharacterContext from '../CharacterContext';
-import character from 'Data/character.json';
+import unitDetails from 'Data/unitDetails.json';
 
 // Component
 export default function References() {
   const { unitSelected } = useContext(CharacterContext);
-  const { references } = character[unitSelected];
+  const { references } = unitDetails[unitSelected];
 
   let i = 0;
   const referencesDisplay = references.map((info) => {

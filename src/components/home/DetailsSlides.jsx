@@ -1,6 +1,7 @@
 // Package dependencies
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Picture from 'Common/Picture';
 import { flexCenter } from 'Styles';
 
 // Component
@@ -10,12 +11,10 @@ export default function DetailsSlides() {
   for (let i = 0; i < 5; i += 1) {
     picList.push(
       <SlideContainer count={count} value={i} key={i}>
-        <source srcSet={`Assets/Detail${i + 1}.webp`} type="image/webp" />
-        <source srcSet={`Assets/Detail${i + 1}.jpg`} type="image/jpeg" />
-        <Pic
+        <Picture
+          src={`Assets/Detail${i + 1}`}
           alt="pages from online short stories"
-          src={`Assets/Detail${i + 1}.jpg`}
-          type="image/jpeg"
+          style={{ width: '100%' }}
         />
       </SlideContainer>,
     );
@@ -40,13 +39,9 @@ export default function DetailsSlides() {
 // Styling
 const SlideContainer = styled.picture`
   ${flexCenter};
-  opacity: ${(props) => (props.count === props.value ? 1 : 0)};
+  opacity: ${({ count, value }) => (count === value ? 1 : 0)};
   transition: opacity 1s;
   position: absolute;
   box-shadow: 0 0 0 #000;
   transform: translate3d(0, 0, 0);
-`;
-
-const Pic = styled.img`
-  width: 100%;
 `;

@@ -8,12 +8,12 @@ import Unit from './Unit';
 import NewUnit from './NewUnit';
 
 // Data dependencies
-import character from 'Character';
+import unitDetails from 'Data/unitDetails.json';
 
 // Component
 export default function UnitList() {
   const [open, setOpen] = useState(false);
-  const unitArr = Object.keys(character).map((key) => (
+  const unitArr = Object.keys(unitDetails).map((key) => (
     <Unit
       unit={key}
       setOpen={setOpen}
