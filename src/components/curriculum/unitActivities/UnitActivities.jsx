@@ -1,12 +1,12 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
 
 // File dependencies
 import { unitActivitiesConstants } from 'Constants';
 import ActivityDisplay from './ActivityDisplay';
 import SocialShare from './SocialShare';
+import CharacterContext from '../CharacterContext';
 
 // Data dependencies
 import character from 'Character';
@@ -14,7 +14,7 @@ const { iconList } = unitActivitiesConstants;
 
 // Component
 export default function UnitActivities() {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { unitSelected } = useContext(CharacterContext);
   const { activities, description, title } = character[unitSelected];
   const list = {};
   const activityKeys = Object.keys(activities);

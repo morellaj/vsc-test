@@ -1,22 +1,22 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { EmailShareButton, PinterestShareButton, TwitterShareButton, FacebookShareButton } from 'react-share';
-import { useSelector } from 'react-redux';
 
 // File dependencies
 import SocialIcon from 'SocialIcon';
+import CharacterContext from '../CharacterContext';
 
 // Data dependencies
-import { HomePage } from 'Data/pageHeadInfo.json';
+import { homePage } from 'Data/pageHeadInfo.json';
 import character from 'Character';
 
 // Component
 export default function SocialShare() {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { unitSelected } = useContext(CharacterContext);
   const { description } = character[unitSelected];
   const urlTitle = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
-  const { title } = HomePage;
+  const { title } = homePage;
   const style = { margin: '3px' };
   const url = `https://learningisthesolution.com/units?${urlTitle}`;
   return (

@@ -1,16 +1,14 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { FaQuestionCircle } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
-import { setInfo } from 'Actions';
+import CharacterContext from '../CharacterContext';
 
 // Component
 export default function ActivityGroup({ text, category, activities }) {
-  const dispatch = useDispatch();
-
+  const { setInfo } = useContext(CharacterContext);
   function handleClick() {
-    dispatch(setInfo({ type: 'categoryInfo', text: category }));
+    setInfo({ type: 'categoryInfo', text: category });
   }
 
   return (

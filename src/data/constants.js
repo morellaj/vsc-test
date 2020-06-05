@@ -70,3 +70,58 @@ export const teamData = [
 ];
 
 export const baseUrl = "https://learningisthesolution.com/";
+
+export const listOfMetaTags = [
+  {
+    input: 'image',
+    property: "og:image"
+  },
+  {
+    input: 'image',
+    property: 'og"image:secure_url'
+  },
+  {
+    input: 'image',
+    property: 'twitter: image'
+  },
+  {
+    input: 'height',
+    property: 'og:image:height'
+  },
+  {
+    input: 'width',
+    property: 'og:image:width'
+  },
+  {
+    input: 'title',
+    property: 'og:title'
+  },
+  {
+    input: 'title',
+    property: 'twitter:title'
+  },
+  {
+    input: 'type',
+    property: 'og:type'
+  },
+  {
+    input: 'description',
+    property: 'og:description'
+  },
+  {
+    input: 'description',
+    property: 'twitter:description'
+  },
+  {
+    input: 'author',
+    property: 'og:book:author'
+  },
+  {
+    input: 'url',
+    property: 'og:url'
+  },
+  {
+    input: 'tags',
+    property: 'og:book:tag'
+  }
+];

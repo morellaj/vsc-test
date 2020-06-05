@@ -1,10 +1,9 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
+import CharacterContext from '../CharacterContext';
 
 // File dependencies
-import { setUnit } from 'Actions';
 import character from 'Character';
 
 // Data dependencies
@@ -12,12 +11,11 @@ import colors from 'Colors';
 
 // Component
 export default function Unit({ unit, setOpen }) {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { unitSelected, setUnitSelected } = useContext(CharacterContext);
   const { title } = character[unit];
-  const dispatch = useDispatch();
   function handleClick(e) {
     setOpen(false);
-    dispatch(setUnit(e.target.getAttribute('value')));
+    setUnitSelected(e.target.getAttribute('value'));
   }
 
   return (

@@ -1,10 +1,9 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaGraduationCap, FaBookReader, FaFileAlt, FaListAlt } from 'react-icons/fa';
-import { useSelector, useDispatch } from 'react-redux';
-import { setInfo } from 'Actions';
+import CharacterContext from '../CharacterContext';
 
 // Data dependencies
 import character from 'Character';
@@ -37,12 +36,12 @@ const parentInformationList = [
 
 // Component
 export default function ParentInformation() {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
-  const dispatch = useDispatch();
+  const { unitSelected } = useContext(CharacterContext);
+  const { setInfo } = useContext(CharacterContext);
   const urlTitle = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
 
-  function handleClick(e) {
-    dispatch(setInfo({ type: e.target.getAttribute('value'), text: urlTitle }));
+  function handleClick() {
+    setInfo(urlTitle);
   }
 
   const style = { margin: '0 5px' };

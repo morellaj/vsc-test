@@ -35,7 +35,8 @@ module.exports = {
     'object-curly-newline': 'off',
     'import/order': 'off',
     'import/first': 'off',
-    'import/newline-after-import': 'off'
+    'import/newline-after-import': 'off',
+    'no-use-before-define': 'off'
   },
   settings: {
     'import/resolver': {

@@ -1,43 +1,26 @@
 // Package dependencies
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
-
 // File dependencies
-import { Heading, Button, flexCenter } from 'Styles';
-import Navbar from 'Navbar';
 import IntroPictures from './IntroPictures';
-const Head = lazy(() => import('Head'));
-const Details = lazy(() => import('./Details'));
-const Footer = lazy(() => import('Footer'));
-const TopicsDisplay = lazy(() => import('./TopicsDisplay'));
+import Details from './Details';
+import TopicsDisplay from './TopicsDisplay';
+import { Heading, Button, flexCenter } from 'Common/Styles';
+import Head from 'Common/Head';
+import Picture from 'Common/Picture';
 
 // Data dependencies
-import { HomePage } from 'Data/pageHeadInfo.json';
-const { title, description } = HomePage;
+import { homePage } from 'Data/pageHeadInfo.json';
+const { title, description } = homePage;
 import { baseUrl } from 'Constants';
 
-const schema = [
-  {
-    "@type": ["WebPage"],
-    "@id": `${baseUrl}#webpage`,
-    "url": baseUrl,
-    "name": title,
-    "isPartOf": {
-      "@id": `${baseUrl}#website`
-    },
-    "inLanguage": "en-US",
-    "about": {
-      "@id": `${baseUrl}#organization`
-    },
-    "description": description
-  }
-];
+const handleClick = () => ReactGA.event({ category: 'home', action: 'clicked lower read a book' });
 
 // Component
-export default function Home() {
+export default function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     ReactGA.pageview(window.location.pathname + window.location.search);
@@ -45,54 +28,34 @@ export default function Home() {
 
   return (
     <>
-      <Suspense fallback={<div />}>
-        <Head
-          title={title}
-          description={description}
-          type="website"
-          image={`${baseUrl}assets/Home1.jpg`}
-          height="1519"
-          width="619"
-          url={baseUrl}
-          schema={schema}
-        />
-      </Suspense>
-      <Navbar />
+      <Head
+        title={title}
+        description={description}
+        type="website"
+        image={`${baseUrl}assets/Home1.jpg`}
+        height="1519"
+        width="619"
+        url={baseUrl}
+      />
       <Container>
         <IntroPictures />
-        <Suspense fallback={<div />}>
-          <Details />
-        </Suspense>
+        <Details />
         <section>
           <Heading>Current Topics: Ages 4 to 9</Heading>
-          <Suspense fallback={<div />}>
-            <TopicsDisplay />
-          </Suspense>
+          <TopicsDisplay />
         </section>
         <TryContainer>
-          <BannerContainer>
-            <source srcSet="Assets/home-banner.webp" type="image/webp" />
-            <source srcSet="Assets/home-banner.jpg" type="image/jpeg" />
-            <img
-              alt="cartoon scene from an online book"
-              src="Assets/home-banner.jpg"
-              type="image/jpeg"
-              style={{ width: '100%' }}
-            />
-          </BannerContainer>
-          <Button
-            as={Link}
-            to="/update-sign-up"
-            style={{ textDecoration: 'none', zIndex: '100' }}
-            onClick={() => ReactGA.event({ category: 'home', action: 'clicked lower read a book' })}
-          >
+          <Picture
+            src="Assets/home-banner"
+            alt="cartoon scene from an online book"
+            containerStyle={bannerContainerStyle}
+            imgStyle={bannerImgStyle}
+          />
+          <Button as={Link} to="/update-sign-up" onClick={handleClick}>
             Email Sign-Up
           </Button>
         </TryContainer>
       </Container>
-      <Suspense fallback={<div />}>
-        <Footer />
-      </Suspense>
     </>
   );
 }
@@ -115,9 +78,13 @@ const TryContainer = styled.div`
   }
 `;
 
-const BannerContainer = styled.picture`
-  position: absolute;
-  width: 100%;
-  min-width: 820px;
-  overflow: hidden;
-`;
+const bannerContainerStyle = {
+  position: 'absolute',
+  width: '100%',
+  minWidth: '820px',
+  overflow: 'hidden'
+};
+
+const bannerImgStyle = {
+  width: '100%'
+};

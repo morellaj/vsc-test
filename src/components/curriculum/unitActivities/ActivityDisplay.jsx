@@ -1,21 +1,21 @@
 
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
 
 // File dependencies
 import Error from 'Error';
 import ActivityGroup from './ActivityGroup';
 import SingleActivity from './SingleActivity';
 import ParentInformation from './ParentInformation';
+import CharacterContext from '../CharacterContext';
 
 // Data dependencies
 import character from 'Character';
 
 // Component
 export default function ActivityDisplay({ list }) {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { unitSelected } = useContext(CharacterContext);
   const unit = character[unitSelected].title.replace(/\s+/g, '-').toLowerCase();
   const singleDisplay = [];
   const multipleDisplay = [];

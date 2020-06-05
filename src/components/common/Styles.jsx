@@ -123,4 +123,6 @@ export const Button = styled.div`
   border-radius: 5px;
   font-size: 1em;
   font-weight: 700;
+  text-decoration: none;
+  z-index: 100;
 `;

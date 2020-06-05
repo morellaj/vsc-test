@@ -1,8 +1,7 @@
 // Package dependencies
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ReactGA from 'react-ga';
-import { useSelector, useDispatch } from 'react-redux';
 import queryString from 'query-string';
 
 // File dependencies
@@ -11,6 +10,7 @@ import Error from 'Error';
 import { setUnit } from 'Actions';
 import UnitList from './unitList/UnitList';
 import UnitActivities from './unitActivities/UnitActivities';
+import CharacterContext from './CharacterContext';
 const Footer = lazy(() => import('Footer'));
 const Head = lazy(() => import('Head'));
 const InformationDisplay = lazy(() => import('./info/InformationDisplay'));
@@ -22,8 +22,8 @@ import { baseUrl } from 'Constants';
 
 // Component
 export default function CharacterPage() {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
-  const dispatch = useDispatch();
+  const [unitSelected, setUnitSelected] = useState('I-1');
+  const [info, setInfo] = useState({});
   const { title, searchTitle, searchDescription } = character[unitSelected];
   const urlTitle = title.replace(/\s+/g, '-').toLowerCase();
   const fullLocation = window.location.search.slice(1);
@@ -33,23 +33,6 @@ export default function CharacterPage() {
   let headTitle = searchTitle;
   let headDescription = searchDescription;
   const headUrl = `${baseUrl}units?${location}`;
-
-  const schema = [
-    {
-      "@type": ["CollectionPage"],
-      "@id": `${headUrl}/#webpage`,
-      "url": headUrl,
-      "name": headTitle,
-      "isPartOf": {
-        "@id": `${baseUrl}#website`
-      },
-      "inLanguage": "en-US",
-      "about": {
-        "@id": `${baseUrl}#organization`
-      },
-      "description": headDescription
-    }
-  ];
 
   const colorTheme = colors[unitSelected.charAt(0)];
   const theme = colorTheme ? {
@@ -68,7 +51,7 @@ export default function CharacterPage() {
       const keys = Object.keys(character);
       for (let i = 0; i < keys.length; i += 1) {
         if (location === character[keys[i]].title.replace(/\s+/g, '-').toLowerCase()) {
-          dispatch(setUnit(keys[i]));
+          setUnit(keys[i]);
           break;
         }
       }
@@ -79,6 +62,7 @@ export default function CharacterPage() {
     ReactGA.modalview(window.location.pathname + window.location.search);
     window.history.replaceState({ id: urlTitle }, 'Stuff', `${newUrl}?${urlTitle}`);
   }, [unitSelected]);
+
 
   return (
     <>
@@ -91,22 +75,23 @@ export default function CharacterPage() {
           image={`${baseUrl}assets/${urlTitle}-social.jpg`}
           height="500"
           width="500"
-          schema={schema}
         />
       </Suspense>
       <Navbar />
       <ThemeProvider theme={theme}>
-        <Error>
-          <Container>
-            <UnitsContainer>
-              <UnitList />
-              <UnitActivities />
-            </UnitsContainer>
-          </Container>
-        </Error>
-        <Suspense fallback={<div />}>
-          <InformationDisplay />
-        </Suspense>
+        <CharacterContext.Provider value={{ unitSelected, setUnitSelected, info, setInfo }}>
+          <Error>
+            <Container>
+              <UnitsContainer>
+                <UnitList />
+                <UnitActivities />
+              </UnitsContainer>
+            </Container>
+          </Error>
+          <Suspense fallback={<div />}>
+            <InformationDisplay />
+          </Suspense>
+        </CharacterContext.Provider>
       </ThemeProvider>
       <Suspense fallback={<div />}>
         <Footer />

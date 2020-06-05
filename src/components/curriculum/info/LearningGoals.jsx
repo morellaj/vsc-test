@@ -1,14 +1,16 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+
+// File dependencies
+import CharacterContext from '../CharacterContext';
 
 // Data dependencies
 import character from 'Data/character.json';
 
 // Component
 export default function LearningGoals() {
-  const { unitSelected } = useSelector((state) => state.unitReducer);
+  const { unitSelected } = useContext(CharacterContext);
   const { learningGoals, importantInformation } = character[unitSelected];
 
   let i = 0;

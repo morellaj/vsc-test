@@ -1,19 +1,17 @@
 // Package dependencies
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
-import { useSelector, useDispatch } from 'react-redux';
-import { setInfo } from 'Actions';
 
 // File dependencies
 import CategoryInformation from './CategoryInformation';
 import LearningGoals from './LearningGoals';
 import References from './References';
+import CharacterContext from '../CharacterContext';
 
 // Component
 export default function InformationDisplay() {
-  const { type, text } = useSelector((state) => state.infoReducer);
-  const dispatch = useDispatch();
+  const { info: { type, text }, setInfo } = useContext(CharacterContext);
   let display;
   switch (type) {
     case 'categoryInfo':
@@ -30,9 +28,9 @@ export default function InformationDisplay() {
   }
 
   return (
-    <Container onClick={() => dispatch(setInfo({}))} type={type}>
+    <Container onClick={() => setInfo({})} type={type}>
       <InfoContainer onClick={(e) => (e.stopPropagation())}>
-        <IconContainer onClick={() => dispatch(setInfo({}))}>
+        <IconContainer onClick={() => setInfo({})}>
           <FaTimes />
         </IconContainer>
         {display}
